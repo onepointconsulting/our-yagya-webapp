@@ -1,4 +1,6 @@
 import App from 'next/app'
+import { appWithTranslation } from 'next-i18next'
+import '../lib/i18n'
 import '../assets/css/styles.css'
 import { createContext } from 'react'
 
@@ -26,4 +28,4 @@ OurYagya.getInitialProps = async (ctxContainer) => {
     return { ...appProps, pageProps: { global: {} } }
 }
 
-export default OurYagya
+export default appWithTranslation(OurYagya)

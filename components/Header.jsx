@@ -1,7 +1,11 @@
 import PillMenu from "./PillMenu"
 import RightPillButtons from "./RightPillButtons"
+import { useTranslation } from 'react-i18next'
 
 const Header = () => {
+
+    const { t } = useTranslation()
+
     return (
         <div className="metropolis_medium bg-white HeaderClassName">
             {/* <!-- sticky buttons on top right --> */}
@@ -59,9 +63,9 @@ const Header = () => {
                     </div>
 
                     <a href="/" className="-mt-8 md:-mt-12 lg:-mt-8 xl:-mt-12">
-                        <h1 className="text-3xl text-yagya-red-color hidden">Our Yagya</h1>
+                        <h1 className="text-3xl text-yagya-red-color hidden">{t('Our Yagya')}</h1>
                         <h1 className="metropolis_medium text-3xl sm:text-4xl md:text-5xl lg:text-7xl 2xl:text-8xl text-gold1 font-bold uppercase">
-                            Our Yagya
+                            {t('Our Yagya')}
                         </h1>
                     </a>
                 </div>
