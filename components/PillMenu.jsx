@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const PillMenu = () => {
     return (
         <div id="floatingMenuItems" className="stickyButtons hide">
