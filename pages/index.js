@@ -5,13 +5,13 @@ import HomeHero from '../components/HomeHero'
 import LinksHome from '../components/LinksHome'
 import Recources from '../components/Resources'
 import Slider from '../components/Slider'
-import SticyMenu from '../components/SticyMenu'
+import StickyMenu from '../components/StickyMenu'
 
 export default function Home() {
   return (
     <>
       <Header />
-      <SticyMenu />
+      <StickyMenu />
       <DefaultMenu />
       <Slider />
       <HomeHero />
