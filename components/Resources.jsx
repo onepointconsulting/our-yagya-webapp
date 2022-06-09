@@ -1,76 +1,59 @@
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 
+const linksData = [
+    {
+        link: '/events',
+        label: 'blessings',
+    },
+    {
+        link: '/',
+        label: 'photos & images',
+    },
+    {
+        link: '/',
+        label: 'audio ebooks',
+    },
+    {
+        link: '/',
+        label: 'books',
+    },
+    {
+        link: '/',
+        label: 'music',
+    },
+    {
+        link: '/',
+        label: 'login for more >>',
+    },
+]
+
 const Recources = () => {
 
     const { t } = useTranslation()
 
-
     return (
         <div>
             <div className="bg-home_resource text-center p-2">
-                <h1 className="filosofia_regular text-2xl md:text-4xl text-white">resources</h1>
+                <h1 className="filosofia_regular text-2xl md:text-4xl text-white">{t('resources')}</h1>
             </div>
 
-            <div className="filosofia_regular bg-home_page_center_meniu p-2  hidden md:block">
-                <div className="flex-wrap md:flex flex-row items-end md:justify-around lg:justify-evenly text-center mx-auto w-full">
-                    <Link href="/events">
-                        <a className="text-home_page_center_nav_text px-2 text-sm lg:text-3xl xl:text-4xl  whitespace-nowrap" >
-                            {t('blessings')}
-                        </a>
-
-
-                    </Link>
-                    <a className="text-home_page_center_nav_text">|</a>
-
-                    <Link href="/">
-                        <a className="text-home_page_center_nav_text px-2 text-sm lg:text-3xl xl:text-4xl  whitespace-nowrap">
-
-                            {t('photos & images')}
-
-                        </a>
-
-                    </Link>
-
-                    <a className="text-home_page_center_nav_text">|</a>
-
-                    <Link href="/">
-                        <a className="text-home_page_center_nav_text px-2 text-sm lg:text-3xl xl:text-4xl  whitespace-nowrap" >
-                            {t('audio ebooks')}
-
-                        </a>
-
-
-                    </Link>
-                    <a className="text-home_page_center_nav_text">|</a>
-
-                    <Link href="/">
-
-                        <a className="text-home_page_center_nav_text px-2 text-sm lg:text-3xl xl:text-4xl  whitespace-nowrap">
-
-                            {t('books')}
-
-                        </a>
-                    </Link>
-                    <a className="text-home_page_center_nav_text">|</a>
-
-                    <Link href="/">
-
-                        <a className="text-home_page_center_nav_text px-2 text-sm lg:text-3xl xl:text-4xl  whitespace-nowrap" >
-
-                            {t('music')}
-
-                        </a>
-                    </Link>
-                    <a className="text-home_page_center_nav_text">|</a>
-                    <Link href="/">
-
-
-                        <a className="text-home_page_center_nav_text px-2 text-sm lg:text-3xl xl:text-4xl  whitespace-nowrap" >
-                            {t('login for more >>')}
-
-                        </a>
-                    </Link>
+            <div
+                className="filosofia_regular bg-home_page_center_meniu p-2  hidden md:block">
+                <div
+                    className="flex-wrap md:flex flex-row items-end md:justify-around lg:justify-evenly text-center mx-auto w-full">
+                    {linksData.map((d, i) => {
+                        return (
+                            <>
+                                <Link href={d.link} key={i}>
+                                    <a className="text-home_page_center_nav_text px-2 text-sm lg:text-3xl xl:text-4xl  whitespace-nowrap">
+                                        {t(d.label)}
+                                    </a>
+                                </Link>
+                                {i < linksData.length - 1 && <a className="text-home_page_center_nav_text">|</a>}
+                            </>
+                        )
+                    })}
                 </div>
             </div>
         </div>

@@ -2,7 +2,6 @@ import PillMenu from "./PillMenu"
 import RightPillButtons from "./RightPillButtons"
 import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
-import Image from 'next/image'
 
 const Header = () => {
 
@@ -16,7 +15,6 @@ const Header = () => {
             <div className="fixed -top-12 lg:absolute lg:h-full lg:top-0 left-0" style={{ zIndex: '1' }}>
                 <div className="sticky top-4 z-10">
                     <Link href="/">
-
                         <a className="lg:hidden inline-block float-right text-yagya-red-color ml-[3px] mt-1 p-[6px] bg-white rounded-full border-2 border-yagya-red"
                         >
                             <img className="h-7 xs:h-8 md:h-7" src="../img/magnifying_glass.svg" alt="" />
@@ -70,7 +68,6 @@ const Header = () => {
 
                     <div>
                         <Link href="/">
-
                             <a> <img className="h-16 xs:h-20 sm:h-28 lg:h-44 w-auto object-contain mx-auto rounded-full -mt-4"
                                 src="./img/logo_big.png" alt="Our Yagya logo" /></a>
                         </Link>

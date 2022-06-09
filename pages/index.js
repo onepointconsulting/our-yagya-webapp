@@ -10,14 +10,12 @@ import StickyMenu from '../components/StickyMenu'
 export default function Home() {
   return (
     <>
-      <Header />
       <StickyMenu />
       <DefaultMenu />
       <Slider />
       <HomeHero />
       <Recources />
       <LinksHome />
-      <Footer/>
     </>
   )
 }

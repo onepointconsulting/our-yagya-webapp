@@ -3,6 +3,9 @@ import { appWithTranslation } from 'next-i18next'
 import '../lib/i18n'
 import '../assets/css/styles.css'
 import { createContext } from 'react'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import { OurYagyaContextProvider } from '../context/OurYagyaContext'
 
 export const GlobalContext = createContext({})
 
@@ -16,8 +19,12 @@ export const GlobalContext = createContext({})
 function OurYagya ({ Component, pageProps }) {
     const { global } = pageProps
     return (
-        <GlobalContext.Provider
-            value={global}><Component {...pageProps} />
+        <GlobalContext.Provider value={global}>
+            <OurYagyaContextProvider>
+                <Header/>
+                    <Component {...pageProps} />
+                <Footer/>
+            </OurYagyaContextProvider>
         </GlobalContext.Provider>
     )
 }
