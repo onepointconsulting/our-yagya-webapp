@@ -38,10 +38,8 @@ const Recources = () => {
                 <h1 className="filosofia_regular text-2xl md:text-4xl text-white">{t('resources')}</h1>
             </div>
 
-            <div
-                className="filosofia_regular bg-home_page_center_meniu p-2  hidden md:block">
-                <div
-                    className="flex-wrap md:flex flex-row items-end md:justify-around lg:justify-evenly text-center mx-auto w-full">
+            <div className="filosofia_regular bg-home_page_center_meniu p-2  hidden md:block">
+                <div className="flex-wrap md:flex flex-row items-end md:justify-around lg:justify-evenly text-center mx-auto w-full">
                     {linksData.map((d, i) => {
                         return (
                             <>
