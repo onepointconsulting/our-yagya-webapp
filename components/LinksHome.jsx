@@ -22,11 +22,14 @@ const LinksHome = () => {
                         {t('Murli Download')}
 
                     </div>
-                    <a href="#"
-                        className="md:pl-2 md:p-1 lg:p-2 -mt-2 text-date-color text-lg md:text-xl lg:text-1xl xl:text-3xl capitalize">
-                        {t('(Login Required)')}
+                    <Link href="/">
 
-                    </a>
+                        <a
+                            className="md:pl-2 md:p-1 lg:p-2 -mt-2 text-date-color text-lg md:text-xl lg:text-1xl xl:text-3xl capitalize">
+                            {t('(Login Required)')}
+
+                        </a>
+                    </Link>
                     <div
                         className="md:pl-2 md:p-1 lg:p-2 text-title-conf-color text-lg md:text-xl lg:text-1xl xl:text-3xl capitalize">
 
@@ -59,10 +62,13 @@ const LinksHome = () => {
                     </div>
                     <div className="absolute bottom-4 right-0 left-0">
                         <h1 className="cursor-poainter text-5xl mt-4 flex justify-center text-gray-400 text-center">
-                            <a href="/links.html">
-                                <img src="./img/icons/ArrowDown.png" alt="" />
+                            <Link href="/links">
 
-                            </a>
+                                <a>
+                                    <img src="./img/icons/ArrowDown.png" alt="" />
+
+                                </a>
+                            </Link>
                         </h1>
                     </div>
                 </div>

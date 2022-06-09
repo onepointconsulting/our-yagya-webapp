@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 
 const Recources = () => {
@@ -13,41 +14,63 @@ const Recources = () => {
 
             <div className="filosofia_regular bg-home_page_center_meniu p-2  hidden md:block">
                 <div className="flex-wrap md:flex flex-row items-end md:justify-around lg:justify-evenly text-center mx-auto w-full">
-                    <a className="text-home_page_center_nav_text px-2 text-sm lg:text-3xl xl:text-4xl  whitespace-nowrap" href="/">
-                        {t('blessings')}
-                    </a>
+                    <Link href="/events">
+                        <a className="text-home_page_center_nav_text px-2 text-sm lg:text-3xl xl:text-4xl  whitespace-nowrap" >
+                            {t('blessings')}
+                        </a>
+
+
+                    </Link>
                     <a className="text-home_page_center_nav_text">|</a>
 
-                    <a className="text-home_page_center_nav_text px-2 text-sm lg:text-3xl xl:text-4xl  whitespace-nowrap" href="/latest_classes.html">
+                    <Link href="/">
+                        <a className="text-home_page_center_nav_text px-2 text-sm lg:text-3xl xl:text-4xl  whitespace-nowrap">
 
-                        {t('photos & images')}
+                            {t('photos & images')}
 
-                    </a>
+                        </a>
+
+                    </Link>
+
                     <a className="text-home_page_center_nav_text">|</a>
 
-                    <a className="text-home_page_center_nav_text px-2 text-sm lg:text-3xl xl:text-4xl  whitespace-nowrap" href="/">
-                        {t('audio ebooks')}
+                    <Link href="/">
+                        <a className="text-home_page_center_nav_text px-2 text-sm lg:text-3xl xl:text-4xl  whitespace-nowrap" >
+                            {t('audio ebooks')}
 
-                    </a>
+                        </a>
+
+
+                    </Link>
                     <a className="text-home_page_center_nav_text">|</a>
 
-                    <a className="text-home_page_center_nav_text px-2 text-sm lg:text-3xl xl:text-4xl  whitespace-nowrap" href="/events.html">
+                    <Link href="/">
 
-                        {t('books')}
+                        <a className="text-home_page_center_nav_text px-2 text-sm lg:text-3xl xl:text-4xl  whitespace-nowrap">
 
-                    </a>
+                            {t('books')}
+
+                        </a>
+                    </Link>
                     <a className="text-home_page_center_nav_text">|</a>
 
-                    <a className="text-home_page_center_nav_text px-2 text-sm lg:text-3xl xl:text-4xl  whitespace-nowrap" href="/">
+                    <Link href="/">
 
-                        {t('music')}
+                        <a className="text-home_page_center_nav_text px-2 text-sm lg:text-3xl xl:text-4xl  whitespace-nowrap" >
 
-                    </a>
+                            {t('music')}
+
+                        </a>
+                    </Link>
                     <a className="text-home_page_center_nav_text">|</a>
-                    <a className="text-home_page_center_nav_text px-2 text-sm lg:text-3xl xl:text-4xl  whitespace-nowrap" href="/">
-                        {t('login for more >>')}
+                    <Link href="/">
 
-                    </a>
+
+                        <a className="text-home_page_center_nav_text px-2 text-sm lg:text-3xl xl:text-4xl  whitespace-nowrap" >
+                            {t('login for more >>')}
+
+                        </a>
+                    </Link>
                 </div>
             </div>
         </div>

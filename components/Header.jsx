@@ -1,6 +1,8 @@
 import PillMenu from "./PillMenu"
 import RightPillButtons from "./RightPillButtons"
 import { useTranslation } from 'react-i18next'
+import Link from 'next/link'
+import Image from 'next/image'
 
 const Header = () => {
 
@@ -13,27 +15,33 @@ const Header = () => {
             {/* <!-- sticky search menu on top left--> */}
             <div className="fixed -top-12 lg:absolute lg:h-full lg:top-0 left-0" style={{ zIndex: '1' }}>
                 <div className="sticky top-4 z-10">
-                    <a className="lg:hidden inline-block float-right text-yagya-red-color ml-[3px] mt-1 p-[6px] bg-white rounded-full border-2 border-yagya-red"
-                        href="#">
-                        <img className="h-7 xs:h-8 md:h-7" src="../img/magnifying_glass.svg" alt="" />
-                    </a>
+                    <Link href="/">
+
+                        <a className="lg:hidden inline-block float-right text-yagya-red-color ml-[3px] mt-1 p-[6px] bg-white rounded-full border-2 border-yagya-red"
+                        >
+                            <img className="h-7 xs:h-8 md:h-7" src="../img/magnifying_glass.svg" alt="" />
+                        </a>
+                    </Link>
                 </div>
             </div>
 
             {/* <!-- sticky hamburger menu --> */}
             <div className="fixed -top-12 lg:absolute lg:h-full lg:top-0  right-0" style={{ zIndex: '2' }}>
                 <div className="sticky top-4 lg:top-0 z-10">
-                    <a className="lg:hidden inline-block float-right text-yagya-red-color mr-[3px] mt-1 p-[6px] bg-white rounded-full border-2 border-yagya-red"
-                        href="#">
-                        <button id="mobile_menu1" className="relative w-7 h-7 outline-none">
-                            <div role="hidden" id="line"
-                                className="inset-0 w-4 h-0.5 m-auto rounded-full bg-yagya-red transition duration-300"></div>
-                            <div role="hidden" id="line2"
-                                className="inset-0 w-4 h-0.5 mt-1 m-auto rounded-full bg-yagya-red transition duration-300"></div>
-                            <div role="hidden" id="line2"
-                                className="inset-0 w-4 h-0.5 mt-1 m-auto rounded-full bg-yagya-red transition duration-300"></div>
-                        </button>
-                    </a>
+                    <Link href="/">
+
+                        <a className="lg:hidden inline-block float-right text-yagya-red-color mr-[3px] mt-1 p-[6px] bg-white rounded-full border-2 border-yagya-red"
+                        >
+                            <button id="mobile_menu1" className="relative w-7 h-7 outline-none">
+                                <div role="hidden" id="line"
+                                    className="inset-0 w-4 h-0.5 m-auto rounded-full bg-yagya-red transition duration-300"></div>
+                                <div role="hidden" id="line2"
+                                    className="inset-0 w-4 h-0.5 mt-1 m-auto rounded-full bg-yagya-red transition duration-300"></div>
+                                <div role="hidden" id="line2"
+                                    className="inset-0 w-4 h-0.5 mt-1 m-auto rounded-full bg-yagya-red transition duration-300"></div>
+                            </button>
+                        </a>
+                    </Link>
                 </div>
             </div>
 
@@ -46,8 +54,11 @@ const Header = () => {
                         <img className="h-5 xs:h-8 md:h-auto" src="../img/magnifying_glass.svg" alt="" />
                     </div>
                     <div className=" hidden lg:block">
-                        <a href="/"><img className="w-auto lg:h-20 lg:pl-16 lg:mb-[5%] xl:mb-[4%] " src="./img/BK_Stacked_SM.png"
-                            alt="" /></a>
+                        <Link href="/">
+
+                            <a><img className="w-auto lg:h-20 lg:pl-16 lg:mb-[5%] xl:mb-[4%] " src="./img/BK_Stacked_SM.png"
+                                alt="" /></a>
+                        </Link>
                     </div>
                 </div>
 
@@ -58,33 +69,42 @@ const Header = () => {
                     </div>
 
                     <div>
-                        <a href="/"> <img className="h-16 xs:h-20 sm:h-28 lg:h-44 w-auto object-contain mx-auto rounded-full -mt-4"
-                            src="./img/logo_big.png" alt="Our Yagya logo" /></a>
+                        <Link href="/">
+
+                            <a> <img className="h-16 xs:h-20 sm:h-28 lg:h-44 w-auto object-contain mx-auto rounded-full -mt-4"
+                                src="./img/logo_big.png" alt="Our Yagya logo" /></a>
+                        </Link>
                     </div>
 
-                    <a href="/" className="-mt-8 md:-mt-12 lg:-mt-8 xl:-mt-12">
-                        <h1 className="text-3xl text-yagya-red-color hidden">{t('Our Yagya')}</h1>
-                        <h1 className="metropolis_medium text-3xl sm:text-4xl md:text-5xl lg:text-7xl 2xl:text-8xl text-gold1 font-bold uppercase">
-                            {t('Our Yagya')}
-                        </h1>
-                    </a>
+                    <Link href="/">
+
+                        <a className="-mt-8 md:-mt-12 lg:-mt-8 xl:-mt-12">
+                            <h1 className="text-3xl text-yagya-red-color hidden">{t('Our Yagya')}</h1>
+                            <h1 className="metropolis_medium text-3xl sm:text-4xl md:text-5xl lg:text-7xl 2xl:text-8xl text-gold1 font-bold uppercase">
+                                {t('Our Yagya')}
+                            </h1>
+                        </a>
+                    </Link>
                 </div>
 
                 {/* <!-- hamburger menu  --> */}
                 <div className="absolute top-4 xs:top-6 md:top-8 right-4 sm:right-10 h-16 w-16 lg:hidden z-30 ">
-                    <a className="inline-block float-right text-yagya-red-color" href="#">
-                        <button id="mobile_menu" className="relative h-10 outline-none">
-                            <div role="hidden" id="line"
-                                className="inset-0 w-4 h-0.5 sm:w-8 md:h-1 m-auto rounded-full bg-yagya-red transition duration-300">
-                            </div>
-                            <div role="hidden" id="line2"
-                                className="inset-0 w-4 h-0.5 sm:w-8 md:h-1 mt-1.5 m-auto rounded-full bg-yagya-red transition duration-300">
-                            </div>
-                            <div role="hidden" id="line2"
-                                className="inset-0 w-4 h-0.5 sm:w-8 md:h-1 mt-1.5 m-auto rounded-full bg-yagya-red transition duration-300">
-                            </div>
-                        </button>
-                    </a>
+                    <Link href="/">
+
+                        <a className="inline-block float-right text-yagya-red-color">
+                            <button id="mobile_menu" className="relative h-10 outline-none">
+                                <div role="hidden" id="line"
+                                    className="inset-0 w-4 h-0.5 sm:w-8 md:h-1 m-auto rounded-full bg-yagya-red transition duration-300">
+                                </div>
+                                <div role="hidden" id="line2"
+                                    className="inset-0 w-4 h-0.5 sm:w-8 md:h-1 mt-1.5 m-auto rounded-full bg-yagya-red transition duration-300">
+                                </div>
+                                <div role="hidden" id="line2"
+                                    className="inset-0 w-4 h-0.5 sm:w-8 md:h-1 mt-1.5 m-auto rounded-full bg-yagya-red transition duration-300">
+                                </div>
+                            </button>
+                        </a>
+                    </Link>
                 </div>
 
                 {/* <!-- Buttons on the right side --> */}
