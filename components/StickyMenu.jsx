@@ -14,7 +14,7 @@ const topMenuData = [
     label: " classes & talks",
   },
   {
-    link: "/",
+    link: "/news",
     label: "news",
   },
   {
