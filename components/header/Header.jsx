@@ -1,4 +1,4 @@
-import PillMenu from "../PillMenu"
+import PillMenu from "./PillMenu"
 import RightPillButtons from "./RightPillButtons"
 import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
