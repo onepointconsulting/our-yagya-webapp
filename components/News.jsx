@@ -1,8 +1,64 @@
-import PillMenu from "./PillMenu";
-import RightPillButtons from "./RightPillButtons";
 import { useTranslation } from "react-i18next";
-import Link from "next/link";
 
+const newsDataInternational = [
+  {
+    link: "/",
+    label:
+      "Recordings of Global Silence Retreat *(November 19-20) now availabe",
+    date: "19-20 November",
+  },
+
+  {
+    link: "/",
+    label: "Avyakt BapDada    ",
+    date: "19-20 November",
+  },
+  {
+    link: "/",
+    label: "Dewali Festival    ",
+    date: "19-20 November",
+  },
+  {
+    link: "/",
+    label: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.    ",
+    date: "19-20 November",
+  },
+  {
+    link: "/",
+    label: "Lorem ipsum dolor sit amet consectetur adipisicing elit.    ",
+    date: "19-20 November",
+  },
+];
+
+const dataMadhubanNews = [
+  {
+    link: "/",
+    label:
+      "Madhuban News  Recordings of Global Silence Retreat *(November 19-20) now availabe",
+    date: "19-20 November",
+  },
+
+  {
+    link: "/",
+    label: "Avyakt BapDada    ",
+    date: "19-20 November",
+  },
+  {
+    link: "/",
+    label: "Dewali Festival    ",
+    date: "19-20 November",
+  },
+  {
+    link: "/",
+    label: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.    ",
+    date: "19-20 November",
+  },
+  {
+    link: "/",
+    label: "Lorem ipsum dolor sit amet consectetur adipisicing elit.    ",
+    date: "19-20 November",
+  },
+];
 const News = () => {
   const { t } = useTranslation();
 
@@ -13,7 +69,7 @@ const News = () => {
         <div id="mainSide" class="sticky top-16 xss:top-16 lg:top-16 z-50">
           <div
             class="left-0 top-20 xs:top-24 md:top-28 md:static mt-1 md:mt-6 lg:mt-0"
-            style={{ zIndex: '1' }}
+            style={{ zIndex: "1" }}
           >
             <div class="bg-darkGray p-2 w-11 flex justify-center items-center md:w-14 lg:w-16 xl:w-24 cursor-pointer lg:h-20 xl:h-24">
               <img
@@ -38,62 +94,21 @@ const News = () => {
               international
             </div>
             <div class="metropolis_medium pl-4 md:pl-8 p-2 md:p-4 mb-8">
-              <div class="text-redfull text-lg py-2 md:text-3xl xl:text-4xl mt-2">
-                <a href="/news_details.html">
-                  Recordings of Global Silence Retreat *(November 19-20) now
-                  availabe
-                </a>
-              </div>
-              <div>
-                <div class="flex items-center text-sm text-date-color md:text-base lg:text-xl xl:text-2xl">
-                  <div class="mr-2">posted</div>
-                  <div class="mx-2">19-20 November</div>
-                </div>
-              </div>
-
-              <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                <a href="/news_details.html">Avyakt BapDada</a>
-              </div>
-              <div>
-                <div class="flex items-center text-sm text-date-color md:text-base lg:text-xl xl:text-2xl">
-                  <div class="mr-2">posted</div>
-                  <div class="mx-2">10-11 November</div>
-                </div>
-              </div>
-
-              <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                <a href="/news_details.html">Dewali Festival</a>
-              </div>
-              <div>
-                <div class="flex items-center text-sm text-date-color md:text-base lg:text-xl xl:text-2xl">
-                  <div class="mr-2">posted</div>
-                  <div class="mx-2">5-8 November</div>
-                </div>
-              </div>
-
-              <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                <a href="/news_details.html">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                </a>
-              </div>
-              <div>
-                <div class="flex items-center text-sm text-date-color md:text-base lg:text-xl xl:text-2xl">
-                  <div class="mr-2">posted</div>
-                  <div class="mx-2">5-8 November</div>
-                </div>
-              </div>
-
-              <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                <a href="/news_details.html">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </a>
-              </div>
-              <div>
-                <div class="flex items-center text-sm text-date-color md:text-base lg:text-xl xl:text-2xl">
-                  <div class="mr-2">posted</div>
-                  <div class="mx-2">5-8 November</div>
-                </div>
-              </div>
+              {newsDataInternational.map((data, i) => {
+                return (
+                  <>
+                    <div class="text-redfull text-lg py-2 md:text-3xl xl:text-4xl mt-2">
+                      <a>{t(data.label)}</a>
+                    </div>
+                    <div>
+                      <div class="flex items-center text-sm text-date-color md:text-base lg:text-xl xl:text-2xl">
+                        <div class="mr-2">posted</div>
+                        <div class="mx-2"> {t(data.date)}</div>
+                      </div>
+                    </div>
+                  </>
+                );
+              })}
             </div>
             <div class="py-8">
               <h1 class="cursor-poainter text-5xl mt-4 flex justify-center text-gray-400 text-center">
@@ -116,65 +131,25 @@ const News = () => {
                   <div class="filosofia_italic bg-button-color text-white p-2 text-3xl md:text-4xl xl:text-6xl pl-4 md:pl-8 capitalize">
                     Madhuban news
                   </div>
+                  {/* start the second section */}
                   <div class="metropolis_medium pl-4 md:pl-8 p-2 md:p-4 mb-8">
-                    <div class="text-redfull text-lg py-2 md:text-3xl xl:text-4xl mt-2">
-                      <a href="/news_details.html">
-                        Recordings of Global Silence Retreat *(November 19-20)
-                        now availabe
-                      </a>
-                    </div>
-                    <div>
-                      <div class="flex items-center text-sm text-date-color md:text-base lg:text-xl xl:text-2xl">
-                        <div class="mr-2">posted</div>
-                        <div class="mx-2">19-20 November</div>
-                      </div>
-                    </div>
-
-                    <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                      <a href="/news_details.html">Avyakt BapDada</a>
-                    </div>
-                    <div>
-                      <div class="flex items-center text-sm text-date-color md:text-base lg:text-xl xl:text-2xl">
-                        <div class="mr-2">posted</div>
-                        <div class="mx-2">10-11 November</div>
-                      </div>
-                    </div>
-
-                    <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                      <a href="/news_details.html">Dewali Festival</a>
-                    </div>
-                    <div>
-                      <div class="flex items-center text-sm text-date-color md:text-base lg:text-xl xl:text-2xl">
-                        <div class="mr-2">posted</div>
-                        <div class="mx-2">5-8 November</div>
-                      </div>
-                    </div>
-
-                    <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                      <a href="/news_details.html">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit.
-                      </a>
-                    </div>
-                    <div>
-                      <div class="flex items-center text-sm text-date-color md:text-base lg:text-xl xl:text-2xl">
-                        <div class="mr-2">posted</div>
-                        <div class="mx-2">5-8 November</div>
-                      </div>
-                    </div>
-
-                    <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                      <a href="/news_details.html">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </a>
-                    </div>
-                    <div>
-                      <div class="flex items-center text-sm text-date-color md:text-base lg:text-xl xl:text-2xl">
-                        <div class="mr-2">posted</div>
-                        <div class="mx-2">5-8 November</div>
-                      </div>
-                    </div>
+                    {dataMadhubanNews.map((data, i) => {
+                      return (
+                        <>
+                          <div class="text-redfull text-lg py-2 md:text-3xl xl:text-4xl mt-2">
+                            <a>{t(data.label)}</a>
+                          </div>
+                          <div>
+                            <div class="flex items-center text-sm text-date-color md:text-base lg:text-xl xl:text-2xl">
+                              <div class="mr-2">posted</div>
+                              <div class="mx-2"> {t(data.date)}</div>
+                            </div>
+                          </div>
+                        </>
+                      );
+                    })}
                   </div>
+
                   <div class="absolute bottom-8 right-0 left-0">
                     <h1 class="cursor-poainter text-5xl mt-4 flex justify-center text-gray-400 text-center">
                       <img
@@ -196,7 +171,7 @@ const News = () => {
                   </div>
                   <div class="metropolis_medium pl-4 md:pl-8 p-2 md:p-4 mb-8">
                     <div class="text-redfull text-lg py-2 md:text-3xl xl:text-4xl mt-2">
-                      <a href="/news_details.html">
+                      <a>
                         Recordings of Global Silence Retreat *(November 19-20)
                         now availabe
                       </a>
@@ -209,7 +184,7 @@ const News = () => {
                     </div>
 
                     <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                      <a href="/news_details.html">Avyakt BapDada</a>
+                      <a>Avyakt BapDada</a>
                     </div>
                     <div>
                       <div class="flex items-center text-sm text-date-color md:text-base lg:text-xl xl:text-2xl">
@@ -219,7 +194,7 @@ const News = () => {
                     </div>
 
                     <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                      <a href="/news_details.html">Dewali Festival</a>
+                      <a>Dewali Festival</a>
                     </div>
                     <div>
                       <div class="flex items-center text-sm text-date-color md:text-base lg:text-xl xl:text-2xl">
@@ -248,7 +223,7 @@ const News = () => {
 
                   <div class="metropolis_medium pl-4 md:pl-8 p-2 md:p-4 mb-8">
                     <div class="text-redfull text-lg py-2 md:text-3xl xl:text-4xl mt-2">
-                      <a href="/news_details.html">
+                      <a>
                         Recordings of Global Silence Retreat *(November 19-20)
                         now availabe
                       </a>
@@ -261,7 +236,7 @@ const News = () => {
                     </div>
 
                     <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                      <a href="/news_details.html">Avyakt BapDada</a>
+                      <a>Avyakt BapDada</a>
                     </div>
                     <div>
                       <div class="flex items-center text-sm text-date-color md:text-base lg:text-xl xl:text-2xl">
@@ -271,7 +246,7 @@ const News = () => {
                     </div>
 
                     <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                      <a href="/news_details.html">Dewali Festival</a>
+                      <a>Dewali Festival</a>
                     </div>
                     <div>
                       <div class="flex items-center text-sm text-date-color md:text-base lg:text-xl xl:text-2xl">
@@ -334,7 +309,7 @@ const News = () => {
                       <div class="accordionChildBody overflow-hidden bg-gray-200">
                         <div class="metropolis_medium pl-4 md:pl-8 p-2 md:p-4 mb-8">
                           <div class="text-redfull text-lg py-2 md:text-3xl xl:text-4xl mt-2">
-                            <a href="/news_details.html">
+                            <a>
                               Recordings of Global Silence Retreat *(November
                               19-20) now availabe
                             </a>
@@ -347,7 +322,7 @@ const News = () => {
                           </div>
 
                           <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                            <a href="/news_details.html">Avyakt BapDada</a>
+                            <a>Avyakt BapDada</a>
                           </div>
                           <div>
                             <div class="flex items-center text-date-color text-lg md:text-xl xl:text-2xl">
@@ -357,7 +332,7 @@ const News = () => {
                           </div>
 
                           <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                            <a href="/news_details.html">Dewali Festival</a>
+                            <a>Dewali Festival</a>
                           </div>
                           <div>
                             <div class="flex items-center text-date-color text-lg md:text-xl xl:text-2xl">
@@ -400,7 +375,7 @@ const News = () => {
                       <div class="accordionChildBody overflow-hidden bg-gray-200">
                         <div class="metropolis_medium pl-4 md:pl-8 p-2 md:p-4 mb-8">
                           <div class="text-redfull text-lg py-2 md:text-3xl xl:text-4xl mt-2">
-                            <a href="/news_details.html">
+                            <a>
                               Recordings of Global Silence Retreat *(November
                               19-20) now availabe
                             </a>
@@ -413,7 +388,7 @@ const News = () => {
                           </div>
 
                           <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                            <a href="/news_details.html">Avyakt BapDada</a>
+                            <a>Avyakt BapDada</a>
                           </div>
                           <div>
                             <div class="flex items-center text-date-color text-lg md:text-xl xl:text-2xl">
@@ -423,7 +398,7 @@ const News = () => {
                           </div>
 
                           <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                            <a href="/news_details.html">Dewali Festival</a>
+                            <a>Dewali Festival</a>
                           </div>
                           <div>
                             <div class="flex items-center text-date-color text-lg md:text-xl xl:text-2xl">
@@ -466,7 +441,7 @@ const News = () => {
                       <div class="accordionChildBody overflow-hidden bg-gray-200">
                         <div class="metropolis_medium pl-4 md:pl-8 p-2 md:p-4 mb-8">
                           <div class="text-redfull text-lg py-2 md:text-3xl xl:text-4xl mt-2">
-                            <a href="/news_details.html">
+                            <a>
                               Recordings of Global Silence Retreat *(November
                               19-20) now availabe
                             </a>
@@ -479,7 +454,7 @@ const News = () => {
                           </div>
 
                           <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                            <a href="/news_details.html">Avyakt BapDada</a>
+                            <a>Avyakt BapDada</a>
                           </div>
                           <div>
                             <div class="flex items-center text-date-color text-lg md:text-xl xl:text-2xl">
@@ -489,7 +464,7 @@ const News = () => {
                           </div>
 
                           <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                            <a href="/news_details.html">Dewali Festival</a>
+                            <a>Dewali Festival</a>
                           </div>
                           <div>
                             <div class="flex items-center text-date-color text-lg md:text-xl xl:text-2xl">
@@ -532,7 +507,7 @@ const News = () => {
                       <div class="accordionChildBody overflow-hidden bg-gray-200">
                         <div class="metropolis_medium pl-4 md:pl-8 p-2 md:p-4 mb-8">
                           <div class="text-redfull text-lg py-2 md:text-3xl xl:text-4xl mt-2">
-                            <a href="/news_details.html">
+                            <a>
                               Recordings of Global Silence Retreat *(November
                               19-20) now availabe
                             </a>
@@ -545,7 +520,7 @@ const News = () => {
                           </div>
 
                           <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                            <a href="/news_details.html">Avyakt BapDada</a>
+                            <a>Avyakt BapDada</a>
                           </div>
                           <div>
                             <div class="flex items-center text-date-color text-lg md:text-xl xl:text-2xl">
@@ -555,7 +530,7 @@ const News = () => {
                           </div>
 
                           <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                            <a href="/news_details.html">Dewali Festival</a>
+                            <a>Dewali Festival</a>
                           </div>
                           <div>
                             <div class="flex items-center text-date-color text-lg md:text-xl xl:text-2xl">
@@ -598,7 +573,7 @@ const News = () => {
                       <div class="accordionChildBody overflow-hidden bg-gray-200">
                         <div class="metropolis_medium pl-4 md:pl-8 p-2 md:p-4 mb-8">
                           <div class="text-redfull text-lg py-2 md:text-3xl xl:text-4xl mt-2">
-                            <a href="/news_details.html">
+                            <a>
                               Recordings of Global Silence Retreat *(November
                               19-20) now availabe
                             </a>
@@ -611,7 +586,7 @@ const News = () => {
                           </div>
 
                           <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                            <a href="/news_details.html">Avyakt BapDada</a>
+                            <a>Avyakt BapDada</a>
                           </div>
                           <div>
                             <div class="flex items-center text-date-color text-lg md:text-xl xl:text-2xl">
@@ -621,7 +596,7 @@ const News = () => {
                           </div>
 
                           <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                            <a href="/news_details.html">Dewali Festival</a>
+                            <a>Dewali Festival</a>
                           </div>
                           <div>
                             <div class="flex items-center text-date-color text-lg md:text-xl xl:text-2xl">
@@ -664,7 +639,7 @@ const News = () => {
                       <div class="accordionChildBody overflow-hidden bg-gray-200">
                         <div class="metropolis_medium pl-4 md:pl-8 p-2 md:p-4 mb-8">
                           <div class="text-redfull text-lg py-2 md:text-3xl xl:text-4xl mt-2">
-                            <a href="/news_details.html">
+                            <a>
                               Recordings of Global Silence Retreat *(November
                               19-20) now availabe
                             </a>
@@ -677,7 +652,7 @@ const News = () => {
                           </div>
 
                           <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                            <a href="/news_details.html">Avyakt BapDada</a>
+                            <a>Avyakt BapDada</a>
                           </div>
                           <div>
                             <div class="flex items-center text-date-color text-lg md:text-xl xl:text-2xl">
@@ -687,7 +662,7 @@ const News = () => {
                           </div>
 
                           <div class="text-redfull text-lg py-2 md:text-2xl xl:text-3xl">
-                            <a href="/news_details.html">Dewali Festival</a>
+                            <a>Dewali Festival</a>
                           </div>
                           <div>
                             <div class="flex items-center text-date-color text-lg md:text-xl xl:text-2xl">
@@ -741,5 +716,4 @@ const News = () => {
     </div>
   );
 };
-
 export default News;
