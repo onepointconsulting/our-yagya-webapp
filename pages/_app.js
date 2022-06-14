@@ -3,7 +3,7 @@ import { appWithTranslation } from 'next-i18next'
 import '../lib/i18n'
 import '../assets/css/styles.css'
 import { createContext } from 'react'
-import Header from '../components/Header'
+import Header from '../components/header/Header'
 import Footer from '../components/Footer'
 import { OurYagyaContextProvider } from '../context/OurYagyaContext'
 
