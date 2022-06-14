@@ -35,7 +35,7 @@ const StickyMenu = () => {
 
   return (
     // <!-- gmenu with gray backgorund -->
-    <div className="relative pt-0">
+    <div className=" hidden lg:block relative pt-0">
       <div className="filosofia_regular absolute inset-0 bg-grayDark flex-wrap md:flex flex-row items-center md:justify-around p-2 lg:justify-evenly text-center mx-auto w-full">
         {/* stick menu */}
         <Link href="/">
