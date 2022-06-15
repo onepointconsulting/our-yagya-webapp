@@ -1,3 +1,4 @@
+import DefaultMenu from '../components/DefaultMenu'
 import HomeHero from '../components/HomeHero'
 import LinksHome from '../components/LinksHome'
 import Recources from '../components/Resources'
