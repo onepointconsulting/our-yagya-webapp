@@ -47,7 +47,7 @@ const HomeHero = () => {
             <div className="metropolis_medium p-4 overflow-y-auto h-80 ">
               {eventsData.map((data, i) => {
                 return (
-                  <>
+                  <div key={i}>
                     <div className="text-title-conf-color text-lg md:text-2xl mt-2">
                       {t(data.label)}
                     </div>
@@ -57,7 +57,7 @@ const HomeHero = () => {
                         {t(data.date)}{" "}
                       </span>
                     </div>
-                  </>
+                  </div>
                 );
               })}
             </div>
@@ -84,7 +84,7 @@ const HomeHero = () => {
             <div className="metropolis_medium p-4 overflow-y-auto h-80 ">
               {eventsData.map((data, i) => {
                 return (
-                  <>
+                  <div key={i}>
                     <div className="text-title-conf-color text-lg md:text-2xl mt-2">
                       {t(data.label)}
                     </div>
@@ -94,7 +94,7 @@ const HomeHero = () => {
                         {t(data.date)}{" "}
                       </span>
                     </div>
-                  </>
+                  </div>
                 );
               })}
             </div>
@@ -121,7 +121,7 @@ const HomeHero = () => {
             <div className="metropolis_medium p-4 overflow-y-auto h-80 ">
               {eventsData.map((data, i) => {
                 return (
-                  <>
+                  <div key={i}>
                     <div className="text-title-conf-color text-lg md:text-2xl mt-2">
                       {t(data.label)}
                     </div>
@@ -131,7 +131,7 @@ const HomeHero = () => {
                         {t(data.date)}{" "}
                       </span>
                     </div>
-                  </>
+                  </div>
                 );
               })}
             </div>

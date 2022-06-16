@@ -58,8 +58,8 @@ const StickyMenu = () => {
         </Link>
         {topMenuData.map((data, i) => {
           return (
-            <>
-              <Link href={data.link} key={i}>
+            <div key={i}>
+              <Link href={data.link} >
                 <a className="text-gray-100 px-2 text-sm lg:text-2xl xl:text-4xl whitespace-nowrap">
                   {t(data.label)}
                 </a>
@@ -67,7 +67,7 @@ const StickyMenu = () => {
               {i < topMenuData.length - 1 && (
                 <a className="text-white">|</a>
               )}
-            </>
+            </div>
           );
         })}
       </div>
@@ -76,8 +76,8 @@ const StickyMenu = () => {
       <div className="bg-green-400 relative filosofia_regular bg-grayDark flex-wrap md:flex flex-row items-end md:justify-around p-2 lg:justify-evenly text-center mx-auto w-full">
         {topMenuData.map((data, i) => {
           return (
-            <>
-              <Link href={data.link} key={i}>
+            <div key={i}>
+              <Link href={data.link}>
                 <a className="text-gray-100 px-2 text-sm lg:text-2xl xl:text-4xl whitespace-nowrap">
                   {t(data.label)}
                 </a>
@@ -85,7 +85,7 @@ const StickyMenu = () => {
               {i < topMenuData.length - 1 && (
                 <a className="text-white">|</a>
               )}
-            </>
+            </div>
           );
         })}
       </div>

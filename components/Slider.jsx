@@ -21,7 +21,8 @@ const Slider = () => {
         }}>
             <SplideSlide>
                 {/* <!-- second slide --> */}
-                <li className="splide__slide"
+               <ul>
+               <li className="splide__slide"
                 style={{ padding: "0px" }}
                 >
                     {/* <!-- first slide --> */}
@@ -79,10 +80,12 @@ const Slider = () => {
                         </div>
                     </div>
                 </li>
+               </ul>
             </SplideSlide>
 
             <SplideSlide>
                 {/* <!-- second slide --> */}
+                <ul>
                 <li className="splide__slide">
                     {/* <!-- first slide --> */}
                     <div className="metropolis_medium mx-auto bg-home_page_top_bg w-full shadow-md overflow-hidden max-w-full">
@@ -139,6 +142,7 @@ const Slider = () => {
                         </div>
                     </div>
                 </li>
+                </ul>
             </SplideSlide>
         </Splide>
 

@@ -1,6 +1,16 @@
-import Link from 'next/link'
+import { useEffect } from 'react'
+import { fetchMenus } from '../../lib/apiClient'
 
 const PillMenu = () => {
+    
+    useEffect(() => {
+        fetchMenus()
+            .then(res => console.log('menu results', res))
+            .catch((e) => console.error("Failed to fetch menus", e))
+    }, [])
+
+
+    
     return (
         <div id="floatingMenuItems" className="stickyButtons hide">
             <div className="sticky top-16">
