@@ -9,8 +9,6 @@ const PillMenu = () => {
             .catch((e) => console.error("Failed to fetch menus", e))
     }, [])
 
-
-    
     return (
         <div id="floatingMenuItems" className="stickyButtons hide">
             <div className="sticky top-16">

@@ -30,8 +30,10 @@ const topMenuData = [
     label: "more",
   },
 ];
-const StickyMenu = () => {
+const MainMenu = () => {
   const { t } = useTranslation();
+
+  // TODO: use useContext to to fetch the menu data and replace the top menu data
 
   return (
     // <!-- gmenu with gray backgorund -->
@@ -93,4 +95,4 @@ const StickyMenu = () => {
   );
 };
 
-export default StickyMenu;
+export default MainMenu;

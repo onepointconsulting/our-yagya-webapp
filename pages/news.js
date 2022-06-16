@@ -2,12 +2,12 @@ import LinksHome from '../components/LinksHome'
 import News from '../components/News'
 import Recources from '../components/Resources'
 import Slider from '../components/Slider'
-import StickyMenu from '../components/StickyMenu'
+import MainMenu from '../components/MainMenu'
 
 export default function Home() {
   return (
     <>
-      <StickyMenu />
+      <MainMenu />
       <Slider />
       <News />
       <Recources />

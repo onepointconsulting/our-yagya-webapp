@@ -6,6 +6,7 @@ import { createContext } from 'react'
 import Header from '../components/header/Header'
 import Footer from '../components/Footer'
 import { OurYagyaContextProvider } from '../context/OurYagyaContext'
+import { fetchFooterFata } from '../lib/apiClient'
 
 export const GlobalContext = createContext({})
 
@@ -22,7 +23,7 @@ function OurYagya ({ Component, pageProps }) {
         <GlobalContext.Provider value={global}>
             <OurYagyaContextProvider>
                 <Header/>
-                    <Component {...pageProps} />
+                <Component {...pageProps} />
                 <Footer/>
             </OurYagyaContextProvider>
         </GlobalContext.Provider>
@@ -32,7 +33,18 @@ function OurYagya ({ Component, pageProps }) {
 OurYagya.getInitialProps = async (ctxContainer) => {
     // Calls page's `getInitialProps` and fills `appProps.pageProps`
     const appProps = await App.getInitialProps(ctxContainer)
-    return { ...appProps, pageProps: { global: {} } }
+    const footerData = await fetchFooterFata()
+    // TODO: read the menu items
+    console.log('footer results', footerData)
+    return {
+        ...appProps,
+        pageProps: {
+            global: {
+                footerData: footerData['data']['footers']['data'],
+                // TODO: inject the menu items meneData
+            },
+        },
+    }
 }
 
 export default appWithTranslation(OurYagya)
