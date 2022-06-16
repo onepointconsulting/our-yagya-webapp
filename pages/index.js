@@ -4,12 +4,12 @@ import Recources from '../components/Resources'
 import Slider from '../components/Slider'
 import StickyMenu from '../components/StickyMenu'
 import { useEffect } from 'react'
-import { fetchFooters } from '../lib/apiClient'
+import { FETCH_FOOTERS_DATA } from '../lib/apiClient'
 
 export default function Home() {
 
     useEffect(() => {
-        fetchFooters()
+        FETCH_FOOTERS_DATA()
             .then(res => console.log('footer results', res))
             .catch((e) => console.error("Failed to fetch footers", e))
     }, [])

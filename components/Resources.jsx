@@ -42,14 +42,14 @@ const Recources = () => {
                 <div className="flex-wrap md:flex flex-row items-end md:justify-around lg:justify-evenly text-center mx-auto w-full">
                     {linksData.map((d, i) => {
                         return (
-                            <>
-                                <Link href={d.link} key={i}>
+                            <div key={i}>
+                                <Link href={d.link}>
                                     <a className="text-home_page_center_nav_text px-2 text-sm lg:text-3xl xl:text-4xl  whitespace-nowrap">
                                         {t(d.label)}
                                     </a>
                                 </Link>
                                 {i < linksData.length - 1 && <a className="text-home_page_center_nav_text">|</a>}
-                            </>
+                            </div>
                         )
                     })}
                 </div>

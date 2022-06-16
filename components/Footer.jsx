@@ -1,38 +1,10 @@
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
+import { ApolloClient, InMemoryCache } from "@apollo/client";
+import { FETCH_FOOTERS_DATA } from "../lib/apiClient";
+import apolloClient from "../lib/apolloClient";
 
-const footerData = [
-  {
-    link: "/",
-    label: "Our Yagya",
-  },
-  {
-    link: "/",
-    label: "Signup For Seva",
-  },
-  {
-    link: "/",
-    label: "FAQ",
-  },
-  {
-    link: "/",
-    label: "contact us",
-  },
-  {
-    link: "/",
-    label: "terms of use",
-  },
-  {
-    link: "/",
-    label: "site map",
-  },
-  {
-    link: "/",
-    label: "Privacy Policy",
-  },
-];
-
-const Footer = () => {
+const Footer = ({ footers }) => {
   const { t } = useTranslation();
 
   return (
@@ -48,23 +20,23 @@ const Footer = () => {
       </div>
 
       <div className="md:pr-4 lg:pr-8">
-        {footerData.map((data, i) => {
+        {footers && footers.map((footer) => {
           return (
             <>
-              <Link href={data.link} key={i}>
+              <Link key={footer.id}>
                 <a className="capitalize text-[19px] md:text-lg lg:text-2xl xl:text-3xl">
-                  {t(data.label)}
+                  {t(footer.name)}
                 </a>
               </Link>
 
-              {i < footerData.length - 1 && (
+              {i < footers.length - 1 && (
                 <a className="px-2"> |</a>
               )}
             </>
           );
         })}
       </div>
-      
+
       <div className="md:hidden md:md:pl-4 lg:pl-8">
         <Link href="/">
           <a className="capitalize text-[19px] md:text-lg lg:text-2xl xl:text-3xl">
@@ -76,5 +48,23 @@ const Footer = () => {
     </footer>
   );
 };
+
+export async function retriveFooterData (){
+  const client = new ApolloClient({
+    uri: 'http://localhost:1337/api/footers',
+    cache: new InMemoryCache(),
+  });
+
+
+  const { data } = await apolloClient.query({ query: FETCH_FOOTERS_DATA })
+
+  return {
+    props: {
+      footers: data.footers
+    }
+  }
+
+}
+
 
 export default Footer;
