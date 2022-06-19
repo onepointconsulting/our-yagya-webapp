@@ -1,11 +1,29 @@
 import Link from 'next/link'
+import { useContext } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Parallax } from 'react-scroll-parallax'
+import { GlobalContext } from '../pages/_app'
 
-const LinksHome = () => {
+
+const linksDirectoryAdeptor = (linksData) => {
+    return linksData.map(link_data => {
+        const links = link_data['attributes']['Name']
+        return {
+            name: links.name,
+            description: links.description,
+            link: links.link,
+        }
+    })
+}
+
+const LinksDirectory = () => {
     const { t } = useTranslation()
+    const { linksData } = useContext(GlobalContext)
+    const links = linksDirectoryAdeptor(linksData)
+    console.log("linksData", linksData);
 
     return (
-        <div className="lg:flex mt-3 mb-3 lg:px-6 py-8">
+        <Parallax speed={-5} className="lg:flex mt-3 mb-3 lg:px-6 py-8">
             <div
                 className="w-auto md:w-11/12 lg:w-2/5 md:mb-4text-gray-900 text-xl bg-links_directory relative mr-4 ml-4 md:mr-auto md:ml-auto">
                 <div className="bg-button-color capitalize p-2 md:p-4 text-Filosofia italic">
@@ -14,52 +32,23 @@ const LinksHome = () => {
                     </h1>
                 </div>
 
-                <div
-                    className="links pb-12 mb-4 md:mb-auto md:pb-auto overflow-y-auto lg:overflow-y-none h-72 md:h-auto lg:h-4/6 metropolis_medium ml-3 mr-3 lg:mr-0 lg:ml-5 md:pt-2 lg:pt-4">
-                    <div
-                        className="md:pl-2 md:p-1 lg:p-2 text-title-conf-color text-lg md:text-xl lg:text-1xl xl:text-3xl mt-2 capitalize">
+                <div className="links pb-12 mb-4 md:mb-auto md:pb-auto overflow-y-auto lg:overflow-y-none h-72 md:h-auto lg:h-4/6 metropolis_medium ml-3 mr-3 lg:mr-0 lg:ml-5 md:pt-2 lg:pt-4">
+                    {!!links && links.map((linkData, index) => {
+                        return (
+                            <>
+                                <Link href="/" key={index}>
+                                    <a className="md:pl-2 md:p-1 lg:p-2 text-title-conf-color text-lg md:text-xl lg:text-1xl xl:text-3xl mt-2 capitalize">
 
-                        {t('Murli Download')}
+                                        {t(linkData.name)}
+                                    </a>
 
-                    </div>
-                    <Link href="/">
+                                </Link>
+                            </>
 
-                        <a
-                            className="md:pl-2 md:p-1 lg:p-2 -mt-2 text-date-color text-lg md:text-xl lg:text-1xl xl:text-3xl capitalize">
-                            {t('(Login Required)')}
-
-                        </a>
-                    </Link>
-                    <div
-                        className="md:pl-2 md:p-1 lg:p-2 text-title-conf-color text-lg md:text-xl lg:text-1xl xl:text-3xl capitalize">
-
-                        {t('  Madhuban Murli')}
-
-                    </div>
-                    <div
-                        className="md:pl-2 md:p-1 lg:p-2 text-title-conf-color text-lg md:text-xl lg:text-1xl xl:text-3xl capitalize">
-
-                        {t(' Avyakt BapDada online')}
-
-                    </div>
-
-                    <div
-                        className="md:pl-2 md:p-1 lg:p-2 text-title-conf-color text-lg md:text-xl lg:text-1xl xl:text-3xl capitalize">
-
-                        {t('BKUN')}
-
-                    </div>
-                    <div
-                        className="md:pl-2 md:p-1 lg:p-2 text-title-conf-color text-lg md:text-xl lg:text-1xl xl:text-3xl capitalize">
-
-                        {t('  green team')}
-
-                    </div>
-                    <div className="md:pl-2 md:p-1 lg:p-2 text-title-conf-color text-lg md:text-xl lg:text-1xl xl:text-3xl">
-                        {t(' etc...')}
+                        )
+                    })}
 
 
-                    </div>
                     <div className="absolute bottom-4 right-0 left-0">
                         <h1 className="cursor-poainter text-5xl mt-4 flex justify-center text-gray-400 text-center">
                             <Link href="/links">
@@ -112,8 +101,8 @@ const LinksHome = () => {
 
                 </div>
             </div>
-        </div>
+        </Parallax>
     )
 }
 
-export default LinksHome
+export default LinksDirectory

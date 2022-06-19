@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import { Parallax } from "react-scroll-parallax";
 
 const eventsData = [
   {
@@ -35,7 +36,7 @@ const eventsData = [
 const HomeHero = () => {
   const { t } = useTranslation();
   return (
-    <div className="w-full flex flex-col items-center">
+    <Parallax speed={6} className="w-full flex flex-col items-center">
       <div className="imageBack w-full mb-auto lg:flex justify-center bg-opacity-75 h-auto">
         <div className="lg:flex justify-center items-end pt-4 lg:pt-72 pb-4 mr-4 ml-4 md:mr-auto md:ml-auto">
           <div className="fadeInLeft bg-gray-200 bg-opacity-95 lg:m-4 md:mr-auto md:ml-auto  w-auto md:w-4/5 lg:w-72 xl:w-96 h-full pb-12 xl:pb-16 relative mb-2 lg:mb-0">
@@ -150,7 +151,7 @@ const HomeHero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Parallax>
   );
 };
 

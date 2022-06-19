@@ -21,7 +21,9 @@ body {
   -webkit-animation: translate 0.5s;
           animation: translate 0.5s;
 }
-
+.stickyMenu{
+  margin-top: -56px;
+}
 /* -----------------------------------------------------------------------> end animations <-------------------------------------------------- */
 
 
@@ -67,16 +69,26 @@ body {
   margin-top: -58px;
 }
 
-.navbar1 {
-  /* margin-top: -108px; */
-  /* background-color: green; */
-}
 /*  -----------------------------------------------------> end testing fonts <---------------------------------------------------------------*/
 
 
 /* ------------------------------------------------------> start custome styles <-----------------------------------------------------------------  */
 
+/* Sticky menu style */
+@media screen and (max-width: 1024px) {
+  .stickyMenu {
+    margin-top: -53px;
+  }
+}
 
+@media screen and (min-width: 1440px) {
+  .RedStickyNavBar {
+    margin-top: auto;
+  }
+}
+
+
+/* Calander styles */
 tbody tr td {
   border-left: 1px solid rgb(123, 120, 120);
   border-top: 1px solid rgb(123, 120, 120);
@@ -4540,13 +4552,14 @@ iframe {
   background: rgb(121, 118, 118);
   border-radius: 50px;
 }
-
 .stickyButtons {
+  display: none;
+}
+.stickyButtons.showBtn {
   position: absolute;
+  display:block;
   top: 0;
-  z-index: 1;
-  transition: all 1s;
-
+  right: 0;
 }
 .bottomSubMenu {
   display: block;

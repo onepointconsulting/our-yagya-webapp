@@ -10,8 +10,6 @@ const Slider = () => {
     const { t } = useTranslation()
 
     return (
-
-
         <Splide aria-label="My slider" options={{
             type: "loop",
             arrows: false,

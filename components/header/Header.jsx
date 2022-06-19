@@ -47,7 +47,7 @@ const Header = () => {
 
             {/* <!-- Header --> */}
             <div className="fadeInTop flex-wrap lg:flex flex-row justify-center lg:justify-between items-end w-full pb-2 md:pb-4 lg:pb-1 relative bg-white shadow-md"
-                style={{ zIndex: '5' }}>
+                >
                 {/* <!-- Logo and Search icon on the left side  --> */}
             <SearchIcon />
 

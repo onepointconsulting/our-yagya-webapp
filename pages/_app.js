@@ -6,7 +6,7 @@ import { createContext } from 'react'
 import Header from '../components/header/Header'
 import Footer from '../components/Footer'
 import { OurYagyaContextProvider } from '../context/OurYagyaContext'
-import { fetchFooterFata } from '../lib/apiClient'
+import { fetchFooterFata, fetchLinksData, fetchMenusData } from '../lib/apiClient'
 
 export const GlobalContext = createContext({})
 
@@ -32,15 +32,23 @@ function OurYagya ({ Component, pageProps }) {
 
 OurYagya.getInitialProps = async (ctxContainer) => {
     // Calls page's `getInitialProps` and fills `appProps.pageProps`
-    const appProps = await App.getInitialProps(ctxContainer)
-    const footerData = await fetchFooterFata()
+    const appProps = await App.getInitialProps(ctxContainer);
+    const footerData = await fetchFooterFata();
     // TODO: read the menu items
-    console.log('footer results', footerData)
+    const menuData = await fetchMenusData();
+
+    // Links data
+    const linksData = await fetchLinksData();
+
+    console.log("The links data fetched.", linksData)
+    
     return {
         ...appProps,
         pageProps: {
             global: {
                 footerData: footerData['data']['footers']['data'],
+                menuData: menuData['data']['menus']['data'],
+                linksData: linksData['data']['links']['data'],
                 // TODO: inject the menu items meneData
             },
         },
