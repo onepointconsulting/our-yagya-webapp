@@ -34,7 +34,6 @@ OurYagya.getInitialProps = async (ctxContainer) => {
     // Calls page's `getInitialProps` and fills `appProps.pageProps`
     const appProps = await App.getInitialProps(ctxContainer);
     const footerData = await fetchFooterFata();
-    // TODO: read the menu items
     const menuData = await fetchMenusData();
 
     // Links data
@@ -49,7 +48,7 @@ OurYagya.getInitialProps = async (ctxContainer) => {
                 footerData: footerData['data']['footers']['data'],
                 menuData: menuData['data']['menus']['data'],
                 linksData: linksData['data']['links']['data'],
-                // TODO: inject the menu items meneData
+                // inject the menu items meneData
             },
         },
     }

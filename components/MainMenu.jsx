@@ -3,23 +3,21 @@ import { useTranslation } from "react-i18next";
 import { useContext } from "react";
 import { GlobalContext } from "../pages/_app";
 
-const mainMenuAdapter = (menuData) => {
-  return menuData.map((md) => {
-    const entry = md["attributes"]["Entry"];
-    console.log("title", entry);
+export const mainMenuAdapter = (menuData) => {
+  const arr = menuData[0].attributes['Entry']
+  return arr.map((md) => {
     return {
-      link: entry.link,
-      title: entry.title,
+      link: md.link,
+      title: md.title
     };
   });
 };
 
 const MainMenu = () => {
   const { t } = useTranslation();
-  // TODO: use useContext to to fetch the menu data and replace the top menu data
+  // use useContext to to fetch the menu data and replace the top menu data
   const { menuData } = useContext(GlobalContext);
   const menus = mainMenuAdapter(menuData);
-  console.log("menu menuData", menuData);
 
   return (
     <div className="hidden lg:block z-30 relative">
@@ -33,7 +31,7 @@ const MainMenu = () => {
               <div key={i}>
                 <Link href="/">
                   <a className="text-gray-100 px-2 text-sm lg:text-2xl xl:text-4xl whitespace-nowrap">
-                    {t("Home")}
+                    {menu.title}
                   </a>
                 </Link>
                 {i < menus.length - 1 && <a className="text-white text-sm lg:text-2xl xl:text-4xl ml-8 pt-[3px]">|</a>

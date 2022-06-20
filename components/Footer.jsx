@@ -15,6 +15,7 @@ const footerAdapter = (footerData) => {
 
 const Footer = () => {
     const { footerData } = useContext(GlobalContext)
+    console.info('footerData', JSON.stringify(footerData))
     const { t } = useTranslation()
 
     const footers = footerAdapter(footerData)
