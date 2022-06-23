@@ -10,7 +10,7 @@ const Header = () => {
     const { t } = useTranslation()
 
     return (
-        <div className="metropolis_medium bg-white HeaderClassName">
+        <div className="metropolis_medium bg-white relative z-30">
             {/* <!-- sticky buttons on top right --> */}
             <PillMenu />
             {/* <!-- sticky search menu on top left--> */}
@@ -46,10 +46,9 @@ const Header = () => {
             </div>
 
             {/* <!-- Header --> */}
-            <div className="fadeInTop flex-wrap lg:flex flex-row justify-center lg:justify-between items-end w-full pb-2 md:pb-4 lg:pb-1 relative bg-white shadow-md"
-                >
+            <div className="fadeInTop flex-wrap lg:flex flex-row justify-center lg:justify-between items-end w-full pb-2 md:pb-4 lg:pb-1 relative bg-white shadow-md z-30">
                 {/* <!-- Logo and Search icon on the left side  --> */}
-            <SearchIcon />
+                <SearchIcon />
 
                 {/* <!-- center logo and title --> */}
                 <div className="mx-auto self-baseline basis-1/2 text-center flex flex-col items-center">

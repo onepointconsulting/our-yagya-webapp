@@ -1,0 +1,13 @@
+[
+    {
+        "attributes": {
+            "items": {
+                "title": "Our yagya",
+                "link": "/yagya",
+                "__typename": "ComponentFooterFooterItems"
+            },
+            "__typename": "Footer"
+        },
+        "__typename": "FooterEntity"
+    },
+]

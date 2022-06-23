@@ -1,10 +1,6 @@
-import { mainMenuAdapter } from '../../components/MainMenu'
+import { footerAdapter } from '../../components/Footer'
 
-describe('mainMenuAdapter2', () => {
-    it('converts GraphQL JSON to MainMenu JSON2', () => {
-        const graphql = `[{"attributes":{"Entry":[{"title":"home","link":"/home","__typename":"ComponentEntryComEntry"},{"title":"events","link":"/events","__typename":"ComponentEntryComEntry"},{"title":"classes & talks","link":"/classes","__typename":"ComponentEntryComEntry"},{"title":"news","link":"/news","__typename":"ComponentEntryComEntry"},{"title":"resources","link":"/resources","__typename":"ComponentEntryComEntry"},{"title":" links directory","link":"/links","__typename":"ComponentEntryComEntry"}],"__typename":"Menu"},"__typename":"MenuEntity"}]`
-        const menuData = mainMenuAdapter(JSON.parse(graphql))
-        expect(menuData.length).toBe(6)
-        expect(menuData[0].title).toBe("home")
+describe('footerAdapte1', () => {
+    it('converts GraphQL JSON to Footer JSON2', () => {  `[{"attributes":{"items":{"title":"Our yagya","link":"/yagya","__typename":"ComponentFooterFooterItems"},"__typename":"Footer"},"__typename":"FooterEntity"},{"attributes":{"items":{"title":"Signup For Seva","link":"/Signup_For_Seva","__typename":"ComponentFooterFooterItems"},"__typename":"Footer"},"__typename":"FooterEntity"},{"attributes":{"items":{"title":" FAQ","link":"/ FAQ","__typename":"ComponentFooterFooterItems"},"__typename":"Footer"},"__typename":"FooterEntity"}]`
     })
 })

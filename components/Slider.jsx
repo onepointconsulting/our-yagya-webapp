@@ -6,9 +6,11 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 // Default theme
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 
-const Slider = () => {
+const Slider = (homePageData) => {
     const { t } = useTranslation()
-
+    
+    // The result is an empty object.
+    console.log("home Page Data", homePageData);
     return (
         <Splide aria-label="My slider" options={{
             type: "loop",
@@ -147,4 +149,12 @@ const Slider = () => {
     )
 }
 
+
+// get server side props; 
+export async function getServerSideProps(context) {
+    const fetchHomePageData = await fetch('http://localhost:1337/api/page-layouts')
+    const data = await fetchHomePageData.json()
+    console.log("Page layout data", fetchHomePageData)
+    return { props: { homePageData: data } }
+}
 export default Slider

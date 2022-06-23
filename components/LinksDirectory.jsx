@@ -35,15 +35,15 @@ const LinksDirectory = () => {
                 <div className="links pb-12 mb-4 md:mb-auto md:pb-auto overflow-y-auto lg:overflow-y-none h-72 md:h-auto lg:h-4/6 metropolis_medium ml-3 mr-3 lg:mr-0 lg:ml-5 md:pt-2 lg:pt-4">
                     {!!links && links.map((linkData, index) => {
                         return (
-                            <>
-                                <Link href="/" key={index}>
+                            <div key={index}>
+                                <Link href="/">
                                     <a className="md:pl-2 md:p-1 lg:p-2 text-title-conf-color text-lg md:text-xl lg:text-1xl xl:text-3xl mt-2 capitalize">
 
                                         {t(linkData.name)}
                                     </a>
 
                                 </Link>
-                            </>
+                            </div>
 
                         )
                     })}

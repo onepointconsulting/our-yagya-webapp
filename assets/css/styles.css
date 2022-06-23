@@ -4547,63 +4547,31 @@ iframe {
   border-radius: 50px;
 }
 
+/* sticky pill menu */
+.sticky-wrapper {
+  position: relative;
+  height: 3rem; /* We need to change this value */
+}
+
+.pill-menu  {
+  /* fixed top-16 right-0 block */
+  position: fixed;
+  top: 4rem;
+  right: 0;
+  display: block;
+}
+.showing {
+  display: block;
+}
+.hide{
+  display: none;
+}
 /* Handle */
 .reading_articale::-webkit-scrollbar-thumb {
   background: rgb(121, 118, 118);
   border-radius: 50px;
 }
-.stickyButtons {
-  display: none;
-}
-.stickyButtons.showBtn {
-  position: absolute;
-  display:block;
-  top: 0;
-  right: 0;
-}
-.bottomSubMenu {
-  display: block;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  background-color: red;
-  transition: all 0.5s;
-  z-index: 1;
-}
 
-.hide {
-  position: absolute;
-  right: 0px;
-  opacity: 0;
-  top: -100%;
-  transition: all 1s;
-
-}
-
-.show2 {
-  opacity: 1;
-  z-index: 1;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  height: -webkit-fill-available;
-  transition: all 2s;
-}
-
-
-.hide1 {
-  display: none;
-  opacity: 0;
-  top: -100%;
-}
-
-.show1 {
-  opacity: 1;
-  top: 0;
-}
-.showNone {
-  display: none;
-}
 @media only screen and (max-width: 1026px) {
   #show1 {
       display: none;
@@ -4678,7 +4646,32 @@ z-index: 81;
       -webkit-transform: translateX(0);
   }
 }
+/* Fade in top for menu */
+.fadeInTopMenu {
+  -webkit-animation: fadeInTopMenu 2s both;
+  animation: fadeInTopMenu 2s both;
+}
 
+@-webkit-keyframes fadeInTopMenu {
+  0% {
+      opacity: 0;
+      -webkit-transform: translateY(-50px);
+  }
+  100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+  }
+}
+
+.fadeOutTopMenu {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 3s, opacity 3s linear;
+  -webkit-transition: visibility 0s 3s, opacity 3s linear;
+  -moz-transition: visibility 0s 3s, opacity 3s linear;
+  -ms-transition: visibility 0s 3s, opacity 3s linear;
+  -o-transition: visibility 0s 3s, opacity 3s linear;
+}
 
 /* Fade in top */
 .fadeInTop {

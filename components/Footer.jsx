@@ -19,7 +19,6 @@ const Footer = () => {
     const { t } = useTranslation()
 
     const footers = footerAdapter(footerData)
-    console.log('footerData', footerData)
 
     return (
         // <!-- Footer -->
