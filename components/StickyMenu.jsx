@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { useContext } from "react";
 import { GlobalContext } from "../pages/_app";
+import useMenuScrollHooks from '../hooks/useMenuScrollHook'
 
 export const mainMenuAdapter = (menuData) => {
   const arr = menuData[0].attributes['Entry'];
@@ -18,24 +19,15 @@ export const mainMenuAdapter = (menuData) => {
 
 
 const StickyMenu = () => {
+
+  const [stickyPillMenu] = useMenuScrollHooks()
+
   const { t } = useTranslation();
   const { menuData } = useContext(GlobalContext);
   const menus = mainMenuAdapter(menuData);
-  const [stickyMenu, setStickyMenu] = useState(false);
-  const windowHeightSize = 270;
 
-  const displayMenu = () => {
-    if (window.scrollY >= windowHeightSize) {
-      setStickyMenu(true)
-    } else {
-      setStickyMenu(false)
-    }
-  }
-  if (typeof window !== 'undefined') {
-    window.addEventListener("scroll", displayMenu)
-  }
   return (
-    <div className={stickyMenu ? "fadeInTopMenu opacity-100	z-10 transition duration-150 ease-in-out sticky top-0 z-10 hidden lg:block" : "fadeOutTopMenu hidden"}>
+    <div className={stickyPillMenu ? "fadeInTopMenu opacity-100	z-10 transition duration-150 ease-in-out sticky top-0 z-10 hidden lg:block" : "fadeOutTopMenu hidden"}>
       <div className="filosofia_regular bg-grayDark flex-wrap md:flex flex-row items-center md:justify-around p-2 text-center mx-auto w-full">
         {/* stick menu */}
         <a

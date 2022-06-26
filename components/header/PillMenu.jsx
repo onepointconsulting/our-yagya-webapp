@@ -1,20 +1,8 @@
-import { useState } from 'react'
+import useMenuScrollHooks from '../../hooks/useMenuScrollHook'
 
 const PillMenu = () => {
-    const [stickyPillMenu, setStickyPillMenu] = useState(false);
-    const windowHeight = 222;
-    function sitckyPillMenu() {
-        if (window.scrollY >= windowHeight) {
-            setStickyPillMenu(true)
-        } else {
-            setStickyPillMenu(false)
-        }
-    }
 
-    if (typeof window !== 'undefined') {
-        window.addEventListener("scroll", sitckyPillMenu)
-    }
-
+    const [stickyPillMenu] = useMenuScrollHooks()
 
     return (
         <div className='hidden lg:block'>
