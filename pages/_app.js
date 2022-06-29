@@ -47,8 +47,7 @@ OurYagya.getInitialProps = async (ctxContainer) => {
             global: {
                 footerData: footerData['data']['footers']['data'],
                 menuData: menuData['data']['menus']['data'],
-                linksData: linksData['data']['links']['data'],
-                // inject the menu items meneData
+                linksData: linksData['data']['links']['data']
             },
         },
     }

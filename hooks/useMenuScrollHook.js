@@ -1,14 +1,12 @@
 import { useEffect, useState } from 'react'
 
-const MINIMUM_WINDOW_HEIGHT = 222
 
 const useMenuScrollHooks = () => {
     const [stickyPillMenu, setStickyPillMenu] = useState(false);
-    const windowHeight = MINIMUM_WINDOW_HEIGHT;
+    const windowHeight = 222;
 
     useEffect(() => {
         const scrollListener = (e) => {
-            console.info("onScroll")
             if (window.scrollY >= windowHeight) {
                 setStickyPillMenu(true)
             } else {
