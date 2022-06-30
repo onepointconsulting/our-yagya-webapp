@@ -4,95 +4,18 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 // Default theme
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 
-// const sliderAdapter = (data) => {
-//   // TODO: extract slider data from GraphQL response
-//   const slideData = sliderData["data"]["pageLayouts"]["attributes"]["slider"];
-//   return console.log("slideData", slideData);
-// };
+export function sliderAdapter(data) {
+  if (!!data && data.data) {
+    return data?.data?.pageLayouts.data[0]?.attributes.slider.slides
+  }
+  return []
+}
 
-const Slider = ({ data }) => {
+const Slider = ({data}) => {
   const { t } = useTranslation();
 
-  const sliderDataObject = [
-    {
-      data: {
-        pageLayouts: {
-          data: [
-            {
-              attributes: {
-                title: "Home",
-                subtitle: "Our project",
-                slider: {
-                  title:
-                    "She was undergoing treatment at Saifee Hospital in Mumbai for the past 15 day",
-                  slides: [
-                    {
-                      id: "1",
-                      image: {
-                        data: [
-                          {
-                            id: "4",
-                            __typename: "UploadFileEntity",
-                          },
-                        ],
-                        __typename: "UploadFileRelationResponseCollection",
-                      },
-                      title: "Prime Minister Narendra Modi",
-                      subtitle: "Prime Minis a Modi",
-                      __typename: "ComponentSlidesComSlides",
-                    },
-                    {
-                      id: "3",
-                      image: {
-                        data: [
-                          {
-                            id: "5",
-                            __typename: "UploadFileEntity",
-                          },
-                        ],
-                        __typename: "UploadFileRelationResponseCollection",
-                      },
-                      title: "Another slider",
-                      subtitle: "sub title for another slider",
-                      __typename: "ComponentSlidesComSlides",
-                    },
-                    {
-                      id: "2",
-                      image: {
-                        data: [
-                          {
-                            id: "4",
-                            __typename: "UploadFileEntity",
-                          },
-                        ],
-                        __typename: "UploadFileRelationResponseCollection",
-                      },
-                      title: "some more slider",
-                      subtitle: "sub title fore some more slider",
-                      __typename: "ComponentSlidesComSlides",
-                    },
-                  ],
-                  __typename: "ComponentSliderComSlider",
-                },
-                __typename: "PageLayout",
-              },
-              __typename: "PageLayoutEntity",
-            },
-          ],
-          __typename: "PageLayoutEntityResponseCollection",
-        },
-      },
-      loading: false,
-      networkStatus: 7,
-      stale: false,
-    },
-  ];
+  sliderAdapter(data)
 
-  const slider = sliderDataObject[0].data.pageLayouts.data[0].attributes.slider;
-  console.log("slider", slider);
-
-  // The result is an empty object.
-  console.log("home Page Data", data);
   return (
     <Splide
       aria-label="My slider"
@@ -103,6 +26,9 @@ const Slider = ({ data }) => {
         swipeDistanceThreshold: 300,
       }}
     >
+      {sliderAdapter(data).map((s, i) => {
+        return <SplideSlide key={i}><>{s.title}</></SplideSlide>
+      })}
       <SplideSlide>
         {/* <!-- second slide --> */}
         <ul>

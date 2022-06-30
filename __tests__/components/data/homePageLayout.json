@@ -1,0 +1,56 @@
+{
+  "data": {
+    "pageLayouts": {
+      "data": [
+        {
+          "attributes": {
+            "title": "Our Yagya",
+            "subtitle": null,
+            "slider": {
+              "title": "Main Slider",
+              "slides": [
+                {
+                  "id": "1",
+                  "image": {
+                    "data": [
+                      {
+                        "id": "1",
+                        "__typename": "UploadFileEntity"
+                      }
+                    ],
+                    "__typename": "UploadFil  eRelationResponseCollection"
+                  },
+                  "title": "Peacebuilding women making a difference",
+                  "subtitle": "October 17, 2021 | 10:00am EST",
+                  "__typename": "ComponentSlidesComSlides"
+                },
+                {
+                  "id": "2",
+                  "image": {
+                    "data": [
+                      {
+                        "id": "2",
+                        "__typename": "UploadFileEntity  "
+                      }
+                    ],
+                    "__typename": "UploadFileRelationResponseCollection"
+                  },
+                  "title": "Peace Festival",
+                  "subtitle": "Fred Roche Gardens",
+                  "__typename": "ComponentSlidesComSlides"
+                }
+              ],
+              "__typename": "ComponentSliderComSlider"
+            },
+            "__typename": "PageLayout"
+          },
+          "__typen  ame": "PageLayoutEntity"
+        }
+      ],
+      "__typename": "PageLayoutEntityResponseCollection"
+    }
+  },
+  "loading": false,
+  "networkStatus": 7,
+  "stale": false
+}

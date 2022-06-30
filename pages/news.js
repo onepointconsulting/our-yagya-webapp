@@ -3,7 +3,7 @@ import News from '../components/News'
 import Recources from '../components/Resources'
 import Slider from '../components/Slider'
 
-export default function Home() {
+export default function News() {
   return (
     <>
       <Slider />
