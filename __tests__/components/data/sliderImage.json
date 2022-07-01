@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "id": "9",
+      "attributes": {
+        "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1656693326/Peace_festival_22_eb_c2f1f21a36_1_b36a102ca6.jpg",
+        "__typename": "UploadFile"
+      },
+      "__typename": "UploadFileEntity"
+    }
+  ],
+  "__typename": "UploadFileRelationResponseCollection"
+}

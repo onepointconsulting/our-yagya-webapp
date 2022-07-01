@@ -5,10 +5,17 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 
 export function sliderAdapter(data) {
-  if (!!data && data.data) {
+  if (!!data?.data && data?.data?.pageLayouts.data.length > 0) {
     return data?.data?.pageLayouts.data[0]?.attributes.slider.slides;
   }
   return [];
+}
+
+export function imageAdapter(imageData) {
+    if (!!imageData?.data && imageData?.data.length > 0) {
+        return imageData?.data[0]?.attributes.url
+    }
+    return null
 }
 
 const Slider = ({ data }) => {
@@ -30,7 +37,7 @@ const Slider = ({ data }) => {
       }}
     >
       {sliderAdapter(data).map((s, i) => {
-        console.log("image", s.image);
+        console.log("image", JSON.stringify(s.image));
         return (
           <SplideSlide key={i}>
             <ul>
@@ -41,7 +48,7 @@ const Slider = ({ data }) => {
                       <img
                         className="h-[50%] xs:h-2/4 mt-2 mb-2 mx-auto md:h-52 xl:h-64 w-[57%] xs:w-3/4 md:w-80 xl:w-80 md:ml-4 object-cover"
                         style={{ marginRight: "auto", marginLeft: "auto" }}
-                        src={s.image}
+                        src={imageAdapter(s.image)}
                         alt="Man looking at item at a store"
                       />
                     </div>
