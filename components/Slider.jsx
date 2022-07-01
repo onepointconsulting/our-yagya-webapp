@@ -16,6 +16,9 @@ const Slider = ({ data }) => {
 
   sliderAdapter(data);
 
+  // slider fields need correction:
+  // 1. subtitle need to be date.
+  // 2. we need 2 more fields. like: author
   return (
     <Splide
       aria-label="My slider"
