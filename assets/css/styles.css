@@ -8,7 +8,8 @@ body {
 
 /* Costume styles */
 
-/* -----------------------------------------------------------------------> start animations <-------------------------------------------------- */
+/* -----------------------------------------------------------------------> end animations <-------------------------------------------------- */
+
 @keyframes translate {
   0% {
     transform: translateY(-100%);
@@ -17,13 +18,36 @@ body {
     transform: translateY(0);
   }
 }
+
 #open_nav_link {
+  animation: translate 0.5s;
   -webkit-animation: translate 0.5s;
-          animation: translate 0.5s;
 }
-.stickyMenu{
-  margin-top: -56px;
+
+/* search */
+@keyframes translateSearchBar {
+  
+  0% {
+    
+    transform: translateX(-100%);
+    /* if you like it we can keep it but if not we can remove it. */
 }
+  100% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+
+}
+}
+
+#openSearchBar {
+  animation: translateSearchBar 0.5s;
+  -webkit-animation: translateSearchBar 0.5s;
+}
+
+
 /* -----------------------------------------------------------------------> end animations <-------------------------------------------------- */
 
 
@@ -4632,8 +4656,8 @@ z-index: 81;
 /* page animation */
 /* Fade in left */
 .fadeInLeft{
-  -webkit-animation: fadeInLeft 3s both;
-  animation: fadeInLeft 3s both;
+  -webkit-animation: fadeInLeft 0.5s both;
+  animation: fadeInLeft 0.5s both;
 }
 
 @-webkit-keyframes fadeInLeft {
@@ -4675,8 +4699,8 @@ z-index: 81;
 
 /* Fade in top */
 .fadeInTop {
-  -webkit-animation: fadeInTop 4s both;
-  animation: fadeInTop 4s both;
+  -webkit-animation: fadeInTop 0.5s both;
+  animation: fadeInTop 0.5s both;
 }
 
 @-webkit-keyframes fadeInTop {
@@ -4692,8 +4716,8 @@ z-index: 81;
 
 /* Fade in right */
 .fadeInRight {
-  -webkit-animation: fadeInRight 3S both;
-  animation: fadeInRight 3S both;
+  -webkit-animation: fadeInRight 0.5S both;
+  animation: fadeInRight 0.5S both;
 }
 
 @-webkit-keyframes fadeInRight {

@@ -2,6 +2,8 @@ import App from "next/app";
 import { appWithTranslation } from "next-i18next";
 import "../lib/i18n";
 import "../assets/css/styles.css";
+import "../styles/globals.css";
+
 import { createContext } from "react";
 import Header from "../components/header/Header";
 import Footer from "../components/Footer";

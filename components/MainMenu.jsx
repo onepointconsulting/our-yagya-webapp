@@ -2,15 +2,15 @@ import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { useContext } from "react";
 import { GlobalContext } from "../pages/_app";
-import StickyMenu from './StickyMenu'
+import StickyMenu from "./StickyMenu";
 
 const mainMenuAdapter = (menuData) => {
-  const arr = menuData[0].attributes['Entry'];
+  const arr = menuData[0].attributes["Entry"];
 
   return arr.map((md) => {
     return {
       link: md.link,
-      title: md.title
+      title: md.title,
     };
   });
 };
@@ -34,8 +34,11 @@ const MainMenu = () => {
                       {menu.title}
                     </a>
                   </Link>
-                  {i < menus.length - 1 && <a className="text-white text-sm lg:text-2xl xl:text-4xl ml-8 pt-[3px]">|</a>
-                  }
+                  {i < menus.length - 1 && (
+                    <a className="text-white text-sm lg:text-2xl xl:text-4xl ml-8 pt-[3px]">
+                      |
+                    </a>
+                  )}
                 </div>
               );
             })}
@@ -45,9 +48,7 @@ const MainMenu = () => {
       {/* StickyMenu */}
       <StickyMenu />
     </>
-
   );
 };
-
 
 export default MainMenu;

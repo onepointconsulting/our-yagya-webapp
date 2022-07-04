@@ -23,7 +23,7 @@ const Footer = () => {
 
   return (
     // <!-- Footer -->
-    <div>
+    <div className="relative metropolis_medium xl:container xl:mx-auto">
       <BackToTop />
       <footer className="filosofia_italic  flex flex-wrap xl:flex-row items-center  justify-center md:justify-between p-2 md:p-4 px-2 bg-grayfull text-white text-center">
         <div className="hidden md:block md:pl-4 lg:pl-8">

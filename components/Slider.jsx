@@ -12,10 +12,10 @@ export function sliderAdapter(data) {
 }
 
 export function imageAdapter(imageData) {
-    if (!!imageData?.data && imageData?.data.length > 0) {
-        return imageData?.data[0]?.attributes.url
-    }
-    return null
+  if (!!imageData?.data && imageData?.data.length > 0) {
+    return imageData?.data[0]?.attributes.url;
+  }
+  return null;
 }
 
 const Slider = ({ data }) => {
@@ -24,7 +24,7 @@ const Slider = ({ data }) => {
   sliderAdapter(data);
 
   // slider fields need correction:
-  // 1. subtitle need to be date.
+  // 1. startDate need to be date.
   // 2. we need 2 more fields. like: author
   return (
     <Splide
@@ -57,23 +57,20 @@ const Slider = ({ data }) => {
                         {s.title}
                         <br />
                         <h1 className="home_page_top text-lg md:text-2xl xl:text-4xl text-gray-500 capitalize lg:pt-4">
-                          {s.subtitle}
+                          {s.startDate}
                         </h1>
                       </div>
                       <br />
-                      <div className="lg:flex justify-between items-end sm:items-center">
+                      <div className="lg:flex justify-between items-center">
                         <div className="pl-4 pr-1 sm:pr-0 sm:pl-0">
                           <h3 className="online-event-p text-sm md:text-xl lg:text-lg xl:text-2xl text-gray-500 capitalize">
-                            {t("Sr. Jayanti Kirpalani, Des")}
-                          </h3>
-                          <h3 className="online-event-p text-sm md:text-xl lg:text-lg xl:text-2xl text-gray-500 capitalize">
-                            {t("Shih de huang jude urriave phd")}
+                            {s.speakers}
                           </h3>
                         </div>
 
                         <div className="float-right text-sm md:text-base lg:text-lg xl:text-2xl md:mb-4 bg-gray-100 sm:float-none md:float-right p-2 lg:p-3 xl:p-4 mb-11 sm:mb-0 ml-auto hover:bg-blue-200 cursor-pointer transation text-gray-500">
                           <Link href="/google.com">
-                            <a href="#">{t("  INFO: www.newurl.com")}</a>
+                            <a href="#">{s.link}</a>
                           </Link>
                         </div>
                       </div>
