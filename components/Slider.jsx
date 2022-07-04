@@ -57,7 +57,7 @@ const Slider = ({ data }) => {
                         {s.title}
                         <br />
                         <h1 className="home_page_top text-lg md:text-2xl xl:text-4xl text-gray-500 capitalize lg:pt-4">
-                          {s.startDate}
+                          {s.startTimestamp}
                         </h1>
                       </div>
                       <br />
