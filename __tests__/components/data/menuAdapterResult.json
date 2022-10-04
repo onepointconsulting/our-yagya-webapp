@@ -1,0 +1,160 @@
+{
+  "main": [
+    {
+      "id": "1",
+      "attributes": {
+        "order": 0,
+        "title": "Home",
+        "url": "/index"
+      }
+    },
+    {
+      "id": "4",
+      "attributes": {
+        "order": 1,
+        "title": "Murli",
+        "url": "/Murli"
+      }
+    },
+    {
+      "id": "5",
+      "attributes": {
+        "order": 2,
+        "title": "Events",
+        "url": "/Events"
+      }
+    },
+    {
+      "id": "6",
+      "attributes": {
+        "order": 3,
+        "title": "Classes & Talks",
+        "url": "/Classes"
+      }
+    },
+    {
+      "id": "7",
+      "attributes": {
+        "order": 4,
+        "title": "News",
+        "url": "/News"
+      }
+    },
+    {
+      "id": "8",
+      "attributes": {
+        "order": 5,
+        "title": "Downloads",
+        "url": "/Downloads"
+      }
+    },
+    {
+      "id": "9",
+      "attributes": {
+        "order": 6,
+        "title": "Links Directory",
+        "url": "/Links"
+      }
+    }
+  ],
+  "footer": [
+    {
+      "id": "2",
+      "attributes": {
+        "order": 0,
+        "title": "Signup For Services",
+        "url": "/signup"
+      }
+    },
+    {
+      "id": "14",
+      "attributes": {
+        "order": 1,
+        "title": "FAQs",
+        "url": "/FAQs"
+      }
+    },
+    {
+      "id": "15",
+      "attributes": {
+        "order": 2,
+        "title": "Contact Us",
+        "url": "/ContactUs"
+      }
+    },
+    {
+      "id": "16",
+      "attributes": {
+        "order": 3,
+        "title": "About Us",
+        "url": "/AboutUs"
+      }
+    },
+    {
+      "id": "18",
+      "attributes": {
+        "order": 5,
+        "title": "Site Map",
+        "url": "/SiteMap"
+      }
+    },
+    {
+      "id": "19",
+      "attributes": {
+        "order": 6,
+        "title": "Privacy Policy",
+        "url": "/PrivacyPolicy"
+      }
+    },
+    {
+      "id": "17",
+      "attributes": {
+        "order": 4,
+        "title": "Terms Of Use",
+        "url": "/TermsOfUse"
+      }
+    }
+  ],
+  "sustenance": [
+    {
+      "id": "3",
+      "attributes": {
+        "order": 0,
+        "title": "Gyan",
+        "url": "https://www.google.com"
+      }
+    },
+    {
+      "id": "10",
+      "attributes": {
+        "order": 1,
+        "title": "Yoga",
+        "url": "/Yoga"
+      }
+    },
+    {
+      "id": "11",
+      "attributes": {
+        "order": 2,
+        "title": "Dharna",
+        "url": "/Dharna"
+      }
+    },
+    {
+      "id": "12",
+      "attributes": {
+        "order": 3,
+        "title": "Seva",
+        "url": "/Seva"
+      }
+    },
+    {
+      "id": "13",
+      "attributes": {
+        "order": 4,
+        "title": "Our Yagya",
+        "url": "/OurYagya"
+      }
+    }
+  ]
+}

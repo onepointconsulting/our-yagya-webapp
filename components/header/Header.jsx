@@ -5,7 +5,7 @@ import Link from "next/link";
 import Hamburger from "./Hamburger";
 import SearchBar from "./SearchBar";
 
-const Header = () => {
+const Header = ({mainMenu}) => {
   const { t } = useTranslation();
 
   return (

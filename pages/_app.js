@@ -39,19 +39,20 @@ function OurYagya({ Component, pageProps }) {
 OurYagya.getInitialProps = async (ctxContainer) => {
   // Calls page's `getInitialProps` and fills `appProps.pageProps`
   const appProps = await App.getInitialProps(ctxContainer);
-  const footerData = await fetchFooterFata();
+
   const menuData = await fetchMenusData();
+  const { footer, main, sustenance } = await menuData;
 
   // Links data
-  const linksData = await fetchLinksData();
+  const linksData = [];
 
   return {
     ...appProps,
     pageProps: {
       global: {
-        footerData: footerData["data"]["footers"]["data"],
-        menuData: menuData["data"]["menus"]["data"],
-        linksData: linksData["data"]["links"]["data"],
+        footer,
+        main,
+        sustenance
       },
     },
   };
