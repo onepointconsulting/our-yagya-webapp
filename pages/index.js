@@ -1,6 +1,6 @@
 export default function Home({ data }) {
   return (
-    <div className="metropolis_medium min-h-full xl:container xl:mx-auto relative">
+    <div className="relative metropolis_medium xl:container xl:mx-auto">
       {/*<MainMenu />*/}
       {/*<Slider data={data} />*/}
       {/*<ParallaxProvider>*/}
