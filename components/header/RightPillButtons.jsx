@@ -1,6 +1,9 @@
 import { useTranslation } from 'react-i18next'
 import { useContext } from 'react'
-import { OUR_YAGYA_ACTIONS, OurYagyaContext } from '../../context/OurYagyaContext'
+import {
+    OUR_YAGYA_ACTIONS,
+    OurYagyaContext,
+} from '../../context/OurYagyaContext'
 import { LANGUAGES } from '../../context/constants'
 
 const RightPillButtons = () => {

@@ -1,4 +1,5 @@
 import { menuAdapter } from '../../lib/menuAdapter'
+
 const graphQl = require("../components/data/menus")
 const menuAdapterResult = require("../components/data/menuAdapterResult")
 

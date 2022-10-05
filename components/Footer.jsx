@@ -1,8 +1,8 @@
-import { useTranslation } from "react-i18next";
-import Link from "next/link";
-import { useContext } from "react";
-import { GlobalContext } from "../pages/_app";
-import BackToTop from "./BackToTop";
+import { useTranslation } from 'react-i18next'
+import Link from 'next/link'
+import { useContext } from 'react'
+import { GlobalContext } from '../pages/_app'
+import BackToTop from './BackToTop'
 
 const footerAdapter = (footerData) => {
   return footerData.map((fd) => {

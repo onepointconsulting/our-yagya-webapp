@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 
-
 const useMenuScrollHooks = () => {
     const [stickyPillMenu, setStickyPillMenu] = useState(false);
     const windowHeight = 222;

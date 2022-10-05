@@ -1,5 +1,5 @@
-import SearchResult from "./SearchResult";
-import SideBarMenu from "./../SideBar/SideBarMenu";
+import SearchResult from './SearchResult'
+import SideBarMenu from './../SideBar/SideBarMenu'
 
 const SearchResultButtons = () => {
   return (

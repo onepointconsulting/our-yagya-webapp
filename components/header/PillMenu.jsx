@@ -1,4 +1,4 @@
-import useMenuScrollHooks from "../../hooks/useMenuScrollHook";
+import useMenuScrollHooks from '../../hooks/useMenuScrollHook'
 
 const PillMenu = () => {
   const [stickyPillMenu] = useMenuScrollHooks();

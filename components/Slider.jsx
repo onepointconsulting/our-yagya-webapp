@@ -1,8 +1,8 @@
-import Link from "next/link";
-import { useTranslation } from "react-i18next";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
+import { Splide, SplideSlide } from '@splidejs/react-splide'
 // Default theme
-import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import '@splidejs/splide/dist/css/themes/splide-default.min.css'
 
 export function sliderAdapter(data) {
   if (!!data?.data && data?.data?.pageLayouts.data.length > 0) {

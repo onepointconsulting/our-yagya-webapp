@@ -1,9 +1,8 @@
-import { useState } from 'react'
+import { useContext } from 'react'
 
-import Link from "next/link";
-import { useTranslation } from "react-i18next";
-import { useContext } from "react";
-import { GlobalContext } from "../pages/_app";
+import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
+import { GlobalContext } from '../pages/_app'
 import useMenuScrollHooks from '../hooks/useMenuScrollHook'
 
 export const mainMenuAdapter = (menuData) => {

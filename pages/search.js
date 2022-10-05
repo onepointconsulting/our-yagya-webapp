@@ -1,5 +1,4 @@
-import SearchResult from "../components/search/SearchResult";
-import SearchResultButtons from "./../components/search/SearchResultButtons";
+import SearchResultButtons from './../components/search/SearchResultButtons'
 
 export default function Search() {
   return (

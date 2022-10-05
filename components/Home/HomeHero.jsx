@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { useTranslation } from "react-i18next";
-import { Parallax } from "react-scroll-parallax";
+import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
+import { Parallax } from 'react-scroll-parallax'
 
 const eventsData = [
   {

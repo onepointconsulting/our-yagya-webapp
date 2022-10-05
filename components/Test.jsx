@@ -1,6 +1,6 @@
-import { useState, useCallback, useEffect } from 'react';
-import HomeHero from './Home/HomeHero';
-import MainMenu from './MainMenu';
+import { useCallback, useEffect, useState } from 'react'
+import HomeHero from './Home/HomeHero'
+import MainMenu from './MainMenu'
 
 const useMediaQuery = (height) => {
   const [displayMenu, setDisplayMenu] = useState(false);

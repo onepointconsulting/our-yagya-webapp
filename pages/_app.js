@@ -1,18 +1,15 @@
-import App from "next/app";
-import { appWithTranslation } from "next-i18next";
-import "../lib/i18n";
-import "../assets/css/styles.css";
-import "../styles/globals.css";
+import App from 'next/app'
+import { appWithTranslation } from 'next-i18next'
+import '../lib/i18n'
+import '../assets/css/styles.css'
+import '../styles/globals.css'
 
-import { createContext } from "react";
-import Header from "../components/header/Header";
-import Footer from "../components/Footer";
-import { OurYagyaContextProvider } from "../context/OurYagyaContext";
-import {
-  fetchFooterFata,
-  fetchLinksData,
-  fetchMenusData,
-} from "../lib/apiClient";
+import { createContext } from 'react'
+import Header from '../components/header/Header'
+// import Footer from "../components/Footer";
+import { OurYagyaContextProvider } from '../context/OurYagyaContext'
+import { fetchMenusData } from '../lib/apiClient'
+import { menuAdapter } from '../lib/menuAdapter'
 
 export const GlobalContext = createContext({});
 
@@ -28,9 +25,9 @@ function OurYagya({ Component, pageProps }) {
   return (
     <GlobalContext.Provider value={global}>
       <OurYagyaContextProvider>
-        <Header />
+        <Header/>
         <Component {...pageProps} />
-        <Footer />
+        {/*<Footer />*/}
       </OurYagyaContextProvider>
     </GlobalContext.Provider>
   );
@@ -41,7 +38,8 @@ OurYagya.getInitialProps = async (ctxContainer) => {
   const appProps = await App.getInitialProps(ctxContainer);
 
   const menuData = await fetchMenusData();
-  const { footer, main, sustenance } = await menuData;
+
+  const { footer, main, sustenance } = menuAdapter(menuData);
 
   // Links data
   const linksData = [];
@@ -50,9 +48,9 @@ OurYagya.getInitialProps = async (ctxContainer) => {
     ...appProps,
     pageProps: {
       global: {
-        footer,
-        main,
-        sustenance
+        mainMenu: main,
+        sustenanceMenu: sustenance,
+        footerMenu: footer
       },
     },
   };

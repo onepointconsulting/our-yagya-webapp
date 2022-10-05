@@ -1,8 +1,8 @@
-import Link from "next/link";
-import { useContext } from "react";
-import { useTranslation } from "react-i18next";
-import { Parallax } from "react-scroll-parallax";
-import { GlobalContext } from "../pages/_app";
+import Link from 'next/link'
+import { useContext } from 'react'
+import { useTranslation } from 'react-i18next'
+import { Parallax } from 'react-scroll-parallax'
+import { GlobalContext } from '../pages/_app'
 
 const linksDirectoryAdeptor = (linksData) => {
   return linksData.map((link_data) => {

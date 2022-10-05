@@ -1,11 +1,12 @@
-import PillMenu from "./PillMenu";
-import RightPillButtons from "./RightPillButtons";
-import { useTranslation } from "react-i18next";
-import Link from "next/link";
-import Hamburger from "./Hamburger";
-import SearchBar from "./SearchBar";
+import PillMenu from './PillMenu'
+import RightPillButtons from './RightPillButtons'
+import { useTranslation } from 'react-i18next'
+import Link from 'next/link'
+import Hamburger from './Hamburger'
+import SearchBar from './SearchBar'
+import MainMenu from '../MainMenu'
 
-const Header = ({mainMenu}) => {
+const Header = () => {
   const { t } = useTranslation();
 
   return (
@@ -108,6 +109,7 @@ const Header = ({mainMenu}) => {
         {/* <!-- Buttons on the right side --> */}
         <RightPillButtons />
       </div>
+      <MainMenu />
     </div>
   );
 };
