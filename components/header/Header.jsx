@@ -1,15 +1,10 @@
-import PillMenu from "./PillMenu";
-import RightPillButtons from "./RightPillButtons";
-import { useTranslation } from "react-i18next";
-import Link from "next/link";
-import Hamburger from "./Hamburger";
-import SearchBar from "./SearchBar";
-import MainMenu from "../MainMenu";
+import { useTranslation } from 'react-i18next'
+import Link from 'next/link'
+import MainMenu from './MainMenu'
+import PillMenu from './PillMenu'
 
 const Header = () => {
     const { t } = useTranslation();
-
-    <PillMenu />;
     return (
         <div className="bg-[#ffffff] relative metropolis_medium xl:container xl:mx-auto">
             <div className="bg-[#ffffff] relative flex justify-between metropolis_medium shadow-md  md:mt-[-6px] h-24 xs:h-32 md::h-32 lg:h-auto" style={{ zIndex: "2" }}>
@@ -115,37 +110,7 @@ const Header = () => {
                         </div>
                     </div>
 
-                    {/* <!-- buttons menu in higher screen --> */}
-                    <div className="hidden metropolis_medium lg:flex flex-col items-center mr-4 mt-4">
-                        <div className="w-full flex items-center justify-between h-[2.4rem] p-[9px] 2xl:p-4 px-[9px] m-[3px] duration-100 bg-[#ffffff] border-2 rounded-full cursor-pointer text-red-600 border-red-600">
-                            <div className="py-[11px] px-2 lg:px-1 text-[15px] xl:text-[15px] 2xl:text-[18px]">
-                                <select className="duration-100 outline-none cursor-pointer">
-                                    <option>English </option>
-                                    <option>Hindi </option>
-                                    <option>Español</option>
-                                </select>
-                            </div>
-                            <img src="../img/icons/Language.png" alt="" className="w-auto h-[1.5rem]" />
-                        </div>
-                        <div className="w-full flex items-center justify-between h-[2.4rem] p-[9px] 2xl:p-4 px-[9px] m-[3px] duration-100 bg-[#ffffff] border-2 rounded-full cursor-pointer text-red-600 border-red-600">
-                            <Link href="/">
-                                <a className="py-[11px] px-2 lg:px-1 text-[15px] xl:text-[15px] 2xl:text-[18px]">Login</a>
-                            </Link>
-                            <img src="../img/icons/LoginRed.png" alt="" className="w-auto h-[1.5rem]" />
-                        </div>
-                        <div className="w-full flex items-center justify-between h-[2.4rem] p-[9px] 2xl:p-4 px-[9px] m-[3px] leading-4 duration-100 bg-[#ffffff] border-2 rounded-full cursor-pointer text-red-600 border-red-600">
-                            <Link href="/">
-                                <a href="/made4me.html" className="py-[11px] px-2 lg:px-1 text-[15px] xl:text-[15px] 2xl:text-[18px]">
-                                    Made for Me
-                                </a>
-                            </Link>
-                            <img src="../img/icons/StarPointer.png" alt="" className="w-auto h-[1.5rem]" />
-                        </div>
-                        <div className="hidden w-full flex items-center justify-between h-[2.4rem] p-[9px] 2xl:p-4 px-[9px] xl:px-[6px] m-[3px] duration-100 bg-[#ffffff] border-2 rounded-full cursor-pointer text-red-600 border-red-600">
-                            <div className="py-[11px] px-2 lg:px-1 text-[15px] xl:text-[15px] 2xl:text-[18px] leading-none">Something Special</div>
-                            <img src="../img/icons/HeartRed.png" alt="" />
-                        </div>
-                    </div>
+                    <PillMenu />
 
                     {/* <!-- mobile hamburger icon --> */}
                     <div className="absolute right-3">

@@ -39,7 +39,11 @@ OurYagya.getInitialProps = async (ctxContainer) => {
 
   const menuData = await fetchMenusData();
 
-  const { footer, main, sustenance } = menuAdapter(menuData);
+  const menuDict = menuAdapter(menuData)
+
+  console.log('menuDict', menuDict)
+
+  const { footer, main, sustenance, pill_menu } = menuDict
 
   // Links data
   const linksData = [];
@@ -50,7 +54,8 @@ OurYagya.getInitialProps = async (ctxContainer) => {
       global: {
         mainMenu: main,
         sustenanceMenu: sustenance,
-        footerMenu: footer
+        footerMenu: footer,
+        pillMenu: pill_menu
       },
     },
   };

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { useContext } from "react";
-import { GlobalContext } from "../pages/_app";
+import { GlobalContext } from "../../pages/_app";
 
 const MenuLink = ({ attributes, isLast }) => {
     const url = attributes.url;

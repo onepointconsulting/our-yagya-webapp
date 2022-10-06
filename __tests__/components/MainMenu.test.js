@@ -1,4 +1,4 @@
-import { mainMenuAdapter } from '../../components/MainMenu'
+import { mainMenuAdapter } from '../../components/header/MainMenu'
 
 describe('mainMenuAdapter2', () => {
     it('converts GraphQL JSON to MainMenu JSON2', () => {
