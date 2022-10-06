@@ -35,7 +35,7 @@
   }
 
   .filter {
-    @apply w-full p-1 text-base text-gray-400 bg-white outline-none md:w-96 lg:w-60 xl:w-96 md:text-xl xl:text-4xl;
+    @apply w-full p-1 text-base text-gray-400 bg-slate-50 outline-none md:w-96 lg:w-60 xl:w-96 md:text-xl xl:text-4xl;
   }
   .goldenButtons {
     @apply bg-gold1 flex items-center mx-auto justify-center rounded-2xl font-semibold w-8/12 md:w-[66%] lg:w-36 px-1 lg:px-3 p-2 text-xss xs:text-xs md:text-sm h-[2rem] lg:h-8 text-white uppercase;
@@ -753,7 +753,7 @@ video {
   background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
 }
 
-.bg-white {
+.bg-slate-50 {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
 }

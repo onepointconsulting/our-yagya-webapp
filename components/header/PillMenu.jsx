@@ -12,13 +12,13 @@ const PillMenu = () => {
     const [stickyPillMenu] = useMenuScrollHooks()
     const { pillMenu } = useContext(GlobalContext);
 
-    console.log('pillMenu', pillMenu)
+    // console.log('pillMenu', pillMenu)
 
     return (
         <div
             className="hidden metropolis_medium lg:flex flex-col items-center mr-4 mt-4">
             <div
-                className="w-full flex items-center justify-between h-[2.4rem] p-[9px] 2xl:p-4 px-[9px] m-[3px] duration-100 bg-[#ffffff] border-2 rounded-full cursor-pointer text-red-600 border-red-600">
+                className="w-full flex items-center justify-between h-[2.4rem] p-[9px] 2xl:p-4 px-[9px] m-[3px] duration-100 bg-slate-50 border-2 rounded-full cursor-pointer text-red-600 border-red-600">
                 <div
                     className="py-[11px] px-2 lg:px-1 text-[15px] xl:text-[15px] 2xl:text-[18px]">
                     <select
@@ -32,7 +32,7 @@ const PillMenu = () => {
                      className="w-auto h-[1.5rem]"/>
             </div>
             <div
-                className="w-full flex items-center justify-between h-[2.4rem] p-[9px] 2xl:p-4 px-[9px] m-[3px] duration-100 bg-[#ffffff] border-2 rounded-full cursor-pointer text-red-600 border-red-600">
+                className="w-full flex items-center justify-between h-[2.4rem] p-[9px] 2xl:p-4 px-[9px] m-[3px] duration-100 bg-slate-50 border-2 rounded-full cursor-pointer text-red-600 border-red-600">
                 <Link href="/">
                     <a className="py-[11px] px-2 lg:px-1 text-[15px] xl:text-[15px] 2xl:text-[18px]">Login</a>
                 </Link>
@@ -40,7 +40,7 @@ const PillMenu = () => {
                      className="w-auto h-[1.5rem]"/>
             </div>
             <div
-                className="w-full flex items-center justify-between h-[2.4rem] p-[9px] 2xl:p-4 px-[9px] m-[3px] leading-4 duration-100 bg-[#ffffff] border-2 rounded-full cursor-pointer text-red-600 border-red-600">
+                className="w-full flex items-center justify-between h-[2.4rem] p-[9px] 2xl:p-4 px-[9px] m-[3px] leading-4 duration-100 bg-slate-50 border-2 rounded-full cursor-pointer text-red-600 border-red-600">
                 <Link href="/">
                     <a href="/made4me.html"
                        className="py-[11px] px-2 lg:px-1 text-[15px] xl:text-[15px] 2xl:text-[18px]">
@@ -51,7 +51,7 @@ const PillMenu = () => {
                      className="w-auto h-[1.5rem]"/>
             </div>
             <div
-                className="hidden w-full flex items-center justify-between h-[2.4rem] p-[9px] 2xl:p-4 px-[9px] xl:px-[6px] m-[3px] duration-100 bg-[#ffffff] border-2 rounded-full cursor-pointer text-red-600 border-red-600">
+                className="hidden w-full flex items-center justify-between h-[2.4rem] p-[9px] 2xl:p-4 px-[9px] xl:px-[6px] m-[3px] duration-100 bg-slate-50 border-2 rounded-full cursor-pointer text-red-600 border-red-600">
                 <div
                     className="py-[11px] px-2 lg:px-1 text-[15px] xl:text-[15px] 2xl:text-[18px] leading-none">Something
                     Special

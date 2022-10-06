@@ -287,7 +287,7 @@ const News = () => {
                   </div>
 
                   {/* <!--accordion child--> */}
-                  <div className="mx-auto bg-white">
+                  <div className="mx-auto bg-slate-50">
                     {/* <!--accordion child 1--> */}
                     <div className="my-2 md:m-2 w-full md:ml-auto">
                       <div className="accordionChildHeader flex items-center py-1 xs:py-4 md:py-8 h-12 cursor-pointer mx-auto md:mx-0 text-gold1 border-2 border-gold1">

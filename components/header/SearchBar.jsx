@@ -50,7 +50,7 @@ const SearchIcon = () => {
               type="text"
               name="search"
               placeholder="Search by keywords"
-              className="p-4 md:p-6 w-full  py-2 md:py-4 border-2 text-lg md:text-2xl xl:text-3xl border-gray-400 outline-none filosofia_italic bg-white placeholder-gray-400"
+              className="p-4 md:p-6 w-full  py-2 md:py-4 border-2 text-lg md:text-2xl xl:text-3xl border-gray-400 outline-none filosofia_italic bg-slate-50 placeholder-gray-400"
             />
           </div>
         </div>

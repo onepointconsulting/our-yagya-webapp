@@ -5,11 +5,13 @@ import '../assets/css/styles.css'
 import '../styles/globals.css'
 
 import { createContext } from 'react'
-import Header from '../components/header/Header'
+import Header from '../components/Header/Header'
 // import Footer from "../components/Footer";
 import { OurYagyaContextProvider } from '../context/OurYagyaContext'
 import { fetchMenusData } from '../lib/apiClient'
 import { menuAdapter } from '../lib/menuAdapter'
+import Home from '../components/Home'
+import Slider from '../components/Slider/Slider'
 
 export const GlobalContext = createContext({});
 
@@ -25,9 +27,13 @@ function OurYagya({ Component, pageProps }) {
   return (
     <GlobalContext.Provider value={global}>
       <OurYagyaContextProvider>
+        <div className="relative metropolis_medium xl:container xl:mx-auto">
         <Header/>
+      <Slider />
+
+        <Home />
+        </div>
         <Component {...pageProps} />
-        {/*<Footer />*/}
       </OurYagyaContextProvider>
     </GlobalContext.Provider>
   );

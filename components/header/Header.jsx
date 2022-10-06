@@ -1,15 +1,16 @@
-import { useTranslation } from 'react-i18next'
-import Link from 'next/link'
-import MainMenu from './MainMenu'
-import PillMenu from './PillMenu'
+import { useTranslation } from "react-i18next";
+import Link from "next/link";
+import MainMenu from "./MainMenu";
+import PillMenu from "./PillMenu";
+import HamburgerMenu from "./HamburgerMenu";
 
 const Header = () => {
     const { t } = useTranslation();
     return (
-        <div className="bg-[#ffffff] relative metropolis_medium xl:container xl:mx-auto">
-            <div className="bg-[#ffffff] relative flex justify-between metropolis_medium shadow-md  md:mt-[-6px] h-24 xs:h-32 md::h-32 lg:h-auto" style={{ zIndex: "2" }}>
+        <div className="bg-slate-50 relative metropolis_medium xl:container xl:mx-auto">
+            <div className="bg-slate-50 relative flex justify-between metropolis_medium shadow-md  md:mt-[-6px] h-24 xs:h-32 md::h-32 lg:h-auto" style={{ zIndex: "2" }}>
                 {/* <!-- search bar/icon --> */}
-                <div className="relative bg-[#ffffff] flex lg:flex-col items-center lg:items-baseline justify-start lg:justify-between lg:py-[11px] w-[34%] h-auto" style={{ zIndex: "4" }}>
+                <div className="relative bg-slate-50 flex lg:flex-col items-center lg:items-baseline justify-start lg:justify-between lg:py-[11px] w-[34%] h-auto" style={{ zIndex: "4" }}>
                     <div id="searchBar" className="ml-2 cursor-pointer md:ml-4 lg:pt-5">
                         <img className="h-[1.5em] md:h-[3.5vh] lg:h-[2rem]" src="../img/icons/Search.png" alt="magnifying glass" />
                     </div>
@@ -25,7 +26,7 @@ const Header = () => {
                 </div>
 
                 <div className="fixed cursor-pointer left-2 top-5 md:left-3" style={{ zIndex: "1" }}>
-                    <div id="searchBarMobile" className="lg:hidden inline-block cursor-pointer p-[12px] bg-[#ffffff] rounded-full border-[1px] border-red-600" href="#">
+                    <div id="searchBarMobile" className="lg:hidden inline-block cursor-pointer p-[12px] bg-slate-50 rounded-full border-[1px] border-red-600" href="#">
                         <img className="h-[1.5em] md:h-[3.5vh]" src="../img/icons/Search.png" alt="" />
                     </div>
                 </div>
@@ -65,71 +66,7 @@ const Header = () => {
                     </div>
                 </div>
 
-                {/* <!-- hamburger menu --> */}
-                <div className="bg-[#ffffff] relative w-[34%] h-auto flex justify-end items-center" style={{ zIndex: "4" }}>
-                    {/* <!-- pille drop down --> */}
-                    <div id="floatingMenuItems" className="stickyButtons hide">
-                        <div>
-                            <div id="language" className="lang bg-[#ffffff] border-2 border-red-600 rounded-md hidden shadow-md absolute right-16 top-[16px] pr-4 rounded-tr-full rounded-br-full">
-                                <select className="outline-none focused">
-                                    <option>English</option>
-                                    <option>Hindi</option>
-                                    <option>Español</option>
-                                </select>
-                            </div>
-
-                            <div className="flex flex-col float-right ml-auto">
-                                <div className="p-2 px-2 m-1 text-red-600 bg-[#ffffff] border-2 border-red-600 rounded-full">
-                                    <Link href="/">
-                                        <a href="#" id="o_language">
-                                            {" "}
-                                            <img className="w-5 h-5" src="../img/icons/Language.png" alt="" />{" "}
-                                        </a>
-                                    </Link>
-                                </div>
-                                <div className="p-2 px-2 m-1 text-red-600 bg-[#ffffff] border-2 border-red-600 rounded-full">
-                                    <Link href="/login.html">
-                                        <a>
-                                            {" "}
-                                            <img className="w-5 h-5" src="../img/icons/LoginRed.png" alt="" />{" "}
-                                        </a>
-                                    </Link>
-                                </div>
-                                <div className="p-2 px-2 m-1 text-red-600 bg-[#ffffff] border-2 border-red-600 rounded-full">
-                                    <Link href="/made4me.html">
-                                        <a>
-                                            {" "}
-                                            <img className="w-5 h-5" src="../img/icons/StarPointer.png" alt="" />{" "}
-                                        </a>
-                                    </Link>
-                                </div>
-                                <div className="hidden p-2 px-2 m-1 text-red-600 bg-[#ffffff] border-2 border-red-600 rounded-full">
-                                    <img className="w-5 h-5" src="../img/icons/HeartRed.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <PillMenu />
-
-                    {/* <!-- mobile hamburger icon --> */}
-                    <div className="absolute right-3">
-                        <button id="mobile_menu" className="p-[4px] bg-[#ffffff] block lg:hidden">
-                            <div className="w-[16px] md:w-[24px] h-[3px] bg-red-500"></div>
-                            <div className="w-[16px] md:w-[24px] h-[3px] my-[3px] md:my-[5px] bg-red-500"></div>
-                            <div className="w-[16px] md:w-[24px] h-[3px] bg-red-500"></div>
-                        </button>
-                    </div>
-                </div>
-
-                {/* <!-- mobile hamburger icon fixed --> */}
-                <div className="lg:hidden block fixed right-4 top-8" style={{ zIndex: "1" }}>
-                    <button id="mobile_menu1" className="p-[7.5px] md:p-[11.5px] rounded-full border-[1px] bg-[#ffffff] border-red-600">
-                        <div className="w-[16px] h-[3.3px] bg-red-500"></div>
-                        <div className="w-[16px] h-[3.3px] my-[3.3px] bg-red-500"></div>
-                        <div className="w-[16px] h-[3.3px] bg-red-500"></div>
-                    </button>
-                </div>
+                <HamburgerMenu />
             </div>
             <MainMenu />
         </div>
