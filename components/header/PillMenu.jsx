@@ -9,8 +9,9 @@ import { GlobalContext } from '../../pages/_app'
  * @constructor
  */
 const PillMenu = () => {
-    const [stickyPillMenu] = useMenuScrollHooks()
+
     const { pillMenu } = useContext(GlobalContext);
+    console.log('pillMenu', pillMenu)
 
     return (
         <div
