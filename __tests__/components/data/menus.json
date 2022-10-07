@@ -12,13 +12,13 @@
                 {
                   "id": "1",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 0,
                     "title": "Home",
                     "url": "/index",
                     "icon": {
+                      "data": null
+                    },
+                    "parent": {
                       "data": null
                     }
                   }
@@ -26,13 +26,13 @@
                 {
                   "id": "4",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 1,
                     "title": "Murli",
                     "url": "/murli",
                     "icon": {
+                      "data": null
+                    },
+                    "parent": {
                       "data": null
                     }
                   }
@@ -40,13 +40,13 @@
                 {
                   "id": "5",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 2,
                     "title": "Events",
                     "url": "/events",
                     "icon": {
+                      "data": null
+                    },
+                    "parent": {
                       "data": null
                     }
                   }
@@ -54,13 +54,13 @@
                 {
                   "id": "6",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 3,
                     "title": "Classes & Talks",
                     "url": "/classes",
                     "icon": {
+                      "data": null
+                    },
+                    "parent": {
                       "data": null
                     }
                   }
@@ -68,13 +68,13 @@
                 {
                   "id": "7",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 4,
                     "title": "News",
                     "url": "/news",
                     "icon": {
+                      "data": null
+                    },
+                    "parent": {
                       "data": null
                     }
                   }
@@ -82,13 +82,13 @@
                 {
                   "id": "8",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 5,
                     "title": "Downloads",
                     "url": "/downloads",
                     "icon": {
+                      "data": null
+                    },
+                    "parent": {
                       "data": null
                     }
                   }
@@ -96,13 +96,13 @@
                 {
                   "id": "9",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 6,
                     "title": "Links Directory",
                     "url": "/links",
                     "icon": {
+                      "data": null
+                    },
+                    "parent": {
                       "data": null
                     }
                   }
@@ -121,13 +121,13 @@
                 {
                   "id": "2",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 0,
                     "title": "Signup For Services",
                     "url": "/signup",
                     "icon": {
+                      "data": null
+                    },
+                    "parent": {
                       "data": null
                     }
                   }
@@ -135,13 +135,13 @@
                 {
                   "id": "14",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 1,
                     "title": "FAQs",
                     "url": "/FAQs",
                     "icon": {
+                      "data": null
+                    },
+                    "parent": {
                       "data": null
                     }
                   }
@@ -149,13 +149,13 @@
                 {
                   "id": "15",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 2,
                     "title": "Contact Us",
                     "url": "/ContactUs",
                     "icon": {
+                      "data": null
+                    },
+                    "parent": {
                       "data": null
                     }
                   }
@@ -163,13 +163,13 @@
                 {
                   "id": "16",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 3,
                     "title": "About Us",
                     "url": "/AboutUs",
                     "icon": {
+                      "data": null
+                    },
+                    "parent": {
                       "data": null
                     }
                   }
@@ -177,13 +177,13 @@
                 {
                   "id": "18",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 5,
                     "title": "Site Map",
                     "url": "/SiteMap",
                     "icon": {
+                      "data": null
+                    },
+                    "parent": {
                       "data": null
                     }
                   }
@@ -191,13 +191,13 @@
                 {
                   "id": "19",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 6,
                     "title": "Privacy Policy",
                     "url": "/PrivacyPolicy",
                     "icon": {
+                      "data": null
+                    },
+                    "parent": {
                       "data": null
                     }
                   }
@@ -205,13 +205,13 @@
                 {
                   "id": "17",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 4,
                     "title": "Terms Of Use",
                     "url": "/TermsOfUse",
                     "icon": {
+                      "data": null
+                    },
+                    "parent": {
                       "data": null
                     }
                   }
@@ -230,13 +230,13 @@
                 {
                   "id": "3",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 0,
                     "title": "Gyan",
                     "url": "https://www.google.com",
                     "icon": {
+                      "data": null
+                    },
+                    "parent": {
                       "data": null
                     }
                   }
@@ -244,13 +244,13 @@
                 {
                   "id": "10",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 1,
                     "title": "Yoga",
                     "url": "/Yoga",
                     "icon": {
+                      "data": null
+                    },
+                    "parent": {
                       "data": null
                     }
                   }
@@ -258,13 +258,13 @@
                 {
                   "id": "11",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 2,
                     "title": "Dharna",
                     "url": "/Dharna",
                     "icon": {
+                      "data": null
+                    },
+                    "parent": {
                       "data": null
                     }
                   }
@@ -272,13 +272,13 @@
                 {
                   "id": "12",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 3,
                     "title": "Seva",
                     "url": "/Seva",
                     "icon": {
+                      "data": null
+                    },
+                    "parent": {
                       "data": null
                     }
                   }
@@ -286,13 +286,13 @@
                 {
                   "id": "13",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 4,
                     "title": "Our Yagya",
                     "url": "/OurYagya",
                     "icon": {
+                      "data": null
+                    },
+                    "parent": {
                       "data": null
                     }
                   }
@@ -311,12 +311,9 @@
                 {
                   "id": "20",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 0,
                     "title": "Language",
-                    "url": "/English",
+                    "url": "/language",
                     "icon": {
                       "data": {
                         "attributes": {
@@ -324,15 +321,15 @@
                           "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1665074393/Language_5c5dc8380f.png"
                         }
                       }
+                    },
+                    "parent": {
+                      "data": null
                     }
                   }
                 },
                 {
                   "id": "21",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 1,
                     "title": "Login",
                     "url": "/login",
@@ -343,15 +340,15 @@
                           "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1665074459/Login_Red_f5f2f733cd.png"
                         }
                       }
+                    },
+                    "parent": {
+                      "data": null
                     }
                   }
                 },
                 {
                   "id": "22",
                   "attributes": {
-                    "parent": {
-                      "data": null
-                    },
                     "order": 2,
                     "title": "Made for Me",
                     "url": "/Made4me",
@@ -362,63 +359,66 @@
                           "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1665074483/Star_Pointer_c47a325ad3.png"
                         }
                       }
+                    },
+                    "parent": {
+                      "data": null
                     }
                   }
                 },
                 {
                   "id": "24",
                   "attributes": {
-                    "parent": {
-                      "data": {
-                        "attributes": {
-                          "title": "Language",
-                          "url": "/English"
-                        }
-                      }
-                    },
                     "order": 1,
                     "title": "Hindi",
                     "url": "/hi/index",
                     "icon": {
                       "data": null
+                    },
+                    "parent": {
+                      "data": {
+                        "attributes": {
+                          "title": "Language",
+                          "url": "/language"
+                        }
+                      }
                     }
                   }
                 },
                 {
                   "id": "23",
                   "attributes": {
-                    "parent": {
-                      "data": {
-                        "attributes": {
-                          "title": "Language",
-                          "url": "/English"
-                        }
-                      }
-                    },
                     "order": 0,
                     "title": "English",
                     "url": "/en/index",
                     "icon": {
                       "data": null
+                    },
+                    "parent": {
+                      "data": {
+                        "attributes": {
+                          "title": "Language",
+                          "url": "/language"
+                        }
+                      }
                     }
                   }
                 },
                 {
                   "id": "25",
                   "attributes": {
-                    "parent": {
-                      "data": {
-                        "attributes": {
-                          "title": "Language",
-                          "url": "/English"
-                        }
-                      }
-                    },
                     "order": 2,
                     "title": "Español",
                     "url": "/es/index",
                     "icon": {
                       "data": null
+                    },
+                    "parent": {
+                      "data": {
+                        "attributes": {
+                          "title": "Language",
+                          "url": "/language"
+                        }
+                      }
                     }
                   }
                 }

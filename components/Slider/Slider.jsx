@@ -40,8 +40,7 @@ const Slider = ({ data }) => {
                         <div className="mx-auto mt-2 lg:mt-0">
                             <img
                                 className="h-[50%] xs:h-2/4 mt-2 mb-2 mx-auto md:h-52 xl:h-48 w-[57%] xs:w-3/4 md:w-80 xl:w-80 md:ml-4 object-cover"
-                                style={{marginRight:" auto", "margin-left": "auto"}}
-                                src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
+                                style={{marginRight:" auto", marginLeft: "auto"}} src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
                                 alt="Man looking at item at a store"
                             />
                         </div>

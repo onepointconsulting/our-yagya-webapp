@@ -12,8 +12,9 @@ import { fetchMenusData } from '../lib/apiClient'
 import { menuAdapter } from '../lib/menuAdapter'
 import Home from '../components/Home'
 import Slider from '../components/Slider/Slider'
+import Footer from '../components/Footer'
 
-export const GlobalContext = createContext({});
+export const GlobalContext = createContext({})
 
 /**
  * Main entry point for the whole app.
@@ -22,49 +23,50 @@ export const GlobalContext = createContext({});
  * @returns {JSX.Element}
  * @constructor
  */
-function OurYagya({ Component, pageProps }) {
-  const { global } = pageProps;
-  return (
-    <GlobalContext.Provider value={global}>
-      <OurYagyaContextProvider>
-        <div className="relative metropolis_medium xl:container xl:mx-auto">
-        <Header/>
-      <Slider />
-
-        <Home />
-        </div>
-        <Component {...pageProps} />
-      </OurYagyaContextProvider>
-    </GlobalContext.Provider>
-  );
+function OurYagya ({ Component, pageProps }) {
+    const { global } = pageProps
+    return (
+        <GlobalContext.Provider value={global}>
+            <OurYagyaContextProvider>
+                <div
+                    className="relative metropolis_medium xl:container xl:mx-auto">
+                    <Header/>
+                    <div className="bg-green-500 h-screen">
+                        <Component {...pageProps} />
+                        <Footer/>
+                    </div>
+                </div>
+            </OurYagyaContextProvider>
+        </GlobalContext.Provider>
+    )
 }
 
 OurYagya.getInitialProps = async (ctxContainer) => {
-  // Calls page's `getInitialProps` and fills `appProps.pageProps`
-  const appProps = await App.getInitialProps(ctxContainer);
+    // Calls page's `getInitialProps` and fills `appProps.pageProps`
+    const appProps = await App.getInitialProps(ctxContainer)
 
-  const menuData = await fetchMenusData();
+    const menuData = await fetchMenusData()
 
-  const menuDict = menuAdapter(menuData)
+    const menuDict = menuAdapter(menuData)
 
-  console.log('menuDict', menuDict)
+    console.log('menuDict', menuDict)
 
-  const { footer, main, sustenance, pill_menu } = menuDict
+    const { footer, main, sustenance, pill_menu } = menuDict
 
-  // Links data
-  const linksData = [];
+    // Links data
+    const linksData = []
 
-  return {
-    ...appProps,
-    pageProps: {
-      global: {
-        mainMenu: main,
-        sustenanceMenu: sustenance,
-        footerMenu: footer,
-        pillMenu: pill_menu
-      },
-    },
-  };
-};
+    return {
+        ...appProps,
+        pageProps: {
+            global: {
+                mainMenu: main,
+                sustenanceMenu: sustenance,
+                footerMenu: footer,
+                pillMenu: pill_menu,
+            },
+        },
+    }
+}
 
-export default appWithTranslation(OurYagya);
+export default appWithTranslation(OurYagya)

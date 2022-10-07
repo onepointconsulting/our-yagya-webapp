@@ -5,7 +5,10 @@
       "attributes": {
         "order": 0,
         "title": "Home",
-        "url": "/index"
+        "url": "/index",
+        "icon": {
+          "data": null
+        }
       }
     },
     {
@@ -13,7 +16,10 @@
       "attributes": {
         "order": 1,
         "title": "Murli",
-        "url": "/Murli"
+        "url": "/murli",
+        "icon": {
+          "data": null
+        }
       }
     },
     {
@@ -21,7 +27,10 @@
       "attributes": {
         "order": 2,
         "title": "Events",
-        "url": "/Events"
+        "url": "/events",
+        "icon": {
+          "data": null
+        }
       }
     },
     {
@@ -29,7 +38,10 @@
       "attributes": {
         "order": 3,
         "title": "Classes & Talks",
-        "url": "/Classes"
+        "url": "/classes",
+        "icon": {
+          "data": null
+        }
       }
     },
     {
@@ -37,7 +49,10 @@
       "attributes": {
         "order": 4,
         "title": "News",
-        "url": "/News"
+        "url": "/news",
+        "icon": {
+          "data": null
+        }
       }
     },
     {
@@ -45,7 +60,10 @@
       "attributes": {
         "order": 5,
         "title": "Downloads",
-        "url": "/Downloads"
+        "url": "/downloads",
+        "icon": {
+          "data": null
+        }
       }
     },
     {
@@ -53,7 +71,10 @@
       "attributes": {
         "order": 6,
         "title": "Links Directory",
-        "url": "/Links"
+        "url": "/links",
+        "icon": {
+          "data": null
+        }
       }
     }
   ],
@@ -63,7 +84,10 @@
       "attributes": {
         "order": 0,
         "title": "Signup For Services",
-        "url": "/signup"
+        "url": "/signup",
+        "icon": {
+          "data": null
+        }
       }
     },
     {
@@ -71,7 +95,10 @@
       "attributes": {
         "order": 1,
         "title": "FAQs",
-        "url": "/FAQs"
+        "url": "/FAQs",
+        "icon": {
+          "data": null
+        }
       }
     },
     {
@@ -79,7 +106,10 @@
       "attributes": {
         "order": 2,
         "title": "Contact Us",
-        "url": "/ContactUs"
+        "url": "/ContactUs",
+        "icon": {
+          "data": null
+        }
       }
     },
     {
@@ -87,7 +117,10 @@
       "attributes": {
         "order": 3,
         "title": "About Us",
-        "url": "/AboutUs"
+        "url": "/AboutUs",
+        "icon": {
+          "data": null
+        }
       }
     },
     {
@@ -95,7 +128,10 @@
       "attributes": {
         "order": 5,
         "title": "Site Map",
-        "url": "/SiteMap"
+        "url": "/SiteMap",
+        "icon": {
+          "data": null
+        }
       }
     },
     {
@@ -103,7 +139,10 @@
       "attributes": {
         "order": 6,
         "title": "Privacy Policy",
-        "url": "/PrivacyPolicy"
+        "url": "/PrivacyPolicy",
+        "icon": {
+          "data": null
+        }
       }
     },
     {
@@ -111,7 +150,10 @@
       "attributes": {
         "order": 4,
         "title": "Terms Of Use",
-        "url": "/TermsOfUse"
+        "url": "/TermsOfUse",
+        "icon": {
+          "data": null
+        }
       }
     }
   ],
@@ -121,7 +163,10 @@
       "attributes": {
         "order": 0,
         "title": "Gyan",
-        "url": "https://www.google.com"
+        "url": "https://www.google.com",
+        "icon": {
+          "data": null
+        }
       }
     },
     {
@@ -129,7 +174,10 @@
       "attributes": {
         "order": 1,
         "title": "Yoga",
-        "url": "/Yoga"
+        "url": "/Yoga",
+        "icon": {
+          "data": null
+        }
       }
     },
     {
@@ -137,7 +185,10 @@
       "attributes": {
         "order": 2,
         "title": "Dharna",
-        "url": "/Dharna"
+        "url": "/Dharna",
+        "icon": {
+          "data": null
+        }
       }
     },
     {
@@ -145,7 +196,10 @@
       "attributes": {
         "order": 3,
         "title": "Seva",
-        "url": "/Seva"
+        "url": "/Seva",
+        "icon": {
+          "data": null
+        }
       }
     },
     {
@@ -153,7 +207,95 @@
       "attributes": {
         "order": 4,
         "title": "Our Yagya",
-        "url": "/OurYagya"
+        "url": "/OurYagya",
+        "icon": {
+          "data": null
+        }
+      }
+    }
+  ],
+  "pill_menu": [
+    {
+      "id": "20",
+      "attributes": {
+        "order": 0,
+        "title": "Language",
+        "url": "/language",
+        "icon": {
+          "data": {
+            "attributes": {
+              "name": "Language.png",
+              "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1665074393/Language_5c5dc8380f.png"
+            }
+          }
+        },
+        "children": [
+          {
+            "id": "24",
+            "attributes": {
+              "order": 1,
+              "title": "Hindi",
+              "url": "/hi/index",
+              "icon": {
+                "data": null
+              }
+            }
+          },
+          {
+            "id": "23",
+            "attributes": {
+              "order": 0,
+              "title": "English",
+              "url": "/en/index",
+              "icon": {
+                "data": null
+              }
+            }
+          },
+          {
+            "id": "25",
+            "attributes": {
+              "order": 2,
+              "title": "Español",
+              "url": "/es/index",
+              "icon": {
+                "data": null
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "21",
+      "attributes": {
+        "order": 1,
+        "title": "Login",
+        "url": "/login",
+        "icon": {
+          "data": {
+            "attributes": {
+              "name": "LoginRed.png",
+              "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1665074459/Login_Red_f5f2f733cd.png"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "22",
+      "attributes": {
+        "order": 2,
+        "title": "Made for Me",
+        "url": "/Made4me",
+        "icon": {
+          "data": {
+            "attributes": {
+              "name": "StarPointer.png",
+              "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1665074483/Star_Pointer_c47a325ad3.png"
+            }
+          }
+        }
       }
     }
   ]

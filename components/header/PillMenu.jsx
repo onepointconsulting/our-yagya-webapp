@@ -12,8 +12,6 @@ const PillMenu = () => {
     const [stickyPillMenu] = useMenuScrollHooks()
     const { pillMenu } = useContext(GlobalContext);
 
-    // console.log('pillMenu', pillMenu)
-
     return (
         <div
             className="hidden metropolis_medium lg:flex flex-col items-center mr-4 mt-4">
