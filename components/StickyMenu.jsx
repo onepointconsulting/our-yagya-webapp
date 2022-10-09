@@ -30,7 +30,7 @@ const StickyMenu = () => {
       <div className="filosofia_regular bg-grayDark flex-wrap md:flex flex-row items-center md:justify-around p-2 text-center mx-auto w-full">
         {/* stick menu */}
         <a
-          className="px-2 text-sm lg:text-2xl xl:text-3xl whitespace-nowrap text-white"
+          className="px-2 text-sm lg:text-2xl xl:text-3xl whitespace-nowrap text-slate-50"
           href="/"
         >
           <svg
@@ -57,7 +57,7 @@ const StickyMenu = () => {
                     {menu.title}
                   </a>
                 </Link>
-                {i < menus.length - 1 && <a className="text-white text-sm lg:text-2xl xl:text-4xl ml-8 pt-[3px]">|</a>
+                {i < menus.length - 1 && <a className="text-slate-50 text-sm lg:text-2xl xl:text-4xl ml-8 pt-[3px]">|</a>
                 }
 
               </div>

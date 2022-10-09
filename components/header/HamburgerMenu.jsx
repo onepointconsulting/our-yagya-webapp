@@ -7,11 +7,11 @@ const HamburgerMenu = () => {
     return (
         <>
             {/* <!-- hamburger menu --> */}
-            <div className="bg-slate-50 relative w-[34%] h-auto flex justify-end items-center" style={{ zIndex: "4" }}>
+            <div className="bg-[#ffffff] relative w-[34%] h-auto flex justify-end items-center" style={{ zIndex: "4" }}>
                 {/* <!-- pille drop down --> */}
                 <div id="floatingMenuItems" className="stickyButtons hide">
                     <div>
-                        <div id="language" className="lang bg-slate-50 border-2 border-red-600 rounded-md hidden shadow-md absolute right-16 top-[16px] pr-4 rounded-tr-full rounded-br-full">
+                        <div id="language" className="lang border-2 border-red-600 rounded-md hidden shadow-md absolute right-16 top-[16px] pr-4 rounded-tr-full rounded-br-full">
                             <select className="outline-none focused">
                                 <option>English</option>
                                 <option>Hindi</option>
@@ -20,7 +20,7 @@ const HamburgerMenu = () => {
                         </div>
 
                         <div className="flex flex-col float-right ml-auto">
-                            <div className="p-2 px-2 m-1 text-red-600 bg-slate-50 border-2 border-red-600 rounded-full">
+                            <div className="p-2 px-2 m-1 text-red-600 border-2 border-red-600 rounded-full">
                                 <Link href="/">
                                     <a href="#" id="o_language">
                                         {" "}
@@ -28,7 +28,7 @@ const HamburgerMenu = () => {
                                     </a>
                                 </Link>
                             </div>
-                            <div className="p-2 px-2 m-1 text-red-600 bg-slate-50 border-2 border-red-600 rounded-full">
+                            <div className="p-2 px-2 m-1 text-red-600 border-2 border-red-600 rounded-full">
                                 <Link href="/login.html">
                                     <a>
                                         {" "}
@@ -36,7 +36,7 @@ const HamburgerMenu = () => {
                                     </a>
                                 </Link>
                             </div>
-                            <div className="p-2 px-2 m-1 text-red-600 bg-slate-50 border-2 border-red-600 rounded-full">
+                            <div className="p-2 px-2 m-1 text-red-600 border-2 border-red-600 rounded-full">
                                 <Link href="/made4me.html">
                                     <a>
                                         {" "}
@@ -44,7 +44,7 @@ const HamburgerMenu = () => {
                                     </a>
                                 </Link>
                             </div>
-                            <div className="hidden p-2 px-2 m-1 text-red-600 bg-slate-50 border-2 border-red-600 rounded-full">
+                            <div className="hidden p-2 px-2 m-1 text-red-600 border-2 border-red-600 rounded-full">
                                 <img className="w-5 h-5" src="../img/icons/HeartRed.png" alt="" />
                             </div>
                         </div>
@@ -55,7 +55,7 @@ const HamburgerMenu = () => {
 
                 {/* <!-- mobile hamburger icon --> */}
                 <div className="absolute right-3">
-                    <button id="mobile_menu" className="p-[4px] bg-slate-50 block lg:hidden">
+                    <button id="mobile_menu" className="p-[4px] block lg:hidden">
                         <div className="w-[16px] md:w-[24px] h-[3px] bg-red-500"></div>
                         <div className="w-[16px] md:w-[24px] h-[3px] my-[3px] md:my-[5px] bg-red-500"></div>
                         <div className="w-[16px] md:w-[24px] h-[3px] bg-red-500"></div>
@@ -65,7 +65,7 @@ const HamburgerMenu = () => {
 
             {/* <!-- mobile hamburger icon fixed --> */}
             <div className="lg:hidden block fixed right-4 top-8" style={{ zIndex: "1" }}>
-                <button id="mobile_menu1" className="p-[7.5px] md:p-[11.5px] rounded-full border-[1px] bg-slate-50 border-red-600">
+                <button id="mobile_menu1" className="p-[7.5px] md:p-[11.5px] rounded-full border-[1px] border-red-600">
                     <div className="w-[16px] h-[3.3px] bg-red-500"></div>
                     <div className="w-[16px] h-[3.3px] my-[3.3px] bg-red-500"></div>
                     <div className="w-[16px] h-[3.3px] bg-red-500"></div>

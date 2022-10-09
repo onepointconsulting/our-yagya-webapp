@@ -1,8 +1,14 @@
+import { useContext } from "react";
+import { GlobalContext } from "../../pages/_app";
+
 const Footer = () => {
+  const { footerMenu } = useContext(GlobalContext);
+  console.log("footerMenu", footerMenu);
+  
   return (
     // <!-- Footer -->
     <div className="metropolis_medium xl:container xl:mx-auto">
-      <footer className=" p-2 px-2 text-center text-slate-50 capitalize 2xl:flex 2xl:flex-wrap 2xl:justify-between filosofia_italic md:p-4 bg-grayfull absolute bottom-0 w-full">
+      <footer className=" p-2 px-2 text-center text-slate-50 capitalize 2xl:flex 2xl:flex-wrap 2xl:justify-between filosofia_italic md:p-4 bg-grayfull w-full">
         <div>
           <a href="#!" className="footer">
             our Yagya <span>@</span>2022

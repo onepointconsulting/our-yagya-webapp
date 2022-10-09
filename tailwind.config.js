@@ -57,6 +57,7 @@ module.exports = {
         12: "3.5rem",
       },
       colors: {
+        white: "#ffffff",
         redfull: "#e9513d",
         red70: "#ee7c6d",
         red50: "#e9513d4f",

@@ -34,7 +34,7 @@ const Recources = () => {
   return (
     <div>
       <div className="bg-home_resource text-center p-2">
-        <h1 className="filosofia_regular text-2xl md:text-4xl text-white">
+        <h1 className="filosofia_regular text-2xl md:text-4xl text-slate-50">
           {t("resources")}
         </h1>
       </div>

@@ -43,7 +43,7 @@ const SearchResultButtons = () => {
               results for
             </h1>
 
-            <div className="bg-[#ffdab2] rounded-full p-2 md:p-3 xl:p-4 text-white flex justify-between items-center">
+            <div className="bg-[#ffdab2] rounded-full p-2 md:p-3 xl:p-4 text-slate-50 flex justify-between items-center">
               <div>
                 <img
                   className="h-5 xs:h-7"

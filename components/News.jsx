@@ -90,7 +90,7 @@ const News = () => {
         {/* <!-- the hero section (first)--> */}
         <div className="fadeInTop w-auto lg:w-full ml-12 xs:ml-16 lg:ml-none mx-2 lg:mx-16 mb-8">
           <div className="object-cover bg-gray-200 bg-opacity-[0.50]">
-            <div className="filosofia_italic bg-button-color text-white p-2 text-3xl md:text-4xl xl:text-6xl pl-4 md:pl-8 capitalize">
+            <div className="filosofia_italic bg-button-color text-slate-50 p-2 text-3xl md:text-4xl xl:text-6xl pl-4 md:pl-8 capitalize">
               international
             </div>
             <div className="metropolis_medium pl-4 md:pl-8 p-2 md:p-4 mb-8">
@@ -128,7 +128,7 @@ const News = () => {
               <di className="w-full max-w-auto lg:w-[48%]">
                 {/* <!-- second section (first box-left ) --> */}
                 <div className="fadeInLeft bg-gray-200 w-full relative my-4 pb-16 h-fit">
-                  <div className="filosofia_italic bg-button-color text-white p-2 text-3xl md:text-4xl xl:text-6xl pl-4 md:pl-8 capitalize">
+                  <div className="filosofia_italic bg-button-color text-slate-50 p-2 text-3xl md:text-4xl xl:text-6xl pl-4 md:pl-8 capitalize">
                     Madhuban news
                   </div>
                   {/* start the second section */}
@@ -166,7 +166,7 @@ const News = () => {
               <di className="fadeInRight w-full max-w-auto lg:w-[48%]">
                 {/* <!-- right section (first box) --> */}
                 <div className="bg-gray-200 w-full relative my-4 pb-16 h-fit">
-                  <div className="filosofia_italic bg-button-color text-white p-2 text-2xl md:text-4xl xl:text-6xl pl-4 md:pl-8">
+                  <div className="filosofia_italic bg-button-color text-slate-50 p-2 text-2xl md:text-4xl xl:text-6xl pl-4 md:pl-8">
                     special focus news
                   </div>
                   <div className="metropolis_medium pl-4 md:pl-8 p-2 md:p-4 mb-8">
@@ -217,7 +217,7 @@ const News = () => {
                 {/* <!-- right section (second box) --> */}
 
                 <div className="bg-gray-200 w-full relative my-4 pb-16 h-fit">
-                  <div className="filosofia_italic bg-button-color text-white p-2 text-2xl md:text-4xl xl:text-6xl pl-4 md:pl-8">
+                  <div className="filosofia_italic bg-button-color text-slate-50 p-2 text-2xl md:text-4xl xl:text-6xl pl-4 md:pl-8">
                     transitions
                   </div>
 
@@ -273,8 +273,8 @@ const News = () => {
               <di className="w-full max-w-auto lg:w-[48%] lg:mt-[-22rem] xl:mt-[-22rem] 2xl:mt-[-19rem]">
                 {/* <!-- right section (second box-right) --> */}
                 <div className="w-full relative my-4 h-fit">
-                  <div className="cursor-pointer mb-0 flex items-center text-white bg-gold1 filosofia_italic">
-                    <div className="filosofia_italic bg-button-color text-white p-2 text-3xl md:text-4xl xl:text-6xl pl-4 md:pl-8 capitalize">
+                  <div className="cursor-pointer mb-0 flex items-center text-slate-50 bg-gold1 filosofia_italic">
+                    <div className="filosofia_italic bg-button-color text-slate-50 p-2 text-3xl md:text-4xl xl:text-6xl pl-4 md:pl-8 capitalize">
                       regional websites
                     </div>
                     <div className="ml-auto invisible">
@@ -691,10 +691,10 @@ const News = () => {
               <di className="w-full max-w-auto lg:w-[48%]">
                 <div className="flex justify-between items-center bg-gold1 w-full my-4 h-fit">
                   <div className="flex lg:block">
-                    <div className="filosofia_italic text-white p-2 text-2xl md:text-4xl xl:text-6xl xs:pl-2 md:pl-8">
+                    <div className="filosofia_italic text-slate-50 p-2 text-2xl md:text-4xl xl:text-6xl xs:pl-2 md:pl-8">
                       for, CCs, NCs, NCTs,
                     </div>
-                    <div className="filosofia_italic text-white p-2 text-2xl md:text-4xl xl:text-6xl xs:pl-2 md:pl-8">
+                    <div className="filosofia_italic text-slate-50 p-2 text-2xl md:text-4xl xl:text-6xl xs:pl-2 md:pl-8">
                       and Board Members
                     </div>
                   </div>

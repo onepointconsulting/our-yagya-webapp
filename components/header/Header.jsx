@@ -7,10 +7,10 @@ import HamburgerMenu from "./HamburgerMenu";
 const Header = () => {
     const { t } = useTranslation();
     return (
-        <div className="bg-slate-50 relative metropolis_medium xl:container xl:mx-auto">
-            <div className="bg-slate-50 relative flex justify-between metropolis_medium shadow-md  md:mt-[-6px] h-24 xs:h-32 md::h-32 lg:h-auto" style={{ zIndex: "2" }}>
+        <div className="bg-[#ffffff] relative metropolis_medium xl:container xl:mx-auto">
+            <div className="bg-[#ffffff] relative flex justify-between metropolis_medium shadow-md  md:mt-[-6px] h-24 xs:h-32 md::h-32 lg:h-auto" style={{ zIndex: "2" }}>
                 {/* <!-- search bar/icon --> */}
-                <div className="relative bg-slate-50 flex lg:flex-col items-center lg:items-baseline justify-start lg:justify-between lg:py-[11px] w-[34%] h-auto" style={{ zIndex: "4" }}>
+                <div className="relative bg-[#ffffff] flex lg:flex-col items-center lg:items-baseline justify-start lg:justify-between lg:py-[11px] w-[34%] h-auto" style={{ zIndex: "4" }}>
                     <div id="searchBar" className="ml-2 cursor-pointer md:ml-4 lg:pt-5">
                         <img className="h-[1.5em] md:h-[3.5vh] lg:h-[2rem]" src="../img/icons/Search.png" alt="magnifying glass" />
                     </div>
@@ -26,13 +26,13 @@ const Header = () => {
                 </div>
 
                 <div className="fixed cursor-pointer left-2 top-5 md:left-3" style={{ zIndex: "1" }}>
-                    <div id="searchBarMobile" className="lg:hidden inline-block cursor-pointer p-[12px] bg-slate-50 rounded-full border-[1px] border-red-600" href="#">
+                    <div id="searchBarMobile" className="lg:hidden inline-block cursor-pointer p-[12px] bg-[#ffffff] rounded-full border-[1px] border-red-600" href="#">
                         <img className="h-[1.5em] md:h-[3.5vh]" src="../img/icons/Search.png" alt="" />
                     </div>
                 </div>
 
                 {/* <!-- center  --> */}
-                <div className="relative w-full h-auto mx-auto text-center">
+                <div className="relative w-full h-auto mx-auto text-center bg-[#ffffff]">
                     {/* <!-- our yagya logo --> */}
                     <Link href="/">
                         <a>
