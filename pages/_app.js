@@ -4,12 +4,13 @@ import '../lib/i18n'
 import '../assets/css/styles.css'
 import '../styles/globals.css'
 
-import { createContext } from 'react'
+import React, { createContext } from 'react'
 import Header from '../components/Header/Header'
 import { OurYagyaContextProvider } from '../context/OurYagyaContext'
 import { fetchMenusData } from '../lib/apiClient'
 import { menuAdapter } from '../lib/menuAdapter'
-import Home from '../components/Home/Home'
+import BackToTop from '../components/Footer/BackToTop'
+import Footer from '../components/Footer/Footer'
 
 export const GlobalContext = createContext({})
 
@@ -28,8 +29,11 @@ function OurYagya ({ Component, pageProps }) {
                 <div
                     className="relative metropolis_medium xl:container xl:mx-auto">
                     <Header/>
-                    <Home />
-                 <Component {...pageProps} />
+                    <Component {...pageProps} />
+                    <div className="absolute bottom-16 right-1">
+                        <BackToTop />
+                    </div>
+                    <Footer />
                 </div>
             </OurYagyaContextProvider>
         </GlobalContext.Provider>
@@ -44,13 +48,8 @@ OurYagya.getInitialProps = async (ctxContainer) => {
 
     const menuDict = menuAdapter(menuData)
 
-    // console.log('menuDict', menuDict)
-
     const { footer, main, sustenance, pill_menu } = menuDict
 
-    // Links data
-    const linksData = []
-console.log("footer", footer)
     return {
         ...appProps,
         pageProps: {
