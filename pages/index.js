@@ -8,7 +8,7 @@ export default function Index({ data }) {
 }
 
 // get server side props;
-// export async function getServerSideProps() {
-//   const layoutData = await pageLayout(PAGE_LAYOUTS.HOME);
-//   return { props: { data: layoutData } };
-// }
+export async function getServerSideProps() {
+  // const layoutData = await pageLayout(PAGE_LAYOUTS.HOME);
+  return { props: { data: {} } };
+}
