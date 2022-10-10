@@ -29,16 +29,16 @@ const Footer = () => {
               {!!footerMenu &&
                   footerMenu.map((footer, i) => {
                     return (
-                        <>
-                          <Link key={i}
-                                href={footer.attributes.url}>
+                        <span key={i}>
+                          <Link
+                                href={footer.attributes.url} >
                             <a className="footer">
                               {t(footer.attributes.title)}
                             </a>
                           </Link>
                           {i < footerMenu.length - 1 &&
                               <a className="px-2"> |</a>}
-                        </>
+                        </span>
                     )
                   })}
             </div>
