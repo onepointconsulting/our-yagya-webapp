@@ -1,8 +1,8 @@
-import { useState } from 'react'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-const SearchIcon = () => {
+const SearchBar = () => {
   const [searchIsOpen, setSearchIsOpen] = useState(false);
   const router = useRouter();
 
@@ -18,39 +18,26 @@ const SearchIcon = () => {
   };
   return (
     <>
-      <div className="flex flex-col w-64 mb-4">
+      <div className="ml-2 cursor-pointer md:ml-4 lg:pt-5">
         <button
-          onClick={search}
-          className="absolute md:left-8 left-3 lg:left-2 top-6 md:top-8 cursor-pointer"
-        >
+          onClick={search}>
           <img
-            className="h-5 xs:h-8 md:h-auto"
-            src="../img/magnifying_glass.svg"
-            alt=""
+            className="h-5 md:h-8"
+            src="../img/icons/Search.png"
+            alt="magnifying glass"
           />
         </button>
-        <div className=" hidden lg:block">
-          <Link href="/">
-            <a>
-              <img
-                className="w-auto lg:h-20 lg:pl-16 lg:mb-[5%] xl:mb-[4%] "
-                src="./img/BK_Stacked_SM.png"
-                alt=""
-              />
-            </a>
-          </Link>
-        </div>
       </div>
 
       {searchIsOpen && (
-        <div className="w-[70%] lg:w-[68%] xl:w-[74%] 2xl:w-[78%] mx-auto z-50 absolute top-[5px] xs:top-[10px] md:top-4 left-[14%] xs:left-16 md:left-28 lg:left-16 right-auto">
-          <div className="p-2 itemce-center">
+        <div className="fixed lg:absolute top-8 md:top-6 xl:top-4 left-12 md:left-28 w-auto md:w-full lg:w-[44rem] xl:w-[53rem] 2xl:w-[76rem]">
+        <div>
             <input
               onKeyPress={handleKeyPress}
               type="text"
               name="search"
               placeholder="Search by keywords"
-              className="p-4 md:p-6 w-full  py-2 md:py-4 border-2 text-lg md:text-2xl xl:text-3xl border-gray-400 outline-none filosofia_italic bg-slate-50 placeholder-gray-400"
+              className="w-full p-4 py-2 text-lg placeholder-gray-400 bg-[#ffffff] border-2 border-gray-400 outline-none md:p-4 md:py-3 md:text-2xl xl:text-3xl filosofia_italic"
             />
           </div>
         </div>
@@ -59,4 +46,4 @@ const SearchIcon = () => {
   );
 };
 
-export default SearchIcon;
+export default SearchBar;

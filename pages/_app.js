@@ -26,8 +26,7 @@ function OurYagya ({ Component, pageProps }) {
     return (
         <GlobalContext.Provider value={global}>
             <OurYagyaContextProvider>
-                <div
-                    className="relative metropolis_medium xl:container xl:mx-auto">
+                <div className="relative metropolis_medium xl:container xl:mx-auto">
                     <Header/>
                     <Component {...pageProps} />
                     <div className="absolute bottom-16 right-1">

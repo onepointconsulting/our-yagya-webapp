@@ -3,18 +3,16 @@ import Link from "next/link";
 import MainMenu from "./MainMenu";
 import PillMenu from "./PillMenu";
 import HamburgerMenu from "./HamburgerMenu";
+import SearchBar from "./SearchBar";
 
 const Header = () => {
     const { t } = useTranslation();
     return (
         <div className="bg-[#ffffff] relative metropolis_medium xl:container xl:mx-auto">
-            <div className="bg-[#ffffff] relative flex justify-between metropolis_medium shadow-md  md:mt-[-6px] h-24 xs:h-32 md::h-32 lg:h-auto" style={{ zIndex: "2" }}>
+            <div className="bg-[#ffffff] relative flex justify-between metropolis_medium shadow-md  md:mt-[-6px] h-24 xs:h-28 md::h-32 lg:h-auto" style={{ zIndex: "2" }}>
                 {/* <!-- search bar/icon --> */}
                 <div className="relative bg-[#ffffff] flex lg:flex-col items-center lg:items-baseline justify-start lg:justify-between lg:py-[11px] w-[34%] h-auto" style={{ zIndex: "4" }}>
-                    <div id="searchBar" className="ml-2 cursor-pointer md:ml-4 lg:pt-5">
-                        <img className="h-[1.5em] md:h-[3.5vh] lg:h-[2rem]" src="../img/icons/Search.png" alt="magnifying glass" />
-                    </div>
-
+                    <SearchBar />
                     {/* <!-- the brahma kumaris logo higher resolution --> */}
                     <div className="hidden lg:block">
                         <Link href="/">
@@ -42,7 +40,7 @@ const Header = () => {
 
                     {/* <!-- title and subtitle --> */}
                     <Link href="/">
-                        <a className="absolute left-0 right-0 top-[1.5rem] md:top-8 lg:top-20">
+                        <a className="absolute left-0 right-0 top-8 xs:top-12 lg:top-20">
                             {/*
                             
                             <h4 className=" text-gold1 text-[1rem] lg:text-[2rem] xl:text-[3vw] 2xl:text-[3em] uppercase">

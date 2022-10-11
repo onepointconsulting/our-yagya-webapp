@@ -1,9 +1,9 @@
 import React from 'react'
-import Home from '../components/Home/Home'
+import AboutUs from '../components/AboutUs/AboutUs';
 
-export default function AboutUs({ data }) {
+export default function About({ data }) {
   return (
-      <Home />
+      <AboutUs />
   );
 }
 
