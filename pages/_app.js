@@ -12,6 +12,7 @@ import { menuAdapter } from '../lib/menuAdapter'
 import BackToTop from '../components/Footer/BackToTop'
 import Footer from '../components/Footer/Footer'
 import { useRouter } from 'next/router'
+import { titleAdapter } from '../lib/titleAdapter'
 
 export const GlobalContext = createContext({})
 
@@ -25,12 +26,11 @@ export const GlobalContext = createContext({})
 function OurYagya ({ Component, pageProps }) {
     const { global } = pageProps
     const router = useRouter()
-    console.info('Component', Component)
     return (
         <GlobalContext.Provider value={global}>
             <OurYagyaContextProvider>
                 <div className="relative metropolis_medium xl:container xl:mx-auto">
-                    <Header/>
+                    <Header title={titleAdapter(pageProps)}/>
                     <Component {...pageProps} />
                     <div className="absolute bottom-16 right-1">
                         <BackToTop />

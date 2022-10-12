@@ -1,11 +1,10 @@
-import { useTranslation } from "react-i18next";
-import Link from "next/link";
-import MainMenu from "./MainMenu";
-import PillMenu from "./PillMenu";
-import HamburgerMenu from "./HamburgerMenu";
-import SearchBar from "./SearchBar";
+import { useTranslation } from 'react-i18next'
+import Link from 'next/link'
+import MainMenu from './MainMenu'
+import HamburgerMenu from './HamburgerMenu'
+import SearchBar from './SearchBar'
 
-const Header = () => {
+const Header = ({title}) => {
     const { t } = useTranslation();
     return (
         <div className="bg-[#ffffff] relative metropolis_medium xl:container xl:mx-auto">
@@ -50,7 +49,7 @@ const Header = () => {
                              */}
 
                             <h1 className="@@TitleStyle text-gold1 font-extrabold uppercase text-[31px] xs:text-[2.4rem] md:text-[3rem]  lg:text-[5.5em]" style={{ lineHeight: "1" }}>
-                                OURYAGYA
+                                {title}
                             </h1>
                         </a>
                     </Link>
