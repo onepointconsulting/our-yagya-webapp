@@ -123,7 +123,7 @@
                   "attributes": {
                     "order": 0,
                     "title": "Signup For Services",
-                    "url": "/signup",
+                    "url": "/signup-for-services",
                     "icon": {
                       "data": null
                     },
@@ -137,7 +137,7 @@
                   "attributes": {
                     "order": 1,
                     "title": "FAQs",
-                    "url": "/FAQs",
+                    "url": "/faqs",
                     "icon": {
                       "data": null
                     },
@@ -151,7 +151,7 @@
                   "attributes": {
                     "order": 2,
                     "title": "Contact Us",
-                    "url": "/ContactUs",
+                    "url": "/contact-us",
                     "icon": {
                       "data": null
                     },
@@ -165,7 +165,7 @@
                   "attributes": {
                     "order": 3,
                     "title": "About Us",
-                    "url": "/AboutUs",
+                    "url": "/about-us",
                     "icon": {
                       "data": null
                     },
@@ -193,7 +193,7 @@
                   "attributes": {
                     "order": 6,
                     "title": "Privacy Policy",
-                    "url": "/PrivacyPolicy",
+                    "url": "/privacy-policy",
                     "icon": {
                       "data": null
                     },
@@ -207,7 +207,7 @@
                   "attributes": {
                     "order": 4,
                     "title": "Terms Of Use",
-                    "url": "/TermsOfUse",
+                    "url": "/terms-of-use",
                     "icon": {
                       "data": null
                     },
@@ -424,6 +424,40 @@
                 }
               ]
             }
+          }
+        }
+      ]
+    },
+    "menuTranslations": {
+      "data": [
+        {
+          "attributes": {
+            "title": "Página principal",
+            "url": "/index"
+          }
+        },
+        {
+          "attributes": {
+            "title": "Murli",
+            "url": "/murli"
+          }
+        },
+        {
+          "attributes": {
+            "title": "Eventos",
+            "url": "/events"
+          }
+        },
+        {
+          "attributes": {
+            "title": "Clases y Charlas",
+            "url": "/classes"
+          }
+        },
+        {
+          "attributes": {
+            "title": "Noticias",
+            "url": "/news"
           }
         }
       ]

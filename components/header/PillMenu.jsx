@@ -2,21 +2,38 @@ import Link from 'next/link'
 import { useContext } from 'react'
 import { GlobalContext } from '../../pages/_app'
 import { useTranslation } from 'react-i18next'
+import { useRouter } from 'next/router'
 
-
+/**
+ * Renders the children of the pill menu.
+ * @param title
+ * @param url
+ * @param children
+ * @returns {JSX.Element}
+ * @constructor
+ */
 const PillMenuContent = ({ title, url, children }) => {
     const { t } = useTranslation();
+    const router = useRouter()
+    const { locale } = router
     if (!!children) {
         return (
             <>
                 <div
                     className="py-[11px] px-2 lg:px-1 text-[15px] xl:text-[15px] 2xl:text-[18px]">
                     <select
-                        className="duration-100 outline-none cursor-pointer">
+                        className="duration-100 outline-none cursor-pointer"
+                        onChange={(e) => {
+                            const language = e.target.value
+                            router.push('index', 'index', { locale: language })
+                        }}
+                        value={locale}
+                    >
                         {children.map((child, i) => {
                             return (
                                 <option
-                                    key={`language${i}`}>{t(child.attributes.title)}</option>
+                                    key={`language${i}`}
+                                    value={child.attributes.url?.replace(/\/(.+?)\/.+/, "$1")}>{t(child.attributes.title)}</option>
                             )
                         })}
                     </select>

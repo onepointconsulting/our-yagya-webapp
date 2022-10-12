@@ -43,10 +43,14 @@ function OurYagya ({ Component, pageProps }) {
 }
 
 OurYagya.getInitialProps = async (ctxContainer) => {
+
+    const { router } = ctxContainer
+    const { locale } = router
+
     // Calls page's `getInitialProps` and fills `appProps.pageProps`
     const appProps = await App.getInitialProps(ctxContainer)
 
-    const menuData = await fetchMenusData()
+    const menuData = await fetchMenusData(locale)
 
     const menuDict = menuAdapter(menuData)
 
