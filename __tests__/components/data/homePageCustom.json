@@ -1,0 +1,28 @@
+{
+  "data": {
+    "pageLayouts": {
+      "data": [
+        {
+          "attributes": {
+            "title": "Página principal",
+            "layout": "home",
+            "backgroundImage": {
+              "data": [
+                {
+                  "attributes": {
+                    "alternativeText": "Clip1.png",
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1664906757/Clip1_c6ee2bd09f.png"
+                  }
+                }
+              ]
+            }
+          }
+
+        }
+      ]
+    }
+  },
+  "loading": false,
+  "networkStatus": 7,
+  "stale": false
+}

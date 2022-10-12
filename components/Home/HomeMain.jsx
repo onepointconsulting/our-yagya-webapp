@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function HomeMain () {
+
+export default function HomeMain ({data}) {
   return (
     // <!-- home page background -->
     <div className="flex flex-col items-center w-full">

@@ -25,7 +25,7 @@ export const GlobalContext = createContext({})
 function OurYagya ({ Component, pageProps }) {
     const { global } = pageProps
     const router = useRouter()
-    console.info('router path', router.pathname)
+    console.info('Component', Component)
     return (
         <GlobalContext.Provider value={global}>
             <OurYagyaContextProvider>
