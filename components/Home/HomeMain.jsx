@@ -1,14 +1,23 @@
 import React from "react";
 
+const imageAdapter = () => {
+
+}
 
 export default function HomeMain ({data}) {
+    // const backgroundImage = attributes?.pageLayouts?.data?.attributes.backgroundImage.data?.attributes?.url
+    // const backgroundImage = attributes.pageLayouts?.data?.attributes?.backgroundImage.data?.attributes
+    // const backgroundImage = data?.pageLayouts?.data?.[0].attributes.backgroundImage.data?.[0].attributes?.url
+
+    // console.log("bg data", backgroundImage)
+    // console.log("bg data", data)
+    // console.log("bg data", data)
   return (
     // <!-- home page background -->
     <div className="flex flex-col items-center w-full">
         <div className="justify-center w-full h-auto mb-auto bg-opacity-75 imageBack lg:flex ">
             <div className="grid grid-cols-1 gap-4 pt-4 pb-4 mx-4 lg:grid-cols-3 lg:pt-72">
-                <div className="relative w-full h-full pb-12 mb-2 bg-gray-200 bg-opacity-95 lg:w-auto xl:pb-16 lg:mb-0"
-                >
+                <div className="relative w-full h-full pb-12 mb-2 bg-gray-200 bg-opacity-95 lg:w-auto xl:pb-16 lg:mb-0">
                  <div className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 filosofia_italic bg-button-color bg-gold1 md:text-4xl">Events</div>
                  <div className="p-4 overflow-y-auto metropolis_medium h-80 ">
                      <div className="leading-5 text-[1.2rem] text-redfull md:text-2xl">Online GlobalSilence Retreat</div>
