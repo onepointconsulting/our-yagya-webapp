@@ -3,9 +3,16 @@ import Link from 'next/link'
 import MainMenu from './MainMenu'
 import HamburgerMenu from './HamburgerMenu'
 import SearchBar from './SearchBar'
+import { useContext } from 'react'
+import { GlobalContext } from '../../pages/_app'
+import { logoAdapter } from '../../lib/globalPropertiesAdapter'
 
 const Header = ({title}) => {
+    const { globalProperties } = useContext(GlobalContext)
     const { t } = useTranslation();
+
+    logoAdapter(globalProperties, logo)
+
     return (
         <div className="bg-[#ffffff] relative metropolis_medium xl:container xl:mx-auto">
             <div className="bg-[#ffffff] relative flex justify-between metropolis_medium shadow-md  md:mt-[-6px] h-24 xs:h-28 md::h-32 lg:h-auto" style={{ zIndex: "2" }}>
