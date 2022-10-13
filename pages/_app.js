@@ -7,7 +7,7 @@ import '../styles/globals.css'
 import React, { createContext } from 'react'
 import Header from '../components/Header/Header'
 import { OurYagyaContextProvider } from '../context/OurYagyaContext'
-import { fetchMenusData } from '../lib/apiClient'
+import { fetchGlobalData } from '../lib/apiClient'
 import { menuAdapter } from '../lib/menuAdapter'
 import BackToTop from '../components/Footer/BackToTop'
 import Footer from '../components/Footer/Footer'
@@ -48,10 +48,9 @@ OurYagya.getInitialProps = async (ctxContainer) => {
     // Calls page's `getInitialProps` and fills `appProps.pageProps`
     const appProps = await App.getInitialProps(ctxContainer)
 
-    const menuData = await fetchMenusData(locale)
-
+    const menuData = await fetchGlobalData(locale)
     const menuDict = menuAdapter(menuData)
-
+    const { globalProperties } = menuData?.data
     const { footer, main, sustenance, pill_menu } = menuDict
 
     return {
@@ -62,6 +61,7 @@ OurYagya.getInitialProps = async (ctxContainer) => {
                 sustenanceMenu: sustenance,
                 footerMenu: footer,
                 pillMenu: pill_menu,
+                globalProperties
             },
         },
     }
