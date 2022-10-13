@@ -7,11 +7,11 @@ import '../styles/globals.css'
 import React, { createContext } from 'react'
 import Header from '../components/Header/Header'
 import { OurYagyaContextProvider } from '../context/OurYagyaContext'
-import { fetchMenusData } from '../lib/apiClient'
+import { fetchGlobalData } from '../lib/apiClient'
 import { menuAdapter } from '../lib/menuAdapter'
 import BackToTop from '../components/Footer/BackToTop'
 import Footer from '../components/Footer/Footer'
-import { useRouter } from 'next/router'
+import { titleAdapter } from '../lib/titleAdapter'
 
 export const GlobalContext = createContext({})
 
@@ -24,13 +24,11 @@ export const GlobalContext = createContext({})
  */
 function OurYagya ({ Component, pageProps }) {
     const { global } = pageProps
-    const router = useRouter()
-    console.info('Component', Component)
     return (
         <GlobalContext.Provider value={global}>
             <OurYagyaContextProvider>
                 <div className="relative metropolis_medium xl:container xl:mx-auto">
-                    <Header/>
+                    <Header title={titleAdapter(pageProps)}/>
                     <Component {...pageProps} />
                     <div className="absolute bottom-16 right-1">
                         <BackToTop />
@@ -50,10 +48,9 @@ OurYagya.getInitialProps = async (ctxContainer) => {
     // Calls page's `getInitialProps` and fills `appProps.pageProps`
     const appProps = await App.getInitialProps(ctxContainer)
 
-    const menuData = await fetchMenusData(locale)
-
+    const menuData = await fetchGlobalData(locale)
     const menuDict = menuAdapter(menuData)
-
+    const { globalProperties } = menuData?.data
     const { footer, main, sustenance, pill_menu } = menuDict
 
     return {
@@ -64,6 +61,7 @@ OurYagya.getInitialProps = async (ctxContainer) => {
                 sustenanceMenu: sustenance,
                 footerMenu: footer,
                 pillMenu: pill_menu,
+                globalProperties
             },
         },
     }
