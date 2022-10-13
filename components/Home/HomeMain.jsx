@@ -1,9 +1,5 @@
 import React from "react";
 
-const imageAdapter = () => {
-
-}
-
 export default function HomeMain ({data}) {
     // const backgroundImage = attributes?.pageLayouts?.data?.attributes.backgroundImage.data?.attributes?.url
     // const backgroundImage = attributes.pageLayouts?.data?.attributes?.backgroundImage.data?.attributes
@@ -12,6 +8,8 @@ export default function HomeMain ({data}) {
     // console.log("bg data", backgroundImage)
     // console.log("bg data", data)
     // console.log("bg data", data)
+
+    
   return (
     // <!-- home page background -->
     <div className="flex flex-col items-center w-full">
