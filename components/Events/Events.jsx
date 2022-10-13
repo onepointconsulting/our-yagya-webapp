@@ -1,10 +1,11 @@
 import React from 'react'
 import FeaturedEvents from './FeaturedEvents'
 
-export default function Events() {
+export default function Events({data}) {
+
   return (
     <div>
-      <FeaturedEvents />
+      <FeaturedEvents data={data}/>
     </div>
   )
 }

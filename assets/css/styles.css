@@ -1488,14 +1488,8 @@ iframe {
 .imageBack {
   background-size: cover;
   transition: all ease-in-out 1ms;
-  background: url(../../public/img/Clip1.png) center center / cover no-repeat;
 }
-/* events background */
-.bg_events {
-  background-size: cover;
-  transition: all ease-in-out 1ms;
-  background: url(../../public/img/GreyBand_4.png) center center / cover no-repeat;
-}
+
 
 .newsBg {
   background-size: cover;

@@ -1,11 +1,14 @@
 import React from "react";
+import { imageAdapter } from "../../lib/imageAdapter";
 
-export default function FeaturedEvents() {
+export default function FeaturedEvents({data}) {
+  const bgImage = imageAdapter(data);
+  
   return (
     <div>
       {/* <!-- home page background --> */}
       <div className="flex flex-col items-center w-full">
-        <div className="flex justify-center w-full h-auto mb-auto bg-opacity-75 bg_events">
+        <div className="flex justify-center w-full h-auto mb-auto bg-opacity-75 imageBack" style={{background: `url(${bgImage}) center center / cover no-repeat`}}>
           {/* <!-- hero section with events lists --> */}
           <div className="flex items-center justify-center w-full mt-28 md:mt-36 lg:mt-52">
             <div className="relative w-full h-full ml-auto mr-auto bg-[#ffffff] bg-opacity-95 lg:m-4 md:w-11/12 lg:w-10/12">
