@@ -1,4 +1,4 @@
-export default function EVents() {
+export default function Classes() {
   return (
     <>
         !!

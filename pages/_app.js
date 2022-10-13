@@ -11,7 +11,6 @@ import { fetchMenusData } from '../lib/apiClient'
 import { menuAdapter } from '../lib/menuAdapter'
 import BackToTop from '../components/Footer/BackToTop'
 import Footer from '../components/Footer/Footer'
-import { useRouter } from 'next/router'
 import { titleAdapter } from '../lib/titleAdapter'
 
 export const GlobalContext = createContext({})
@@ -25,7 +24,6 @@ export const GlobalContext = createContext({})
  */
 function OurYagya ({ Component, pageProps }) {
     const { global } = pageProps
-    const router = useRouter()
     return (
         <GlobalContext.Provider value={global}>
             <OurYagyaContextProvider>
