@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
 import { useContext } from 'react'
 import { GlobalContext } from '../../pages/_app'
-import { copyrightAdapter } from '../../lib/globalPropertiesAdapter'
+import { globalPropertyAdapter } from '../../lib/globalPropertiesAdapter'
 
 /**
  * Used to render the footer items from the Strapi menu
@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="metropolis_medium xl:container xl:mx-auto">
           <footer
               className="p-2 px-2 text-center text-slate-50 capitalize 2xl:flex 2xl:flex-wrap 2xl:justify-between filosofia_italic md:p-4 bg-grayfull w-full">
-            <div><a href="#!" className="footer">{copyrightAdapter(globalProperties, 'copyright')}</a></div>
+            <div><a href="#!" className="footer">{globalPropertyAdapter(globalProperties, 'copyright')}</a></div>
             <div>
               {!!footerMenu &&
                   footerMenu.map((footer, i) => {
