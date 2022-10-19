@@ -1,10 +1,12 @@
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { GlobalContext } from "../../pages/_app";
+import { useContext } from "react";
 import { sliderAdapter } from "../../lib/sliderAdapter";
 
-const Slider = ({data}) => { 
-  const slide = sliderAdapter(data)
-  console.log("slide", slide)
+const Slider = (data) => { 
+  // const {sliderAdapter} = useContext(GlobalContext)
+  sliderAdapter(data).then((slide) => console.log("slide", slide));
 
   return (
     <Splide
