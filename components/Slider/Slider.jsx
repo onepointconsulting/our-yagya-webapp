@@ -1,7 +1,11 @@
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { sliderAdapter } from "../../lib/sliderAdapter";
 
-const Slider = () => {
+const Slider = ({data}) => { 
+  const slide = sliderAdapter(data)
+  console.log("slide", slide)
+
   return (
     <Splide
       className="splide visible"
