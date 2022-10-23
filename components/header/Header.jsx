@@ -50,7 +50,7 @@ const Header = ({ title }) => {
                 >
                     <div
                         id="searchBarMobile"
-                        className="lg:hidden inline-block cursor-pointer p-[12px] bg-[#ffffff] rounded-full border-[1px] border-red-600"
+                        className="lg:hidden inline-block cursor-pointer p-[12px] bg-[#ffffff]  border-[1px] border-red-600"
                         href="#"
                     >
                         <img
@@ -63,12 +63,12 @@ const Header = ({ title }) => {
 
                 {/* <!-- center  --> */}
                 <div
-                    className="relative w-full h-auto mx-auto text-center bg-[#ffffff]">
+                    className="relative w-full h-0 mx-auto text-center bg-[#ffffff]"  style={{ zIndex: '3' }}>
                     {/* <!-- our yagya logo --> */}
                     <Link href="/">
-                        <a>
+                        <a className='block bg-[#ffffff]'>
                             <img
-                                className="object-contain w-auto mx-auto -mt-4 xs:-mt-0 rounded-full h-[7rem] lg:h-[11em]"
+                                className="object-contain w-auto mx-auto h-auto md:h-[7rem] lg:h-[11em]"
                                 src="./img/ShivBaba.jpg"
                                 alt="Our Yagya logo"
                             />
@@ -77,7 +77,7 @@ const Header = ({ title }) => {
 
                     {/* <!-- title and subtitle --> */}
                     <Link href="/">
-                        <a className="absolute left-0 right-0 top-8 xs:top-12 lg:top-20">
+                        <a className="absolute left-0 right-0 top-5 xs:top-12 lg:top-20 md:w-max m-auto">
                             {/*
                             
                             <h4 className=" text-gold1 text-[1rem] lg:text-[2rem] xl:text-[3vw] 2xl:text-[3em] uppercase">
@@ -87,7 +87,7 @@ const Header = ({ title }) => {
                              */}
 
                             <h1
-                                className="@@TitleStyle text-gold1 font-extrabold uppercase text-[31px] xs:text-[2.4rem] md:text-[3rem]  lg:text-[5.5em]"
+                                className="@@TitleStyle text-gold1 font-extrabold uppercase text-[31px] xs:text-[2rem] md:text-[3rem]  lg:text-[4rem]"
                                 style={{ lineHeight: '1' }}
                             >
                                 {title}

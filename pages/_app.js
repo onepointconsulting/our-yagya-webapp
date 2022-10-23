@@ -30,7 +30,7 @@ function OurYagya ({ Component, pageProps }) {
                 <div className="relative metropolis_medium xl:container xl:mx-auto">
                     <Header title={titleAdapter(pageProps)}/>
                     <Component {...pageProps} />
-                    <div className="absolute bottom-16 right-1">
+                    <div className="absolute w-full bottom-40 md:bottom-16 right-1">
                         <BackToTop />
                     </div>
                     <Footer />
@@ -52,7 +52,8 @@ OurYagya.getInitialProps = async (ctxContainer) => {
     const menuDict = menuAdapter(menuData)
     const { globalProperties } = menuData?.data
     const { footer, main, sustenance, pill_menu } = menuDict
-    console.log("fetchSlider", fetchSlider1)
+
+
     return {
         ...appProps,
         pageProps: {

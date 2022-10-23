@@ -22,7 +22,7 @@ const SearchBar = () => {
         <button
           onClick={search}>
           <img
-            className="h-5 md:h-8"
+            className="h-[1.3rem] md:h-8"
             src="../img/icons/Search.png"
             alt="magnifying glass"
           />
