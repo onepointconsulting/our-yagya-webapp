@@ -1,6 +1,7 @@
 import React from 'react'
 import Home from '../components/Home/Home'
 import { adaptCustomPage } from '../lib/pageAdapter'
+import { indexLayout } from '../lib/apiClient'
 
 export default function Index({ data }) {
   return (
@@ -10,5 +11,5 @@ export default function Index({ data }) {
 
 // get server side props;
 export async function getServerSideProps(context) {
-  return await adaptCustomPage(context)
+  return await adaptCustomPage(context, indexLayout)
 }
