@@ -61,7 +61,8 @@ OurYagya.getInitialProps = async (ctxContainer) => {
                 sustenanceMenu: sustenance,
                 footerMenu: footer,
                 pillMenu: pill_menu,
-                globalProperties
+                globalProperties,
+                locale
             },
         },
     }

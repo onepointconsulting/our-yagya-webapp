@@ -10,6 +10,7 @@ import Video from './Video'
  * @constructor
  */
 export default function Home ({ data }) {
+
     return (
         <div className="bg-slate-50 h-full">
             <Slider data={data}/>
