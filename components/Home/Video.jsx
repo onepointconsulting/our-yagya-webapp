@@ -1,5 +1,4 @@
 import React from "react";
-import { videoAdapter } from "../../lib/videoAdapter";
 import Sustenanc from "./Sustenanc";
 
 export default function Video({ data }) {
@@ -28,11 +27,11 @@ export default function Video({ data }) {
             featured video
           </h1>
         </div>
-        {data.videoAdapter?.map((renderVideo) => {
+        {data.videoAdapter?.map((renderVideo, i) => {
           // console.log("renderVideo", renderVideo)
           return (
             <div
-              key={video.id}
+              key={i}
               className="mt-2 ml-3 mr-3 metropolis_medium bg-gray50 lg:mr-0 lg:ml-0 md:mt-0 mb-8"
             >
               <div className="w-auto mx-auto lg:w-4/5 xl:w-auto max-w-auto pt-auto md:pt-4 lg:pt-10 xl:pt-12 px-auto md:px-4 lg:px-10 xl:px-14">
