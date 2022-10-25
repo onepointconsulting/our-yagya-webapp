@@ -1,7 +1,8 @@
 import React from "react";
 import Sustenanc from "./Sustenanc";
 
-export default function SustenancAndVideo() {
+export default function SustenancAndVideo({data}) {
+    // TODO write adapter
   return (
 <div className="mx-auto my-4">
     {/*

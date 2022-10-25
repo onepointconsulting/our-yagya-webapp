@@ -14,7 +14,7 @@ export default function Home ({ data }) {
         <div className="bg-slate-50 h-full">
             <Slider data={data}/>
             <HomeMain data={data}/>
-            <Video/>
+            <Video data={data}/>
         </div>
     )
 }
