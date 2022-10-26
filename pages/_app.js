@@ -4,7 +4,7 @@ import '../lib/i18n'
 import '../assets/css/styles.css'
 import '../styles/globals.css'
 
-import React, { createContext } from 'react'
+import React, { createContext, useEffect } from 'react'
 import Header from '../components/Header/Header'
 import { OurYagyaContextProvider } from '../context/OurYagyaContext'
 import { fetchGlobalData } from '../lib/apiClient'
@@ -12,6 +12,7 @@ import { menuAdapter } from '../lib/menuAdapter'
 import BackToTop from '../components/Footer/BackToTop'
 import Footer from '../components/Footer/Footer'
 import { titleAdapter } from '../lib/titleAdapter'
+import i18n from 'i18next'
 
 export const GlobalContext = createContext({})
 
@@ -24,6 +25,12 @@ export const GlobalContext = createContext({})
  */
 function OurYagya ({ Component, pageProps }) {
     const { global } = pageProps
+    const locale = global.locale
+
+    useEffect(() => {
+        i18n.changeLanguage(locale);
+    }, [locale]);
+
     return (
         <GlobalContext.Provider value={global}>
             <OurYagyaContextProvider>
