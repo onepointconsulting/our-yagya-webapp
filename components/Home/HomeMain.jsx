@@ -1,7 +1,10 @@
 import React from "react";
 import { imageAdapter } from '../../lib/imageAdapter'
+import { useTranslation } from "react-i18next";
 
 export default function HomeMain ({data}) {
+    const { t } = useTranslation();
+
     const bgImage = imageAdapter(data);
 
   return (
@@ -10,7 +13,7 @@ export default function HomeMain ({data}) {
         <div className="justify-center w-full h-auto mb-auto bg-opacity-75 lg:flex imageBack" style={{background: `url(${bgImage}) center center / cover no-repeat`}}>
             <div className="grid grid-cols-1 gap-4 pt-4 pb-4 mx-4 lg:grid-cols-3 lg:pt-72">
                 <div className="relative w-full h-full pb-12 mb-2 bg-gray-200 bg-opacity-95 lg:w-auto xl:pb-16 lg:mb-0">
-                 <div className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 filosofia_italic bg-button-color bg-gold1 md:text-4xl">Events</div>
+                 <div className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 filosofia_italic bg-button-color bg-gold1 md:text-4xl">    {t("Events")} </div>
                  <div className="p-4 overflow-y-auto metropolis_medium h-80 ">
                      <div className="leading-5 text-[1.2rem] text-redfull md:text-2xl">Online GlobalSilence Retreat</div>
                      <div className="leading-5 text-[1.2rem] text-redfull md:text-2xl">Silence Retreat</div>
@@ -38,7 +41,7 @@ export default function HomeMain ({data}) {
        
              <div className="relative w-full h-full pb-12 mb-2 bg-gray-200 fadeInTop bg-opacity-95 lg:w-auto xl:pb-16 lg:mb-0"
                 >
-                 <div className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 filosofia_italic bg-button-color bg-gold1 md:text-4xl">Latest classes</div>
+                 <div className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 filosofia_italic bg-button-color bg-gold1 md:text-4xl"> {t("Latest classes")}</div>
                  <div className="p-4 overflow-y-auto metropolis_medium h-80 ">
                      <div className="leading-5 text-[1.2rem] text-redfull md:text-2xl">Online GlobalSilence Retreat</div>
                      <div className="leading-5 text-[1.2rem] text-redfull md:text-2xl">Silence Retreat</div>
@@ -66,7 +69,7 @@ export default function HomeMain ({data}) {
        
              <div className="relative w-full h-full pb-12 mb-2 bg-gray-200 metropolis_medium bg-opacity-95 lg:w-auto xl:pb-16 lg:mb-0"
                 >
-                 <div className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 filosofia_italic bg-button-color bg-gold1 md:text-4xl">News</div>
+                 <div className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 filosofia_italic bg-button-color bg-gold1 md:text-4xl">{t("News")}</div>
                  <div className="p-4 overflow-y-auto metropolis_medium h-80 ">
                      <div className="leading-5 text-[1.2rem] text-redfull md:text-2xl">Online GlobalSilence Retreat</div>
                      <div className="leading-5 text-[1.2rem] text-redfull md:text-2xl">Silence Retreat</div>

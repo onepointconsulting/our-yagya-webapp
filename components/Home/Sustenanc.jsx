@@ -1,17 +1,19 @@
 import React from "react";
 import Link from "next/link";
 import { useContext } from "react";
+import { useTranslation } from "react-i18next";
 
 import { GlobalContext } from "../../pages/_app";
 
 export default function Sustenanc() {
+  const { t } = useTranslation();
   const { sustenanceMenu } = useContext(GlobalContext);
 
   return (
     <>
       <div className="hidden p-[.75rem] text-center bg-red70 lg:block">
         <h1 className="text-2xl text-slate-50 filosofia_italic md:text-[2.5rem]">
-          Sustenance
+          {t("Sustenance")}
         </h1>
       </div>
 

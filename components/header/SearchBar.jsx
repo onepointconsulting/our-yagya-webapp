@@ -1,10 +1,11 @@
 import { useState } from "react";
-import Link from "next/link";
+import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
 
 const SearchBar = () => {
   const [searchIsOpen, setSearchIsOpen] = useState(false);
   const router = useRouter();
+  const { t } = useTranslation();
 
   const search = () => {
     setSearchIsOpen(!searchIsOpen);
@@ -36,7 +37,7 @@ const SearchBar = () => {
               onKeyPress={handleKeyPress}
               type="text"
               name="search"
-              placeholder="Search by keywords"
+              placeholder={t("Search by keywords")}
               className="w-full p-4 py-2 text-lg placeholder-gray-400 bg-[#ffffff] border-2 border-gray-400 outline-none md:p-4 md:py-3 md:text-2xl xl:text-3xl filosofia_italic"
             />
           </div>
