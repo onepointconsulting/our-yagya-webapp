@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import Sustenanc from "./Sustenanc";
-import { useTranslation } from "react-i18next";
-import { GlobalContext } from "../../pages/_app";
-import { formateDate } from "../../lib/dateAdapter";
+import React, { useContext } from 'react'
+import Sustenance from './Sustenanc'
+import { useTranslation } from 'react-i18next'
+import { GlobalContext } from '../../pages/_app'
+import { durationAdapter, formateDate } from '../../lib/dateAdapter'
 
 const videoAdapter = (data) => {
   const video = data?.data?.videos?.data;
@@ -10,31 +10,6 @@ const videoAdapter = (data) => {
     return [];
   }
   return video[0]?.attributes;
-};
-
-const durationAdapter = (videoData) => {
-    const durationHours = videoData.durationHours;
-    const durationMinutes = videoData.durationMinutes;
-    const durationSeconds = videoData.durationSeconds;
-
-    const durationCheck1 = durationHours === 0 && durationMinutes && durationSeconds > 10;
-    const durationCheck2 = durationHours >= 1 && durationMinutes && durationSeconds > 10;
-    const durationCheck3 = durationHours <= 1 && durationMinutes <= 10 && durationSeconds > 10;
-    const durationCheck4 = durationHours === 0 && durationMinutes < 10 && durationSeconds <= 10;
-    const durationCheck5 = durationHours === 0 && durationMinutes === 0 && durationSeconds <= 60;
-
-    if (durationCheck1) {
-        return console.log("durationCheck1", durationMinutes + ":" + durationSeconds);
-    } else if (durationCheck2) {
-        return "0" + durationHours + ":" + durationMinutes + ":" + durationSeconds;
-    } else if (durationCheck3) {
-        return "0" + durationMinutes + ":" + durationSeconds;
-    } else if (durationCheck4) {
-        return "0" + durationMinutes + ":" + "0" + durationSeconds;
-    } else if (durationCheck5) {
-        return "0" + "0" + ":" + durationSeconds;
-    }
-    return "";
 };
 
 
@@ -45,13 +20,10 @@ export default function Video({ data }) {
   
   const duration = durationAdapter(videoData);
   
-//   console.log("duration", duration)
-
-
   return (
     <div className="mx-auto my-4">
       {/* Sustenanc Menu */}
-      <Sustenanc />
+      <Sustenance />
 
       {/* video preview */}
       <div className="w-auto mx-auto mt-6 bg-video-pre-color xl:w-3/4">

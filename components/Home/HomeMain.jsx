@@ -2,6 +2,10 @@ import React from "react";
 import { imageAdapter } from '../../lib/imageAdapter'
 import { useTranslation } from "react-i18next";
 
+const newsAdapter = (data) => {
+    return []
+}
+
 export default function HomeMain ({data}) {
     const { t } = useTranslation();
 
