@@ -13,6 +13,7 @@ import BackToTop from '../components/Footer/BackToTop'
 import Footer from '../components/Footer/Footer'
 import { titleAdapter } from '../lib/titleAdapter'
 import i18n from 'i18next'
+import i18next from 'i18next'
 
 export const GlobalContext = createContext({})
 
@@ -52,13 +53,14 @@ OurYagya.getInitialProps = async (ctxContainer) => {
     const { router } = ctxContainer
     const { locale } = router
 
+    i18next.changeLanguage(locale);
+
     // Calls page's `getInitialProps` and fills `appProps.pageProps`
     const appProps = await App.getInitialProps(ctxContainer)
     const menuData = await fetchGlobalData(locale)
     const menuDict = menuAdapter(menuData)
     const { globalProperties } = menuData?.data
     const { footer, main, sustenance, pill_menu } = menuDict
-
 
     return {
         ...appProps,
