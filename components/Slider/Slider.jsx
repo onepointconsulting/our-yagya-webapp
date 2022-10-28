@@ -15,6 +15,7 @@ import { GlobalContext } from '../../pages/_app'
 const Slider = ({ data }) => {
   const {locale} = useContext(GlobalContext)
   const slides = sliderAdapter(data, locale);
+
   return (
     <Splide
       className="splide visible"

@@ -1,22 +1,21 @@
 import React from "react";
-import { imageAdapter } from '../../lib/imageAdapter'
+import { imageAdapter } from "../../lib/imageAdapter";
 import { useTranslation } from "react-i18next";
+import { formateDate } from "../../lib/dateAdapter";
 
 const newsAdapter = (data) => {
-    // this function is not completed yet!
     const getNews = data?.data?.news?.data;
-    if(getNews.length > 0) {
-        return getNews[0]?.attributes;
+
+    if (getNews.length > 0) {
+        return getNews;
     }
-    return ""
+    return "";
+};
 
-}
-
-export default function HomeMain ({data}) {
-    const { t } = useTranslation();
-    const newsData = newsAdapter(data);
-
-    const bgImage = imageAdapter(data);
+export default function HomeMain({ data }) {
+  const { t } = useTranslation();
+  const newsData = newsAdapter(data);
+  const bgImage = imageAdapter(data);
 
   return (
     // <!-- home page background -->
@@ -119,34 +118,42 @@ export default function HomeMain ({data}) {
               </h1>
             </div>
           </div>
-
+          {/* News */}
           <div className="relative w-full h-full pb-12 mb-2 bg-gray-200 metropolis_medium bg-opacity-95 lg:w-auto xl:pb-16 lg:mb-0">
             <div className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 filosofia_italic bg-button-color bg-gold1 md:text-4xl">
               {t("News")}
             </div>
-            <div className="p-4 overflow-y-auto metropolis_medium h-80 ">
-              <div className="leading-5 text-[1.2rem] text-redfull md:text-2xl">
-                {newsData.title}
-              </div>
-              <div className="leading-5 text-[1.2rem] text-redfull md:text-2xl">
-                Silence Retreat
-              </div>
-              <div className="pb-3">
-                <span className="text-[14px] text-gray-700 md:text-base">
-                  {newsData.timestamp}
-                </span>
-              </div>
-            </div>
-            <div className="absolute left-0 right-0 bottom-8">
-              <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
-                <a href="/news.html">
-                  <img src="./img/icons/ArrowDown.png" alt="" />
-                </a>
-              </h1>
+
+            <div className="overflow-y-auto metropolis_medium h-80">
+              {newsData.map((news) => {
+                return (
+                  <>
+                    <div className="p-4">
+                      <div className="leading-5 text-[1.2rem] text-redfull md:text-2xl">
+                        {news.attributes.title}
+                      </div>
+
+                      <div className="pb-3">
+                        <span className="text-[14px] text-gray-700 md:text-base">
+                          {formateDate(news.attributes.timestamp)}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* arrow down icon */}
+                    <div className="absolute left-0 right-0 bottom-8">
+                      <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
+                        <a href="/news.html">
+                          <img src="./img/icons/ArrowDown.png" alt="" />
+                        </a>
+                      </h1>
+                    </div>
+                  </>
+                );
+              })}
             </div>
           </div>
         </div>
-        {/* <!-- Resources --> */}
       </div>
     </div>
   );
