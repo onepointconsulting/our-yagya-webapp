@@ -128,12 +128,12 @@ export default function HomeMain({ data }) {
               {newsData.map((news) => {
                 return (
                   <>
-                    <div className="p-4">
+                    <div className="p-3">
                       <div className="leading-5 text-[1.2rem] text-redfull md:text-2xl">
                         {news.attributes.title}
                       </div>
 
-                      <div className="pb-3">
+                      <div className="p-1">
                         <span className="text-[14px] text-gray-700 md:text-base">
                           {formateDate(news.attributes.timestamp)}
                         </span>
