@@ -5,7 +5,7 @@ import '../assets/css/styles.css'
 import '../styles/globals.css'
 
 import React, { createContext, useEffect } from 'react'
-import Header from '../components/Header/Header'
+import Header from '../components/header/Header'
 import { OurYagyaContextProvider } from '../context/OurYagyaContext'
 import { fetchGlobalData } from '../lib/apiClient'
 import { menuAdapter } from '../lib/menuAdapter'
