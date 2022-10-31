@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import Sustenance from './Sustenanc'
+import Sustenance from './Sustenance'
 import { useTranslation } from 'react-i18next'
 import { GlobalContext } from '../../pages/_app'
 import { durationAdapter, formateDate } from '../../lib/dateAdapter'
