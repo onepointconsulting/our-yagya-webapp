@@ -1,0 +1,365 @@
+{
+  "data": {
+    "pageLayouts": {
+      "data": [
+        {
+          "attributes": {
+            "title": "News",
+            "layout": "news",
+            "backgroundImage": {
+              "data": [
+                {
+                  "attributes": {
+                    "alternativeText": "newsBgImage.png",
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1666992100/news_Bg_Image_35ffa8446f.png",
+                    "__typename": "UploadFile"
+                  },
+                  "__typename": "UploadFileEntity"
+                }
+              ],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "__typename": "PageLayout"
+          },
+          "__typename": "PageLayoutEntity"
+        }
+      ],
+      "__typename": "PageLayoutEntityResponseCollection"
+    },
+    "slides": {
+      "data": [
+        {
+          "id": "3",
+          "attributes": {
+            "url": "/news",
+            "slider": {
+              "id": "3",
+              "title": "Motivational slides news",
+              "slides": [
+                {
+                  "id": "7",
+                  "title": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in ",
+                  "image": {
+                    "data": {
+                      "id": "10",
+                      "attributes": {
+                        "name": "one.png",
+                        "alternativeText": "one.png",
+                        "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1665820110/one_8289cc0ec0.png",
+                        "__typename": "UploadFile"
+                      },
+                      "__typename": "UploadFileEntity"
+                    },
+                    "__typename": "UploadFileEntityResponse"
+                  },
+                  "speakers": "Shih de huang jude urriave phd",
+                  "startTimestamp": "2022-10-20T15:24:00.000Z",
+                  "link": "https://www.google.com/",
+                  "__typename": "ComponentSlideComponentsSlide"
+                },
+                {
+                  "id": "8",
+                  "title": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in ",
+                  "image": {
+                    "data": {
+                      "id": "3",
+                      "attributes": {
+                        "name": "Dadis gathering",
+                        "alternativeText": "Dadis gathering",
+                        "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1664906757/Clip1_c6ee2bd09f.png",
+                        "__typename": "UploadFile"
+                      },
+                      "__typename": "UploadFileEntity"
+                    },
+                    "__typename": "UploadFileEntityResponse"
+                  },
+                  "speakers": "Shih de huang jude urriave phd",
+                  "startTimestamp": "2022-11-03T19:03:00.000Z",
+                  "link": "https://www.google.com/",
+                  "__typename": "ComponentSlideComponentsSlide"
+                },
+                {
+                  "id": "9",
+                  "title": "Motivational slides news",
+                  "image": {
+                    "data": {
+                      "id": "12",
+                      "attributes": {
+                        "name": "Rectangle.png",
+                        "alternativeText": "Rectangle.png",
+                        "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1665820828/Rectangle_456755754e.png",
+                        "__typename": "UploadFile"
+                      },
+                      "__typename": "UploadFileEntity"
+                    },
+                    "__typename": "UploadFileEntityResponse"
+                  },
+                  "speakers": "Shih de huang jude urriave phd 1",
+                  "startTimestamp": "2022-10-18T23:40:00.000Z",
+                  "link": "https://www.google.com/",
+                  "__typename": "ComponentSlideComponentsSlide"
+                },
+                {
+                  "id": "10",
+                  "title": "Motivational slides 5",
+                  "image": {
+                    "data": {
+                      "id": "10",
+                      "attributes": {
+                        "name": "one.png",
+                        "alternativeText": "one.png",
+                        "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1665820110/one_8289cc0ec0.png",
+                        "__typename": "UploadFile"
+                      },
+                      "__typename": "UploadFileEntity"
+                    },
+                    "__typename": "UploadFileEntityResponse"
+                  },
+                  "speakers": "Shih de huang jude urriave phd 545",
+                  "startTimestamp": "2022-10-25T14:35:00.000Z",
+                  "link": "https://www.google.com/",
+                  "__typename": "ComponentSlideComponentsSlide"
+                },
+                {
+                  "id": "11",
+                  "title": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in  658",
+                  "image": {
+                    "data": {
+                      "id": "13",
+                      "attributes": {
+                        "name": "ParliamentLOGO.png",
+                        "alternativeText": "ParliamentLOGO.png",
+                        "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1665820941/Parliament_LOGO_2d0cd3424f.png",
+                        "__typename": "UploadFile"
+                      },
+                      "__typename": "UploadFileEntity"
+                    },
+                    "__typename": "UploadFileEntityResponse"
+                  },
+                  "speakers": "Shih de huang jude urriave phd 89",
+                  "startTimestamp": "2022-10-20T13:16:00.000Z",
+                  "link": "https://www.google.com",
+                  "__typename": "ComponentSlideComponentsSlide"
+                }
+              ],
+              "__typename": "ComponentSlideComponentsSlider"
+            },
+            "__typename": "Slide"
+          },
+          "__typename": "SlideEntity"
+        }
+      ],
+      "__typename": "SlideEntityResponseCollection"
+    },
+    "news": {
+      "data": [
+        {
+          "id": "11",
+          "attributes": {
+            "title": "Merciful and bestower #31",
+            "timestamp": "2022-10-31T00:00:00.000Z",
+            "content": "YouTube Video Links : \n*Mohini Didi Classes :\nEnglish - Merciful & Bestower Playlist - https://www.youtube.com/playlist?list=PLHSAb26Vm7rnOFedAUnf5lv-S8gzGq0fp\n\n English -  Merciful & Bestower   - https://youtu.be/G3yHWJItryQ\n\n Hindi  - https://youtu.be/eJqWo5tDzb8\n\n\n*Elevated Version - Bapdada: https://youtu.be/gOQNVJoOYd8\n\n* Meditation: https://youtu.be/8xOu_9tXhlk\n\n\n *Amritvela Meditation: https://youtube.com/playlist?list=PLHSAb26Vm7rnJo4gZpYlz42C4CfYbz2Py\n\n\n*Daily Murli for Little Angels :\nhttps://www.youtube.com/playlist?list=PLHSAb26Vm7rkIRMIpTqbZMGcU3eOyD5N7\n\n*We have uploaded all translated language classes on the YouTube channel:\nHindi :\nhttps://youtube.com/playlist?list=PLHSAb26Vm7rnCwTCmGES3aW64O0WzXLVR\n\nSpanish : \nhttps://www.youtube.com/playlist?list=PLHSAb26Vm7rmofbl3f1uubYQx1ggBZ3aJ\n\nFrench : \nhttps://youtube.com/playlist?list=PLHSAb26Vm7rlAVV7Mx_OJ28u2diDHT4FO\n\nPortuguese : \nhttps://www.youtube.com/playlist?list=PLHSAb26Vm7rlDJTKi5DvOYIZui6QaqVOU\n\nTamil :\nhttps://www.youtube.com/playlist?list=PLHSAb26Vm7rn0522qKPmqMLiUYEcJq5fh\n\nTelugu :\nhttps://www.youtube.com/playlist?list=PLHSAb26Vm7rmqT7LzOlGRIAt1Dpjb9kKK\n\nThai :\nhttps://www.youtube.com/playlist?list=PLHSAb26Vm7rk_XXBlzaBgQcjoGn7FwGw2\n\nChinese : \nhttps://youtube.com/playlist?list=PLHSAb26Vm7rk4U6nze-RocccOefcbrujM\n\nKorean :\nhttps://youtube.com/playlist?list=PLHSAb26Vm7rnUKrjsahnGTzh3y_Shu02_\n\nNepali : \nhttps://youtube.com/playlist?list=PLHSAb26Vm7rkNm0JE1hWF-WROtRH_e7wo\n\nEnglish (Translation of Avyakti Gyan Ratan + Avyakti Blessings)\nhttps://youtube.com/playlist?list=PLHSAb26Vm7rmfry7aak0F3o-pOlbmdzOW",
+            "images": {
+              "data": [
+                {
+                  "id": "21",
+                  "attributes": {
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667241973/M_B_Homework_Oct_31_1_61f21786e5.jpg",
+                    "alternativeText": "M_B_Homework_Oct_31 (1).jpg",
+                    "__typename": "UploadFile"
+                  },
+                  "__typename": "UploadFileEntity"
+                }
+              ],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Special Focus News",
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "9",
+          "attributes": {
+            "title": "Transformation of old nature and old sanskar",
+            "timestamp": "2022-10-31T00:00:00.000Z",
+            "content": "**November 2022 Homework**\n\nOm Shanti\nDear Baba's Family,\nGreetings of love!\n\nPromo:   https://youtu.be/wgdwJPI6lEM\n \nYou will receive a daily point of self-awareness and the method of practice in the YouTube folder link given below.\n \nThank you\nIn Baba's loving yaad,\n BK Mohini\nAdditional Administrative Head of Brahma Kumaris\n \n\nHomework Link – you will receive a daily video in the below YouTube folder link.\n \n\nEnglish :\nhttps://youtube.com/playlist?list=PLHSAb26Vm7rngV-eFcQ9TfQ0dSI_rPzli\n \nHindi (translated classes) :\nhttps://youtube.com/playlist?list=PLHSAb26Vm7rnCwTCmGES3aW64O0WzXLVR\n \n\nAvyakti Parivar\nA Family of Angels United in Love for One\nOm Shanti\nhttp://tiny.cc/avyaktiparivar-youtube  \nwww.avyaktiparivar.org",
+            "images": {
+              "data": [
+                {
+                  "id": "20",
+                  "attributes": {
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667241376/butterflies_aa6f0e7bc6.png",
+                    "alternativeText": "butterflies.png",
+                    "__typename": "UploadFile"
+                  },
+                  "__typename": "UploadFileEntity"
+                }
+              ],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Special Focus News",
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "7",
+          "attributes": {
+            "title": "Reminder: Nairobi (Kenya)- Invitation to International BK Gujarati Retreat 24 - 30 November 2022",
+            "timestamp": "2022-11-23T20:27:00.000Z",
+            "content": "Om Shanti. Please find attached an invitation to the BK Gujarati International Retreat to be held at the Serve Africa Retreat Center in Nairobi, Kenya.",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "International",
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "5",
+          "attributes": {
+            "title": "Merciful & Bestower #27",
+            "timestamp": "2022-11-20T13:00:00.000Z",
+            "content": "YouTube Video Links : \n*Mohini Didi Classes :\nEnglish - Merciful & Bestower Playlist - https://www.youtube.com/playlist?list=[PLHSAb26Vm7rnOFedAUnf5lv-S8gzGq0fp\n",
+            "images": {
+              "data": [
+                {
+                  "id": "18",
+                  "attributes": {
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1666890543/M_B_Homework_Oct_27_1_4878ef463d.jpg",
+                    "alternativeText": "M_B_Homework_Oct_27 (1).jpg",
+                    "__typename": "UploadFile"
+                  },
+                  "__typename": "UploadFileEntity"
+                },
+                {
+                  "id": "17",
+                  "attributes": {
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1666890543/M_B_Template_ESPANOL_Day_27_86b80dc27b.jpg",
+                    "alternativeText": "M_B_Template_ESPANOL Day 27.jpg",
+                    "__typename": "UploadFile"
+                  },
+                  "__typename": "UploadFileEntity"
+                },
+                {
+                  "id": "16",
+                  "attributes": {
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1666890543/French_Homework_Day_27_1aa3cab43d.jpg",
+                    "alternativeText": "French Homework Day 27 .jpg",
+                    "__typename": "UploadFile"
+                  },
+                  "__typename": "UploadFileEntity"
+                }
+              ],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "International",
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "3",
+          "attributes": {
+            "title": "Gift For The Soul ~ 27th October 2022",
+            "timestamp": "2022-10-27T11:00:00.000Z",
+            "content": "Gift For The Soul ~ 27th October 2022",
+            "images": {
+              "data": [
+                {
+                  "id": "15",
+                  "attributes": {
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1666886295/gift_for_the_soul_a90755229a.png",
+                    "alternativeText": "gift_for_the_soul.png",
+                    "__typename": "UploadFile"
+                  },
+                  "__typename": "UploadFileEntity"
+                }
+              ],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Special Focus News",
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "1",
+          "attributes": {
+            "title": "Madhuban Newsletter - November 2022",
+            "timestamp": "2022-10-26T11:00:00.000Z",
+            "content": "Please find attached the Madhuban Newsletter for November 2022 with points for 1-30 November in English and Hindi.",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Madhuban News",
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        }
+      ],
+      "__typename": "NewEntityResponseCollection"
+    }
+  },
+  "loading": false,
+  "networkStatus": 7,
+  "stale": false
+}

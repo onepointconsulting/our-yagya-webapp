@@ -12,8 +12,7 @@ import { IndexContext } from '../../pages'
  * @returns {JSX.Element}
  * @constructor
  */
-const Slider = () => {
-    const { data } = useContext(IndexContext)
+const Slider = ({data}) => {
     const { locale } = useContext(GlobalContext)
     const slides = sliderAdapter(data, locale)
 
