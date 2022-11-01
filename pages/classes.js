@@ -1,4 +1,4 @@
-import Classes from "../components/Classes/Classes";
+import Classes from '../components/Classes/Classes'
 import { adaptCustomPage } from '../lib/pageAdapter'
 
 export default function classes() {

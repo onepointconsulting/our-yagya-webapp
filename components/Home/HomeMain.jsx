@@ -5,6 +5,7 @@ import { formateDate } from '../../lib/dateAdapter'
 import { GlobalContext } from '../../pages/_app'
 import Link from 'next/link'
 import { PAGES } from '../../lib/pages'
+import { IndexContext } from '../../pages'
 
 const newsAdapter = (data) => {
     const news = data?.data?.news?.data
@@ -25,10 +26,10 @@ const NewsItem = ({news}) => {
                 </div>
 
                 <div className="p-1">
-                                    <span
-                                        className="text-[14px] text-gray-700 md:text-base">
-                                      {formateDate(news.attributes.timestamp, locale)}
-                                    </span>
+                    <span
+                        className="text-[14px] text-gray-700 md:text-base">
+                      {formateDate(news.attributes.timestamp, locale)}
+                    </span>
                 </div>
             </div>
 
@@ -185,7 +186,8 @@ const EventsBlock = () => {
     )
 }
 
-export default function HomeMain ({ data }) {
+export default function HomeMain () {
+    const { data } = useContext(IndexContext)
     const { t } = useTranslation()
     const newsData = newsAdapter(data)
     const bgImage = imageAdapter(data)

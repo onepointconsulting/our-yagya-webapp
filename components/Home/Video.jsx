@@ -3,6 +3,7 @@ import Sustenance from './Sustenance'
 import { useTranslation } from 'react-i18next'
 import { GlobalContext } from '../../pages/_app'
 import { durationAdapter, formateDate } from '../../lib/dateAdapter'
+import { IndexContext } from '../../pages'
 
 const videoAdapter = (data) => {
   const video = data?.data?.videos?.data;
@@ -13,7 +14,9 @@ const videoAdapter = (data) => {
 };
 
 
-export default function Video({ data }) {
+export default function Video() {
+
+  const { data } = useContext(IndexContext)
   const { locale } = useContext(GlobalContext);
   const { t } = useTranslation();
   const videoData = videoAdapter(data);

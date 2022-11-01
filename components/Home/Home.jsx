@@ -9,13 +9,13 @@ import Video from './Video'
  * @returns {JSX.Element}
  * @constructor
  */
-export default function Home ({ data }) {
+export default function Home () {
 
     return (
         <div className="bg-slate-50 h-full">
-            <Slider data={data}/>
-            <HomeMain data={data}/>
-            <Video data={data}/>
+            <Slider/>
+            <HomeMain/>
+            <Video/>
         </div>
     )
 }

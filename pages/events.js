@@ -1,6 +1,5 @@
-import Events from "../components/Events/Events";
-import { adaptCustomPage } from "../lib/pageAdapter";
-
+import Events from '../components/Events/Events'
+import { adaptCustomPage } from '../lib/pageAdapter'
 
 export default function EVents({data}) {
 

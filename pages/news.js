@@ -1,7 +1,7 @@
-import { adaptCustomPage } from "../lib/pageAdapter";
-import NewsMain from "../components/NewsCom/NewsMain";
-import { newsLayout } from "../lib/apiClient";
-import Slider from "../components/Slider/Slider";
+import { adaptCustomPage } from '../lib/pageAdapter'
+import NewsMain from '../components/NewsCom/NewsMain'
+import { newsLayout } from '../lib/apiClient'
+import Slider from '../components/Slider/Slider'
 
 export default function News({ data }) {
   console.log("News data", data);
