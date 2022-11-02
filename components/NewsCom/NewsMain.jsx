@@ -18,11 +18,10 @@ const newsCategoriesAdapter = (globalProperties) => {
 export default function NewsMain ({ data }) {
     const { t } = useTranslation()
     const { globalProperties , locale} = useContext(GlobalContext)
-    const newsCategories = globalProperties.newsCategories
     const bgImage = imageAdapter(data)
-    const getNews = newsAdapter(data)
-    const getNewsCategoriesAdapter = newsCategoriesAdapter(globalProperties)
-    console.log("getNewsCategoriesAdapter", getNewsCategoriesAdapter)
+    const adaptedNews = newsAdapter(data)
+    const newsCategories = newsCategoriesAdapter(globalProperties)
+    console.log("NewsMain data", JSON.stringify(data))
 
     return (
       <div>
@@ -38,21 +37,21 @@ export default function NewsMain ({ data }) {
             <div className="object-cover bg-gray-200 bg-opacity-[0.50]">
                 
               <div className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
-                international
+                {newsCategories[0]}
               </div>
-              {getNews.map((news, i) => {
+              {adaptedNews[newsCategories[0]]?.news.map((news, i) => {
                 return (
                   <>
                     <div key={i} className="p-2 pl-4 metropolis_medium md:pl-8 md:p-4">
                       <div className="text-redfull py-2 text-[19px] md:text-[26px] xl:text-[30px]">
                         <a href="/news_details.html">
-                       {news.attributes.title}
+                       {news.title}
                         </a>
                       </div>
                       <div>
                         <div className="flex items-center text-sm text-gray-700 md:text-base lg:text-xl xl:text-2xl">
                           <div className="mr-2">     {t('Posted')}</div> 
-                          <div className="mx-2">  {formateDate(news.attributes.timestamp, locale)}</div>
+                          <div className="mx-2">  {formateDate(news.timestamp, locale)}</div>
                         </div>
                       </div>
                     </div>
@@ -79,7 +78,7 @@ export default function NewsMain ({ data }) {
                   {/* <!-- second section (first box-left ) --> */}
                   <div className="relative w-full pb-16 my-4 bg-gray-200 fadeInLeft h-fit">
                     <div className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
-                      Madhuban news
+                      {newsCategories[1]}
                     </div>
                     <div className="p-2 pl-4 mb-8 metropolis_medium md:pl-8 md:p-4">
                       <div className="text-redfull py-2 text-[19px] md:text-[26px] xl:text-[30px]">
@@ -158,7 +157,7 @@ export default function NewsMain ({ data }) {
                   {/* <!-- right section (first box) --> */}
                   <div className="relative w-full pb-16 my-4 bg-gray-200 h-fit">
                     <div className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
-                      special focus news
+                      {newsCategories[2]}
                     </div>
                     <div className="p-2 pl-4 mb-8 metropolis_medium md:pl-8 md:p-4">
                       <div className="text-redfull py-2 text-[19px] md:text-[26px] xl:text-[30px]">
