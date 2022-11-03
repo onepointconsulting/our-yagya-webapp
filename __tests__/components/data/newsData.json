@@ -154,6 +154,72 @@
     "news": {
       "data": [
         {
+          "id": "21",
+          "attributes": {
+            "title": "Benjamin Netanyahu set to form government after Israeli PM concedes defeat in election",
+            "timestamp": "2022-11-01T18:27:00.000Z",
+            "content": "Mr Netanyahu is expected to form the country's most right-wing government in history when he takes power, likely in the coming weeks.\n\n",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "International",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "19",
+          "attributes": {
+            "title": "Jagtar Singh Johal: Nazanin Zaghari-Ratcliffe and her husband join protest calling for return of British national detained in India",
+            "timestamp": "2022-11-03T18:33:00.000Z",
+            "content": "Blogger Jagtar Singh Johal, 35, says he faces the death penalty over his activism and campaigning for Sikh human rights, something \"the UK strongly opposes\", the Foreign Office has told Sky News.\n\n",
+            "images": {
+              "data": [
+                {
+                  "id": "23",
+                  "attributes": {
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667497495/skynews_richard_ratcliffe_jagtar_singh_johal_5953197_79f6b36b64.jpg",
+                    "alternativeText": "skynews-richard-ratcliffe-jagtar-singh-johal_5953197.jpg",
+                    "__typename": "UploadFile"
+                  },
+                  "__typename": "UploadFileEntity"
+                }
+              ],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "International",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
           "id": "15",
           "attributes": {
             "title": "Brent Business News",
