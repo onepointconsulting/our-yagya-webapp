@@ -149,7 +149,8 @@ export default function NewsMain({ data }) {
                 <img
                   className="w-8 md:w-12"
                   src="./img/icons/ArrowDown.png"
-                  alt=""
+                  alt={newsCategories[0]}
+                  title={newsCategories[0]}
                 />
               </h1>
             </div>
