@@ -1,0 +1,938 @@
+{
+  "data": {
+    "news": {
+      "data": [
+        {
+          "id": "54",
+          "attributes": {
+            "title": "Lidiando con el cambio climático en el Monte Everest",
+            "timestamp": "2022-08-02T07:58:00.000Z",
+            "content": "Cientos de escaladores llegan cada año al campamento base del Everest en el glaciar Khumbu, pero las temperaturas más altas están derritiendo el hielo en la región del Himalaya. Los guías locales que son miembros de la comunidad sherpa ayudan a los visitantes a llegar al pico de 8,8 km, pero el gobierno de Nepal está considerando trasladar el campamento por razones de seguridad. Entonces, ¿qué tan peligroso es el cambio climático al hacer el viaje a la cima de la montaña más alta del mundo?",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Sudamerica",
+                  "parent": {
+                    "data": {
+                      "attributes": {
+                        "title": "Sitios web regionales",
+                        "__typename": "Category"
+                      },
+                      "__typename": "CategoryEntity"
+                    },
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "52",
+          "attributes": {
+            "title": "Bolsonaro intensificó la cultura de las armas en Brasil. ¿Podrá Lula reinar?",
+            "timestamp": "2022-09-23T15:18:00.000Z",
+            "content": "Después de ganar las elecciones brasileñas, Luiz Inacio Lula da Silva volverá a ser presidente del país en enero, más de 10 años después de que ocupó el cargo por última vez. Pero su victoria fue estrecha y el actual presidente Jair Bolsonaro aún obtuvo más del 49 por ciento de los votos.",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Sudamerica",
+                  "parent": {
+                    "data": {
+                      "attributes": {
+                        "title": "Sitios web regionales",
+                        "__typename": "Category"
+                      },
+                      "__typename": "CategoryEntity"
+                    },
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "50",
+          "attributes": {
+            "title": "Lo que sabemos sobre el desastre mortal de Halloween en Seúl",
+            "timestamp": "2022-11-01T16:13:00.000Z",
+            "content": "El sábado por la noche, decenas de miles de personas inundaron el área en el centro de Seúl para celebrar Halloween, pero el pánico estalló cuando la multitud aumentó, y algunos testigos dijeron que se volvió difícil respirar e imposible moverse.\nEl sábado por la noche, decenas de miles de personas inundaron el área en el centro de Seúl para celebrar Halloween, pero el pánico estalló cuando la multitud aumentó.",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Asia",
+                  "parent": {
+                    "data": {
+                      "attributes": {
+                        "title": "Sitios web regionales",
+                        "__typename": "Category"
+                      },
+                      "__typename": "CategoryEntity"
+                    },
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "48",
+          "attributes": {
+            "title": "Corea del Norte disparó la mayor cantidad de misiles de corto alcance en un día, dice Corea del Sur",
+            "timestamp": "2022-10-12T16:23:00.000Z",
+            "content": "El ejército de Corea del Sur dijo el miércoles que Corea del Norte lanzó la mayor cantidad de misiles de corto alcance en un día cuando Seúl tomó represalias por el último aluvión de pruebas de armas de Pyongyang, aumentando aún más las tensiones en la región.",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Asia",
+                  "parent": {
+                    "data": {
+                      "attributes": {
+                        "title": "Sitios web regionales",
+                        "__typename": "Category"
+                      },
+                      "__typename": "CategoryEntity"
+                    },
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "46",
+          "attributes": {
+            "title": "El desastre de la multitud en Seúl deja a Corea del Sur tambaleándose, mientras el número de muertos aumenta a 154",
+            "timestamp": "2022-10-28T20:54:00.000Z",
+            "content": "Las autoridades de Corea del Sur están investigando el aumento de la multitud que mató al menos a 154 asistentes a la fiesta en Seúl, mientras la agitada nación intenta aceptar uno de los peores desastres de su historia.\n\nEl país ha comenzado un período de duelo de una semana de duración mientras los funcionarios intentan comprender cómo se produjo el aplastamiento devastador.",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Asia",
+                  "parent": {
+                    "data": {
+                      "attributes": {
+                        "title": "Sitios web regionales",
+                        "__typename": "Category"
+                      },
+                      "__typename": "CategoryEntity"
+                    },
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "44",
+          "attributes": {
+            "title": "África debe presentar una posición fuerte y unida en la COP27 – ACET",
+            "timestamp": "2022-08-30T13:01:00.000Z",
+            "content": "El investigador principal del Centro Africano para la Transformación Económica (ACET), el Dr. John Asafu-Adjaye, ha dicho que dado que África recibió relativamente poca financiación climática, especialmente para la adaptación, lo que socava la capacidad de las comunidades locales para desarrollar resiliencia al cambio climático, el continente debe presentar una posición fuerte y unida en la próxima Conferencia de las Naciones Unidas sobre el Cambio Climático (COP27).",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "África",
+                  "parent": {
+                    "data": {
+                      "attributes": {
+                        "title": "Sitios web regionales",
+                        "__typename": "Category"
+                      },
+                      "__typename": "CategoryEntity"
+                    },
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "42",
+          "attributes": {
+            "title": "El conflicto en curso en la República Centroafricana (RCA) ha dejado a más de un millón de niños en peligro.",
+            "timestamp": "2022-10-31T10:56:00.000Z",
+            "content": "Desde 2014, War Child ha estado trabajando en la República Centroafricana para brindar servicios vitales a los niños afectados por el conflicto y sus familias para mejorar sus medios de subsistencia, el acceso a la protección y la educación. Esto también ha incluido facilitar la liberación de más de 15.500 niños de las fuerzas armadas y grupos de",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "África",
+                  "parent": {
+                    "data": {
+                      "attributes": {
+                        "title": "Sitios web regionales",
+                        "__typename": "Category"
+                      },
+                      "__typename": "CategoryEntity"
+                    },
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "40",
+          "attributes": {
+            "title": "Los defensores habían advertido sobre los peligros de una violación de datos de bienes raíces. Acaba de suceder",
+            "timestamp": "2022-10-20T09:16:00.000Z",
+            "content": "La agencia inmobiliaria australiana Harcourts reveló que se vio afectada por un ataque cibernético el mes pasado, con la información personal de inquilinos, propietarios y comerciantes potencialmente expuesta.",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Australia",
+                  "parent": {
+                    "data": {
+                      "attributes": {
+                        "title": "Sitios web regionales",
+                        "__typename": "Category"
+                      },
+                      "__typename": "CategoryEntity"
+                    },
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "38",
+          "attributes": {
+            "title": "El fundador de Hillsong, Brian Houston, rompe el silencio y dice que \"luchará\" contra el cargo de encubrimiento de abuso",
+            "timestamp": "2022-10-30T08:13:00.000Z",
+            "content": "Esta historia contiene denuncias de agresión sexual y puede ser angustiante para algunos lectores.\n\nEn sus primeros comentarios públicos en meses, el fundador de la Iglesia Hillsong, Brian Houston, dijo que “luchará” contra un cargo que alega que encubrió los delitos sexuales contra niños de su padre.",
+            "images": {
+              "data": [
+                {
+                  "id": "29",
+                  "attributes": {
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667502966/aus_deaab42cc8.webp",
+                    "alternativeText": "aus.webp",
+                    "__typename": "UploadFile"
+                  },
+                  "__typename": "UploadFileEntity"
+                }
+              ],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Australia",
+                  "parent": {
+                    "data": {
+                      "attributes": {
+                        "title": "Sitios web regionales",
+                        "__typename": "Category"
+                      },
+                      "__typename": "CategoryEntity"
+                    },
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "36",
+          "attributes": {
+            "title": "v",
+            "timestamp": "2022-08-02T14:46:00.000Z",
+            "content": "Julie Powell, la escritora gastronómica que inspiró el drama biográfico de Nora Ephron de 2009, Julie & Julia, murió de un paro cardíaco el 26 de octubre. Tenía 49 años. Powell saltó a la fama en 2002 cuando lanzó el Proyecto Julie/Julia en Salon.com, que hizo una crónica de su intento de cocinar las 524 recetas del histórico libro de cocina de Julia Child Mastering the Art of French Cooking en el transcurso de un año. El éxito del blog condujo a un contrato de libro para Powell, quien lanzó Julie and Julia: 365 Days, 524 Recipes, 1 Tiny Apartment Kitchen en 2005. Más tarde se adaptó a la película nominada al Premio de la Academia y al Globo de Oro de Ephron protagonizada por Amy Adams como Powell y Meryl Streep como Child. A Powell le sobreviven su esposo, hermano y padres.",
+            "images": {
+              "data": [
+                {
+                  "id": "28",
+                  "attributes": {
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667501468/b_a058d14f7a.jpg",
+                    "alternativeText": "b.jpeg",
+                    "__typename": "UploadFile"
+                  },
+                  "__typename": "UploadFileEntity"
+                }
+              ],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Transiciones",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "34",
+          "attributes": {
+            "title": "Estrellas que hemos perdido en 2022",
+            "timestamp": "2022-08-30T14:45:00.000Z",
+            "content": "Julie Powell, la escritora gastronómica que inspiró la comedia dramática biográfica de Nora Ephron de 2009, Julie & Julia, murió de un paro cardíaco el 26 de octubre.",
+            "images": {
+              "data": [
+                {
+                  "id": "27",
+                  "attributes": {
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667501294/dddd_1925e7d149.jpg",
+                    "alternativeText": "dddd.jpeg",
+                    "__typename": "UploadFile"
+                  },
+                  "__typename": "UploadFileEntity"
+                }
+              ],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Transiciones",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "32",
+          "attributes": {
+            "title": "Una cuarta parte de las personas recurren a las tarjetas de crédito para pagar las facturas de los alimentos a medida que empeora la crisis del costo de vida, según una encuesta",
+            "timestamp": "2022-11-04T19:49:00.000Z",
+            "content": "Una encuesta exclusiva realizada para Sky News muestra cómo las personas se están adaptando a la crisis del costo de vida, cuánto creen que Liz Truss tuvo la culpa del aumento de los precios y que Martin Lewis es más confiable para brindar soluciones que el gobierno.",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Europa",
+                  "parent": {
+                    "data": {
+                      "attributes": {
+                        "title": "Sitios web regionales",
+                        "__typename": "Category"
+                      },
+                      "__typename": "CategoryEntity"
+                    },
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "30",
+          "attributes": {
+            "title": "Informe más reciente del Manchester Arena: los servicios de emergencia 'realmente lamentan' la respuesta al bombardeo, ya que las víctimas quedaron 'muriendo sin dignidad'",
+            "timestamp": "2022-11-02T14:48:00.000Z",
+            "content": "Actualizaciones en vivo a medida que se publica un informe sobre la respuesta de los servicios de emergencia al ataque del Manchester Arena; ha tomado una decisión sobre si las muertes de Saffie-Rose Roussos, de ocho años, y John Atkinson, de 28 años, podrían haberse evitado.",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Europa",
+                  "parent": {
+                    "data": {
+                      "attributes": {
+                        "title": "Sitios web regionales",
+                        "__typename": "Category"
+                      },
+                      "__typename": "CategoryEntity"
+                    },
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "28",
+          "attributes": {
+            "title": "El rompecabezas más grande del mundo sale a la venta en Costco: esto es lo que podría costarle",
+            "timestamp": "2022-10-06T18:11:00.000Z",
+            "content": "Este podría ser el regalo de Navidad perfecto para cualquier pariente amante de los rompecabezas, siempre que tenga la paciencia de armar 60,000 piezas de rompecabezas, utilizando 60 carteles de referencia diferentes.",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Sitios web regionales",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "26",
+          "attributes": {
+            "title": "Bolsonaro de Brasil evita concesión a Lula, pero comienza transición",
+            "timestamp": "2022-10-30T20:33:00.000Z",
+            "content": "RÍO DE JANEIRO (Reuters) - El presidente de extrema derecha de Brasil, Jair Bolsonaro, evitó el martes conceder la derrota al izquierdista Luiz Inácio Lula da Silva en sus primeras declaraciones públicas desde las elecciones del domingo, diciendo que las protestas desde entonces fueron fruto de \"la indignación y una sensación de injusticia\". \"sobre la votación.",
+            "images": {
+              "data": [
+                {
+                  "id": "26",
+                  "attributes": {
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667499146/america_29c98d30b9.jpg",
+                    "alternativeText": "america.jpeg",
+                    "__typename": "UploadFile"
+                  },
+                  "__typename": "UploadFileEntity"
+                }
+              ],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "América del norte",
+                  "parent": {
+                    "data": {
+                      "attributes": {
+                        "title": "Sitios web regionales",
+                        "__typename": "Category"
+                      },
+                      "__typename": "CategoryEntity"
+                    },
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "25",
+          "attributes": {
+            "title": "Transformación de la vieja naturaleza y los viejos sanskars #3",
+            "timestamp": "2022-12-03T00:00:00.000Z",
+            "content": "Enlaces de videos de YouTube:\n*Clases de Mohini Didi:\nEspañol - Transformación de la vieja naturaleza y los viejos sanskars Lista de reproducción - https://youtube.com/playlist?list=PLHSAb26Vm7rngV-eFcQ9TfQ0dSI_rPzli\n\n Español - Transformación de la vieja naturaleza y los viejos sanskars -\nhttps://youtu.be/-NAWHsEsPGA\n\n\n*Versión elevada - Bapdada: https://youtu.be/7z79B0ljh8U\n\n* Meditación: https://youtu.be/1g2j-M0y9bs",
+            "images": {
+              "data": [
+                {
+                  "id": "25",
+                  "attributes": {
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667499137/Transform_ENG_Nov_3_1_4810ac4f30.jpg",
+                    "alternativeText": "Transform_ENG_Nov_3 (1).jpg",
+                    "__typename": "UploadFile"
+                  },
+                  "__typename": "UploadFileEntity"
+                }
+              ],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "América del norte",
+                  "parent": {
+                    "data": {
+                      "attributes": {
+                        "title": "Sitios web regionales",
+                        "__typename": "Category"
+                      },
+                      "__typename": "CategoryEntity"
+                    },
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "18",
+          "attributes": {
+            "title": "Obituario de Ronnie Radford",
+            "timestamp": "2022-11-03T12:00:00.000Z",
+            "content": "Futbolista cuyo extraordinario gol con el Hereford United le valió una reacción de éxtasis de los aficionados y un papel en el folclore de la Copa FA",
+            "images": {
+              "data": [
+                {
+                  "id": "22",
+                  "attributes": {
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667496778/3000_9491cbee37.webp",
+                    "alternativeText": "3000.webp",
+                    "__typename": "UploadFile"
+                  },
+                  "__typename": "UploadFileEntity"
+                }
+              ],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Transiciones",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "22",
+          "attributes": {
+            "title": "Benjamin Netanyahu se prepara para formar gobierno después de que el primer ministro israelí reconoce la derrota en las elecciones",
+            "timestamp": "2022-11-01T18:27:00.000Z",
+            "content": "Se espera que Netanyahu forme el gobierno más derechista de la historia del país cuando asuma el poder, probablemente en las próximas semanas.",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Internacional",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "20",
+          "attributes": {
+            "title": "Jagtar Singh Johal: Nazanin Zaghari-Ratcliffe y su esposo se unen a la protesta para pedir el regreso del ciudadano británico detenido en India",
+            "timestamp": "2022-11-03T18:33:00.000Z",
+            "content": "El bloguero Jagtar Singh Johal, de 35 años, dice que se enfrenta a la pena de muerte por su activismo y su campaña a favor de los derechos humanos de los sijs, algo a lo que \"el Reino Unido se opone firmemente\", ha dicho el Foreign Office a Sky News.",
+            "images": {
+              "data": [
+                {
+                  "id": "24",
+                  "attributes": {
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667498069/skynews_sikh_jagtar_singh_johal_5953211_bf4ccc2c6b.jpg",
+                    "alternativeText": "skynews-sikh-jagtar-singh-johal_5953211.jpg",
+                    "__typename": "UploadFile"
+                  },
+                  "__typename": "UploadFileEntity"
+                }
+              ],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Internacional",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "16",
+          "attributes": {
+            "title": "Noticias de negocios Brent",
+            "timestamp": "2022-12-02T00:00:00.000Z",
+            "content": "Esquema de ahorro de energía empresarial: no se lo pierda\n\n¿Eres una pequeña o mediana empresa?\n\nCon nuestro esquema de ahorro de energía, puede hacer que su negocio sea más eficiente energéticamente y ahorrar dinero en sus facturas.\n\nLas empresas elegibles recibirán:\n\nUna auditoría energética in situ gratuita con un informe personalizado que le guiará sobre cómo reducir el uso de energía y las emisiones de carbono.\nUna subvención de hasta 18 000 £ para financiar hasta el 60 % de un proyecto para reducir el consumo de energía.",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Europa",
+                  "parent": {
+                    "data": {
+                      "attributes": {
+                        "title": "Sitios web regionales",
+                        "__typename": "Category"
+                      },
+                      "__typename": "CategoryEntity"
+                    },
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "12",
+          "attributes": {
+            "title": "Clases de Mohini Didi",
+            "timestamp": "2022-10-31T00:00:00.000Z",
+            "content": "Enlaces de videos de YouTube:\n*Clases de Mohini Didi:\nInglés - Lista de reproducción Misericordioso y Otorgador - https://www.youtube.com/playlist?list=PLHSAb26Vm7rnOFedAUnf5lv-S8gzGq0fp\n\n Español - Misericordioso y Otorgador - https://youtu.be/G3yHWJItryQ\n\n Hindú: https://youtu.be/eJqWo5tDzb8\n\n\n*Versión elevada - Bapdada: https://youtu.be/gOQNVJoOYd8\n\n* Meditación: https://youtu.be/8xOu_9tXhlk\n\n\n *Meditación Amritvela: https://youtube.com/playlist?list=PLHSAb26Vm7rnJo4gZpYlz42C4CfYbz2Py\n\n\n* Murli diario para angelitos:\nhttps://www.youtube.com/playlist?list=PLHSAb26Vm7rkIRMIpTqbZMGcU3eOyD5N7\n\n*Hemos subido todas las clases de idiomas traducidas al canal de YouTube:\nhindi:\nhttps://youtube.com/playlist?list=PLHSAb26Vm7rnCwTCmGES3aW64O0WzXLVR\n\nEspañol :\nhttps://www.youtube.com/playlist?list=PLHSAb26Vm7rmofbl3f1uubYQx1ggBZ3aJ\n\nFrancés :\nhttps://youtube.com/playlist?list=PLHSAb26Vm7rlAVV7Mx_OJ28u2diDHT4FO\n\nportugués:\nhttps://www.youtube.com/playlist?list=PLHSAb26Vm7rlDJTKi5DvOYIZui6QaqVOU\n\ntamil:\nhttps://www.youtube.com/playlist?list=PLHSAb26Vm7rn0522qKPmqMLiUYEcJq5fh\n\ntelugu:\nhttps://www.youtube.com/playlist?list=PLHSAb26Vm7rmqT7LzOlGRIAt1Dpjb9kKK\n\ntailandés:\nhttps://www.youtube.com/playlist?list=PLHSAb26Vm7rk_XXBlzaBgQcjoGn7FwGw2\n\nChino :\nhttps://youtube.com/playlist?list=PLHSAb26Vm7rk4U6nze-RocccOefcbrujM\n\ncoreano:\nhttps://youtube.com/playlist?list=PLHSAb26Vm7rnUKrjsahnGTzh3y_Shu02_\n\nnepalí:\nhttps://youtube.com/playlist?list=PLHSAb26Vm7rkNm0JE1hWF-WROtRH_e7wo\n\nEspañol (Traducción de Avyakti Gyan Ratan + Avyakti Blessings)\nhttps://youtube.com/playlist?list=PLHSAb26Vm7rmfry7aak0F3o-pOlbmdzOW",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Noticias de enfoque especial",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "14",
+          "attributes": {
+            "title": "Rishi Sunak ahora irá a la cumbre climática COP27",
+            "timestamp": "2022-12-02T00:00:00.000Z",
+            "content": "https://www.bbc.co.uk/news/uk-politics-63484971",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Europa",
+                  "parent": {
+                    "data": {
+                      "attributes": {
+                        "title": "Sitios web regionales",
+                        "__typename": "Category"
+                      },
+                      "__typename": "CategoryEntity"
+                    },
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "10",
+          "attributes": {
+            "title": "Transformación de la vieja naturaleza y el viejo sanskar.",
+            "timestamp": "2022-10-31T00:00:00.000Z",
+            "content": "**Deberes de noviembre de 2022**\n\nOm Shanti\nQuerida familia de Baba,\nSaludos de amor!\n\nPromoción: https://youtu.be/wgdwJPI6lEM\n \nRecibirá un punto diario de autoconciencia y el método de práctica en el enlace de la carpeta de YouTube que figura a continuación.\n \nGracias\nEn el amoroso yaad de Baba,\n BK Mohini\nJefe Administrativo Adicional de Brahma Kumaris\n \n\nEnlace de tarea: recibirá un video diario en el siguiente enlace de la carpeta de YouTube.\n \n\nInglés :\nhttps://youtube.com/playlist?list=PLHSAb26Vm7rngV-eFcQ9TfQ0dSI_rPzli\n \nHindi (clases traducidas):\nhttps://youtube.com/playlist?list=PLHSAb26Vm7rnCwTCmGES3aW64O0WzXLVR\n \n\nAvyakti Parivar\nUna familia de ángeles unidos en amor por uno\nOm Shanti\nhttp://tiny.cc/avyaktiparivar-youtube\nwww.avyaktiparivar.org",
+            "images": {
+              "data": [
+                {
+                  "id": "20",
+                  "attributes": {
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667241376/butterflies_aa6f0e7bc6.png",
+                    "alternativeText": "butterflies.png",
+                    "__typename": "UploadFile"
+                  },
+                  "__typename": "UploadFileEntity"
+                }
+              ],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Noticias de enfoque especial",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "8",
+          "attributes": {
+            "title": "Recordatorio: Nairobi (Kenia) - Invitación al retiro internacional BK Gujarati del 24 al 30 de noviembre de 2022",
+            "timestamp": "2022-11-23T20:27:00.000Z",
+            "content": "Om Shanti. Adjunto encontrará una invitación al Retiro Internacional BK Gujarati que se llevará a cabo en el Centro de Retiros Serve Africa en Nairobi, Kenia.",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Internacional",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "6",
+          "attributes": {
+            "title": "Misericordiosa y otorgadora # 27",
+            "timestamp": "2022-11-20T13:00:00.000Z",
+            "content": "Enlaces de videos de YouTube: \\n*Clases de Mohini Didi:\\nInglés - Lista de reproducción de Misericordioso y otorgante - https://www.youtube.com/playlist?list=[PLHSAb26Vm7rnOFedAUnf5lv-S8gzGq0fp\\n\"",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Internacional",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "4",
+          "attributes": {
+            "title": "Regalo para el alma ~ 27 de octubre de 2022",
+            "timestamp": "2022-10-27T11:00:00.000Z",
+            "content": "Regalo para el alma ~ 27 de octubre de 2022",
+            "images": {
+              "data": [
+                {
+                  "id": "15",
+                  "attributes": {
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1666886295/gift_for_the_soul_a90755229a.png",
+                    "alternativeText": "gift_for_the_soul.png",
+                    "__typename": "UploadFile"
+                  },
+                  "__typename": "UploadFileEntity"
+                }
+              ],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": null,
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "2",
+          "attributes": {
+            "title": "Boletín Madhuban - Noviembre 2022",
+            "timestamp": "2022-10-26T11:00:00.000Z",
+            "content": "Adjunto encontrará el boletín informativo de Madhuban de noviembre de 2022 con puntos del 1 al 30 de noviembre en inglés e hindi.",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Noticias Madhuban",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        }
+      ],
+      "__typename": "NewEntityResponseCollection"
+    }
+  },
+  "loading": false,
+  "networkStatus": 7,
+  "stale": false
+}

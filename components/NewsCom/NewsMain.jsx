@@ -46,7 +46,6 @@ const AccordionItem = ({
   const title = Object.keys(subCategory)[0];
   const news = Object.values(subCategory)[0]?.news;
 
-  console.log("regional websites", subCategory);
   return (
     <div className="w-full my-2 md:m-2 md:ml-auto">
       <div
@@ -124,7 +123,7 @@ export default function NewsMain({ data }) {
   const bgImage = imageAdapter(data);
   const adaptedNews = newsAdapter(data);
   const newsCategories = newsCategoriesAdapter(globalProperties);
-
+  console.log('NewsMain', JSON.stringify(data))
   return (
     <div>
       {/* <!-- parent --> */}

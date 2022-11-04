@@ -1,4 +1,24 @@
 {
+  "International": {
+    "news": [
+      {
+        "title": "Benjamin Netanyahu set to form government after Israeli PM concedes defeat in election",
+        "timestamp": "2022-11-01T18:27:00.000Z"
+      },
+      {
+        "title": "Jagtar Singh Johal: Nazanin Zaghari-Ratcliffe and her husband join protest calling for return of British national detained in India",
+        "timestamp": "2022-11-03T18:33:00.000Z"
+      },
+      {
+        "title": "Reminder: Nairobi (Kenya)- Invitation to International BK Gujarati Retreat 24 - 30 November 2022",
+        "timestamp": "2022-11-23T20:27:00.000Z"
+      },
+      {
+        "title": "Merciful & Bestower #27",
+        "timestamp": "2022-11-20T13:00:00.000Z"
+      }
+    ]
+  },
   "Regional Websites": {
     "news": [],
     "children": [
@@ -32,18 +52,6 @@
       {
         "title": "Gift For The Soul ~ 27th October 2022",
         "timestamp": "2022-10-27T11:00:00.000Z"
-      }
-    ]
-  },
-  "International": {
-    "news": [
-      {
-        "title": "Reminder: Nairobi (Kenya)- Invitation to International BK Gujarati Retreat 24 - 30 November 2022",
-        "timestamp": "2022-11-23T20:27:00.000Z"
-      },
-      {
-        "title": "Merciful & Bestower #27",
-        "timestamp": "2022-11-20T13:00:00.000Z"
       }
     ]
   },
