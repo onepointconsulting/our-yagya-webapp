@@ -52,10 +52,6 @@ const AccordionItem = ({
         className="flex items-center h-12 py-1 mx-auto border-2 cursor-pointer accordionChildHeader xs:py-4 md:py-8 md:mx-0 text-gold1 border-gold1"
         onClick={() => setOpenPosition(expanded ? -1 : pos)}
       >
-        <div className="">
-          <img className="invisible w-1" src="../img/svg/Webcsat.svg" alt="" />
-        </div>
-
         <div className="mb-0 cursor-pointer text-gold1">
           <h1 className="py-2 pl-4 pr-2 text-[2rem] capitalize filosofia_italic bg-button-color md:text-4xl text-gold1">
             {title}
@@ -90,7 +86,7 @@ const AccordionItem = ({
             <img
               className="w-8 md:w-12"
               src="./img/icons/ArrowDown.png"
-              alt=""
+              alt="Arrow down"
             />
           </h1>
         </div>
@@ -123,12 +119,12 @@ export default function NewsMain({ data }) {
   const bgImage = imageAdapter(data);
   const adaptedNews = newsAdapter(data);
   const newsCategories = newsCategoriesAdapter(globalProperties);
-  console.log('NewsMain', JSON.stringify(data))
+  console.log("NewsMain", JSON.stringify(data));
   return (
     <div>
       {/* <!-- parent --> */}
       <div
-        className="md:pt-16 lg:pt-72 px-8 lg:px-16"
+        className="pt-8 md:pt-16 lg:pt-72 px-8 lg:px-16"
         style={{
           background: `url(${bgImage}) no-repeat`,
         }}
@@ -157,7 +153,7 @@ export default function NewsMain({ data }) {
           </div>
         </div>{" "}
         <div className="lg:flex justify-between">
-          <div className="lg:mr-4 flex flex-col items-center w-1/2">
+          <div className="lg:mr-4 flex flex-col items-center w-full lg:w-1/2">
             {/* Madhuban News */}
 
             {/* <!-- right section (first box) --> */}
@@ -173,7 +169,8 @@ export default function NewsMain({ data }) {
                   <img
                     className="w-8 md:w-12"
                     src="./img/icons/ArrowDown.png"
-                    alt=""
+                    alt={newsCategories[1]}
+                    title={newsCategories[1]}
                   />
                 </h1>
               </div>
@@ -187,13 +184,6 @@ export default function NewsMain({ data }) {
                   <div className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
                     {newsCategories[3]}
                   </div>
-                  <div className="invisible ml-auto">
-                    <img
-                      className="object-cover w-4 h-auto md:w-8"
-                      src="../img/linksIcons/asset1.png"
-                      alt=""
-                    />
-                  </div>
                 </div>
 
                 {/* <!--accordion child--> */}
@@ -205,7 +195,7 @@ export default function NewsMain({ data }) {
             </div>
           </div>
 
-          <div className="lg:ml-4 flex flex-col items-center w-3/6">
+          <div className="lg:ml-4 flex flex-col items-center w-full lg:w-3/6">
             {/* Special Focus News */}
             <div className="relative w-full my-4 bg-gray-200 h-fit">
               <div className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
@@ -219,7 +209,8 @@ export default function NewsMain({ data }) {
                   <img
                     className="w-8 md:w-12"
                     src="./img/icons/ArrowDown.png"
-                    alt=""
+                    alt={newsCategories[2]}
+                    title={newsCategories[2]}
                   />
                 </h1>
               </div>
@@ -239,7 +230,8 @@ export default function NewsMain({ data }) {
                   <img
                     className="w-8 md:w-12"
                     src="./img/icons/ArrowDown.png"
-                    alt=""
+                    alt={newsCategories[4]}
+                    title={newsCategories[4]}
                   />
                 </h1>
               </div>
@@ -260,7 +252,8 @@ export default function NewsMain({ data }) {
                     <img
                       className="w-7 md:w-10 xl:w-12"
                       src="../img/Lock.png"
-                      alt=""
+                      alt="Arrow down icon"
+                      title="Arrow down icon"
                     />
                   </h1>
                 </div>
