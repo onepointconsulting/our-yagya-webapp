@@ -18,7 +18,7 @@ const newsCategoriesAdapter = (globalProperties) => {
 const NewsItem = ({ news, locale }) => {
   const { t } = useTranslation();
   return (
-    <div className="p-2 pl-4 metropolis_medium md:pl-8 md:p-4">
+    <div className="p-2 pl-3 metropolis_medium md:pl-6 md:p-3">
       <div className="text-redfull py-2 text-[19px] md:text-[26px] xl:text-[30px]">
         <a href="/news_details.html">{news.title}</a>
       </div>
@@ -69,7 +69,7 @@ const AccordionItem = ({
       >
         {news.map((regionalNews, i) => {
           return (
-            <div className="p-2 pl-4 metropolis_medium md:pl-8 md:p-4">
+            <div className="p-2 pl-3 metropolis_medium md:pl-6 md:p-3">
               <div className="text-redfull py-2 text-[19px] md:text-[26px] xl:text-[30px]">
                 <a href="/news_details.html">{regionalNews.title}</a>
               </div>
@@ -156,7 +156,7 @@ export default function NewsMain({ data }) {
           </div>
         </div>{" "}
         <div className="lg:flex justify-between">
-          <div className="lg:mr-4 flex flex-col items-center">
+          <div className="lg:mr-4 flex flex-col items-center w-1/2">
             {/* Madhuban News */}
 
             {/* <!-- right section (first box) --> */}
@@ -204,7 +204,7 @@ export default function NewsMain({ data }) {
             </div>
           </div>
 
-          <div className="lg:ml-4 flex flex-col items-center">
+          <div className="lg:ml-4 flex flex-col items-center w-3/6">
             {/* Special Focus News */}
             <div className="relative w-full my-4 bg-gray-200 h-fit">
               <div className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
