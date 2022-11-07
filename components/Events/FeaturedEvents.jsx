@@ -1,4 +1,5 @@
 import React from "react";
+import { eventsAdapter } from "../../lib/eventsAdapter";
 import Hero from "./Hero";
 
 const eventsData = [
@@ -17,6 +18,8 @@ const eventsData = [
 ];
 
 export default function FeaturedEvents({ data }) {
+  const eventsAd = eventsAdapter(data);
+  console.log("eventsAd", eventsAd)
   return (
     <div>
       {/* <!-- home page background --> */}
