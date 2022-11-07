@@ -1,0 +1,70 @@
+{
+  "data": {
+    "pageLayouts": {
+      "data": [
+        {
+          "attributes": {
+            "title": "Events",
+            "layout": "events",
+            "backgroundImage": {
+              "data": [
+                {
+                  "attributes": {
+                    "alternativeText": "GreyBand_4.png",
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667772684/Grey_Band_4_0649f7dab6.png",
+                    "__typename": "UploadFile"
+                  },
+                  "__typename": "UploadFileEntity"
+                }
+              ],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "__typename": "PageLayout"
+          },
+          "__typename": "PageLayoutEntity"
+        }
+      ],
+      "__typename": "PageLayoutEntityResponseCollection"
+    },
+    "events": {
+      "data": [
+        {
+          "id": "1",
+          "attributes": {
+            "title": "Dummy Event",
+            "eventSessions": {
+              "data": [
+                {
+                  "attributes": {
+                    "startDate": "2022-12-31T19:00:00.000Z",
+                    "__typename": "EventSession"
+                  },
+                  "__typename": "EventSessionEntity"
+                }
+              ],
+              "__typename": "EventSessionRelationResponseCollection"
+            },
+            "categories": {
+              "data": [
+                {
+                  "attributes": {
+                    "title": "Featured Events",
+                    "__typename": "Category"
+                  },
+                  "__typename": "CategoryEntity"
+                }
+              ],
+              "__typename": "CategoryRelationResponseCollection"
+            },
+            "__typename": "Event"
+          },
+          "__typename": "EventEntity"
+        }
+      ],
+      "__typename": "EventEntityResponseCollection"
+    }
+  },
+  "loading": false,
+  "networkStatus": 7,
+  "stale": false
+}

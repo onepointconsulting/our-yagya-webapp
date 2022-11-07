@@ -4,7 +4,7 @@ import { newsLayout } from '../lib/apiClient'
 import Slider from '../components/Slider/Slider'
 
 export default function News({ data }) {
-  console.log("News data", data);
+
   // TODO: implement slider.
   return (
     <>
