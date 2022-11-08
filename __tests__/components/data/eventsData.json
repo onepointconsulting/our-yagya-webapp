@@ -26,6 +26,7 @@
       ],
       "__typename": "PageLayoutEntityResponseCollection"
     },
+    
     "events": {
       "data": [
         {
