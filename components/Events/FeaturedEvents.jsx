@@ -19,7 +19,7 @@ const eventsData = [
 
 export default function FeaturedEvents({ data }) {
 
-  console.log("FeaturedEvents", JSON.stringify(data))
+  // console.log("FeaturedEvents", JSON.stringify(data))
   const eventsAd = eventsAdapter(data);
 
   return (
