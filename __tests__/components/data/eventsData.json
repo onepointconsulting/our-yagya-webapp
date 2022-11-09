@@ -76,6 +76,13 @@
                           "__typename": "Category"
                         },
                         "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "International",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
                       }
                     ],
                     "__typename": "CategoryRelationResponseCollection"
