@@ -8,6 +8,6 @@ describe('eventsAdapter', () => {
         expect(eventsData).toBeTruthy()
         expect(eventsDataExpected).toBeTruthy()
         const res = eventsAdapter(eventsData)
-        // expect(JSON.stringify(res)).toBe(JSON.stringify(eventsDataExpected))
+        expect(JSON.stringify(res)).toBe(JSON.stringify(eventsDataExpected))
     })
 })
