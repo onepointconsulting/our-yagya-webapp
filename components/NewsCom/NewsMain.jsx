@@ -65,7 +65,7 @@ const AccordionItem = ({
       >
         {news.map((regionalNews, i) => {
           return (
-            <div className="p-2 pl-3 metropolis_medium md:pl-6 md:p-3">
+            <div key={i} className="p-2 pl-3 metropolis_medium md:pl-6 md:p-3">
               <div className="text-redfull py-2 text-[19px] md:text-[26px] xl:text-[30px]">
                 <a href="/news_details.html">{regionalNews.title}</a>
               </div>
@@ -116,10 +116,12 @@ const NestedAccordion = ({ news, newsCategory }) => {
 export default function NewsMain({ data }) {
   const { t } = useTranslation();
   const { globalProperties, locale } = useContext(GlobalContext);
+
+  console.log("globalProperties", globalProperties)
   const bgImage = imageAdapter(data);
   const adaptedNews = newsAdapter(data);
   const newsCategories = newsCategoriesAdapter(globalProperties);
-  console.log("NewsMain", JSON.stringify(data));
+
   return (
     <div>
       {/* <!-- parent --> */}

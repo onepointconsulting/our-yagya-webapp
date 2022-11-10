@@ -18,15 +18,17 @@ const eventsData = [
 ];
 
 export default function FeaturedEvents({ data }) {
-
-  // console.log("FeaturedEvents", JSON.stringify(data))
   const eventsAd = eventsAdapter(data);
+  console.log("events data", eventsAd)
+
 
   return (
     <div>
       {/* <!-- home page background --> */}
       <div className="flex flex-col items-center w-full">
         {/* <!-- hero section with events lists --> */}
+
+
         <Hero data={data} />
 
         {/* <!-- event 1 --> */}
