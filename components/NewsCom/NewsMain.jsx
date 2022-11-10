@@ -4,16 +4,7 @@ import { imageAdapter } from "../../lib/imageAdapter";
 import { newsAdapter } from "../../lib/newsAdapter";
 import { GlobalContext } from "../../pages/_app";
 import { useTranslation } from "react-i18next";
-
-const newsCategoriesAdapter = (globalProperties) => {
-  const resArray = globalProperties?.data
-    .filter((gb) => gb.attributes.key === "newsCategories")
-    .map((gb) => gb.attributes.value);
-  if (resArray.length === 1) {
-    return resArray[0].split(",");
-  }
-  return [];
-};
+import { categoriesAdapter } from '../../lib/globalPropertiesAdapter'
 
 const NewsItem = ({ news, locale }) => {
   const { t } = useTranslation();
@@ -117,10 +108,9 @@ export default function NewsMain({ data }) {
   const { t } = useTranslation();
   const { globalProperties, locale } = useContext(GlobalContext);
 
-  console.log("globalProperties", globalProperties)
   const bgImage = imageAdapter(data);
   const adaptedNews = newsAdapter(data);
-  const newsCategories = newsCategoriesAdapter(globalProperties);
+  const newsCategories = categoriesAdapter(globalProperties);
 
   return (
     <div>

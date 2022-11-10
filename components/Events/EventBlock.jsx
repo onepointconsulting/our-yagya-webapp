@@ -2,7 +2,7 @@ import React from "react";
 import { eventsAdapter } from "../../lib/eventsAdapter";
 import { imageAdapter } from "../../lib/imageAdapter";
 
-export default function Hero({ data }) {
+export default function EventBlock({ data, title = "You forgot the title" }) {
   const bgImage = imageAdapter(data);
   const eventsAdap = eventsAdapter(data);
 
@@ -15,10 +15,10 @@ export default function Hero({ data }) {
         <div className="flex items-center justify-center w-full mt-28 md:mt-36 lg:mt-52">
           <div className="relative w-full h-full ml-auto mr-auto bg-[#ffffff] bg-opacity-95 lg:m-4 md:w-11/12 lg:w-10/12">
             <div className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 filosofia_italic bg-gold1 md:text-4xl">
-              Featured Events
+              {title}
             </div>
 
-            {eventsAdap["Featured Events"].map((event) => {
+            {eventsAdap[title].map((event) => {
               return (
                 <>
                   <div className="flex pt-3">

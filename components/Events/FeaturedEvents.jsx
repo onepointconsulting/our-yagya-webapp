@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from 'react'
 import { eventsAdapter } from "../../lib/eventsAdapter";
-import Hero from "./Hero";
+import EventBlock from "./EventBlock";
+import { GlobalContext } from '../../pages/_app'
+import { categoriesAdapter } from '../../lib/globalPropertiesAdapter'
 
 const eventsData = [
   {
@@ -20,7 +22,9 @@ const eventsData = [
 export default function FeaturedEvents({ data }) {
   const eventsAd = eventsAdapter(data);
   console.log("events data", eventsAd)
+  const { globalProperties, locale } = useContext(GlobalContext);
 
+  const eventsCategories = categoriesAdapter(globalProperties, "eventsCategories", "::")
 
   return (
     <div>
@@ -29,7 +33,7 @@ export default function FeaturedEvents({ data }) {
         {/* <!-- hero section with events lists --> */}
 
 
-        <Hero data={data} />
+        <EventBlock data={data} title={eventsCategories[0]}/>
 
         {/* <!-- event 1 --> */}
         {eventsData.map((eve, i) => {
