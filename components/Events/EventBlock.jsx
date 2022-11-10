@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { formateDate } from "../../lib/dateAdapter";
 import { eventsAdapter } from "../../lib/eventsAdapter";
 import { imageAdapter } from "../../lib/imageAdapter";
+import { GlobalContext } from "../../pages/_app";
 
 export default function EventBlock({ data, title = "You forgot the title" }) {
   const bgImage = imageAdapter(data);
   const eventsAdap = eventsAdapter(data);
+  const { locale } = useContext(GlobalContext);
 
   return (
     <div
@@ -44,7 +47,7 @@ export default function EventBlock({ data, title = "You forgot the title" }) {
                               <div className="w-full">
                                 <div>
                                   <p className="leading-6 text-[10px] text-gray-400 md:text-[1rem] lg:text-[1.125rem]">
-                                    {event.date}
+                                    {formateDate(event.date, locale)}
                                   </p>
                                 </div>
                               </div>

@@ -19,23 +19,41 @@ const eventsData = [
   },
 ];
 
+
+const EventItem = ({ event }) => {
+  return (
+    <>
+      {" "}
+      <div className="h-auto p-4 overflow-y-auto metropolis_medium">
+        <div className="text-lg text-redfull md:text-2xl">{event.title}</div>
+        <div className="pb-3">
+          <span className="text-sm text-gray-700 md:text-base">
+            {event.date}
+          </span>
+        </div>
+      </div>
+    </>
+  );
+};
+
 export default function FeaturedEvents({ data }) {
   const eventsAd = eventsAdapter(data);
-  console.log("events data", eventsAd)
   const { globalProperties, locale } = useContext(GlobalContext);
 
   const eventsCategories = categoriesAdapter(globalProperties, "eventsCategories", "::")
 
   return (
     <div>
-      {/* <!-- home page background --> */}
       <div className="flex flex-col items-center w-full">
-        {/* <!-- hero section with events lists --> */}
-
-
-        <EventBlock data={data} title={eventsCategories[0]}/>
-
-        {/* <!-- event 1 --> */}
+        <EventBlock data={data} title={eventsCategories[0]} />
+        {eventsAd[eventsCategories[1]]?.events.map((event) => {
+          return (
+            <>
+            
+            <div className="bg-red-400 h-28 w-full">{eventsCategories}</div>
+            </>
+          )
+        })}
         {eventsData.map((eve, i) => {
           return (
             <>
