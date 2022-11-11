@@ -1,14 +1,13 @@
 import { adaptCustomPage } from '../lib/pageAdapter'
-import FeaturedEvents from '../components/Events/FeaturedEvents'
+import EventsMain from '../components/Events/EventsMain'
 import React from 'react'
 import { eventsLayout } from '../lib/apiClient'
 
 export default function EVents({data}) {
 
-  console.log('EVents', JSON.stringify(data))
   return (
       <div>
-          <FeaturedEvents data={data}/>
+          <EventsMain data={data}/>
       </div>
   )
 }
