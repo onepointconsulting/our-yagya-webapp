@@ -32,7 +32,7 @@ const ArrowIcon = () => {
               return <></>;
             }
             return (
-              <div className="w-full bg-gray-200 h-fit" key={i}>
+              <div className="w-full bg-gray-200" key={i}>
                 <div className="py-2 pl-4 pr-2 text-[1.2rem] text-slate-50 capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
                   {category}
                 </div>
