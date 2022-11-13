@@ -31,10 +31,15 @@ const FeaturedEventItem = ({ event }) => {
                                     {event.title}
                                 </h1>
 
-                                <div className="w-full">
+                                <div className="flex items-center justify-between w-full">
                                     <div>
                                         <p className="leading-6 text-[10px] text-gray-400 md:text-[1rem] lg:text-[1.125rem]">
                                             {formateDate(event.date, locale)}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p className="leading-6 text-[10px] text-gray-400 md:text-[1rem] lg:text-[1.125rem]">
+                                            {event.timeszone}
                                         </p>
                                     </div>
                                 </div>
