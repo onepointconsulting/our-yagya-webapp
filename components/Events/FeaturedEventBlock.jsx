@@ -1,38 +1,20 @@
 import React, { useContext } from 'react'
 import { formateDate } from '../../lib/dateAdapter'
-import { eventsAdapter } from '../../lib/eventsAdapter'
-import { imageAdapter } from '../../lib/imageAdapter'
+import Link from '../../node_modules/next/link';
 import { GlobalContext } from '../../pages/_app'
 
-const EventItem = ({ event }) => {
-    return (
-        <>
-            {' '}
-            <div className="h-auto p-4 overflow-y-auto metropolis_medium">
-                <div
-                    className="text-lg text-redfull md:text-2xl">{event.title}</div>
-                <div className="pb-3">
-          <span className="text-sm text-gray-700 md:text-base">
-            {event.date}
-          </span>
-                </div>
-            </div>
-        </>
-    )
-}
-
 const FeaturedEventItem = ({ event }) => {
-    const { locale } = useContext(GlobalContext)
+    const { locale } = useContext(GlobalContext);
+
     return (
         <div className="flex pt-3">
             <div className="w-full pb-4">
-                <a href="/calendar_events.html">
-                    {/* <!-- online events section 2 --> */}
+                <Link href={`/single_event/${event.id}`}>
                     <div
                         className="flex items-center justify-between pt-[0.5rem]">
                         <div
                             className="flex items-center w-auto md:w-4/5 lg:w-5/6 xl:w-5/6">
-                            {/* <!-- img --> */}
+                            {/* <!-- image --> */}
 
                             <div className="relative w-[27vw] md:w-36">
                                 <img
@@ -41,22 +23,30 @@ const FeaturedEventItem = ({ event }) => {
                                     alt=""
                                 />
                             </div>
+
+                            {/* title and date */}
                             <div
                                 className="w-[40vw] md:w-[72%] lg:w-full pl-2 md:pl-4 lg:pl-8">
                                 <h1 className="text-xs font-medium leading-4 text-red-400 xs:text-[14px] md:text-2xl xxl:text-3xl whitespace-nowrap lg:whitespace-normal overflow-hidden lg:overflow-auto text-ellipsis">
                                     {event.title}
                                 </h1>
 
-                                <div className="w-full">
+                                <div className="flex items-center justify-between w-full">
                                     <div>
                                         <p className="leading-6 text-[10px] text-gray-400 md:text-[1rem] lg:text-[1.125rem]">
                                             {formateDate(event.date, locale)}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p className="leading-6 text-[10px] text-gray-400 md:text-[1rem] lg:text-[1.125rem]">
+                                            {event.timeszone}
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
+                        {/* more info and registeration */}
                         <div className="w-20 xs:w-24 xl:w-32">
                             <div
                                 className="flex items-center px-1 py-1 my-1 rounded-lg cursor-pointer bg-gold1">
@@ -64,7 +54,8 @@ const FeaturedEventItem = ({ event }) => {
                                     <img
                                         className="w-4 xs:w-6 lg:w-7"
                                         src="../img/icons8-info-50.png"
-                                        alt=""
+                                        alt={event.title}
+                                        title={event.title}
                                     />
                                 </div>
                                 <div
@@ -79,7 +70,8 @@ const FeaturedEventItem = ({ event }) => {
                                     <img
                                         className="w-4 xs:w-6 lg:w-7"
                                         src="../img/icons8-pencil-64.png"
-                                        alt=""
+                                        alt={event.title}
+                                        title={event.title}
                                     />
                                 </div>
                                 <div
@@ -88,8 +80,9 @@ const FeaturedEventItem = ({ event }) => {
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
-                </a>
+                </Link>
             </div>
         </div>
     )
@@ -109,11 +102,7 @@ const EventArrow = () => {
     )
 }
 
-export default function FeaturedEventBlock ({
-    adaptedEvents,
-    title = 'You forgot the title',
-}) {
-    console.log('FeaturedEventBlock', adaptedEvents)
+export default function FeaturedEventBlock ({adaptedEvents,title = 'You forgot the title',}) {
     return (
         <div
             className="flex items-center justify-center w-full mt-28 md:mt-36 lg:mt-52">

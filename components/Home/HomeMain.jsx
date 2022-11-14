@@ -1,13 +1,12 @@
 import React, { useContext } from 'react'
 import { imageAdapter } from '../../lib/imageAdapter'
-import { newsAdapter } from '../../lib/newsAdapter'
+import { simpleNewsAdapter } from '../../lib/newsAdapter'
 import { useTranslation } from 'react-i18next'
 import { formateDate } from '../../lib/dateAdapter'
 import { GlobalContext } from '../../pages/_app'
 import Link from 'next/link'
 import { PAGES } from '../../lib/pages'
 import { IndexContext } from '../../pages'
-import { eventsAdapter } from '../../lib/eventsAdapter'
 
 const EventsItem = ({events}) => {
     const { locale } = useContext(GlobalContext)
@@ -177,8 +176,8 @@ const ClassBlock = () => {
 
 export default function HomeMain () {
     const { data } = useContext(IndexContext)
-    const newsData = newsAdapter(data)
-    const eventsData = eventsAdapter(data)
+    const newsData = simpleNewsAdapter(data)
+    const eventsData = []
     const bgImage = imageAdapter(data)
 
     console.log(data)
