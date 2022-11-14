@@ -14,7 +14,6 @@ const SearchBar = () => {
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       router.push("/search");
-      console.log("enter press here! ");
     }
   };
   return (
@@ -26,6 +25,7 @@ const SearchBar = () => {
             className="h-[1.3rem] md:h-8"
             src="../img/icons/Search.png"
             alt="magnifying glass"
+            title="magnifying glass"
           />
         </button>
       </div>

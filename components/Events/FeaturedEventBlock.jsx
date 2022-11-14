@@ -6,6 +6,9 @@ import { GlobalContext } from '../../pages/_app'
 const FeaturedEventItem = ({ event }) => {
     const { locale } = useContext(GlobalContext);
 
+    if(event.image.length === 0 ) {
+        return []
+    }
     return (
         <div className="flex pt-3">
             <div className="w-full pb-4">
@@ -19,8 +22,9 @@ const FeaturedEventItem = ({ event }) => {
                             <div className="relative w-[27vw] md:w-36">
                                 <img
                                     className="object-cover w-full h-full"
-                                    src="https://ouryagyaproject.netlify.app/img/events_img.png"
-                                    alt=""
+                                    src={event.image}
+                                    alt={event.alternativeText}
+                                    title={event.alternativeText}
                                 />
                             </div>
 

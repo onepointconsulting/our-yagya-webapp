@@ -74,4 +74,3 @@ var obj = [
 ];
 
 var slider = obj[0].data.pageLayouts.data[0].attributes.slider;
-console.log("slider", slider);

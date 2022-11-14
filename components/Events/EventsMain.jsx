@@ -14,7 +14,6 @@ export default function EventsMain ({ data }) {
         'eventsCategories')
     const adaptedEvents = eventsAdapter(data)
 
-    console.log('eventsCategories', adaptedEvents)
     return (
         <>
             <div
