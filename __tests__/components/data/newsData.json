@@ -154,6 +154,140 @@
     "news": {
       "data": [
         {
+          "id": "21",
+          "attributes": {
+            "title": "Benjamin Netanyahu set to form government after Israeli PM concedes defeat in election",
+            "timestamp": "2022-11-01T18:27:00.000Z",
+            "content": "Mr Netanyahu is expected to form the country's most right-wing government in history when he takes power, likely in the coming weeks.\n\n",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "International",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "19",
+          "attributes": {
+            "title": "Jagtar Singh Johal: Nazanin Zaghari-Ratcliffe and her husband join protest calling for return of British national detained in India",
+            "timestamp": "2022-11-03T18:33:00.000Z",
+            "content": "Blogger Jagtar Singh Johal, 35, says he faces the death penalty over his activism and campaigning for Sikh human rights, something "the UK strongly opposes", the Foreign Office has told Sky News.\n\n",
+            "images": {
+              "data": [
+                {
+                  "id": "23",
+                  "attributes": {
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667497495/skynews_richard_ratcliffe_jagtar_singh_johal_5953197_79f6b36b64.jpg",
+                    "alternativeText": "skynews-richard-ratcliffe-jagtar-singh-johal_5953197.jpg",
+                    "__typename": "UploadFile"
+                  },
+                  "__typename": "UploadFileEntity"
+                }
+              ],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "International",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "15",
+          "attributes": {
+            "title": "Brent Business News",
+            "timestamp": "2022-12-02T00:00:00.000Z",
+            "content": "\t\nBusiness Energy Saving Scheme – Don’t Miss Out\n\nAre you a small to medium sized business?\n\nWith our energy saving scheme, you can make your business more energy efficient and save money on your bills.\n\nEligible businesses will receive:\n\nA free on-site energy audit with a tailored report to guide you on how to reduce your energy use and carbon emissions.\nA grant of up to £18,000 to fund up to 60% of a project to reduce your energy usage.",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Europe",
+                  "parent": {
+                    "data": {
+                      "attributes": {
+                        "title": "Regional Websites",
+                        "__typename": "Category"
+                      },
+                      "__typename": "CategoryEntity"
+                    },
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "13",
+          "attributes": {
+            "title": "Rishi Sunak is now going to COP27 climate summit",
+            "timestamp": "2022-12-02T00:00:00.000Z",
+            "content": "https://www.bbc.co.uk/news/uk-politics-63484971",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Europe",
+                  "parent": {
+                    "data": {
+                      "attributes": {
+                        "title": "Regional Websites",
+                        "__typename": "Category"
+                      },
+                      "__typename": "CategoryEntity"
+                    },
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
           "id": "11",
           "attributes": {
             "title": "Merciful and bestower #31",
@@ -177,6 +311,10 @@
               "data": {
                 "attributes": {
                   "title": "Special Focus News",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
                   "__typename": "Category"
                 },
                 "__typename": "CategoryEntity"
@@ -211,6 +349,10 @@
               "data": {
                 "attributes": {
                   "title": "Special Focus News",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
                   "__typename": "Category"
                 },
                 "__typename": "CategoryEntity"
@@ -235,6 +377,10 @@
               "data": {
                 "attributes": {
                   "title": "International",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
                   "__typename": "Category"
                 },
                 "__typename": "CategoryEntity"
@@ -287,6 +433,10 @@
               "data": {
                 "attributes": {
                   "title": "International",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
                   "__typename": "Category"
                 },
                 "__typename": "CategoryEntity"
@@ -321,6 +471,10 @@
               "data": {
                 "attributes": {
                   "title": "Special Focus News",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
                   "__typename": "Category"
                 },
                 "__typename": "CategoryEntity"
@@ -345,6 +499,10 @@
               "data": {
                 "attributes": {
                   "title": "Madhuban News",
+                  "parent": {
+                    "data": null,
+                    "__typename": "CategoryEntityResponse"
+                  },
                   "__typename": "Category"
                 },
                 "__typename": "CategoryEntity"
