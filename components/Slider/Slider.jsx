@@ -6,14 +6,9 @@ import { useContext } from 'react'
 import { GlobalContext } from '../../pages/_app'
 import { IndexContext } from '../../pages'
 
-/**
- *
- * @param data
- * @returns {JSX.Element}
- * @constructor
- */
-const Slider = ({data}) => {
+export default function Slider() {
     const { locale } = useContext(GlobalContext)
+    const { data } = useContext(IndexContext)
     const slides = sliderAdapter(data, locale)
 
     return (
@@ -84,4 +79,4 @@ const Slider = ({data}) => {
         </Splide>
     )
 }
-export default Slider
+

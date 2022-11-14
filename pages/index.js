@@ -8,7 +8,7 @@ export const IndexContext = createContext({ data: {} })
 export default function Index ({ data }) {
     return (
         <IndexContext.Provider value={{data}}>
-            <Home data={data}/>
+            <Home/>
         </IndexContext.Provider>
     )
 }
