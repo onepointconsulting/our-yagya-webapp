@@ -5,7 +5,7 @@ const ArrowIcon = () => {
     <div className="absolute inset-x-0 bottom-0 flex justify-center py-4 lg:py-8 cursor-poainter">
       <Link href="/">
         <a>
-          <img className="w-8 xs:w-10" src="../img/icons/ArrowDown.png" />
+          <img className="w-8 xs:w-10" src="/img/icons/ArrowDown.png" />
         </a>
       </Link>
     </div>

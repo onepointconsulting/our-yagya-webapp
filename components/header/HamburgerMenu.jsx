@@ -42,7 +42,7 @@ const HamburgerMenu = () => {
                     {" "}
                     <img
                       className="w-5 h-5"
-                      src="../img/icons/Language.png"
+                      src="/img/icons/Language.png"
                       alt=""
                     />{" "}
                   </a>
@@ -54,7 +54,7 @@ const HamburgerMenu = () => {
                     {" "}
                     <img
                       className="w-5 h-5"
-                      src="../img/icons/LoginRed.png"
+                      src="/img/icons/LoginRed.png"
                       alt=""
                     />{" "}
                   </a>
@@ -66,7 +66,7 @@ const HamburgerMenu = () => {
                     {" "}
                     <img
                       className="w-5 h-5"
-                      src="../img/icons/StarPointer.png"
+                      src="/img/icons/StarPointer.png"
                       alt=""
                     />{" "}
                   </a>
@@ -75,7 +75,7 @@ const HamburgerMenu = () => {
               <div className="hidden p-2 px-2 m-1 text-red-600 border-2 border-red-600 rounded-full">
                 <img
                   className="w-5 h-5"
-                  src="../img/icons/HeartRed.png"
+                  src="/img/icons/HeartRed.png"
                   alt=""
                 />
               </div>

@@ -31,7 +31,7 @@ const EventsItem = ({events}) => {
                 <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
                     <Link href={PAGES.EVENTS}>
                         <a>
-                            <img src="./img/icons/ArrowDown.png"
+                            <img src="/img/icons/ArrowDown.png"
                                  alt=""/>
                         </a>
                     </Link>
@@ -85,7 +85,7 @@ const NewsItem = ({news}) => {
                 <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
                     <Link href={PAGES.NEWS}>
                         <a>
-                            <img src="./img/icons/ArrowDown.png"
+                            <img src="/img/icons/ArrowDown.png"
                                  alt=""/>
                         </a>
                     </Link>
@@ -166,7 +166,7 @@ const ClassBlock = () => {
             <div className="absolute left-0 right-0 bottom-8">
                 <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
                     <a href="/classes.html">
-                        <img src="./img/icons/ArrowDown.png" alt=""/>
+                        <img src="/img/icons/ArrowDown.png" alt=""/>
                     </a>
                 </h1>
             </div>

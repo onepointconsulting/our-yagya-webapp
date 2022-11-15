@@ -76,7 +76,7 @@ const AccordionItem = ({
           <h1 className="flex justify-center text-5xl text-center text-gray-400 cursor-poainter">
             <img
               className="w-8 md:w-12"
-              src="../img/icons/ArrowDown.png"
+              src="/img/icons/ArrowDown.png"
               alt={title}
               title={title}
             />
@@ -135,7 +135,7 @@ export default function NewsMain({ data }) {
               <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
                 <img
                   className="w-8 md:w-12"
-                  src="../img/icons/ArrowDown.png"
+                  src="/img/icons/ArrowDown.png"
                   alt={newsCategories[0]}
                   title={newsCategories[0]}
                 />
@@ -158,7 +158,7 @@ export default function NewsMain({ data }) {
                 <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
                   <img
                     className="w-8 md:w-12"
-                    src="../img/icons/ArrowDown.png"
+                    src="/img/icons/ArrowDown.png"
                     alt={newsCategories[1]}
                     title={newsCategories[1]}
                   />
@@ -197,7 +197,7 @@ export default function NewsMain({ data }) {
                 <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
                   <img
                     className="w-8 md:w-12"
-                    src="../img/icons/ArrowDown.png"
+                    src="/img/icons/ArrowDown.png"
                     alt={newsCategories[2]}
                     title={newsCategories[2]}
                   />
@@ -217,7 +217,7 @@ export default function NewsMain({ data }) {
                 <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
                   <img
                     className="w-8 md:w-12"
-                    src="../img/icons/ArrowDown.png"
+                    src="/img/icons/ArrowDown.png"
                     alt={newsCategories[4]}
                     title={newsCategories[4]}
                   />

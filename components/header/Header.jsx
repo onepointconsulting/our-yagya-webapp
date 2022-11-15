@@ -55,7 +55,7 @@ const Header = ({ title }) => {
                     >
                         <img
                             className="h-[1.5em] md:h-[3.5vh]"
-                            src="../img/icons/Search.png"
+                            src="/img/icons/Search.png"
                             alt=""
                         />
                     </div>
@@ -101,7 +101,7 @@ const Header = ({ title }) => {
                                 {' '}
                                 <img
                                     className="w-[77%] xs:w-[70%] md:w-[45%] lg:w-4 mx-auto"
-                                    src="../img/icons/BK_Landscape.png"
+                                    src="/img/icons/BK_Landscape.png"
                                     alt="BK Landscape"
                                 />{' '}
                             </a>

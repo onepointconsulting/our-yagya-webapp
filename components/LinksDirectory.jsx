@@ -47,7 +47,7 @@ const LinksDirectory = () => {
             <h1 className="cursor-poainter text-5xl mt-4 flex justify-center text-gray-400 text-center">
               <Link href="/links">
                 <a>
-                  <img src="./img/icons/ArrowDown.png" alt="" />
+                  <img src="/img/icons/ArrowDown.png" alt="" />
                 </a>
               </Link>
             </h1>

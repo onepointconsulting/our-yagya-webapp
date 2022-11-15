@@ -57,7 +57,7 @@ const FeaturedEventItem = ({ event }) => {
                                 <div>
                                     <img
                                         className="w-4 xs:w-6 lg:w-7"
-                                        src="../img/icons8-info-50.png"
+                                        src="/img/icons8-info-50.png"
                                         alt={event.title}
                                         title={event.title}
                                     />
@@ -73,7 +73,7 @@ const FeaturedEventItem = ({ event }) => {
                                 <div>
                                     <img
                                         className="w-4 xs:w-6 lg:w-7"
-                                        src="../img/icons8-pencil-64.png"
+                                        src="/img/icons8-pencil-64.png"
                                         alt={event.title}
                                         title={event.title}
                                     />
@@ -98,7 +98,7 @@ const EventArrow = () => {
             <a href="/events.html">
                 <img
                     className="w-8 xs:w-10 md:w-12"
-                    src="./img/icons/ArrowDown.png"
+                    src="/img/icons/ArrowDown.png"
                     alt=""
                 />
             </a>

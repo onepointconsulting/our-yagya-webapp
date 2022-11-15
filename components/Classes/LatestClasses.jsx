@@ -265,7 +265,7 @@ export default function LatestClasses() {
         <h1 className="text-5xl mt-4 mb-4 flex justify-center text-gray-400 text-center">
           <img
             className="object-contain w-8 h-12"
-            src="../img/icons/ArrowDown.png"
+            src="/img/icons/ArrowDown.png"
             alt=""
           />
         </h1>

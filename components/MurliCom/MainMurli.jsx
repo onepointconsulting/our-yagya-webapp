@@ -107,7 +107,7 @@ const Murli = () => {
                         </div>
                         <div className="flex justify-center mx-auto my-8 absolute bottom-0 left-0 right-0">
                             <h1 className="cursor-poainter text-5xl flex justify-center text-gray-400 text-center">
-                                <img className="w-8 md:w-12" src="./img/icons/ArrowDown.png" alt="" />
+                                <img className="w-8 md:w-12" src="/img/icons/ArrowDown.png" alt="" />
                             </h1>
                         </div>
                     </div>
@@ -171,7 +171,7 @@ const Murli = () => {
                         </div>
                         <div className="flex justify-center mx-auto my-8 absolute bottom-0 left-0 right-0">
                             <h1 className="cursor-poainter text-5xl flex justify-center text-gray-400 text-center">
-                                <img className="w-8 md:w-12" src="./img/icons/ArrowDown.png" alt="" />
+                                <img className="w-8 md:w-12" src="/img/icons/ArrowDown.png" alt="" />
                             </h1>
                         </div>
                     </div>
