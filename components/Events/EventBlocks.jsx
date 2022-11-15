@@ -5,7 +5,7 @@ const ArrowIcon = () => {
           <a href="/events.html">
             <img
               className="w-8 xs:w-10"
-              src="./img/icons/ArrowDown.png"
+              src="/img/icons/ArrowDown.png"
             />
           </a>
         </h1>
@@ -23,8 +23,7 @@ const ArrowIcon = () => {
     }
   
     const slicedEventCategories = eventsCategories.slice(1);
-  
-  
+
     return (
         <div className="grid w-full grid-cols-1 gap-8 px-8 md:grid-cols-2">
           {slicedEventCategories.map((category, i) => {

@@ -6,6 +6,9 @@ import { GlobalContext } from '../../pages/_app'
 const FeaturedEventItem = ({ event }) => {
     const { locale } = useContext(GlobalContext);
 
+    if(event.image.length === 0 ) {
+        return []
+    }
     return (
         <div className="flex pt-3">
             <div className="w-full pb-4">
@@ -19,8 +22,9 @@ const FeaturedEventItem = ({ event }) => {
                             <div className="relative w-[27vw] md:w-36">
                                 <img
                                     className="object-cover w-full h-full"
-                                    src="https://ouryagyaproject.netlify.app/img/events_img.png"
-                                    alt=""
+                                    src={event.image}
+                                    alt={event.alternativeText}
+                                    title={event.alternativeText}
                                 />
                             </div>
 
@@ -34,12 +38,12 @@ const FeaturedEventItem = ({ event }) => {
                                 <div className="flex items-center justify-between w-full">
                                     <div>
                                         <p className="leading-6 text-[10px] text-gray-400 md:text-[1rem] lg:text-[1.125rem]">
-                                            {formateDate(event.date, locale)}
+                                            {formateDate(event.date, locale, 'dd LLLL yyyy')}
                                         </p>
                                     </div>
                                     <div>
                                         <p className="leading-6 text-[10px] text-gray-400 md:text-[1rem] lg:text-[1.125rem]">
-                                            {event.timeszone}
+                                            {formateDate(event.date, locale, 'hh:mm a')} {event.timezone}
                                         </p>
                                     </div>
                                 </div>
@@ -102,7 +106,7 @@ const EventArrow = () => {
     )
 }
 
-export default function FeaturedEventBlock ({adaptedEvents,title = 'You forgot the title',}) {
+export default function FeaturedEventBlock ({adaptedEvents, title = 'You forgot the title',}) {
     return (
         <div
             className="flex items-center justify-center w-full mt-28 md:mt-36 lg:mt-52">
@@ -112,12 +116,12 @@ export default function FeaturedEventBlock ({adaptedEvents,title = 'You forgot t
                     className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 filosofia_italic bg-gold1 md:text-4xl">
                     {title}
                 </div>
-                {adaptedEvents[title].map((event, i) => {
+                {!!adaptedEvents[title] ? adaptedEvents[title].map((event, i) => {
                     return (
                         <FeaturedEventItem event={event}
                                            key={`featuredEvent_${i}`}/>
                     )
-                })}
+                }) : <></>}
                 <EventArrow/>
             </div>
         </div>
