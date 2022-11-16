@@ -76,8 +76,9 @@ const AccordionItem = ({
           <h1 className="flex justify-center text-5xl text-center text-gray-400 cursor-poainter">
             <img
               className="w-8 md:w-12"
-              src="./img/icons/ArrowDown.png"
-              alt="Arrow down"
+              src="../img/icons/ArrowDown.png"
+              alt={title}
+              title={title}
             />
           </h1>
         </div>
@@ -114,16 +115,14 @@ export default function NewsMain({ data }) {
 
   return (
     <div>
-      {/* <!-- parent --> */}
       <div
-        className="pt-8 md:pt-16 lg:pt-72 px-8 lg:px-16"
+        className="px-8 pt-8 md:pt-16 lg:pt-72 lg:px-16"
         style={{
           background: `url(${bgImage}) no-repeat`,
-        }}
-      >
+        }} >
+
+        <div className="w-auto mb-8 fadeInTop lg:w-full mx-atuo">
         {/* Internationl */}
-        <div className="w-auto  mb-8 fadeInTop lg:w-full mx-atuo">
-          {/* <!-- the hero section (first)--> */}
           <div className="object-cover bg-gray-200 bg-opacity-[0.50]">
             <div className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
               {newsCategories[0]}
@@ -136,7 +135,7 @@ export default function NewsMain({ data }) {
               <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
                 <img
                   className="w-8 md:w-12"
-                  src="./img/icons/ArrowDown.png"
+                  src="../img/icons/ArrowDown.png"
                   alt={newsCategories[0]}
                   title={newsCategories[0]}
                 />
@@ -144,11 +143,10 @@ export default function NewsMain({ data }) {
             </div>
           </div>
         </div>{" "}
-        <div className="lg:flex justify-between">
-          <div className="lg:mr-4 flex flex-col items-center w-full lg:w-1/2">
-            {/* Madhuban News */}
 
-            {/* <!-- right section (first box) --> */}
+        <div className="justify-between lg:flex">
+          <div className="flex flex-col items-center w-full lg:mr-4 lg:w-1/2">
+            {/* Madhuban News */}
             <div className="relative w-full my-4 bg-gray-200 h-fit">
               <div className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
                 {newsCategories[1]}
@@ -160,7 +158,7 @@ export default function NewsMain({ data }) {
                 <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
                   <img
                     className="w-8 md:w-12"
-                    src="./img/icons/ArrowDown.png"
+                    src="../img/icons/ArrowDown.png"
                     alt={newsCategories[1]}
                     title={newsCategories[1]}
                   />
@@ -170,9 +168,8 @@ export default function NewsMain({ data }) {
 
             {/* Regional Websites */}
             <div className="w-full">
-              {/* <!-- right section (second box-right) --> */}
               <div className="relative w-full my-4 h-fit">
-                <div className="flex items-center mb-0 text-slate-50 cursor-pointer bg-gold1 filosofia_italic">
+                <div className="flex items-center mb-0 cursor-pointer text-slate-50 bg-gold1 filosofia_italic">
                   <div className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
                     {newsCategories[3]}
                   </div>
@@ -187,7 +184,7 @@ export default function NewsMain({ data }) {
             </div>
           </div>
 
-          <div className="lg:ml-4 flex flex-col items-center w-full lg:w-3/6">
+          <div className="flex flex-col items-center w-full lg:ml-4 lg:w-3/6">
             {/* Special Focus News */}
             <div className="relative w-full my-4 bg-gray-200 h-fit">
               <div className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
@@ -200,7 +197,7 @@ export default function NewsMain({ data }) {
                 <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
                   <img
                     className="w-8 md:w-12"
-                    src="./img/icons/ArrowDown.png"
+                    src="../img/icons/ArrowDown.png"
                     alt={newsCategories[2]}
                     title={newsCategories[2]}
                   />
@@ -209,7 +206,6 @@ export default function NewsMain({ data }) {
             </div>
 
             {/* Transitions */}
-
             <div className="relative w-full my-4 bg-gray-200 h-fit">
               <div className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
                 {newsCategories[4]}
@@ -221,13 +217,14 @@ export default function NewsMain({ data }) {
                 <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
                   <img
                     className="w-8 md:w-12"
-                    src="./img/icons/ArrowDown.png"
+                    src="../img/icons/ArrowDown.png"
                     alt={newsCategories[4]}
                     title={newsCategories[4]}
                   />
                 </h1>
               </div>
             </div>
+            
             {/* Links */}
             <div className="relative w-full my-4 bg-gray-200">
               <div className="flex items-center justify-between w-full bg-gold1 h-fit">

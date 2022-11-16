@@ -33,7 +33,6 @@ const SubMenu = ({ mainMenu }) => {
     currentMenu.length > 0 &&
     currentMenu[0]?.attributes?.children?.length > 0
   ) {
-    console.log("mainMenu currentMenu", currentMenu);
     const children = currentMenu[0]?.attributes?.children;
     return (
       <div
@@ -69,8 +68,7 @@ const MainMenu = () => {
     <>
       <div className="relative z-30 hidden lg:block">
         <div
-          className="flex-row flex-wrap items-end w-full p-3 mx-auto
-            text-center filosofia_regular bg-grayDark md:flex md:justify-around lg:justify-evenly"
+          className="flex-row flex-wrap items-end w-full p-3 mx-auto text-center filosofia_regular bg-grayDark md:flex md:justify-around lg:justify-evenly"
         >
           {mainMenu.map((menu, i) => {
             return (
