@@ -13,7 +13,7 @@ export default function Slider() {
 
     return (
         <Splide
-            className="splide visible"
+            className="visible splide"
             style={{ zIndex: '0' }}
             aria-label="My slider"
             options={{
@@ -29,9 +29,9 @@ export default function Slider() {
                 return (
                     <SplideSlide className="splide__slide" key={slide.id}>
                         <div
-                            className="metropolis_medium mx-auto bg-home_page_top_bg w-full shadow-md overflow-hidden max-w-full">
+                            className="w-full max-w-full mx-auto overflow-hidden shadow-md metropolis_medium bg-home_page_top_bg">
                             <div
-                                className="md:flex justify-between items-center">
+                                className="items-center justify-between md:flex">
                                 <div className="mx-auto mt-2 lg:mt-0">
                                     <img
                                         className="h-[50%] xs:h-2/4 mt-2 mb-2 mx-auto md:h-52 xl:h-48 w-[57%] xs:w-3/4 md:w-80 xl:w-80 md:ml-4 object-cover p-4"
@@ -45,7 +45,7 @@ export default function Slider() {
                                         title={image?.alternativeText}
                                     />
                                 </div>
-                                <div className="md:pl-14 w-full">
+                                <div className="w-full md:pl-14">
                                     <div
                                         className="pl-4 pr-1 sm:pr-0 sm:pl-0 home_page_top text-lg md:text-2xl xl:text-[32px] my-1 sm:my-4 text-gray-500 capitalize">
                                         {slide.title}
@@ -55,10 +55,10 @@ export default function Slider() {
                                         </h1>
                                     </div>
                                     <div
-                                        className="mb-4 lg:flex justify-between items-end sm:items-center">
+                                        className="items-end justify-between mb-4 lg:flex sm:items-center">
                                         <div
                                             className="pl-4 pr-1 sm:pr-0 sm:pl-0">
-                                            <h3 className="online-event-p text-lg leading-8	 md:text-xl lg:text-lg xl:text-2xl text-gray-500 capitalize">
+                                            <h3 className="text-lg leading-8 text-gray-500 capitalize online-event-p md:text-xl lg:text-lg xl:text-2xl">
                                                 {slide.speakers}
                                             </h3>
                                         </div>

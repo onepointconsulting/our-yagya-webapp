@@ -1,10 +1,14 @@
-import { adaptCustomPage } from '../../lib/pageAdapter'
 import React from 'react'
+import SingleEventMain from '../../components/Events/SingleEventMain'
+import { adaptCustomPage } from '../../lib/pageAdapter'
 import { singleEventLayout } from '../../lib/apiClient'
 
 export default function SingleEvent({ data }) {
+
+    console.log('SingleEvent data', JSON.stringify(data))
+
     return (
-        <></>
+        <SingleEventMain data={data} />
     );
 }
 

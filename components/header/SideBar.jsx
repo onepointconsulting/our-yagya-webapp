@@ -6,7 +6,7 @@ const SideBar = () => {
         <div className="p-4 h-[68vh] md:h-[69vh] overflow-y-auto">
             <div className="flex items-center justify-center w-full my-4 filosofia_regular">
                 <span className="z-10 px-1 py-2 -mr-12 text-2xl text-red70">
-                    <img className="object-center w-8 pr-2 text-red70" src="../img/magnifying_glass.svg" alt="" />
+                    <img className="object-center w-8 pr-2 text-red70" src="/img/magnifying_glass.svg" alt="" />
                 </span>
     
                 <div className="w-full">
@@ -22,7 +22,7 @@ const SideBar = () => {
     
             <div className="flex flex-col overflow-hidden">
                 <div className="flex items-center pb-2">
-                    <img className="object-center w-8 pr-2 text-red70" src="../img/svg/SpeakerIcon.svg" alt="" />
+                    <img className="object-center w-8 pr-2 text-red70" src="/img/svg/SpeakerIcon.svg" alt="" />
                     <span className="text-lg font-semibold text-red70 lg:text-2xl">speaker</span>
                 </div>
     
@@ -35,7 +35,7 @@ const SideBar = () => {
                 </ul>
     
                 <div className="flex items-center pb-2">
-                    <img className="object-center w-8 pr-2 text-red70" src="../img/svg/TopicIcon.svg" alt="" />
+                    <img className="object-center w-8 pr-2 text-red70" src="/img/svg/TopicIcon.svg" alt="" />
                     <span className="text-lg font-semibold text-red70 lg:text-2xl">topic</span>
                 </div>
     
@@ -51,7 +51,7 @@ const SideBar = () => {
                 </ul>
     
                 <div className="flex items-center pb-2">
-                    <img className="object-center w-8 pr-2 text-red70" src="../img/svg/LanguageIcon.svg" alt="" />
+                    <img className="object-center w-8 pr-2 text-red70" src="/img/svg/LanguageIcon.svg" alt="" />
                     <span className="text-lg font-semibold text-red70 lg:text-2xl">languages</span>
                 </div>
     
@@ -68,7 +68,7 @@ const SideBar = () => {
                 </ul>
     
                 <div className="flex items-center pb-2">
-                    <img className="object-center w-8 pr-2 text-red70" src="../img/svg/CalendarIcon.svg" alt="" />
+                    <img className="object-center w-8 pr-2 text-red70" src="/img/svg/CalendarIcon.svg" alt="" />
                     <span className="text-lg font-semibold text-red70 lg:text-2xl">Date</span>
                 </div>
                 <ul className="pb-4 mx-auto list-inside">

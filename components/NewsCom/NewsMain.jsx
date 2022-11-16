@@ -76,7 +76,7 @@ const AccordionItem = ({
           <h1 className="flex justify-center text-5xl text-center text-gray-400 cursor-poainter">
             <img
               className="w-8 md:w-12"
-              src="../img/icons/ArrowDown.png"
+              src="/img/icons/ArrowDown.png"
               alt={title}
               title={title}
             />
@@ -115,6 +115,7 @@ export default function NewsMain({ data }) {
 
   return (
     <div>
+      {/* <!-- parent --> */}
       <div
         className="px-8 pt-8 md:pt-16 lg:pt-72 lg:px-16"
         style={{
@@ -135,7 +136,7 @@ export default function NewsMain({ data }) {
               <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
                 <img
                   className="w-8 md:w-12"
-                  src="../img/icons/ArrowDown.png"
+                  src="/img/icons/ArrowDown.png"
                   alt={newsCategories[0]}
                   title={newsCategories[0]}
                 />
@@ -158,7 +159,7 @@ export default function NewsMain({ data }) {
                 <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
                   <img
                     className="w-8 md:w-12"
-                    src="../img/icons/ArrowDown.png"
+                    src="/img/icons/ArrowDown.png"
                     alt={newsCategories[1]}
                     title={newsCategories[1]}
                   />
@@ -197,7 +198,7 @@ export default function NewsMain({ data }) {
                 <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
                   <img
                     className="w-8 md:w-12"
-                    src="../img/icons/ArrowDown.png"
+                    src="/img/icons/ArrowDown.png"
                     alt={newsCategories[2]}
                     title={newsCategories[2]}
                   />
@@ -217,14 +218,14 @@ export default function NewsMain({ data }) {
                 <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
                   <img
                     className="w-8 md:w-12"
-                    src="../img/icons/ArrowDown.png"
+                    src="/img/icons/ArrowDown.png"
                     alt={newsCategories[4]}
                     title={newsCategories[4]}
                   />
                 </h1>
               </div>
             </div>
-            
+
             {/* Links */}
             <div className="relative w-full my-4 bg-gray-200">
               <div className="flex items-center justify-between w-full bg-gold1 h-fit">
@@ -240,7 +241,7 @@ export default function NewsMain({ data }) {
                   <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
                     <img
                       className="w-7 md:w-10 xl:w-12"
-                      src="../img/Lock.png"
+                      src="/img/Lock.png"
                       alt="Arrow down icon"
                       title="Arrow down icon"
                     />

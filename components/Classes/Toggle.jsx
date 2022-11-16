@@ -10,7 +10,7 @@ const Toggle = () => {
         <img
           id="openbtn1"
           className="w-8 mx-auto md:w-12 lg:w-auto "
-          src="../img/Layer.png"
+          src="/img/Layer.png"
           alt="opening sidebar menu"
         />
       </div>

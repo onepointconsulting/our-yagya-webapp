@@ -1,3 +1,7 @@
+import { useContext } from "react";
+import { formateDate } from "../../lib/dateAdapter";
+import { GlobalContext } from "../../pages/_app";
+
 const ArrowIcon = () => {
     return (
       <div>
@@ -14,6 +18,8 @@ const ArrowIcon = () => {
   };
   
   const EventBlocks = ({ adaptedEvents, eventsCategories }) => {
+    const {  locale } = useContext(GlobalContext);
+
     if (eventsCategories.length === 0) {
       return <></>;
     }
@@ -45,7 +51,8 @@ const ArrowIcon = () => {
   
                         <div className="pb-3">
                           <span className="text-sm text-gray-700 md:text-base">
-                            {eve.date}
+                            {formateDate(eve.date, locale, 'dd LLLL yyyy  hh:mm a')}
+
                           </span>
                         </div>
                       </div>

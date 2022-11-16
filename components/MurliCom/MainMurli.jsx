@@ -107,7 +107,7 @@ const Murli = () => {
                         </div>
                         <div className="flex justify-center mx-auto my-8 absolute bottom-0 left-0 right-0">
                             <h1 className="cursor-poainter text-5xl flex justify-center text-gray-400 text-center">
-                                <img className="w-8 md:w-12" src="./img/icons/ArrowDown.png" alt="" />
+                                <img className="w-8 md:w-12" src="/img/icons/ArrowDown.png" alt="" />
                             </h1>
                         </div>
                     </div>
@@ -171,7 +171,7 @@ const Murli = () => {
                         </div>
                         <div className="flex justify-center mx-auto my-8 absolute bottom-0 left-0 right-0">
                             <h1 className="cursor-poainter text-5xl flex justify-center text-gray-400 text-center">
-                                <img className="w-8 md:w-12" src="./img/icons/ArrowDown.png" alt="" />
+                                <img className="w-8 md:w-12" src="/img/icons/ArrowDown.png" alt="" />
                             </h1>
                         </div>
                     </div>
@@ -191,7 +191,7 @@ const Murli = () => {
                             className="w-full px-4 py-2 md:py-4 text-base border placeholder-gray-700 text-red70 focus:outline-none"
                             placeholder="Search" x-model="search" style={{opacity: "0.6"}} />
                         <a className="absolute right-0 px-2 text-sm lg:text-2xl xl:text-3xl whitespace-nowrap" href="/">
-                            <img className="h-6 lg:h-8" src="../img/magnifying_glass.svg" alt="magnifying glass" />
+                            <img className="h-6 lg:h-8" src="/img/magnifying_glass.svg" alt="magnifying glass" />
                         </a>
                         <a href="#"
                             className="absolute hover:bg-white hover:text-blue-900 transition-all duration-200 -right-16 rounded-full p-3 bg-gray-600 text-slate-50 text-base">

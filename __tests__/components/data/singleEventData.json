@@ -1,0 +1,64 @@
+{
+  "data": {
+    "pageLayouts": {
+      "data": [
+        {
+          "attributes": {
+            "title": "Single Event",
+            "layout": "single_event",
+            "backgroundImage": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "__typename": "PageLayout"
+          },
+          "__typename": "PageLayoutEntity"
+        }
+      ],
+      "__typename": "PageLayoutEntityResponseCollection"
+    },
+    "eventSessions": {
+      "data": [
+        {
+          "id": "20",
+          "attributes": {
+            "title": "You can now stream data to an MQTT endpoint! Click More > Stream to MQTT Endpoint... to get started.",
+            "description": "You can now stream data to an MQTT endpoint! Click More > Stream to MQTT Endpoint... to get started.\nYou can now stream data to an MQTT endpoint! Click More > Stream to MQTT Endpoint... to get started.\nYou can now stream data to an MQTT endpoint! Click More > Stream to MQTT Endpoint... to get started.\nYou can now stream data to an MQTT endpoint! Click More > Stream to MQTT Endpoint... to get started.\n",
+            "startDate": "2022-12-07T21:58:00.000Z",
+            "endDate": "2022-12-10T20:58:00.000Z",
+            "liveLink": "https://dummy.com",
+            "timezone": {
+              "data": {
+                "attributes": {
+                  "name": "Africa/Cairo",
+                  "abbreviation": "EET",
+                  "__typename": "Timezone"
+                },
+                "__typename": "TimezoneEntity"
+              },
+              "__typename": "TimezoneEntityResponse"
+            },
+            "event": {
+              "data": {
+                "attributes": {
+                  "title": "Massive UI Update! The UI has been overhauled to provide a faster, prettier experience.",
+                  "onlineStatus": "online",
+                  "joinLink": "https://us02web.zoom.us/j/85495153523?pwd=U2VPM2lDVmFOYjRFaFdHZTI2YjJuUT09",
+                  "__typename": "Event"
+                },
+                "__typename": "EventEntity"
+              },
+              "__typename": "EventEntityResponse"
+            },
+            "__typename": "EventSession"
+          },
+          "__typename": "EventSessionEntity"
+        }
+      ],
+      "__typename": "EventSessionEntityResponseCollection"
+    }
+  },
+  "loading": false,
+  "networkStatus": 7,
+  "stale": false
+}
