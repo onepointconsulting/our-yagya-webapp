@@ -38,35 +38,35 @@ export default function LatestClasses() {
               <div className="lg:m-auto pl-2 pr-2 md:pl-3 md:pr-3">
                 <img
                   className="w-7 md:w-9 xl:w-12"
-                  src="../img/svg/Watch.svg"
+                  src="/img/svg/Watch.svg"
                   alt=""
                 />
               </div>
               <div className="lg:m-auto pl-2 pr-2 md:pl-3 md:pr-3">
                 <img
                   className="w-7 md:w-9 xl:w-12"
-                  src="../img/svg/Listen.svg"
+                  src="/img/svg/Listen.svg"
                   alt=""
                 />
               </div>
               <div className="lg:m-auto pl-2 pr-2 md:pl-3 md:pr-3">
                 <img
                   className="w-7 md:w-9 xl:w-12"
-                  src="../img/svg/Read.svg"
+                  src="/img/svg/Read.svg"
                   alt=""
                 />
               </div>
               <div className="lg:m-auto pl-2 pr-2 md:pl-3 md:pr-3">
                 <img
                   className="w-[70%] md:w-[71%] lg:w-[2.5rem] xl:w-14"
-                  src="../img/svg/Download.png"
+                  src="/img/svg/Download.png"
                   alt=""
                 />
               </div>
               <div className="lg:m-auto pl-2 pr-2 md:pl-3 md:pr-3">
                 <img
                   className="w-7 md:w-9 xl:w-12"
-                  src="../img/svg/Share.svg"
+                  src="/img/svg/Share.svg"
                   alt=""
                 />
               </div>
@@ -101,35 +101,35 @@ export default function LatestClasses() {
               <div className="lg:m-auto pl-2 pr-2 md:pl-3 md:pr-3">
                 <img
                   className="w-7 md:w-9 xl:w-12"
-                  src="../img/svg/Watch.svg"
+                  src="/img/svg/Watch.svg"
                   alt=""
                 />
               </div>
               <div className="lg:m-auto pl-2 pr-2 md:pl-3 md:pr-3">
                 <img
                   className="w-7 md:w-9 xl:w-12"
-                  src="../img/svg/Listen.svg"
+                  src="/img/svg/Listen.svg"
                   alt=""
                 />
               </div>
               <div className="lg:m-auto pl-2 pr-2 md:pl-3 md:pr-3 invisible">
                 <img
                   className="w-7 md:w-9 xl:w-12"
-                  src="../img/svg/Read.svg"
+                  src="/img/svg/Read.svg"
                   alt=""
                 />
               </div>
               <div className="lg:m-auto pl-2 pr-2 md:pl-3 md:pr-3">
                 <img
                   className="w-[70%] md:w-[71%] lg:w-[2.5rem] xl:w-14"
-                  src="../img/svg/Download.png"
+                  src="/img/svg/Download.png"
                   alt=""
                 />
               </div>
               <div className="lg:m-auto pl-2 pr-2 md:pl-3 md:pr-3">
                 <img
                   className="w-7 md:w-9 xl:w-12"
-                  src="../img/svg/Share.svg"
+                  src="/img/svg/Share.svg"
                   alt=""
                 />
               </div>
@@ -164,35 +164,35 @@ export default function LatestClasses() {
               <div className="lg:m-auto pl-2 pr-2 md:pl-3 md:pr-3">
                 <img
                   className="w-7 md:w-9 xl:w-12"
-                  src="../img/svg/Watch.svg"
+                  src="/img/svg/Watch.svg"
                   alt=""
                 />
               </div>
               <div className="lg:m-auto pl-2 pr-2 md:pl-3 md:pr-3">
                 <img
                   className="w-7 md:w-9 xl:w-12"
-                  src="../img/svg/Listen.svg"
+                  src="/img/svg/Listen.svg"
                   alt=""
                 />
               </div>
               <div className="lg:m-auto pl-2 pr-2 md:pl-3 md:pr-3">
                 <img
                   className="w-7 md:w-9 xl:w-12"
-                  src="../img/svg/Read.svg"
+                  src="/img/svg/Read.svg"
                   alt=""
                 />
               </div>
               <div className="lg:m-auto pl-2 pr-2 md:pl-3 md:pr-3">
                 <img
                   className="w-[70%] md:w-[71%] lg:w-[2.5rem] xl:w-14"
-                  src="../img/svg/Download.png"
+                  src="/img/svg/Download.png"
                   alt=""
                 />
               </div>
               <div className="lg:m-auto pl-2 pr-2 md:pl-3 md:pr-3">
                 <img
                   className="w-7 md:w-9 xl:w-12"
-                  src="../img/svg/Share.svg"
+                  src="/img/svg/Share.svg"
                   alt=""
                 />
               </div>
@@ -227,35 +227,35 @@ export default function LatestClasses() {
               <div className="lg:m-auto pl-2 pr-2 md:pl-3 md:pr-3">
                 <img
                   className="w-7 md:w-9 xl:w-12"
-                  src="../img/svg/Watch.svg"
+                  src="/img/svg/Watch.svg"
                   alt=""
                 />
               </div>
               <div className="lg:m-auto pl-2 pr-2 md:pl-3 md:pr-3">
                 <img
                   className="w-7 md:w-9 xl:w-12"
-                  src="../img/svg/Listen.svg"
+                  src="/img/svg/Listen.svg"
                   alt=""
                 />
               </div>
               <div className="lg:m-auto pl-2 pr-2 md:pl-3 md:pr-3 invisible">
                 <img
                   className="w-7 md:w-9 xl:w-12"
-                  src="../img/svg/Read.svg"
+                  src="/img/svg/Read.svg"
                   alt=""
                 />
               </div>
               <div className="lg:m-auto pl-2 pr-2 md:pl-3 md:pr-3">
                 <img
                   className="w-[70%] md:w-[71%] lg:w-[2.5rem] xl:w-14"
-                  src="../img/svg/Download.png"
+                  src="/img/svg/Download.png"
                   alt=""
                 />
               </div>
               <div className="lg:m-auto pl-2 pr-2 md:pl-3 md:pr-3">
                 <img
                   className="w-7 md:w-9 xl:w-12"
-                  src="../img/svg/Share.svg"
+                  src="/img/svg/Share.svg"
                   alt=""
                 />
               </div>

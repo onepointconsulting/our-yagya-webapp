@@ -18,7 +18,7 @@ const SearchResultButtons = () => {
               <img
                 id="openbtn1"
                 className="w-8 mx-auto md:w-12 lg:w-auto "
-                src="../img/Layer.png"
+                src="/img/Layer.png"
                 alt="opening sidebar menu"
               />
             </div>
@@ -47,7 +47,7 @@ const SearchResultButtons = () => {
               <div>
                 <img
                   className="h-5 xs:h-7"
-                  src="../img/magnifying_glass.svg"
+                  src="/img/magnifying_glass.svg"
                   alt=""
                 />
               </div>

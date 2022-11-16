@@ -50,13 +50,12 @@ const Header = ({ title }) => {
                 >
                     <div
                         id="searchBarMobile"
-                        className="lg:hidden inline-block cursor-pointer p-[12px] bg-[#ffffff]  border-[1px] border-red-600"
-                        href="#"
-                    >
+                        className="lg:hidden inline-block cursor-pointer p-[12px] bg-[#ffffff]  border-[1px] border-red-600">
                         <img
                             className="h-[1.5em] md:h-[3.5vh]"
                             src="/img/icons/Search.png"
-                            alt=""
+                            alt="search icon"
+                            title="search icon"
                         />
                     </div>
                 </div>
@@ -69,8 +68,9 @@ const Header = ({ title }) => {
                         <a className='block bg-[#ffffff]'>
                             <img
                                 className="object-contain w-auto mx-auto h-auto md:h-[7rem] lg:h-[11em]"
-                                src="./img/ShivBaba.jpg"
-                                alt="Our Yagya logo"
+                                src="/img/ShivBaba.jpg"
+                                alt="Our YagYa logo"
+                                title='Our YagYa'
                             />
                         </a>
                     </Link>

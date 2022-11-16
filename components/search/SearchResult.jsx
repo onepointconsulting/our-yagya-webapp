@@ -36,35 +36,35 @@ const SearchResult = () => {
                 <div className="pl-2 pr-2 lg:m-auto md:pl-3 md:pr-3">
                   <img
                     className="w-7 md:w-9 xl:w-12"
-                    src="../img/svg/Watch.svg"
+                    src="/img/svg/Watch.svg"
                     alt=""
                   />
                 </div>
                 <div className="pl-2 pr-2 lg:m-auto md:pl-3 md:pr-3">
                   <img
                     className="w-7 md:w-9 xl:w-12"
-                    src="../img/svg/Listen.svg"
+                    src="/img/svg/Listen.svg"
                     alt=""
                   />
                 </div>
                 <div className="pl-2 pr-2 lg:m-auto md:pl-3 md:pr-3">
                   <img
                     className="w-7 md:w-9 xl:w-12"
-                    src="../img/svg/Read.svg"
+                    src="/img/svg/Read.svg"
                     alt=""
                   />
                 </div>
                 <div className="pl-2 pr-2 lg:m-auto md:pl-3 md:pr-3">
                   <img
                     className="w-[70%] md:w-[90%] lg:w-11 xl:w-14"
-                    src="../img/svg/Download.png"
+                    src="/img/svg/Download.png"
                     alt=""
                   />
                 </div>
                 <div className="pl-2 pr-2 lg:m-auto md:pl-3 md:pr-3">
                   <img
                     className="w-7 md:w-9 xl:w-12"
-                    src="../img/svg/Share.svg"
+                    src="/img/svg/Share.svg"
                     alt=""
                   />
                 </div>
@@ -105,35 +105,35 @@ const SearchResult = () => {
                 <div className="pl-2 pr-2 lg:m-auto md:pl-3 md:pr-3">
                   <img
                     className="w-7 md:w-9 xl:w-12"
-                    src="../img/svg/Watch.svg"
+                    src="/img/svg/Watch.svg"
                     alt=""
                   />
                 </div>
                 <div className="pl-2 pr-2 lg:m-auto md:pl-3 md:pr-3">
                   <img
                     className="w-7 md:w-9 xl:w-12"
-                    src="../img/svg/Listen.svg"
+                    src="/img/svg/Listen.svg"
                     alt=""
                   />
                 </div>
                 <div className="pl-2 pr-2 lg:m-auto md:pl-3 md:pr-3">
                   <img
                     className="w-7 md:w-9 xl:w-12"
-                    src="../img/svg/Read.svg"
+                    src="/img/svg/Read.svg"
                     alt=""
                   />
                 </div>
                 <div className="pl-2 pr-2 lg:m-auto md:pl-3 md:pr-3">
                   <img
                     className="w-[70%] md:w-[90%] lg:w-11 xl:w-14"
-                    src="../img/svg/Download.png"
+                    src="/img/svg/Download.png"
                     alt=""
                   />
                 </div>
                 <div className="pl-2 pr-2 lg:m-auto md:pl-3 md:pr-3">
                   <img
                     className="w-7 md:w-9 xl:w-12"
-                    src="../img/svg/Share.svg"
+                    src="/img/svg/Share.svg"
                     alt=""
                   />
                 </div>
@@ -189,7 +189,7 @@ const SearchResult = () => {
             <div className="flex items-center justify-center ml-auto">
               <img
                 className="float-left object-cover ml-2 mr-2 search-result max-w-[5rem] md:max-w-[8rem] md:mr-4 md:ml-4"
-                src="../img/Bless.png"
+                src="/img/Bless.png"
                 alt=""
               />
             </div>
@@ -213,7 +213,7 @@ const SearchResult = () => {
           <div className="flex items-center justify-center w-12 h-12 p-4 text-center rounded-full cursor-pointer bg-redfull xs:w-16 lg:w-16 xs:h-16 lg:h-16">
             <img
               className="mt-[-7px] xs:mt-[-10px] lg:mt-[-10px]"
-              src="../img/svg/+.png"
+              src="/img/svg/+.png"
               alt="pluc icon"
             />
           </div>
