@@ -1,9 +1,16 @@
 import { singleEventAdapter } from "../../lib/eventsAdapter";
+import { useTranslation } from 'react-i18next'
 
 const SingleEventMain = ({ data }) => {
-  const singleEvent = singleEventAdapter(data);
-  console.log("singleEvent", singleEvent);
 
+  const { t } = useTranslation();
+
+  const singleEvent = singleEventAdapter(data);
+
+  console.log("singleEvent", singleEvent);
+  if(!singleEvent) {
+    return <div>{t('Sorry, we could not find the event you looking for.')}</div>
+  }
   return (
     <>
       <div className="w-full px-4 py-4 md:px-8 lg:px-20 md:py-8 lg:py-20">
@@ -27,7 +34,7 @@ const SingleEventMain = ({ data }) => {
           <div className="border border-gray-400">
             <div className="filosofia_italic bg-gold1">
               <h1 className="p-4 text-2xl text-center text-slate-50 sm:text-3xl md:text-4xl lg:text-5xl lg:p-7">
-                Guided meditation and life harp music: here is an angel
+                {singleEvent.eventTitle}
               </h1>
             </div>
 

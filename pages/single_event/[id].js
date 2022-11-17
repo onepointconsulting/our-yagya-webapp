@@ -5,8 +5,6 @@ import { singleEventLayout } from '../../lib/apiClient'
 
 export default function SingleEvent({ data }) {
 
-    console.log('SingleEvent data', JSON.stringify(data))
-
     return (
         <SingleEventMain data={data} />
     );
