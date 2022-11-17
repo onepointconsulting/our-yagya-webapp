@@ -1,15 +1,32 @@
 import { singleEventAdapter } from "../../lib/eventsAdapter";
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from "react-i18next";
+import { formateDate } from "../../lib/dateAdapter";
+import { GlobalContext } from "../../pages/_app";
+import { useContext } from "react";
+
+const Required = ({ singleEvent }) => {
+  const { t } = useTranslation();
+  if (singleEvent.joinLink) {
+    return <> {t("Required")}</>;
+  }
+};
 
 const SingleEventMain = ({ data }) => {
-
   const { t } = useTranslation();
+  const { locale } = useContext(GlobalContext);
 
   const singleEvent = singleEventAdapter(data);
 
-  console.log("singleEvent", singleEvent);
-  if(!singleEvent) {
-    return <div>{t('Sorry, we could not find the event you looking for.')}</div>
+  console.log("singleEvent", data);
+  if (!singleEvent) {
+    return (
+      <div className="flex items-center justify-center h-screen p-4 text-center bg-red-500">
+        <h3 className="text-base md:text-lg lg:text-5xl text-slate-50">
+          {" "}
+          {t("Sorry, we could not find the event you looking for.")}
+        </h3>
+      </div>
+    );
   }
   return (
     <>
@@ -25,8 +42,9 @@ const SingleEventMain = ({ data }) => {
 
               <img
                 className="object-cover w-full h-full mx-auto"
-                src="/img/Rectangle.png"
-                alt=""
+                src={singleEvent.sEventImage}
+                alt={singleEvent.sAlternativeText}
+                title={singleEvent.sAlternativeText}
               />
             </div>
           </div>
@@ -54,7 +72,8 @@ const SingleEventMain = ({ data }) => {
                     </h1>
 
                     <h3 className="text-sm leading-normal text-left text-gray-400 md:text-lg lg:text-xl ">
-                      Thursday, 2 December 2021
+                      {/* Not clear */}
+                      {formateDate(singleEvent.sStartDate, locale, "cccc, dd LLLL yyyy")}
                     </h3>
                   </div>
                 </div>
@@ -76,10 +95,14 @@ const SingleEventMain = ({ data }) => {
 
                     <h3 className="text-sm leading-normal text-left text-gray-400 md:text-lg lg:text-xl ">
                       Timezone: America/Edmonton
+                      {singleEvent.sTimezone.name}
                       <br />
-                      Date: Thursday, 2 December 2021
+                      Date:{" "}
+                      {formateDate(singleEvent.sStartDate, locale, " dd LLLL yyyy")}
                       <br />
-                      Time: 2:00am - 3:30am
+                      Time:{" "}
+                      {formateDate(singleEvent.sStartDate, locale, "hh:mm a")} -
+                      {formateDate(singleEvent.sEndDate, locale, "hh:mm a")}
                     </h3>
                   </div>
                 </div>
@@ -100,7 +123,7 @@ const SingleEventMain = ({ data }) => {
                     </h1>
 
                     <h3 className="text-sm leading-normal text-left text-gray-400 md:text-lg lg:text-xl ">
-                      Online
+                      {singleEvent.sOnlineStatus}
                     </h3>
                   </div>
                 </div>
@@ -121,18 +144,16 @@ const SingleEventMain = ({ data }) => {
                     </h1>
 
                     <h3 className="text-sm leading-normal text-left text-gray-400 md:text-lg lg:text-xl ">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Perspiciatis, omnis ipsam error ducimus exercitationem
-                      amet cupiditate?
+                      {singleEvent.sEeventDescription}
                     </h3>
                     <h1 className="text-lg text-left text-gold1 sm:text-xl md:text-2xl">
                       Registration?{" "}
                     </h1>
                     <p className="text-sm leading-normal text-left text-gray-400 md:text-lg lg:text-xl ">
-                      Required
+                      <Required singleEvent={singleEvent} />
                       <br />
                       <a className="font-bold" href="#!">
-                        https://goggle.com
+                        {singleEvent.joinLink}
                       </a>
                     </p>
                   </div>
