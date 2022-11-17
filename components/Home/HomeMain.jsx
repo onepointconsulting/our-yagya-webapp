@@ -180,7 +180,7 @@ export default function HomeMain () {
     const eventsData = []
     const bgImage = imageAdapter(data)
 
-    console.log(data)
+    console.log('HomeMain data', JSON.stringify(data))
 
     return (
         // <!-- home page background -->

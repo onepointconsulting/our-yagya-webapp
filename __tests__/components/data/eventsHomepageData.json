@@ -1,0 +1,484 @@
+{
+  "data": {
+    "pageLayouts": {
+      "data": [
+        {
+          "attributes": {
+            "title": "OUR YAGYA",
+            "layout": "home",
+            "backgroundImage": {
+              "data": [
+                {
+                  "attributes": {
+                    "alternativeText": "Dadis gathering",
+                    "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1664906757/Clip1_c6ee2bd09f.png",
+                    "__typename": "UploadFile"
+                  },
+                  "__typename": "UploadFileEntity"
+                }
+              ],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "__typename": "PageLayout"
+          },
+          "__typename": "PageLayoutEntity"
+        }
+      ],
+      "__typename": "PageLayoutEntityResponseCollection"
+    },
+    "slides": {
+      "data": [
+        {
+          "id": "1",
+          "attributes": {
+            "url": "/index",
+            "slider": {
+              "id": "1",
+              "title": "Motivational slides 1",
+              "slides": [
+                {
+                  "id": "3",
+                  "title": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in ",
+                  "image": {
+                    "data": {
+                      "id": "2",
+                      "attributes": {
+                        "name": "MurliClass_Top.jpg",
+                        "alternativeText": "Murli gathering",
+                        "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1664815494/Murli_Class_Top_318c024240.jpg",
+                        "__typename": "UploadFile"
+                      },
+                      "__typename": "UploadFileEntity"
+                    },
+                    "__typename": "UploadFileEntityResponse"
+                  },
+                  "speakers": "Shih de huang jude urriave phd",
+                  "startTimestamp": "2022-10-28T20:57:00.000Z",
+                  "link": "https://www.google.com/",
+                  "__typename": "ComponentSlideComponentsSlide"
+                },
+                {
+                  "id": "4",
+                  "title": "Peacebuilding women making a difference *(2)",
+                  "image": {
+                    "data": {
+                      "id": "3",
+                      "attributes": {
+                        "name": "Dadis gathering",
+                        "alternativeText": "Dadis gathering",
+                        "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1664906757/Clip1_c6ee2bd09f.png",
+                        "__typename": "UploadFile"
+                      },
+                      "__typename": "UploadFileEntity"
+                    },
+                    "__typename": "UploadFileEntityResponse"
+                  },
+                  "speakers": "Sr. Jayanti Kirpalani, Des",
+                  "startTimestamp": "2022-10-28T20:54:00.000Z",
+                  "link": "https://ouryagya.netlify.app",
+                  "__typename": "ComponentSlideComponentsSlide"
+                },
+                {
+                  "id": "12",
+                  "title": "The standard Lorem Ipsum passage, used since the 1500s",
+                  "image": {
+                    "data": {
+                      "id": "13",
+                      "attributes": {
+                        "name": "ParliamentLOGO.png",
+                        "alternativeText": "ParliamentLOGO.png",
+                        "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1665820941/Parliament_LOGO_2d0cd3424f.png",
+                        "__typename": "UploadFile"
+                      },
+                      "__typename": "UploadFileEntity"
+                    },
+                    "__typename": "UploadFileEntityResponse"
+                  },
+                  "speakers": "Someone from around the globe",
+                  "startTimestamp": "2022-10-19T20:06:00.000Z",
+                  "link": "https://ouryagya.netlify.app/",
+                  "__typename": "ComponentSlideComponentsSlide"
+                }
+              ],
+              "__typename": "ComponentSlideComponentsSlider"
+            },
+            "__typename": "Slide"
+          },
+          "__typename": "SlideEntity"
+        }
+      ],
+      "__typename": "SlideEntityResponseCollection"
+    },
+    "videos": {
+      "data": [
+        {
+          "id": "4",
+          "attributes": {
+            "url": "/index",
+            "video": "https://www.youtube.com/embed/rLPivKKWs6w",
+            "title": "Constant Happiness - Contentment",
+            "speaker": "Mohini Didi",
+            "date": "2021-12-23",
+            "durationHours": 0,
+            "durationMinutes": 12,
+            "durationSeconds": 16,
+            "__typename": "Video"
+          },
+          "__typename": "VideoEntity"
+        }
+      ],
+      "__typename": "VideoEntityResponseCollection"
+    },
+    "news": {
+      "data": [
+        {
+          "id": "53",
+          "attributes": {
+            "title": "Coping with climate change on Mt Everest",
+            "timestamp": "2022-08-02T07:58:00.000Z",
+            "content": "Hundreds of climbers arrive at the Everest base camp on the Khumbu glacier every year, but higher temperatures are melting the ice in the Himalayan region. Local guides who are members of the Sherpa community help visitors reach the 8.8km peak, but Nepal's government is considering moving the camp for safety reasons. So, how dangerous is climate change making the journey to the top of the world's highest mountain?\n\n",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "South America",
+                  "parent": {
+                    "data": {
+                      "attributes": {
+                        "title": "Regional News",
+                        "__typename": "Category"
+                      },
+                      "__typename": "CategoryEntity"
+                    },
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "51",
+          "attributes": {
+            "title": "Bolsonaro ramped up Brazil’s gun culture. Can Lula reign it in?",
+            "timestamp": "2022-09-23T15:18:00.000Z",
+            "content": "After winning the Brazilian election, Luiz Inacio Lula da Silva will once again become the country’s President in January, more than 10 years after he last held the position. But his victory was narrow and current President Jair Bolsonaro still won more than 49 percent of the vote.\n\n",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "South America",
+                  "parent": {
+                    "data": {
+                      "attributes": {
+                        "title": "Regional News",
+                        "__typename": "Category"
+                      },
+                      "__typename": "CategoryEntity"
+                    },
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        },
+        {
+          "id": "49",
+          "attributes": {
+            "title": "What we know about the deadly Halloween disaster in Seoul",
+            "timestamp": "2022-11-01T16:13:00.000Z",
+            "content": "On Saturday night, tens of thousands of people flooded into the area in central Seoul to celebrate Halloween – but panic erupted as the crowds swelled, with some witnesses saying it became hard to breathe and impossible to move.\n\n",
+            "images": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "category": {
+              "data": {
+                "attributes": {
+                  "title": "Asia",
+                  "parent": {
+                    "data": {
+                      "attributes": {
+                        "title": "Regional News",
+                        "__typename": "Category"
+                      },
+                      "__typename": "CategoryEntity"
+                    },
+                    "__typename": "CategoryEntityResponse"
+                  },
+                  "__typename": "Category"
+                },
+                "__typename": "CategoryEntity"
+              },
+              "__typename": "CategoryEntityResponse"
+            },
+            "__typename": "New"
+          },
+          "__typename": "NewEntity"
+        }
+      ],
+      "__typename": "NewEntityResponseCollection"
+    },
+    "eventSessions": {
+      "data": [
+        {
+          "id": "22",
+          "attributes": {
+            "startDate": "2022-11-26T21:28:00.000Z",
+            "timezone": {
+              "data": {
+                "attributes": {
+                  "name": "Africa/Cairo",
+                  "abbreviation": "EET",
+                  "__typename": "Timezone"
+                },
+                "__typename": "TimezoneEntity"
+              },
+              "__typename": "TimezoneEntityResponse"
+            },
+            "event": {
+              "data": {
+                "attributes": {
+                  "featuredImage": {
+                    "data": {
+                      "id": "31",
+                      "attributes": {
+                        "alternativeText": "dummy.jpg",
+                        "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667841600/dummy_b18ed28cec.jpg",
+                        "__typename": "UploadFile"
+                      },
+                      "__typename": "UploadFileEntity"
+                    },
+                    "__typename": "UploadFileEntityResponse"
+                  },
+                  "title": "You can now generate datasets using JSON and import them into other schemas using the Dataset Column type.",
+                  "categories": {
+                    "data": [
+                      {
+                        "attributes": {
+                          "title": "Featured Events",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "the peninsula retreat center",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Virtual centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "yarra valley centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Illawarra retreat centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Asia Retreat Centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      }
+                    ],
+                    "__typename": "CategoryRelationResponseCollection"
+                  },
+                  "__typename": "Event"
+                },
+                "__typename": "EventEntity"
+              },
+              "__typename": "EventEntityResponse"
+            },
+            "__typename": "EventSession"
+          },
+          "__typename": "EventSessionEntity"
+        },
+        {
+          "id": "16",
+          "attributes": {
+            "startDate": "2022-11-30T14:38:00.000Z",
+            "timezone": {
+              "data": {
+                "attributes": {
+                  "name": "Africa/Cairo",
+                  "abbreviation": "EET",
+                  "__typename": "Timezone"
+                },
+                "__typename": "TimezoneEntity"
+              },
+              "__typename": "TimezoneEntityResponse"
+            },
+            "event": {
+              "data": {
+                "attributes": {
+                  "featuredImage": {
+                    "data": {
+                      "id": "28",
+                      "attributes": {
+                        "alternativeText": "b.jpeg",
+                        "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667501468/b_a058d14f7a.jpg",
+                        "__typename": "UploadFile"
+                      },
+                      "__typename": "UploadFileEntity"
+                    },
+                    "__typename": "UploadFileEntityResponse"
+                  },
+                  "title": "Massive UI Update! The UI has been overhauled to provide a faster, prettier experience.",
+                  "categories": {
+                    "data": [
+                      {
+                        "attributes": {
+                          "title": "Illawarra retreat centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Virtual centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Featured Events",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Asia Retreat Centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      }
+                    ],
+                    "__typename": "CategoryRelationResponseCollection"
+                  },
+                  "__typename": "Event"
+                },
+                "__typename": "EventEntity"
+              },
+              "__typename": "EventEntityResponse"
+            },
+            "__typename": "EventSession"
+          },
+          "__typename": "EventSessionEntity"
+        },
+        {
+          "id": "20",
+          "attributes": {
+            "startDate": "2022-12-07T21:58:00.000Z",
+            "timezone": {
+              "data": {
+                "attributes": {
+                  "name": "Africa/Cairo",
+                  "abbreviation": "EET",
+                  "__typename": "Timezone"
+                },
+                "__typename": "TimezoneEntity"
+              },
+              "__typename": "TimezoneEntityResponse"
+            },
+            "event": {
+              "data": {
+                "attributes": {
+                  "featuredImage": {
+                    "data": {
+                      "id": "28",
+                      "attributes": {
+                        "alternativeText": "b.jpeg",
+                        "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667501468/b_a058d14f7a.jpg",
+                        "__typename": "UploadFile"
+                      },
+                      "__typename": "UploadFileEntity"
+                    },
+                    "__typename": "UploadFileEntityResponse"
+                  },
+                  "title": "Massive UI Update! The UI has been overhauled to provide a faster, prettier experience.",
+                  "categories": {
+                    "data": [
+                      {
+                        "attributes": {
+                          "title": "Illawarra retreat centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Virtual centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Featured Events",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Asia Retreat Centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      }
+                    ],
+                    "__typename": "CategoryRelationResponseCollection"
+                  },
+                  "__typename": "Event"
+                },
+                "__typename": "EventEntity"
+              },
+              "__typename": "EventEntityResponse"
+            },
+            "__typename": "EventSession"
+          },
+          "__typename": "EventSessionEntity"
+        }
+      ],
+      "__typename": "EventSessionEntityResponseCollection"
+    }
+  },
+  "loading": false,
+  "networkStatus": 7,
+  "stale": false
+}
