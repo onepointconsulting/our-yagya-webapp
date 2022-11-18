@@ -17,7 +17,6 @@ const SingleEventMain = ({ data }) => {
 
   const singleEvent = singleEventAdapter(data);
 
-  console.log("singleEvent", data);
   if (!singleEvent) {
     return (
       <div className="flex items-center justify-center h-screen p-4 text-center bg-red-500">
@@ -94,14 +93,14 @@ const SingleEventMain = ({ data }) => {
                     </h1>
 
                     <h3 className="text-sm leading-normal text-left text-gray-400 md:text-lg lg:text-xl ">
-                      Timezone: America/Edmonton
+                      Timezone:{' '}
                       {singleEvent.sTimezone.name}
                       <br />
                       Date:{" "}
                       {formateDate(singleEvent.sStartDate, locale, " dd LLLL yyyy")}
                       <br />
                       Time:{" "}
-                      {formateDate(singleEvent.sStartDate, locale, "hh:mm a")} -
+                      {formateDate(singleEvent.sStartDate, locale, "hh:mm a")} -{" "}
                       {formateDate(singleEvent.sEndDate, locale, "hh:mm a")}
                     </h3>
                   </div>

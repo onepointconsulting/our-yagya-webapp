@@ -15,6 +15,33 @@ const ArrowIcon = () => {
   );
 };
 
+const EventItem = ({ eve, locale }) => {
+    return (
+        <Link
+            className="bg-green-500 cursor-pointer"
+            href={`/single_event/${eve.id}`}
+        >
+            <a>
+                <div className="h-auto p-4 overflow-y-auto metropolis_medium">
+                    <div className="text-lg text-redfull md:text-2xl">
+                        {eve.title}
+                    </div>
+
+                    <div className="pb-3">
+                          <span className="text-sm text-gray-700 md:text-base">
+                            {formateDate(
+                                eve.date,
+                                locale,
+                                "dd LLLL yyyy  hh:mm a"
+                            )} {eve.timezone}
+                          </span>
+                    </div>
+                </div>
+            </a>
+        </Link>
+    )
+}
+
 const EventBlocks = ({ adaptedEvents, eventsCategories }) => {
   const { locale } = useContext(GlobalContext);
 
@@ -37,43 +64,13 @@ const EventBlocks = ({ adaptedEvents, eventsCategories }) => {
         return (
           <div className="w-full bg-gray-200" key={i}>
             {/* Going to an event from the title is not the same as the actual event */}
-            <Link
-              className="bg-green-500 cursor-pointer"
-              href={`/single_event/${category.id}`}
-            >
-              <a>
+              <>
                 <div className="py-2 pl-4 pr-2 text-[1.2rem] text-slate-50 capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
                   {category}
                 </div>
-              </a>
-            </Link>
-            {adaptedEvents[category]?.map((eve) => {
-              return (
-                <>
-                  <Link
-                    className="bg-green-500 cursor-pointer"
-                    href={`/single_event/${eve.id}`}
-                  >
-                    <a>
-                      <div className="h-auto p-4 overflow-y-auto metropolis_medium">
-                        <div className="text-lg text-redfull md:text-2xl">
-                          {eve.title}
-                        </div>
-
-                        <div className="pb-3">
-                          <span className="text-sm text-gray-700 md:text-base">
-                            {formateDate(
-                              eve.date,
-                              locale,
-                              "dd LLLL yyyy  hh:mm a"
-                            )}
-                          </span>
-                        </div>
-                      </div>
-                    </a>
-                  </Link>
-                </>
-              );
+              </>
+            {adaptedEvents[category]?.map((eve, i) => {
+              return <EventItem locale={locale} eve={eve} key={i} />
             })}
             <ArrowIcon />
           </div>

@@ -82,7 +82,6 @@ const FeaturedEventItem = ({ event }) => {
                                 </div>
                                 <div
                                     className="pl-2 pr-2 m-auto mt-auto mb-auto text-xs text-center text-slate-50 onlnie_eve_title lg:text-sm xl:text-[13px]">
-                                    
                                     {t("Register")}
                                 </div>
                             </div>
