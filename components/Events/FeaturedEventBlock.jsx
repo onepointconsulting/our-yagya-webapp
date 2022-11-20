@@ -33,11 +33,11 @@ const FeaturedEventItem = ({ event }) => {
                             {/* title and date */}
                             <div
                                 className="w-[40vw] md:w-[72%] lg:w-full pl-2 md:pl-4 lg:pl-8">
-                                <h1 className="text-xs font-medium leading-4 text-red-400 xs:text-[14px] md:text-xl lg:text-2xl whitespace-nowrap lg:whitespace-normal overflow-hidden lg:overflow-auto text-ellipsis">
+                                <h1 className="text-xs font-medium leading-4 text-red-400 xs:text-[14px] md:text-base lg:text-xl whitespace-nowrap lg:whitespace-normal overflow-hidden lg:overflow-auto text-ellipsis">
                                     {event.title}
                                 </h1>
 
-                                <div className="flex items-center justify-between w-full">
+                                <div className="items-center justify-between w-full md:flex">
                                     <div>
                                         <p className="leading-6 text-[10px] text-gray-400 md:text-[1rem] lg:text-[1.125rem]">
                                             {formateDate(event.date, locale, 'dd LLLL yyyy')}
@@ -70,7 +70,7 @@ const FeaturedEventItem = ({ event }) => {
                                 </div>
                             </div>
 
-                            <div
+                          {event.joinLink &&  <div
                                 className="flex items-center px-1 py-1 my-1 text-center rounded-lg bg-gold1">
                                 <div>
                                     <img
@@ -84,7 +84,7 @@ const FeaturedEventItem = ({ event }) => {
                                     className="pl-2 pr-2 m-auto mt-auto mb-auto text-xs text-center text-slate-50 onlnie_eve_title lg:text-sm xl:text-[13px]">
                                     {t("Register")}
                                 </div>
-                            </div>
+                            </div>}
                         </div>
                         
                     </div>
@@ -115,7 +115,7 @@ export default function FeaturedEventBlock ({adaptedEvents, title = 'You forgot 
             <div
                 className="relative w-full h-full ml-auto mr-auto bg-[#ffffff] bg-opacity-95 lg:m-4 md:w-11/12 lg:w-10/12">
                 <div
-                    className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 filosofia_italic bg-gold1 md:text-4xl">
+                    className="py-2 pl-4 pr-2 text-xl text-slate-50 filosofia_italic bg-gold1 md:text-3xl xl:text-4xl">
                     {title}
                 </div>
                 {!!adaptedEvents[title] ? adaptedEvents[title].map((event, i) => {

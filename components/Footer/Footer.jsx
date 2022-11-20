@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useContext } from 'react'
 import { GlobalContext } from '../../pages/_app'
 import { globalPropertyAdapter } from '../../lib/globalPropertiesAdapter'
+import BackToTop from './BackToTop'
 
 /**
  * Used to render the footer items from the Strapi menu
@@ -17,7 +18,8 @@ const Footer = () => {
       <>
         <div className="metropolis_medium xl:container xl:mx-auto">
           <footer
-              className="p-2 px-2 text-center text-slate-50 capitalize 2xl:flex 2xl:flex-wrap 2xl:justify-between filosofia_italic md:p-4 bg-grayfull w-full">
+              className="relative w-full p-2 px-2 text-center capitalize text-slate-50 2xl:flex 2xl:flex-wrap 2xl:justify-between filosofia_italic md:p-4 bg-grayfull">
+                <BackToTop />
             <div><a href="#!" className="footer">{globalPropertyAdapter(globalProperties, 'copyright')}</a></div>
             <div>
               {!!footerMenu &&

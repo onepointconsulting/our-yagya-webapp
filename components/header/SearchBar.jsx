@@ -31,14 +31,14 @@ const SearchBar = () => {
       </div>
 
       {searchIsOpen && (
-        <div className="fixed lg:absolute top-8 md:top-6 xl:top-4 left-12 md:left-28 w-auto md:w-full lg:w-[44rem] xl:w-[53rem] 2xl:w-[76rem]">
+        <div className="fixed lg:absolute top-4 md:top-6 xl:top-4 left-12 md:left-16 w-[54%] md:w-[67%] lg:w-[44rem] xl:w-[53rem] 2xl:w-[76rem]">
         <div>
             <input
               onKeyPress={handleKeyPress}
               type="text"
               name="search"
               placeholder={t("Search by keywords")}
-              className="w-full p-4 py-2 text-lg placeholder-gray-400 bg-[#ffffff] border-2 border-gray-400 outline-none md:p-4 md:py-3 md:text-2xl xl:text-3xl filosofia_italic"
+              className="w-full p-4 py-2 text-sm placeholder-gray-400 bg-[#ffffff] border-2 border-gray-400 outline-none md:p-4 md:py-3 md:text-2xl xl:text-3xl filosofia_italic"
             />
           </div>
         </div>

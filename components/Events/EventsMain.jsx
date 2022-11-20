@@ -23,7 +23,7 @@ export default function EventsMain ({ data }) {
                 }}
             >
                 {/* Featured event with the event background */}
-                <div className="w-full mx-4">
+                <div className="w-full mx-2 md:mx-4">
                     <FeaturedEventBlock
                         adaptedEvents={adaptedEvents}
                         title={eventsCategories[0]}

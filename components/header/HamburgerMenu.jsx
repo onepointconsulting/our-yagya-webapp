@@ -49,7 +49,7 @@ const HamburgerMenu = () => {
                 </Link>
               </div>
               <div className="p-2 px-2 m-1 text-red-600 border-2 border-red-600 rounded-full">
-                <Link href="/login.html">
+                <Link href="/">
                   <a>
                     {" "}
                     <img
@@ -61,7 +61,7 @@ const HamburgerMenu = () => {
                 </Link>
               </div>
               <div className="p-2 px-2 m-1 text-red-600 border-2 border-red-600 rounded-full">
-                <Link href="/made4me.html">
+                <Link href="/">
                   <a>
                     {" "}
                     <img
@@ -97,16 +97,16 @@ const HamburgerMenu = () => {
 
       {/* <!-- mobile hamburger icon fixed --> */}
       <div
-        className="lg:hidden block fixed right-4 top-8"
+        className="fixed block lg:hidden right-4 top-[1.60rem] md:top-8"
         style={{ zIndex: "1" }}
       >
         <button
           onClick={sideBarMenu}
-          className="p-[7.5px] md:p-[11.5px] rounded-full border-[1px] border-red-600"
+          className="p-[5px] md:p-[11.5px] rounded-full border-[1px] border-red-600"
         >
-          <div className="w-[16px] h-[3.3px] bg-red-500"></div>
-          <div className="w-[16px] h-[3.3px] my-[3.3px] bg-red-500"></div>
-          <div className="w-[16px] h-[3.3px] bg-red-500"></div>
+          <div className="w-[13px] md:w-[16px] h-[2px] md:h-[3.3px] bg-red-500"></div>
+          <div className="w-[13px] md:w-[16px] h-[2px] md:h-[3.3px] my-[3.3px] bg-red-500"></div>
+          <div className="w-[13px] md:w-[16px] h-[2px] md:h-[3.3px] bg-red-500"></div>
         </button>
       </div>
       <div className="relative">{sideBarMenuIsOpen && <SidebarMenu />}</div>

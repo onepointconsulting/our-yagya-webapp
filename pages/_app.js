@@ -9,7 +9,6 @@ import Header from '../components/header/Header'
 import { OurYagyaContextProvider } from '../context/OurYagyaContext'
 import { fetchGlobalData } from '../lib/apiClient'
 import { menuAdapter } from '../lib/menuAdapter'
-import BackToTop from '../components/Footer/BackToTop'
 import Footer from '../components/Footer/Footer'
 import { titleAdapter } from '../lib/titleAdapter'
 import i18n from 'i18next'
@@ -38,9 +37,7 @@ function OurYagya ({ Component, pageProps }) {
                 <div className="relative metropolis_medium xl:container xl:mx-auto">
                     <Header title={titleAdapter(pageProps)}/>
                     <Component {...pageProps} />
-                    <div className="absolute w-full bottom-40 md:bottom-16 right-1">
-                        <BackToTop />
-                    </div>
+             
                     <Footer />
                 </div>
             </OurYagyaContextProvider>

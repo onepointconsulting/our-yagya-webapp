@@ -3,18 +3,13 @@ import { useTranslation } from "react-i18next";
 import { formateDate } from "../../lib/dateAdapter";
 import { GlobalContext } from "../../pages/_app";
 import { useContext } from "react";
-
-const Required = ({ singleEvent }) => {
-  const { t } = useTranslation();
-  if (singleEvent.joinLink) {
-    return <> {t("Required")}</>;
-  }
-};
+import Router from "next/router";
+import { convertIsoToGoogleCal } from "../../lib/googleCalendar";
 
 const SingleEventMain = ({ data }) => {
   const { t } = useTranslation();
   const { locale } = useContext(GlobalContext);
-
+  convertIsoToGoogleCal();
   const singleEvent = singleEventAdapter(data);
 
   if (!singleEvent) {
@@ -34,8 +29,9 @@ const SingleEventMain = ({ data }) => {
           <div className="relative w-full h-full">
             <div className="flex jsutify-between">
               <img
+                onClick={() => Router.back()}
                 className="w-8 md:w-12 h-8 md:h-12 absolute right-[-14px] md:right-[-24px] top-[-9px] md:top-[-22px] cursor-pointer hover:bg-red-400 transition-all duration-150 p-2 rounded-full bg-slate-50  border border-gray-600 mx-auto object-cover"
-                src="https://ouryagya.netlify.app/img/Rectangle.png"
+                src="https://ouryagya.netlify.app/img/svg/icons8-close-50.png"
                 alt=""
               />
 
@@ -50,7 +46,7 @@ const SingleEventMain = ({ data }) => {
 
           <div className="border border-gray-400">
             <div className="filosofia_italic bg-gold1">
-              <h1 className="p-4 text-2xl text-center text-slate-50 sm:text-3xl md:text-4xl lg:text-5xl lg:p-7">
+              <h1 className="p-2 text-xl text-center md:p-4 text-slate-50 sm:text-2xl md:text-4xl lg:text-5xl lg:p-7">
                 {singleEvent.eventTitle}
               </h1>
             </div>
@@ -67,12 +63,16 @@ const SingleEventMain = ({ data }) => {
 
                   <div className="flex flex-col mx-2">
                     <h1 className="text-lg text-left text-gold1 sm:text-xl md:text-2xl">
-                      Date{" "}
+                      {t("Date")}
                     </h1>
 
                     <h3 className="text-sm leading-normal text-left text-gray-400 md:text-lg lg:text-xl ">
                       {/* Not clear */}
-                      {formateDate(singleEvent.sStartDate, locale, "cccc, dd LLLL yyyy")}
+                      {formateDate(
+                        singleEvent.sStartDate,
+                        locale,
+                        "cccc, dd LLLL yyyy"
+                      )}
                     </h3>
                   </div>
                 </div>
@@ -89,20 +89,43 @@ const SingleEventMain = ({ data }) => {
 
                   <div className="flex flex-col mx-2">
                     <h1 className="text-lg text-left text-gold1 sm:text-xl md:text-2xl">
-                      Local time{" "}
+                      {t("Local time")}{" "}
                     </h1>
 
-                    <h3 className="text-sm leading-normal text-left text-gray-400 md:text-lg lg:text-xl ">
-                      Timezone:{' '}
-                      {singleEvent.sTimezone.name}
+                    <div className="text-sm leading-normal text-left text-gray-400 md:text-lg lg:text-xl ">
+                      <div className="flex items-center justify-between w-full">
+                        {" "}
+                        {t("Timezone")}:{" "}
+                        <div className="ml-4 w-36 md:w-48 xl:w-60">
+                          {singleEvent.sTimezone.name}
+                        </div>
+                      </div>
                       <br />
-                      Date:{" "}
-                      {formateDate(singleEvent.sStartDate, locale, " dd LLLL yyyy")}
+                      <div className="flex items-center justify-between w-full">
+                        {t("Date")}:{" "}
+                        <div className="ml-4 w-36 md:w-48 xl:w-60">
+                          {formateDate(
+                            singleEvent.sStartDate,
+                            locale,
+                            " dd LLLL yyyy"
+                          )}
+                        </div>
+                      </div>
                       <br />
-                      Time:{" "}
-                      {formateDate(singleEvent.sStartDate, locale, "hh:mm a")} -{" "}
-                      {formateDate(singleEvent.sEndDate, locale, "hh:mm a")}
-                    </h3>
+                      <div className="flex items-center justify-between w-full">
+                        {t("Time")}:{" "}
+                        <div className="ml-4 w-36 md:w-48 xl:w-60">
+                          {" "}
+                          {formateDate(
+                            singleEvent.sStartDate,
+                            locale,
+                            "hh:mm a"
+                          )}{" "}
+                          -{" "}
+                          {formateDate(singleEvent.sEndDate, locale, "hh:mm a")}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -118,7 +141,7 @@ const SingleEventMain = ({ data }) => {
 
                   <div className="flex flex-col mx-2">
                     <h1 className="text-lg text-left text-gold1 sm:text-xl md:text-2xl">
-                      Location{" "}
+                      {t("Location")}{" "}
                     </h1>
 
                     <h3 className="text-sm leading-normal text-left text-gray-400 md:text-lg lg:text-xl ">
@@ -139,22 +162,26 @@ const SingleEventMain = ({ data }) => {
 
                   <div className="flex flex-col mx-2">
                     <h1 className="text-lg text-left text-gold1 sm:text-xl md:text-2xl">
-                      Description{" "}
+                      {t("Description")}{" "}
                     </h1>
 
                     <h3 className="text-sm leading-normal text-left text-gray-400 md:text-lg lg:text-xl ">
                       {singleEvent.sEeventDescription}
                     </h3>
-                    <h1 className="text-lg text-left text-gold1 sm:text-xl md:text-2xl">
-                      Registration?{" "}
-                    </h1>
-                    <p className="text-sm leading-normal text-left text-gray-400 md:text-lg lg:text-xl ">
-                      <Required singleEvent={singleEvent} />
-                      <br />
-                      <a className="font-bold" href="#!">
-                        {singleEvent.joinLink}
-                      </a>
-                    </p>
+                    {singleEvent.joinLink && (
+                      <>
+                        <h1 className="text-lg text-left text-gold1 sm:text-xl md:text-2xl">
+                          {t("Registration")}?{" "}
+                        </h1>
+                        <p className="text-sm leading-normal text-left text-gray-400 md:text-lg lg:text-xl ">
+                          {t("Required")}
+                          <br />
+                          <a className="font-bold" href="#!">
+                            {singleEvent.joinLink}
+                          </a>
+                        </p>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>

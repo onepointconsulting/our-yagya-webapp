@@ -19,7 +19,7 @@ const Header = ({ title }) => {
         <div
             className="bg-[#ffffff] relative metropolis_medium xl:container xl:mx-auto">
             <div
-                className="bg-[#ffffff] relative flex justify-between metropolis_medium shadow-md  md:mt-[-6px] h-24 xs:h-28 md::h-32 lg:h-auto"
+                className="bg-[#ffffff] relative flex justify-between metropolis_medium shadow-md  md:mt-[-6px] h-20 xs:h-28 md::h-32 lg:h-auto"
                 style={{ zIndex: '2' }}
             >
                 {/* <!-- search bar/icon --> */}
@@ -48,9 +48,7 @@ const Header = ({ title }) => {
                     className="fixed cursor-pointer left-2 top-5 md:left-3"
                     style={{ zIndex: '1' }}
                 >
-                    <div
-                        id="searchBarMobile"
-                        className="lg:hidden inline-block cursor-pointer p-[12px] bg-[#ffffff]  border-[1px] border-red-600">
+                    <div className="lg:hidden inline-block cursor-pointer p-[5px] bg-slate-50 rounded-full  border-[1px] border-red-600">
                         <img
                             className="h-[1.5em] md:h-[3.5vh]"
                             src="/img/icons/Search.png"
@@ -77,7 +75,7 @@ const Header = ({ title }) => {
 
                     {/* <!-- title and subtitle --> */}
                     <Link href="/">
-                        <a className="absolute left-0 right-0 top-5 xs:top-12 lg:top-20 md:w-max m-auto">
+                        <a className="absolute left-0 right-0 m-auto top-10 xs:top-12 lg:top-20 md:w-max">
                             {/*
                             
                             <h4 className=" text-gold1 text-[1rem] lg:text-[2rem] xl:text-[3vw] 2xl:text-[3em] uppercase">
@@ -87,7 +85,7 @@ const Header = ({ title }) => {
                              */}
 
                             <h1
-                                className="@@TitleStyle text-gold1 font-extrabold uppercase text-[31px] xs:text-[2rem] md:text-[3rem]  lg:text-[4rem]"
+                                className="text-gold1 font-extrabold uppercase text-[25px] xs:text-[2rem] md:text-[3rem]  lg:text-[4rem]"
                                 style={{ lineHeight: '1' }}
                             >
                                 {title}
@@ -95,7 +93,7 @@ const Header = ({ title }) => {
                         </a>
                     </Link>
                     <div
-                        className="block lg:hidden  absolute mb-3 top-auto left-0 right-0 bottom-0">
+                        className="absolute bottom-0 left-0 right-0 top-auto block mb-3 lg:hidden">
                         <Link href="/">
                             <a>
                                 {' '}
