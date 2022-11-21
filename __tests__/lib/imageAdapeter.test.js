@@ -7,6 +7,6 @@ describe('imageAdapter', () => {
     it('converts GraphQL JSON to bgImage object', () => {
         expect(graphQl).toBeTruthy()
         const res = imageAdapter(graphQl)
-        expect(JSON.stringify(res)).toBe(JSON.stringify(menuAdapterResult))
+        expect(res).toBe("https://res.cloudinary.com/stackrefugee/image/upload/v1664906757/Clip1_c6ee2bd09f.png")
     })
 })
