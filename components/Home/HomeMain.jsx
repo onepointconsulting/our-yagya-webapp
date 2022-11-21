@@ -7,6 +7,7 @@ import { GlobalContext } from '../../pages/_app'
 import Link from 'next/link'
 import { PAGES } from '../../lib/pages'
 import { IndexContext } from '../../pages'
+import { flatEventsAdapter } from '../../lib/eventsAdapter'
 
 const EventsItem = ({events}) => {
     const { locale } = useContext(GlobalContext)
@@ -15,13 +16,18 @@ const EventsItem = ({events}) => {
             <div className="p-3">
                 <div
                     className="leading-5 text-[1.2rem] text-redfull md:text-2xl">
-                    {events.attributes.title}
+                    {events.title}
+                </div>
+
+                <div
+                    className="leading-5 text-[1.2rem] text-redfull md:text-1xl">
+                    {events.category}
                 </div>
 
                 <div className="p-1">
                     <span
                         className="text-[14px] text-gray-700 md:text-base">
-                      {formateDate(events.attributes.timestamp, locale)}
+                      {formateDate(events.startDate, locale)}
                     </span>
                 </div>
             </div>
@@ -177,10 +183,8 @@ const ClassBlock = () => {
 export default function HomeMain () {
     const { data } = useContext(IndexContext)
     const newsData = simpleNewsAdapter(data)
-    const eventsData = []
+    const eventsData = flatEventsAdapter(data)
     const bgImage = imageAdapter(data)
-
-    console.log('HomeMain data', JSON.stringify(data))
 
     return (
         // <!-- home page background -->
