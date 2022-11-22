@@ -5,10 +5,12 @@ import Link from 'next/link'
 import { useContext } from 'react'
 import { GlobalContext } from '../../pages/_app'
 import { IndexContext } from '../../pages'
+import { NewsContext } from '../../pages/news'
 
 export default function Slider() {
     const { locale } = useContext(GlobalContext)
-    const { data } = useContext(IndexContext)
+    const { data } = Object.keys(useContext(IndexContext).data).length === 0 ?
+        useContext(NewsContext) : useContext(IndexContext)
     const slides = sliderAdapter(data, locale)
 
     return (

@@ -2,18 +2,20 @@ import { adaptCustomPage } from '../lib/pageAdapter'
 import NewsMain from '../components/NewsCom/NewsMain'
 import { newsLayout } from '../lib/apiClient'
 import Slider from '../components/Slider/Slider'
+import { createContext } from 'react'
 
-export default function News({ data }) {
+export const NewsContext = createContext({ data: {} })
 
-  // TODO: implement slider.
-  return (
-    <>
-      <Slider data={data} />
-      <NewsMain data={data} />
-    </>
-  );
+export default function News ({ data }) {
+
+    return (
+        <NewsContext.Provider value={{ data }}>
+            <Slider/>
+            <NewsMain data={data}/>
+        </NewsContext.Provider>
+    )
 }
 
-export async function getServerSideProps(context) {
-  return await adaptCustomPage(context, newsLayout);
+export async function getServerSideProps (context) {
+    return await adaptCustomPage(context, newsLayout)
 }

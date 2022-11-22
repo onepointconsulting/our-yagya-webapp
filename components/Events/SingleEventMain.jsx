@@ -5,6 +5,10 @@ import { GlobalContext } from '../../pages/_app'
 import { useContext } from 'react'
 import Router from 'next/router'
 import Link from '../../node_modules/next/link'
+import {
+    createGoogleCalendarLink,
+    googleCalendarLink,
+} from '../../lib/googleCalendar'
 
 const Venue = ({singleEvent}) => {
     return (
@@ -70,8 +74,10 @@ const EventLocation = ({ singleEvent }) => {
     )
 }
 
-const AddToCalendar = () => {
+const AddToCalendar = ({singleEvent}) => {
     const { t } = useTranslation();
+
+    const googleCalendarLink = createGoogleCalendarLink(singleEvent)
 
   return (
     <div className="my-2 lg:my-4 lg:p-4">
@@ -87,7 +93,9 @@ const AddToCalendar = () => {
 
         <div className="w-full">
           <h4 className="text-sm text-left capitalize text-slate-50 md:text-base lg:text-xl">
+              <a href={googleCalendarLink} target="_blank">
             {t("Add to Google Calendar")}
+              </a>
           </h4>
         </div>
       </div>
@@ -250,8 +258,7 @@ const SingleEventMain = ({ data }) => {
                 <EventDetails singleEvent={singleEvent} />
 
                 {/* <!-- add to calendar --> */}
-                <AddToCalendar />
-                <Venue  singleEvent={singleEvent} />
+                <AddToCalendar singleEvent={singleEvent}/>
               </div>
             </div>
           </div>
