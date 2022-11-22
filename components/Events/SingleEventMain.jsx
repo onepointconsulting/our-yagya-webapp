@@ -5,24 +5,26 @@ import { GlobalContext } from '../../pages/_app'
 import { useContext } from 'react'
 import Router from 'next/router'
 import Link from '../../node_modules/next/link'
-import {
-    createGoogleCalendarLink,
-    googleCalendarLink,
-} from '../../lib/googleCalendar'
+import { createGoogleCalendarLink} from '../../lib/googleCalendar'
 
 const Venue = ({singleEvent}) => {
     return (
-      <div className="ml-12">
-        <br />
-        <p className="p-2 text-gray-500">
+      <div className='p-2 text-sm leading-normal text-left text-gray-400 md:text-lg lg:text-xl '>
+        <p>
           {" "}
           {!!singleEvent?.venueName && <p>{singleEvent?.venueName}</p>}
         </p>
-        <p className="p-2 text-gray-500">{singleEvent?.venueAddress}</p>
+        <p>
+          {singleEvent?.venueAddress}
+        </p>
         {!!singleEvent?.venuePostalCode && (
-          <p className="p-2 text-gray-500">{singleEvent?.venuePostalCode}</p>
+          <p>
+            {singleEvent?.venuePostalCode}
+          </p>
         )}
-        <p className="p-2 text-gray-500">{singleEvent?.venueLocality}</p>
+        <p>
+          {singleEvent?.venueLocality}
+        </p>
       </div>
     );
 }
@@ -64,7 +66,7 @@ const EventLocation = ({ singleEvent }) => {
                         {t('Location')}{' '}
                     </h1>
 
-                    <h3 className="text-sm leading-normal text-left text-gray-400 md:text-lg lg:text-xl ">
+                    <h3 className="text-sm leading-normal text-left text-gray-400 md:text-lg lg:text-xl">
                         {singleEvent.sOnlineStatus?.includes("online") && t('Online')}
                         {singleEvent.sOnlineStatus?.includes("inhouse") && <Venue singleEvent={singleEvent} />}
                     </h3>
@@ -145,22 +147,20 @@ const EventTime = ({singleEvent, locale}) => {
                 </h1>
 
                 <div className="text-sm leading-normal text-left text-gray-400 md:text-lg lg:text-xl ">
-                    <div  className="flex items-center justify-between w-full">
+                    <div  className="flex items-center justify-between w-full my-2">
                         {' '}
                         {t('Timezone')}:{' '}
                         <div className="ml-4 w-36 md:w-48 xl:w-60">
                             {singleEvent.sTimezone.name}
                         </div>
                     </div>
-                    <br/>
-                    <div className="flex items-center justify-between w-full">
+                    <div className="flex items-center justify-between w-full my-2">
                         {t('Date')}:{' '}
                         <div className="ml-4 w-36 md:w-48 xl:w-60">
                             {formateDate(singleEvent.sStartDate,locale,' dd LLLL yyyy')}
                         </div>
                     </div>
-                    <br/>
-                    <div className="flex items-center justify-between w-full">
+                    <div className="flex items-center justify-between w-full my-2">
                         {t('Time')}:{' '}
                         <div className="ml-4 w-36 md:w-48 xl:w-60">
                             {' '}
@@ -235,7 +235,7 @@ const SingleEventMain = ({ data }) => {
     return (
       <>
         <div className="w-full px-4 py-4 md:px-8 lg:px-20 md:py-8 lg:py-20">
-          <div className="w-full mx-auto bg-slate-50 xl:w-3/5 bg-opacity-95">
+          <div className="w-full mx-auto bg-slate-50 xl:w-10/12 bg-opacity-95">
             <EventImage singleEvent={singleEvent} />
             <div className="border border-gray-400">
               <div className="filosofia_italic bg-gold1">

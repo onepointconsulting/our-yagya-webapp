@@ -4,7 +4,6 @@ import { adaptCustomPage } from '../../lib/pageAdapter'
 import { singleEventLayout } from '../../lib/apiClient'
 
 export default function SingleEvent({ data }) {
-
     return (
         <SingleEventMain data={data} />
     );
