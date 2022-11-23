@@ -8,47 +8,11 @@ import Link from 'next/link'
 import { PAGES } from '../../lib/pages'
 import { IndexContext } from '../../pages'
 import { flatEventsAdapter } from '../../lib/eventsAdapter'
-
-const EventsItem = ({events}) => {
-    const { locale } = useContext(GlobalContext)
-    return (
-        <>
-            <div className="p-3">
-                <div
-                    className="leading-5 text-[1.2rem] text-redfull md:text-2xl">
-                    {events.title}
-                </div>
-
-                <div
-                    className="leading-5 text-[1.2rem] text-redfull md:text-1xl">
-                    {events.category}
-                </div>
-
-                <div className="p-1">
-                    <span
-                        className="text-[14px] text-gray-700 md:text-base">
-                      {formateDate(events.startDate, locale)}
-                    </span>
-                </div>
-            </div>
-
-            {/* arrow down icon */}
-            <div className="absolute left-0 right-0 bottom-8">
-                <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
-                    <Link href={PAGES.EVENTS}>
-                        <a>
-                            <img src="/img/icons/ArrowDown.png"
-                                 alt=""/>
-                        </a>
-                    </Link>
-                </h1>
-            </div>
-        </>
-    )
-}
+import { EventItem } from '../Events/EventItem'
 
 const EventsBlock = ({ eventsData }) => {
     const { t } = useTranslation()
+    const { locale } = useContext(GlobalContext)
     return (
         <div
             className="relative w-full h-full pb-12 mb-2 bg-gray-200 metropolis_medium bg-opacity-95 lg:w-auto xl:pb-16 lg:mb-0">
@@ -58,11 +22,22 @@ const EventsBlock = ({ eventsData }) => {
             </div>
 
             <div className="overflow-y-auto metropolis_medium h-80">
-                {eventsData.map((events, i) => {
+                {eventsData.map((event, i) => {
                     return (
-                        <EventsItem events={events} key={`events_item_${i}`} />
+                        <EventItem event={event} locale={locale} key={`events_item_${i}`} />
                     )
                 })}
+            </div>
+             {/* arrow down icon */}
+             <div className="absolute left-0 right-0 bottom-8">
+                <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-pointer">
+                    <Link href={PAGES.EVENTS}>
+                        <a>
+                            <img src="/img/icons/ArrowDown.png"
+                                 alt=""/>
+                        </a>
+                    </Link>
+                </h1>
             </div>
         </div>
     )
@@ -85,18 +60,6 @@ const NewsItem = ({news}) => {
                     </span>
                 </div>
             </div>
-
-            {/* arrow down icon */}
-            <div className="absolute left-0 right-0 bottom-8">
-                <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
-                    <Link href={PAGES.NEWS}>
-                        <a>
-                            <img src="/img/icons/ArrowDown.png"
-                                 alt=""/>
-                        </a>
-                    </Link>
-                </h1>
-            </div>
         </>
     )
 }
@@ -118,7 +81,18 @@ const NewsBlock = ({ newsData }) => {
                     )
                 })}
             </div>
-        </div>
+                {/* arrow down icon */}
+                <div className="absolute left-0 right-0 bottom-8">
+                    <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
+                        <Link href={PAGES.NEWS}>
+                            <a>
+                                <img src="/img/icons/ArrowDown.png"
+                                 alt=""/>
+                            </a>
+                        </Link>
+                    </h1>
+                </div>
+            </div>
     )
 }
 
