@@ -41,8 +41,8 @@ const EventBlocks = ({ adaptedEvents, eventsCategories }) => {
                   {category}
                 </div>
               </>
-            {adaptedEvents[category]?.map((eve, i) => {
-              return <EventItem locale={locale} eve={eve} key={i} />
+            {adaptedEvents[category]?.map((event, i) => {
+              return <EventItem locale={locale} event={event} key={i} />
             })}
             <ArrowIcon />
           </div>
