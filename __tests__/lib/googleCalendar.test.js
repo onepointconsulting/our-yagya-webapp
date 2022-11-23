@@ -1,5 +1,3 @@
-import { menuAdapter } from '../../lib/menuAdapter'
-import { durationAdapter } from '../../lib/dateAdapter'
 import { convertIsoToGoogleCal } from '../../lib/googleCalendar'
 
 describe('googleCalendar', () => {

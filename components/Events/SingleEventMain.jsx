@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next'
 import { formateDate } from '../../lib/dateAdapter'
 import { GlobalContext } from '../../pages/_app'
 import { useContext } from 'react'
-import Router from 'next/router'
+import { useRouter } from 'next/router'
 import Link from '../../node_modules/next/link'
-import { createGoogleCalendarLink} from '../../lib/googleCalendar'
+import { createGoogleCalendarLink } from '../../lib/googleCalendar'
 
 const Venue = ({singleEvent}) => {
     return (
@@ -30,14 +30,16 @@ const Venue = ({singleEvent}) => {
 }
 
 const EventImage = ({singleEvent}) => {
+    const { t } = useTranslation()
+    const router = useRouter()
     return (
         <div className="relative w-full h-full">
         <div className="flex jsutify-between">
           <img
-            onClick={() => Router.back()}
+            onClick={() => router.back()}
             className="w-8 md:w-12 h-8 md:h-12 absolute right-[-14px] md:right-[-24px] top-[-9px] md:top-[-22px] cursor-pointer hover:bg-red-400 transition-all duration-150 p-2 rounded-full bg-slate-50  border border-gray-600 mx-auto object-cover"
             src="https://ouryagya.netlify.app/img/svg/icons8-close-50.png"
-            alt=""
+            alt={t("Close")}
           />
 
           <img
