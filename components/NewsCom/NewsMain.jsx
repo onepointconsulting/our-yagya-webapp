@@ -5,13 +5,16 @@ import { newsAdapter } from "../../lib/newsAdapter";
 import { GlobalContext } from "../../pages/_app";
 import { useTranslation } from "react-i18next";
 import { categoriesAdapter } from '../../lib/globalPropertiesAdapter'
+import Link from 'next/link'
 
 const NewsItem = ({ news, locale }) => {
   const { t } = useTranslation();
   return (
     <div className="p-2 pl-3 metropolis_medium md:pl-6 md:p-3">
       <div className="text-redfull py-2 text-[14px] md:text-[26px] xl:text-[30px]">
-        <a href={`/single_news/${news.id}`}>{news.title}</a>
+        <Link href={`/single_news/${news.id}`}>
+          <a>{news.title}</a>
+        </Link>
       </div>
       <div>
         <div className="flex items-center text-sm text-gray-700 md:text-base lg:text-xl xl:text-2xl">
@@ -106,7 +109,6 @@ const NestedAccordion = ({ news, newsCategory }) => {
 };
 
 export default function NewsMain({ data }) {
-  const { t } = useTranslation();
   const { globalProperties, locale } = useContext(GlobalContext);
 
   const bgImage = imageAdapter(data);

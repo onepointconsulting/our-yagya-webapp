@@ -25,7 +25,7 @@ const PillMenuContent = ({ title, url, children }) => {
                         className="duration-100 outline-none cursor-pointer"
                         onChange={(e) => {
                             const language = e.target.value
-                            router.push('index', 'index', { locale: language })
+                            router.push('/index', '/index', { locale: language })
                         }}
                         value={locale}
                     >
