@@ -61,7 +61,10 @@ const AccordionItem = ({
           return (
             <div key={i} className="p-2 pl-3 metropolis_medium md:pl-6 md:p-3">
               <div className="text-redfull py-2 text-[19px] md:text-[26px] xl:text-[30px]">
-                <a href={`/single_news/${news.id}`}>{regionalNews.title}</a>
+              
+              <Link href={`/single_news/${regionalNews.id}`}>
+              <a>{regionalNews.title}</a>
+              </Link>
               </div>
               <div>
                 <div className="flex items-center text-sm text-gray-700 md:text-xl xl:text-2xl">

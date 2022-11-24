@@ -35,7 +35,6 @@ const EventBlocks = ({ adaptedEvents, eventsCategories }) => {
         }
         return (
           <div className="w-full bg-gray-200" key={i}>
-            {/* Going to an event from the title is not the same as the actual event */}
               <>
                 <div className="py-2 pl-4 pr-2 text-[1.2rem] text-slate-50 capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
                   {category}
