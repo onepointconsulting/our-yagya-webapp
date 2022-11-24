@@ -72,68 +72,46 @@ const NewDate = ({ SingleNewsData, locale, formateDate }) => {
 const NewsImageSlider = ({ SingleNewsData }) => {
   return (
     <>
-      <div className="flex items-center">
-        <Splide
-          className="visible splide"
-          style={{ zIndex: "0" }}
-          aria-label="My slider"
-          options={{
-            type: "loop",
-            arrows: true,
-            speed: 1000,
-            swipeDistanceThreshold: 300,
-          }}
-        >
-          <SplideSlide
-            className="splide__slide"
-            style={{ background: "transparent" }}
+      {!!SingleNewsData.images && (
+        <div className="flex items-center w-9/12 mx-auto">
+          <Splide
+            className="visible splide"
+            style={{ zIndex: "0" }}
+            aria-label="My slider"
+            options={{
+              type: "loop",
+              arrows: true,
+              speed: 1000,
+              swipeDistanceThreshold: 300,
+            }}
           >
-            <div className="w-ful bg-slate-50">
-              <div className="items-center justify-between bg-slate-50 md:flex">
-                <div className="mx-auto mt-2 lg:mt-0">
-                  <img
-                    className="rounded-lg"
-                    src="https://res.cloudinary.com/stackrefugee/image/upload/v1667499146/america_29c98d30b9.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-          </SplideSlide>
-          <SplideSlide
-            className="splide__slide"
-            style={{ background: "transparent" }}
-          >
-            <div className="w-ful bg-slate-50">
-              <div className="items-center justify-between bg-slate-50 md:flex">
-                <div className="mx-auto mt-2 lg:mt-0">
-                  <img
-                    className="rounded-lg"
-                    src="https://res.cloudinary.com/stackrefugee/image/upload/v1667499146/america_29c98d30b9.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-          </SplideSlide>
-          <SplideSlide
-            className="splide__slide"
-            style={{ background: "transparent" }}
-          >
-            <div className="w-ful bg-slate-50">
-              <div className="items-center justify-between bg-slate-50 md:flex">
-                <div className="mx-auto mt-2 lg:mt-0">
-                  <img
-                    className="rounded-lg"
-                    src="https://res.cloudinary.com/stackrefugee/image/upload/v1667499146/america_29c98d30b9.jpg"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-          </SplideSlide>
-        </Splide>
-      </div>
+            {SingleNewsData.images.map((img) => {
+              return (
+                <>
+                  <SplideSlide
+                    className="splide__slide"
+                    style={{ background: "transparent" }}
+                  >
+                    <div className="w-ful bg-slate-50">
+                      <div className="items-center justify-between bg-slate-50 md:flex">
+                        <div className="mx-auto mt-2 lg:mt-0">
+                          <img
+                            key={img.id}
+                            className="rounded-lg"
+                            src={img.url}
+                            alt={img.name}
+                            title={img.alternativeText}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </SplideSlide>
+                </>
+              );
+            })}
+          </Splide>
+        </div>
+      )}
     </>
   );
 };
