@@ -8,6 +8,7 @@ import { GlobalContext } from '../../pages/_app'
 import {
     globalPropertyAdapter
 } from '../../lib/globalPropertiesAdapter'
+import PillMenu from './PillMenu'
 
 const Header = ({ title }) => {
     const { globalProperties } = useContext(GlobalContext)
@@ -109,7 +110,7 @@ const Header = ({ title }) => {
 
                 <HamburgerMenu/>
             </div>
-            <MainMenu/>
+            <MainMenu />
         </div>
     )
 }

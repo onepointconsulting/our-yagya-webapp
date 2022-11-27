@@ -2,7 +2,6 @@ import App from 'next/app'
 import { appWithTranslation } from 'next-i18next'
 import '../lib/i18n'
 import '../assets/css/styles.css'
-import '../styles/globals.css'
 
 import React, { createContext, useEffect } from 'react'
 import Header from '../components/header/Header'
@@ -37,7 +36,6 @@ function OurYagya ({ Component, pageProps }) {
                 <div className="relative metropolis_medium xl:container xl:mx-auto">
                     <Header title={titleAdapter(pageProps)}/>
                     <Component {...pageProps} />
-             
                     <Footer />
                 </div>
             </OurYagyaContextProvider>

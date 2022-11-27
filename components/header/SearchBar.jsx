@@ -19,8 +19,7 @@ const SearchBar = () => {
   return (
     <>
       <div className="ml-2 cursor-pointer md:ml-4 lg:pt-5">
-        <button
-          onClick={search}>
+        <button onClick={search}>
           <img
             className="h-[1.3rem] md:h-8"
             src="/img/icons/Search.png"

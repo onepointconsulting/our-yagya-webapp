@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useTranslation } from "react-i18next";
@@ -9,6 +9,11 @@ import { formateDate } from "../../lib/dateAdapter";
 import { GlobalContext } from "../../pages/_app";
 
 const BackArrow = () => {
+  const [socialOpen, setSocialOpen] = useState(false);
+  const social = () => {
+    setSocialOpen(!socialOpen);
+  };
+
   return (
     <>
       {" "}
@@ -20,16 +25,18 @@ const BackArrow = () => {
           alt=""
         />
       </div>
+
       <div className="relative ml-auto">
         <div className="cursor-pointer">
           <img
+            onClick={social}
             className="w-7 md:w-9 lg:w-9 xl:w-12"
             src="/img/svg/Share.svg"
             alt="share btn"
-          />
+            />
         </div>
 
-        <SocialMediaIcons />
+       {socialOpen && (<SocialMediaIcons />)}
       </div>
     </>
   );
@@ -103,9 +110,9 @@ const NewsImageSlider = ({ singleNewsData }) => {
                         />
                       </div>
                     </div>
-                         <h1 className="text-gold1 text-center text-[1rem] xs:text-[29px] md:text-2xl xl:text-5xl">
-            {img.name}
-          </h1>
+                    <h1 className="text-gold1 text-center text-[1rem] xs:text-[29px] md:text-2xl xl:text-5xl">
+                      {img.name}
+                    </h1>
                   </div>
                 </SplideSlide>
               );
@@ -116,7 +123,7 @@ const NewsImageSlider = ({ singleNewsData }) => {
     </>
   );
 };
-
+  
 const NewsContent = ({ singleNewsData, locale }) => {
   return (
     <>
@@ -125,9 +132,9 @@ const NewsContent = ({ singleNewsData, locale }) => {
       </div>
 
       <div className="w-full mx-auto lg:px-14 xl:px-40">
-        <div className="my-4 filosofia_italic">
-          <h1 className="text-gold1 text-left text-[1rem] xs:text-[29px] md:text-2xl xl:text-5xl">
-            {singleNewsData.sNewsTitle}
+        <div className="my-4">
+          <h1 className="text-gold1 text-left text-[1rem] xs:text-[29px] md:text-2xl xl:text-5xl filosofia_italic">
+              {singleNewsData.sNewsTitle}
           </h1>
         </div>
 

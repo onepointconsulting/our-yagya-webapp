@@ -1,4 +1,5 @@
 import React from 'react';
+import MurliQuestion from './MurliQuestion';
 
 const Murli = () => {
     return (
@@ -199,6 +200,7 @@ const Murli = () => {
                         </a>
                     </div>
                 </div>
+                <MurliQuestion />
             </div>
         </div>
     );
