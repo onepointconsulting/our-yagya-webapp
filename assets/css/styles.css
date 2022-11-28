@@ -263,13 +263,13 @@ button,
   /* changed from default bg-color to blue */
   background: #bf8f23;
 }
-.splide__arrow {
+.splide__arrow1 {
   position: absolute;
   z-index: 1;
-  top: 40%;
+  top: 46%;
   transform: translateY(-50%);
-  width: 2em;
-  height: 2em;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -277,9 +277,58 @@ button,
   border: none;
   padding: 0;
   opacity: 0.7;
-  background: #ccc;
+  background: transparent;
   margin-right: 2rem;
-  margin-left: 2rem;
+  margin-left: 2rem;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media screen and (min-width: 320px) {
+  .splide__arrow1 {
+    position: absolute;
+    z-index: 1;
+    top: 33%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    opacity: 0.7;
+    background: transparent;
+    margin-right: -2rem;
+    margin-left: -2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+@media screen and (min-width: 425px) {
+  .splide__arrow1 {
+    position: absolute;
+    z-index: 1;
+    top: 33%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    opacity: 0.7;
+    background: transparent;
+    margin-right: -2rem;
+    margin-left: -2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+.splide__slide{
+  background: transparent;
+
 }
 .splide__pagination {
   z-index: 0;

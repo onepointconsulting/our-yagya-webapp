@@ -1,13 +1,13 @@
-import React, { useContext, useState } from 'react'
-import '@splidejs/splide/dist/css/themes/splide-default.min.css'
-import { Splide, SplideSlide } from '@splidejs/react-splide'
-import { useTranslation } from 'react-i18next'
-import Router from 'next/router'
-import SocialMediaIcons from './SocialMediaIcons'
-import { formateDate } from '../../lib/dateAdapter'
-import { GlobalContext } from '../../pages/_app'
+import React, { useContext, useState } from "react";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
+import { useTranslation } from "react-i18next";
+import Router from "next/router";
+import SocialMediaIcons from "./SocialMediaIcons";
+import { formateDate } from "../../lib/dateAdapter";
+import { GlobalContext } from "../../pages/_app";
 
-const BackArrow = () => {
+const BackArrow = ({ singleNewsData }) => {
   const [socialOpen, setSocialOpen] = useState(false);
   const social = () => {
     setSocialOpen(!socialOpen);
@@ -16,26 +16,34 @@ const BackArrow = () => {
   return (
     <>
       {" "}
-      <div className="mr-auto cursor-pointer">
-        <img
-          onClick={() => Router.back()}
-          className="w-4 lg:w-8"
-          src="/img/ArrowSide.png"
-          alt=""
-        />
+      <div className="mr-auto cursor-pointer flex items-center ">
+        <div className="xl:w-14">
+          <img
+            onClick={() => Router.back()}
+            className="w-4 lg:w-8"
+            src="/img/ArrowSide.png"
+            alt=""
+          />
+        </div>
+        <div className="w-full mx-auto lg:px-20">
+          <div className="my-4">
+            <h1 className="text-gold1 text-left text-[1rem] xs:text-[29px] md:text-2xl xl:text-5xl filosofia_italic">
+              {singleNewsData.sNewsTitle}
+            </h1>
+          </div>
+        </div>
       </div>
-
-      <div className="relative ml-auto">
+      <div className="relative ml-auto xl:w-20">
         <div className="cursor-pointer">
           <img
             onClick={social}
             className="w-7 md:w-9 lg:w-9 xl:w-12"
             src="/img/svg/Share.svg"
             alt="share btn"
-            />
+          />
         </div>
 
-       {socialOpen && (<SocialMediaIcons />)}
+        {socialOpen && <SocialMediaIcons />}
       </div>
     </>
   );
@@ -79,64 +87,78 @@ const NewsImageSlider = ({ singleNewsData }) => {
   return (
     <>
       {!!singleNewsData.images && singleNewsData.images.length > 0 && (
-        <div className="w-auto mx-auto lg:w-9/12">
-          <Splide
-            className="visible splide"
-            style={{ zIndex: "0" }}
-            aria-label="My slider"
-            options={{
-              type: "loop",
-              arrows: true,
-              speed: 1000,
-              swipeDistanceThreshold: 300,
-            }}
-          >
-            {singleNewsData.images.map((img, i) => {
-              return (
-                <SplideSlide
-                  className="splide__slide"
-                  style={{ background: "transparent" }}
-                  key={`news_slide_${i}`}
-                >
-                  <div className="m-auto" style={{ background: "transparent" }}>
-                    <div className="relative w-[17rem] md:w-[30rem] xl:w-[42rem] 2xl:w-[59rem] h-[10rem] md:h-[17rem] xl:h-[23rem] 2xl:h-[32rem]">
-                      <div className="inset-0 mx-auto mt-2 rounded-lg md:absolute lg:mt-0 ">
-                        <img
-                          className="w-full h-full rounded-lg"
-                          src={img.url}
-                          alt={img.name}
-                          title={img.alternativeText}
-                        />
+        <div>
+          {singleNewsData.images.map((img, i) => {
+            return (
+              <Splide
+                hasTrack={false}
+                aria-label="..."
+                style={{ zIndex: "0", background: "transparent" }}
+                options={{
+                  type: "loop",
+                  arrows: true,
+                  speed: 1000,
+                  swipeDistanceThreshold: 300,
+                }}
+                key={`news_slide_${i}`}
+              >
+                <div className="custom-wrapper">
+                  <SplideTrack>
+                    <SplideSlide>
+                      <div
+                        className="m-auto"
+                        style={{ background: "transparent" }}
+                      >
+                        <div className="relative m-auto w-auto xs:w-[23rem] md:w-[30rem] xl:w-[42rem] 2xl:w-[70rem] h-[10rem] md:h-[17rem] xl:h-[23rem] 2xl:h-[39rem]">
+                          <div className="inset-0 mx-auto mt-2 rounded-lg md:absolute lg:mt-0 ">
+                            <img
+                              className="w-full h-full rounded-lg"
+                              src={img.url}
+                              alt={img.name}
+                              title={img.alternativeText}
+                            />
+                          </div>
+                        </div>
+                     <div className="my-12">   <h1 className="text-gold1 text-center text-base md:text-lg xl:text-3xl my-6">
+                          {img.name}
+                        </h1></div>
                       </div>
-                    </div>
-                    <h1 className="text-gold1 text-center text-[1rem] xs:text-[29px] md:text-2xl xl:text-5xl">
-                      {img.name}
-                    </h1>
-                  </div>
-                </SplideSlide>
-              );
-            })}
-          </Splide>
+                    </SplideSlide>
+                  </SplideTrack>
+                  <div className="splide__arrows">
+                    <button className="splide__arrow1 top-[39%] md:top-[36%] lg:top-[42%] splide__arrow--prev">
+                      <img
+                        className="w-14"
+                        src="https://img.icons8.com/ios/512/back--v1.png"
+                        alt=""
+                      />
+                    </button>
+                    <button className="splide__arrow1 top-[39%] md:top-[36%] lg:top-[42%] splide__arrow--next">
+                      <img
+                        className="w-14"
+                        src="https://img.icons8.com/ios-filled/512/forward.png"
+                        alt=""
+                      />
+                    </button>
+                  </div>{" "}
+                </div>
+              </Splide>
+            );
+          })}
         </div>
       )}
     </>
   );
 };
-  
+
 const NewsContent = ({ singleNewsData, locale }) => {
   return (
     <>
       <div className="flex items-center justify-between w-full md:px-2 xl:px-12">
-        <BackArrow />
+        <BackArrow singleNewsData={singleNewsData} />
       </div>
 
       <div className="w-full mx-auto lg:px-14 xl:px-40">
-        <div className="my-4">
-          <h1 className="text-gold1 text-left text-[1rem] xs:text-[29px] md:text-2xl xl:text-5xl filosofia_italic">
-              {singleNewsData.sNewsTitle}
-          </h1>
-        </div>
-
         <NewsDate
           singleNewsData={singleNewsData}
           locale={locale}
@@ -144,13 +166,13 @@ const NewsContent = ({ singleNewsData, locale }) => {
         />
 
         <NewsVideo singleNesData={singleNewsData} />
-        <div className="pt-4 text-justify">
-          <h3 className="text-sm text-gray-400 xl:leading-relaxed md:text-base lg:text-xl xl:text-3xl">
+        <div className="py-4 xl:py-8 text-justify">
+          <h3 className="text-sm text-gray-400 xl:leading-relaxed md:text-base lg:text-xl xl:text-2xl">
             {singleNewsData.sNewsContent}
           </h3>
         </div>
-      </div>
       <NewsImageSlider singleNewsData={singleNewsData} />
+      </div>
     </>
   );
 };

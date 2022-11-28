@@ -98,7 +98,7 @@ const AddToCalendar = ({singleEvent}) => {
         <div className="w-full">
           <h4 className="text-sm text-left capitalize text-slate-50 md:text-base lg:text-xl">
               <a href={googleCalendarLink} target="_blank">
-            {t("Add to Google Calendar")}
+                  {t("Add to Google Calendar")}
               </a>
           </h4>
         </div>
