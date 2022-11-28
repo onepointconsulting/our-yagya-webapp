@@ -2,6 +2,7 @@ import App from 'next/app'
 import { appWithTranslation } from 'next-i18next'
 import '../lib/i18n'
 import '../assets/css/styles.css'
+import '../styles/globals.css'
 
 import React, { createContext, useEffect } from 'react'
 import Header from '../components/header/Header'
@@ -12,6 +13,8 @@ import Footer from '../components/Footer/Footer'
 import { titleAdapter } from '../lib/titleAdapter'
 import i18n from 'i18next'
 import i18next from 'i18next'
+import { useTranslation } from 'react-i18next'
+import Head from 'next/head'
 
 export const GlobalContext = createContext({})
 
@@ -25,6 +28,7 @@ export const GlobalContext = createContext({})
 function OurYagya ({ Component, pageProps }) {
     const { global } = pageProps
     const locale = global.locale
+    const { t } = useTranslation();
 
     useEffect(() => {
         i18n.changeLanguage(locale);
@@ -33,9 +37,13 @@ function OurYagya ({ Component, pageProps }) {
     return (
         <GlobalContext.Provider value={global}>
             <OurYagyaContextProvider>
+                <Head>
+                    <title>{t('Our Yagya')}</title>
+                </Head>
                 <div className="relative metropolis_medium xl:container xl:mx-auto">
                     <Header title={titleAdapter(pageProps)}/>
                     <Component {...pageProps} />
+             
                     <Footer />
                 </div>
             </OurYagyaContextProvider>
@@ -45,8 +53,10 @@ function OurYagya ({ Component, pageProps }) {
 
 OurYagya.getInitialProps = async (ctxContainer) => {
 
-    const { router } = ctxContainer
+    const { ctx, router } = ctxContainer
+
     const { locale } = router
+    console.log('ctx?.req?.headers', ctx?.req?.headers)
 
     i18next.changeLanguage(locale);
 
@@ -66,7 +76,8 @@ OurYagya.getInitialProps = async (ctxContainer) => {
                 footerMenu: footer,
                 pillMenu: pill_menu,
                 globalProperties,
-                locale
+                locale,
+                baseUrl: ctx?.req?.headers.host
             },
         },
     }

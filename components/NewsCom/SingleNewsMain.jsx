@@ -1,12 +1,11 @@
-import React, { useContext, useState } from "react";
-import "@splidejs/splide/dist/css/themes/splide-default.min.css";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { useTranslation } from "react-i18next";
-import { singleNewsAdapter } from "../../lib/newsAdapter";
-import Router from "next/router";
-import SocialMediaIcons from "./SocialMediaIcons";
-import { formateDate } from "../../lib/dateAdapter";
-import { GlobalContext } from "../../pages/_app";
+import React, { useContext, useState } from 'react'
+import '@splidejs/splide/dist/css/themes/splide-default.min.css'
+import { Splide, SplideSlide } from '@splidejs/react-splide'
+import { useTranslation } from 'react-i18next'
+import Router from 'next/router'
+import SocialMediaIcons from './SocialMediaIcons'
+import { formateDate } from '../../lib/dateAdapter'
+import { GlobalContext } from '../../pages/_app'
 
 const BackArrow = () => {
   const [socialOpen, setSocialOpen] = useState(false);
@@ -156,9 +155,8 @@ const NewsContent = ({ singleNewsData, locale }) => {
   );
 };
 
-export default function SingleNewsMain({ data }) {
+export default function SingleNewsMain({ singleNewsData }) {
   const { t } = useTranslation();
-  const singleNewsData = singleNewsAdapter(data);
   const { locale } = useContext(GlobalContext);
 
   return (
