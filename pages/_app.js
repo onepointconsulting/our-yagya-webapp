@@ -51,12 +51,8 @@ function OurYagya ({ Component, pageProps }) {
 }
 
 OurYagya.getInitialProps = async (ctxContainer) => {
-
     const { ctx, router } = ctxContainer
-
     const { locale } = router
-    console.log('ctx?.req?.headers', ctx?.req?.headers)
-
     i18next.changeLanguage(locale);
 
     // Calls page's `getInitialProps` and fills `appProps.pageProps`

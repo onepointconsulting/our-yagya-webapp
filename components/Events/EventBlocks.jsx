@@ -1,24 +1,67 @@
-import { useContext } from 'react'
-import Link from 'next/link';
+import { useContext, useEffect, useState } from 'react'
 import { GlobalContext } from '../../pages/_app'
 import { EventItem } from './EventItem'
+import { useTranslation } from 'react-i18next'
 
-const ArrowIcon = () => {
+const ArrowIcon = ({start, setStart}) => {
+
+  const { t } = useTranslation();
+
+  const onClick = (e) => {
+    e.preventDefault()
+    setStart(start + 5)
+  }
+
   return (
     <div>
       <h1 className="flex justify-center py-4 text-5xl text-center text-gray-400 lg:py-8 cursor-poainter">
-        <Link href="#">
-        <a>
-          <img className="w-8 xs:w-10" src="/img/icons/ArrowDown.png" />
+        <a href="#" onClick={onClick}>
+          <img className="w-8 xs:w-10" src="/img/icons/ArrowDown.png" alt={t('more')}/>
         </a>
-        </Link>
       </h1>
     </div>
   );
 };
 
-const EventBlocks = ({ adaptedEvents, eventsCategories }) => {
+/**
+ * Loops through events in category
+ * @param adaptedEvents
+ * @param category
+ * @returns {JSX.Element}
+ * @constructor
+ */
+const EventBlock = ({adaptedEvents, category}) => {
   const { locale } = useContext(GlobalContext);
+  const [events, setEvents] = useState()
+  const [start, setStart] = useState()
+
+  useEffect(() => {
+    setEvents(adaptedEvents)
+    setStart(0)
+  }, [adaptedEvents])
+
+  useEffect(() => {
+    // TODO: pull new data of specific category.
+    console.log('Start', start)
+  }, [start])
+
+  return (
+      <div className="w-full bg-gray-200">
+        <>
+          <div className="py-2 pl-4 pr-2 text-[1.2rem] text-slate-50 capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
+            {category}
+          </div>
+        </>
+        {!!events && events[category]?.map((event, i) => {
+          return <EventItem locale={locale} event={event} key={i} />
+        })}
+        <ArrowIcon start={start} setStart={setStart}/>
+      </div>
+  )
+
+}
+
+const EventBlocks = ({ adaptedEvents, eventsCategories }) => {
 
   if (eventsCategories.length === 0) {
     return <></>;
@@ -37,17 +80,7 @@ const EventBlocks = ({ adaptedEvents, eventsCategories }) => {
           return <></>;
         }
         return (
-          <div className="w-full bg-gray-200" key={i}>
-              <>
-                <div className="py-2 pl-4 pr-2 text-[1.2rem] text-slate-50 capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
-                  {category}
-                </div>
-              </>
-            {adaptedEvents[category]?.map((event, i) => {
-              return <EventItem locale={locale} event={event} key={i} />
-            })}
-            <ArrowIcon />
-          </div>
+            <EventBlock category={category} adaptedEvents={adaptedEvents} key={i}/>
         );
       })}
     </div>
