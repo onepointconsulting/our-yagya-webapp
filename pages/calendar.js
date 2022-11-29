@@ -1,0 +1,18 @@
+import { adaptCustomPage } from '../lib/pageAdapter'
+import { calendarLayout } from '../lib/apiClient'
+import React from 'react'
+
+export default function Calendar ({ data }) {
+
+  return (
+    <div>
+      Test
+    </div>
+  )
+}
+
+// get server side props;
+export async function getServerSideProps (context) {
+
+  return await adaptCustomPage(context, calendarLayout)
+}
