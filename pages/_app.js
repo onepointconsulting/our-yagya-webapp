@@ -41,9 +41,8 @@ function OurYagya ({ Component, pageProps }) {
                     <title>{t('Our Yagya')}</title>
                 </Head>
                 <div className="relative metropolis_medium xl:container xl:mx-auto">
-                    <Header title={titleAdapter(pageProps)}/>
+                <Header title={titleAdapter(pageProps)}/>
                     <Component {...pageProps} />
-             
                     <Footer />
                 </div>
             </OurYagyaContextProvider>

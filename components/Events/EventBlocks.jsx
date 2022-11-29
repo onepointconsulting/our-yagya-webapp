@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import Link from 'next/link';
 import { GlobalContext } from '../../pages/_app'
 import { EventItem } from './EventItem'
 
@@ -6,9 +7,11 @@ const ArrowIcon = () => {
   return (
     <div>
       <h1 className="flex justify-center py-4 text-5xl text-center text-gray-400 lg:py-8 cursor-poainter">
-        <a href="/events.html">
+        <Link href="#">
+        <a>
           <img className="w-8 xs:w-10" src="/img/icons/ArrowDown.png" />
         </a>
+        </Link>
       </h1>
     </div>
   );

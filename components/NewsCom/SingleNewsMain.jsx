@@ -33,7 +33,7 @@ const BackArrow = ({ singleNewsData }) => {
           </div>
         </div>
       </div>
-      <div className="relative ml-auto xl:w-20">
+      <div className="relative ml-auto xl:w-12">
         <div className="cursor-pointer">
           <img
             onClick={social}
