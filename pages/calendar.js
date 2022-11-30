@@ -4,8 +4,7 @@ import React from "react";
 import CalendarMain from "../components/Events/CalendarMain";
 
 export default function Calendar({ data }) {
-  console.log("datadata", data);
-
+  console.log("Calendar data", data);
   return <div><CalendarMain /> </div>;
 }
 
