@@ -1,7 +1,7 @@
 import { adaptCustomPage } from "../lib/pageAdapter";
 import { calendarLayout } from "../lib/apiClient";
 import React from "react";
-import CalendarMain from "../components/Events/CalendarMain";
+import CalendarMain from "../components/Events/calendar/CalendarMain";
 
 export default function Calendar({ data }) {
   console.log("Calendar data", data);

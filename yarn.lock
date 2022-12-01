@@ -402,6 +402,46 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@fullcalendar/common@^5.11.3", "@fullcalendar/common@~5.11.3":
+  version "5.11.3"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/common/-/common-5.11.3.tgz#6d555a06925b8a6d1556570c9f039960539908d5"
+  integrity sha512-welVwyfQOXQQGfDwBMSfYEPbiO1cPfUD+C7jd3ZoweJR+dSO11ddFugxIQ7dGfABAGZ63oq/+LW9FsmAJezVNg==
+  dependencies:
+    tslib "^2.1.0"
+
+"@fullcalendar/daygrid@^5.11.3", "@fullcalendar/daygrid@~5.11.3":
+  version "5.11.3"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-5.11.3.tgz#6bc1f956c95f84438428aa6e7a106c863a791a70"
+  integrity sha512-PCK0y80DRNCzWuC5lGpIWqCgKDvql1ah7rXql5lu+Gn2EeFj15ZQ8diMFjtNIQucEmFaNOXnR05Pgcry1n6Shg==
+  dependencies:
+    "@fullcalendar/common" "~5.11.3"
+    tslib "^2.1.0"
+
+"@fullcalendar/interaction@^5.11.3":
+  version "5.11.3"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/interaction/-/interaction-5.11.3.tgz#c6712c1305ecb8e975953c7ff462222b49204187"
+  integrity sha512-L955wkDjza62K96ndstvYs2Fd4V0kayTDpqW8W7huFG3Ox8MutpLqKAa2SCaTvcNIlWS4oexGQRiQAaJG7u47A==
+  dependencies:
+    "@fullcalendar/common" "~5.11.3"
+    tslib "^2.1.0"
+
+"@fullcalendar/react@^5.11.3":
+  version "5.11.3"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/react/-/react-5.11.3.tgz#34c076785ec8ea12cfbc29b7028cb5d923c2aecd"
+  integrity sha512-pxk6da5V1Mn41M664phQ1cr+0QbhXqkDHUhAVp8OOBrtMW84nhs82IYWTZNA3cbFCn4aUgoG2oGnyxekSF3pYA==
+  dependencies:
+    "@fullcalendar/common" "~5.11.3"
+    tslib "^2.1.0"
+
+"@fullcalendar/timegrid@^5.11.3":
+  version "5.11.3"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/timegrid/-/timegrid-5.11.3.tgz#77c45b6596da54bfa9b7f7d2ab3f2ad42aa1d2b4"
+  integrity sha512-SjIj2ZQ7nTyL1RxZkCPvNbuUQ0xHT+gfYJdUL3FT4bPjPJCxWtQ2CL8hxaeNmVozYYuy0yrGTW5Oup2+9IplbA==
+  dependencies:
+    "@fullcalendar/common" "~5.11.3"
+    "@fullcalendar/daygrid" "~5.11.3"
+    tslib "^2.1.0"
+
 "@graphql-typed-document-node/core@^3.1.1":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@graphql-typed-document-node/core/-/core-3.1.1.tgz#076d78ce99822258cf813ecc1e7fa460fa74d052"
@@ -1682,6 +1722,14 @@ emoji-regex@^9.2.2:
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-9.2.2.tgz#840c8803b0d8047f4ff0cf963176b32d4ef3ed72"
   integrity sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==
 
+enhanced-resolve@^5.10.0:
+  version "5.12.0"
+  resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-5.12.0.tgz#300e1c90228f5b570c4d35babf263f6da7155634"
+  integrity sha512-QHTXI/sZQmko1cbDoNAa3mJ5qhWUUNAq3vR0/YiD379fWQrcfuoX1+HW2S0MTt7XmoPLapdaDKUtelUSPic7hQ==
+  dependencies:
+    graceful-fs "^4.2.4"
+    tapable "^2.2.0"
+
 error-ex@^1.3.1:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/error-ex/-/error-ex-1.3.2.tgz#b4ac40648107fdcdcfae242f428bea8a14d4f1bf"
@@ -2208,7 +2256,7 @@ globby@^11.1.0:
     merge2 "^1.4.1"
     slash "^3.0.0"
 
-graceful-fs@^4.2.9:
+graceful-fs@^4.2.4, graceful-fs@^4.2.9:
   version "4.2.10"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.10.tgz#147d3a006da4ca3ce14728c7aefc287c367d7a6c"
   integrity sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==
@@ -3109,6 +3157,13 @@ next-i18next@^11.0.0:
     i18next-fs-backend "^1.1.4"
     react-i18next "^11.18.0"
 
+next-transpile-modules@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/next-transpile-modules/-/next-transpile-modules-10.0.0.tgz#7152880048835acb64d05fc7aa34910cbe7994da"
+  integrity sha512-FyeJ++Lm2Fq31gbThiRCrJlYpIY9QaI7A3TjuhQLzOix8ChQrvn5ny4MhfIthS5cy6+uK1AhDRvxVdW17y3Xdw==
+  dependencies:
+    enhanced-resolve "^5.10.0"
+
 next@12.3.1:
   version "12.3.1"
   resolved "https://registry.yarnpkg.com/next/-/next-12.3.1.tgz#127b825ad2207faf869b33393ec8c75fe61e50f1"
@@ -3870,6 +3925,11 @@ tailwindcss@^3.1.4:
     postcss-value-parser "^4.2.0"
     quick-lru "^5.1.1"
     resolve "^1.22.1"
+
+tapable@^2.2.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/tapable/-/tapable-2.2.1.tgz#1967a73ef4060a82f12ab96af86d52fdb76eeca0"
+  integrity sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==
 
 test-exclude@^6.0.0:
   version "6.0.0"
