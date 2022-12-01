@@ -1,11 +1,11 @@
-import React from 'react'
-import Calendar from './Calendar'
+import React from "react";
+import Calendar from "./Calendar";
+import Router from "next/router";
 
 const Filter = () => {
   return (
     <div className="flex justify-between my-4 metropolis_medium bg-filter-bg ">
-      <div
-        className="px-4 py-4 text-base md:text-lg lg:text-xl xl:text-2xl text-gold1">
+      <div className="px-4 py-4 text-base md:text-lg lg:text-xl xl:text-2xl text-gold1">
         Filter by
       </div>
 
@@ -40,139 +40,127 @@ const Filter = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const accordinData = [
   {
-    image: '/img/Rectangle.png',
-    title: 'Experience Peace and Calm in Your Own Home Angel[Los Angeles]',
-    date: '7 December 2021',
-    time: '6:30-8:30pm EDT',
+    image: "/img/Rectangle.png",
+    title: "Experience Peace and Calm in Your Own Home Angel[Los Angeles]",
+    date: "7 December 2021",
+    time: "6:30-8:30pm EDT",
   },
   {
-    image: '/img/Rectangle.png',
-    title: 'Experience Peace and Calm in Your Own Home Angel[Los Angeles]',
-    date: '7 December 2021',
-    time: '6:30-8:30pm EDT',
+    image: "/img/Rectangle.png",
+    title: "Experience Peace and Calm in Your Own Home Angel[Los Angeles]",
+    date: "7 December 2021",
+    time: "6:30-8:30pm EDT",
   },
   {
-    image: '/img/Rectangle.png',
-    title: 'Experience Peace and Calm in Your Own Home Angel[Los Angeles]',
-    date: '7 December 2021',
-    time: '6:30-8:30pm EDT',
+    image: "/img/Rectangle.png",
+    title: "Experience Peace and Calm in Your Own Home Angel[Los Angeles]",
+    date: "7 December 2021",
+    time: "6:30-8:30pm EDT",
   },
   {
-    image: '/img/Rectangle.png',
-    title: 'Experience Peace and Calm in Your Own Home Angel[Los Angeles]',
-    date: '7 December 2021',
-    time: '6:30-8:30pm EDT',
+    image: "/img/Rectangle.png",
+    title: "Experience Peace and Calm in Your Own Home Angel[Los Angeles]",
+    date: "7 December 2021",
+    time: "6:30-8:30pm EDT",
   },
   {
-    image: '/img/Rectangle.png',
-    title: 'Experience Peace and Calm in Your Own Home Angel[Los Angeles]',
-    date: '7 December 2021',
-    time: '6:30-8:30pm EDT',
+    image: "/img/Rectangle.png",
+    title: "Experience Peace and Calm in Your Own Home Angel[Los Angeles]",
+    date: "7 December 2021",
+    time: "6:30-8:30pm EDT",
   },
   {
-    image: '/img/Rectangle.png',
-    title: 'Experience Peace and Calm in Your Own Home Angel[Los Angeles]',
-    date: '7 December 2021',
-    time: '6:30-8:30pm EDT',
+    image: "/img/Rectangle.png",
+    title: "Experience Peace and Calm in Your Own Home Angel[Los Angeles]",
+    date: "7 December 2021",
+    time: "6:30-8:30pm EDT",
   },
   {
-    image: '/img/Rectangle.png',
-    title: 'Experience Peace and Calm in Your Own Home Angel[Los Angeles]',
-    date: '7 December 2021',
-    time: '6:30-8:30pm EDT',
+    image: "/img/Rectangle.png",
+    title: "Experience Peace and Calm in Your Own Home Angel[Los Angeles]",
+    date: "7 December 2021",
+    time: "6:30-8:30pm EDT",
   },
   {
-    image: '/img/Rectangle.png',
-    title: 'Experience Peace and Calm in Your Own Home Angel[Los Angeles]',
-    date: '7 December 2021',
-    time: '6:30-8:30pm EDT',
+    image: "/img/Rectangle.png",
+    title: "Experience Peace and Calm in Your Own Home Angel[Los Angeles]",
+    date: "7 December 2021",
+    time: "6:30-8:30pm EDT",
   },
   {
-    image: '/img/Rectangle.png',
-    title: 'Experience Peace and Calm in Your Own Home Angel[Los Angeles]',
-    date: '7 December 2021',
-    time: '6:30-8:30pm EDT',
+    image: "/img/Rectangle.png",
+    title: "Experience Peace and Calm in Your Own Home Angel[Los Angeles]",
+    date: "7 December 2021",
+    time: "6:30-8:30pm EDT",
   },
-]
+];
+
 const SpecialDay = () => {
   return (
-    // <!-- right section -->
     <div className="text-xl text-gray-900 lg:border-0 border-2 border-gold1">
-      {/* <!-- Start -> special days section --> */}
       <div>
         <div className="bg-slate-50">
-          <h1
-            className="pb-2 ml-2 text-3xl font-light filosofia_italic md:text-4xl text-gold1 md:ml-0 md:p-2">
+          <h1 className="pb-2 ml-2 text-3xl font-light filosofia_italic md:text-4xl text-gold1 md:ml-0 md:p-2">
             Special Days
           </h1>
 
           <div className="metropolis_medium">
             <div className="p-2">
-              <div
-                className="text-lg leading-7 font-medium text-redfull capitalize md:text-xl xl:text-2xl">
+              <div className="text-lg leading-7 font-medium text-redfull capitalize md:text-xl xl:text-2xl">
                 Humans rights day
               </div>
               <div className="flex items-center justify-between w-full">
                 <div>
-                  <p
-                    className="text-xs xs:text-sm text-gray-700 md:text-base lg:text-lg">
+                  <p className="text-xs xs:text-sm text-gray-700 md:text-base lg:text-lg">
                     7 December 2021
                   </p>
                 </div>
 
-                <div
-                  className="text-xs xs:text-sm text-gray-700 md:text-base lg:text-lg">
+                <div className="text-xs xs:text-sm text-gray-700 md:text-base lg:text-lg">
                   <p>
-                    6:30-8:30pm{' '}
+                    6:30-8:30pm{" "}
                     <span className="underline underline-offset-2">EDT</span>
                   </p>
                 </div>
               </div>
             </div>
             <div className="p-2">
-              <div
-                className="text-lg leading-7 font-medium text-redfull capitalize md:text-xl xl:text-2xl">
+              <div className="text-lg leading-7 font-medium text-redfull capitalize md:text-xl xl:text-2xl">
                 Christmas Day
               </div>
-              <div
-                className="text-xs xs:text-sm text-gray-700 md:text-base lg:text-lg">
+              <div className="text-xs xs:text-sm text-gray-700 md:text-base lg:text-lg">
                 10 December 2021
               </div>
             </div>
 
             <div className="p-2">
-              <div
-                className="text-lg leading-7 font-medium text-redfull capitalize md:text-xl xl:text-2xl">
+              <div className="text-lg leading-7 font-medium text-redfull capitalize md:text-xl xl:text-2xl">
                 ancestor soul anniversay: Santri Dadi
               </div>
-              <div
-                className="text-xs xs:text-sm text-gray-700 md:text-base lg:text-lg">
+              <div className="text-xs xs:text-sm text-gray-700 md:text-base lg:text-lg">
                 13 December 2021
               </div>
             </div>
 
             <div className="p-2">
-              <div
-                className="text-lg leading-7 font-medium text-redfull capitalize md:text-xl xl:text-2xl">
+              <div className="text-lg leading-7 font-medium text-redfull capitalize md:text-xl xl:text-2xl">
                 ancestor soul anniversay: Santri Dadi
               </div>
               <div className="flex items-center justify-between w-full">
                 <div>
-                  <p
-                    className="text-xs xs:text-sm text-gray-700 md:text-base lg:text-lg">
+                  <p className="text-xs xs:text-sm text-gray-700 md:text-base lg:text-lg">
                     7 December 2021
                   </p>
                 </div>
 
-                <div
-                  className="text-xs xs:text-sm text-gray-700 md:text-base lg:text-lg">
+                <div className="text-xs xs:text-sm text-gray-700 md:text-base lg:text-lg">
                   <p>
-                    6:30-8:30pm{' '}
+                    6:30-8:30pm{" "}
                     <span className="underline underline-offset-2">EDT</span>
                   </p>
                 </div>
@@ -180,27 +168,22 @@ const SpecialDay = () => {
             </div>
 
             <div className="p-2">
-              <div
-                className="text-lg leading-7 font-medium text-redfull capitalize md:text-xl xl:text-2xl">
+              <div className="text-lg leading-7 font-medium text-redfull capitalize md:text-xl xl:text-2xl">
                 ancestor soul anniversay: Santri Dadi
               </div>
-              <div
-                className="text-xs xs:text-sm text-gray-700 md:text-base lg:text-lg">
+              <div className="text-xs xs:text-sm text-gray-700 md:text-base lg:text-lg">
                 13 December 2021
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* <!-- End -> special days section --> */}
 
-      {/* <!-- arrow down icon --> */}
       <div>
-        <h1
-          className="flex justify-center py-4 text-5xl text-center text-gray-700 lg:py-8 cursor-poainter">
+        <h1 className="flex justify-center py-4 text-5xl text-center text-gray-700 lg:py-6 cursor-poainter">
           <a href="/events.html">
             <img
-              className="w-8 md:w-16"
+              className="w-4 md:w-8"
               src="./img/icons/ArrowDown.png"
               alt=""
             />
@@ -208,8 +191,8 @@ const SpecialDay = () => {
         </h1>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const EventsAccordion = () => {
   return (
@@ -236,10 +219,8 @@ const EventsAccordion = () => {
               return (
                 <>
                   <div className="relative" key={i}>
-                    <div
-                      className="flex justify-between my-2 bg-gray-100 cursor-pointer md:items-center eventAccordion metropolis_medium">
-                      <div
-                        className="flex items-center w-full md:w-4/5 lg:w-5/6 xl:w-5/6">
+                    <div className="flex justify-between my-2 bg-gray-100 cursor-pointer md:items-center eventAccordion metropolis_medium">
+                      <div className="flex items-center w-full md:w-4/5 lg:w-5/6 xl:w-5/6">
                         {/* <!-- img --> */}
 
                         <div className="relative w-[27vw] md:w-36">
@@ -249,24 +230,19 @@ const EventsAccordion = () => {
                             alt={ed.image}
                           />
                         </div>
-                        <div
-                          className="w-full md:w-[62%] lg:w-full px-2 md:px-4 lg:px-8">
-                          <h1
-                            className="text-xs font-medium leading-4 text-redfull xs:text-[14px] md:text-2xl xxl:text-3xl whitespace-nowrap lg:whitespace-normal overflow-hidden lg:overflow-auto text-ellipsis">
+                        <div className="w-full md:w-[62%] lg:w-full px-2 md:px-4 lg:px-8">
+                          <h1 className="text-xs font-medium leading-4 text-redfull xs:text-[14px] md:text-2xl xxl:text-3xl whitespace-nowrap lg:whitespace-normal overflow-hidden lg:overflow-auto text-ellipsis">
                             {ed.title}
                           </h1>
 
-                          <div
-                            className="flex items-center justify-between w-full">
+                          <div className="flex items-center justify-between w-full">
                             <div>
-                              <p
-                                className="leading-6 text-[10px] text-gray-700 md:text-[1rem] lg:text-[1.125rem]">
+                              <p className="leading-6 text-[10px] text-gray-700 md:text-[1rem] lg:text-[1.125rem]">
                                 {ed.date}
                               </p>
                             </div>
 
-                            <div
-                              className="leading-6 text-[10px] text-gray-700 md:text-[1rem] lg:text-[1.125rem]">
+                            <div className="leading-6 text-[10px] text-gray-700 md:text-[1rem] lg:text-[1.125rem]">
                               <p>{ed.time}</p>
                             </div>
                           </div>
@@ -274,8 +250,7 @@ const EventsAccordion = () => {
                       </div>
 
                       <div className="w-20 xs:w-24 xl:w-32">
-                        <div
-                          className="flex items-center px-1 py-1 my-1 rounded-lg cursor-pointer bg-gold1">
+                        <div className="flex items-center px-1 py-1 my-1 rounded-lg cursor-pointer bg-gold1">
                           <div>
                             <img
                               className="w-4 xs:w-6 lg:w-7"
@@ -283,14 +258,12 @@ const EventsAccordion = () => {
                               alt=""
                             />
                           </div>
-                          <div
-                            className="m-auto mt-auto mb-auto text-xs xs:text-[12px] text-slate-50 onlnie_eve_title lg:text-sm xl:text-base">
+                          <div className="m-auto mt-auto mb-auto text-xs xs:text-[12px] text-slate-50 onlnie_eve_title lg:text-sm xl:text-base">
                             <a href="/event_card.html"> more info</a>
                           </div>
                         </div>
 
-                        <div
-                          className="flex items-center px-1 py-1 my-1 rounded-lg cursor-pointer bg-gold1">
+                        <div className="flex items-center px-1 py-1 my-1 rounded-lg cursor-pointer bg-gold1">
                           <div>
                             <img
                               className="w-4 xs:w-6 lg:w-7"
@@ -298,8 +271,7 @@ const EventsAccordion = () => {
                               alt=""
                             />
                           </div>
-                          <div
-                            className="m-auto mt-auto mb-auto text-xs xs:text-[12px] text-slate-50 onlnie_eve_title lg:text-sm xl:text-base">
+                          <div className="m-auto mt-auto mb-auto text-xs xs:text-[12px] text-slate-50 onlnie_eve_title lg:text-sm xl:text-base">
                             join now
                           </div>
                         </div>
@@ -307,36 +279,37 @@ const EventsAccordion = () => {
                     </div>
 
                     {/* <!-- open accordin --> */}
-                    <div
-                      className="relative w-full overflow-hidden text-slate-50 bg-slate-50 shadow-md accordionBody metropolis_medium">
-                      <div
-                        className="flex flex-col-reverse justify-between p-3 lg:flex-row xl:p-5">
+                    <div className="relative w-full overflow-hidden text-slate-50 bg-slate-50 shadow-md accordionBody metropolis_medium">
+                      <div className="flex flex-col-reverse justify-between p-3 lg:flex-row xl:p-5">
                         <div className="w-full">
                           <p className="text-base text-gray-700 md:text-xl">
                             Take a look at the image above. On the top, you can
                             see that in synchronous execution, the tasks are
                             executed in a sequential way;
-                            <br/>
+                            <br />
                             Lorem ipsum dolor, sit amet consectetur adipisicing
                             elit. Hic incidunt suscipit nobis perspiciatis ex
                             odit quidem iste laudantium nemo minima .
-                            <br/>
+                            <br />
                             Doloremque reprehenderit aperiam corporis beatae
                             ratione minus illum,
-                            <a href="components/Events/calendar/CalendarMain#"
-                               className="underline">
+                            <a
+                              href="components/Events/calendar/CalendarMain#"
+                              className="underline"
+                            >
                               www.bksanfrancisco.org
                             </a>
-                            <a href="components/Events/calendar/CalendarMain#"
-                               className="underline">
+                            <a
+                              href="components/Events/calendar/CalendarMain#"
+                              className="underline"
+                            >
                               www.bksanfrancisco.org
                             </a>
                           </p>
                         </div>
 
                         {/* <!-- img --> */}
-                        <div
-                          className="relative flex justify-between w-full lg:w-max">
+                        <div className="relative flex justify-between w-full lg:w-max">
                           <div className="">
                             <img
                               className="object-cover w-auto mx-auto lg:h-auto md:w-full lg:w-96 xl:w-10/12"
@@ -349,15 +322,14 @@ const EventsAccordion = () => {
                             data-share-btn="share_btn"
                             data-parent="events"
                             className="float-right my-4 cursor-pointer md:mt-4 "
-                            style={{ textAlign: '-webkit-center' }}
+                            style={{ textAlign: "-webkit-center" }}
                           >
                             <img
                               className="w-4 xs:w-6 lg:w-7"
                               src="../img/Share.png"
                               alt=""
                             />
-                            <h3
-                              className="text-center text-xs xs:text-[12px] lg:text-sm xl:text-base text-gray-500">
+                            <h3 className="text-center text-xs xs:text-[12px] lg:text-sm xl:text-base text-gray-500">
                               Share
                             </h3>
                           </div>
@@ -366,17 +338,14 @@ const EventsAccordion = () => {
                     </div>
                   </div>
                 </>
-              )
+              );
             })}
-
-
           </div>
         </div>
 
         {/* <!-- arrow down icon --> */}
         <div>
-          <h1
-            className="flex justify-center py-4 text-5xl text-center text-gray-700 lg:py-8 cursor-poainter">
+          <h1 className="flex justify-center py-4 text-5xl text-center text-gray-700 lg:py-8 cursor-poainter">
             <a href="/events.html">
               <img
                 className="w-8 xl:w-16"
@@ -388,26 +357,44 @@ const EventsAccordion = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default function CalendarMain () {
+const ArrowBack = () => {
   return (
     <>
-      <div
-        className="relative justify-between mt-4 xl:mb-8 bg-slate-50 lg:flex lg:mx-10 lg:mt-12 xl:mt-16">
+      <div className="w-12 xl:w-14 my-7 pl-4">
+        <img
+          onClick={() => Router.back()}
+          className="w-4 cursor-pointer"
+          src="/img/ArrowSide.png"
+          alt=""
+        />
+      </div>
+    </>
+  );
+};
+
+export default function CalendarMain() {
+  return (
+    <div className="mx-2 md:mx-4">
+      <div className="relative mt-4 xl:mb-8 bg-slate-50 lg:flex lg:mt-12 xl:mt-16">
         <div>
-          <Calendar/>
-          <Filter/>
+          <div className="flex">
+            {" "}
+            <ArrowBack />
+            <Calendar />
+          </div>
+          <Filter />
         </div>
-        <div>
-          <SpecialDay/>
+        <div className="w-full lg:mx-20">
+          <SpecialDay />
         </div>
       </div>
       <div className="w-full">
-        {' '}
-        <EventsAccordion/>
+        {" "}
+        <EventsAccordion />
       </div>
-    </>
-  )
+    </div>
+  );
 }

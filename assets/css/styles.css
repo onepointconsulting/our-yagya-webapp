@@ -1270,125 +1270,49 @@ iframe {
 /* ------------------------------------------------------> end  media queries <-----------------------------------------------------------------  */
 
 /* -------------------------------------------------------------------------> calendar styles <---------------------------------------------------*/
-
-.fc .fc-toolbar-title {
-  font-size: 1.75em;
-  margin: 0;
+.fc .fc-button-primary {
+  display: none;
 }
-.fc-header-toolbar {
-  display: flex;
-  justify-content: space-between;
-}
-.fc-today {
-  background: #fffb00;
-  border-top: 1px solid #ddd !important;
-  font-weight: 300;
+.fc .fc-button:disabled {
+  opacity: 0.65;
+  display: none;
 }
 
-.fc .fc-col-header-cell-cushion {
-  background-color: #e89295;
-  color: white;
-  width: 100%;
-  place-items: center;
-  text-align: center;
-  justify-content: center;
-  font-size: 34px;
-  font-weight: 500;
-  font-family: "Metropolis Medium";
-}
-
-.fc .fc-col-header-cell-cushion:hover {
-  background-color: white;
-  color: black;
+.fc .fc-button:not(:disabled) {
   cursor: pointer;
-}
+  display: none;
 
-.fc .fc-scrollgrid-liquid {
-  height: 100%;
-  font-size: 20px;
-  font-weight: 800;
-  color: red;
-  font-family: "AvenirLTStd Black";
-  border-top: 1px solid gray;
-}
-
-.our-event-class > .fc-daygrid-day-frame {
-  color: white;
-}
-
-.fc .fc-button {
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  vertical-align: middle;
-  user-select: none;
-  background-color: transparent;
-  border: 1px solid transparent;
-  padding: 0.4em 1px;
-  font-size: 1em;
-  line-height: 1rem;
-  border-radius: 0.25em;
-  margin-right: 1rem;
-}
-.fc-theme-standard td,
-.fc-theme-standard th {
-  border: 1px solid #ddd;
-  border: 1px solid var(--fc-border-color, #ddd);
-  border-top: 1px solid #ddd;
-  border-right: 1px solid #504e4e;
-  border-left: 1px solid #7d7c7c;
-}
-.fc .fc-button-group {
-  position: relative;
-  display: inline-flex;
-  vertical-align: middle;
-  margin-right: 1rem;
-}
-
-.fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {
-  border-radius: 2px;
-  background: white;
-  color: #c08d24;
-  outline: none;
-  font-size: 18px;
-  margin-right: 14px;
-  padding: 1px;
-  margin-right: 2rem;
 }
 
 .fc-direction-ltr .fc-button-group > .fc-button:not(:first-child) {
   border-radius: 2px;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: white;
   color: #c08d24;
-  outline: none;
-  font-size: 18px;
-  margin-left: 18px;
-  padding: 1px;
-  border-top: 2px solid rgb(123, 120, 120);
 }
-
-.fc .fc-daygrid-day-top {
-  /* display: flex; */
-  /* flex-direction: row-reverse; */
-  font-size: 30px;
-  margin-right: auto;
-  margin-left: auto;
-  justify-content: center;
-  align-items: baseline;
+.fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {
+  border-radius: 2px;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: white;
+    color: #c08d24;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem
 }
-
-.fc .fc-daygrid-day-frame {
-  position: relative;
-  min-height: 100%;
-  place-items: center;
-  display: flex;
-  /* padding-top: 12px; */
+.fc .fc-toolbar.fc-header-toolbar {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
-
-.fc-day:hover {
-  background: #ff7b7b;
-  color: white;
-  cursor: pointer;
+/* title */
+.fc .fc-toolbar-title {
+  font-size: 1.75em;
+  margin: 0;
 }
 .fc .fc-toolbar-title {
   font-size: 2rem;
@@ -1398,28 +1322,33 @@ iframe {
   font-family: "Filosofia italic";
 }
 
-.fc .fc-bg-event {
+.fc .fc-col-header-cell-cushion {
+  background-color: #e89295;
   color: white;
+  width: 100%;
+  place-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 500;
+  font-family: "Metropolis Medium";
 }
-.fc-today-button {
-  visibility: hidden;
-  width: 1rem;
-  height: 1rem;
+.fc-day:hover {
+  background: #ff7b7b;
+  color: white;
+  cursor: pointer;
+}
+.fc .fc-view-harness-active > .fc-view{
+  border: 1px solid #000000;
 }
 
-.fc .fc-bg-event .fc-event-title {
-  margin: 0.5em;
-  font-size: 0.85em;
-  font-size: var(--fc-small-font-size, 0.85em);
-  font-style: italic;
-}
-.fc-today-button .fc-button .fc-button-primary {
-  display: none;
-}
-.fc .fc-button-primary:disabled {
-  padding: 0rem;
-  font-size: 1rem;
-  display: none;
+@media only screen and (max-width: 1024px) {
+  .fc .fc-col-header-cell-cushion {
+    font-size: 19px;
+  }
+  .fc .fc-col-header-cell-cushion {
+    padding: 0px;
+  }
 }
 @media only screen and (max-width: 600px) {
   .fc .fc-daygrid-day-top {
@@ -1439,10 +1368,7 @@ iframe {
     padding-top: 5px;
   }
 
-  .fc .fc-col-header-cell-cushion {
-    display: inline-block;
-    padding: -1px;
-  }
+
   .fc-direction-ltr .fc-button-group > .fc-button:not(:first-child) {
     font-size: 1.125rem;
   }
@@ -1476,6 +1402,7 @@ iframe {
   }
 }
 
+
 .fc-bg-event {
   opacity: 1 !important;
 }
@@ -1496,6 +1423,27 @@ iframe {
   border-top-style: hidden;
   border-left-style: solid;
   border-right-style: hidden;
+}
+
+.fc .fc-daygrid-day-frame {
+  position: relative;
+  min-height: 100%;
+  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fc .fc-scrollgrid-liquid {
+  height: 100%;
+  font-size: 20px;
+  font-weight: 800;
+  color: red;
+  font-family: "AvenirLTStd Black";
+  border-top: 1px solid gray;
+}
+.fc .fc-button .fc-icon {
+  vertical-align: middle;
+  font-size: 1rem;
 }
 
 /**
