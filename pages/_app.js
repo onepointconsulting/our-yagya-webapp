@@ -16,9 +16,9 @@ import i18next from 'i18next'
 import { useTranslation } from 'react-i18next'
 import Head from 'next/head'
 
-import '@fullcalendar/common/main.css' // @fullcalendar/react imports @fullcalendar/common
-import '@fullcalendar/daygrid/main.css' // @fullcalendar/timegrid imports @fullcalendar/daygrid
-import '@fullcalendar/timegrid/main.css' // @fullcalendar/timegrid is a direct import
+import "@fullcalendar/common/main.css";
+import "@fullcalendar/daygrid/main.css";
+import "@fullcalendar/timegrid/main.css";
 
 export const GlobalContext = createContext({})
 
