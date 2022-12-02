@@ -44,12 +44,7 @@ const Filter = () => {
 };
 
 const accordinData = [
-  {
-    image: "/img/Rectangle.png",
-    title: "Experience Peace and Calm in Your Own Home Angel[Los Angeles]",
-    date: "7 December 2021",
-    time: "6:30-8:30pm EDT",
-  },
+
   {
     image: "/img/Rectangle.png",
     title: "Experience Peace and Calm in Your Own Home Angel[Los Angeles]",
@@ -109,7 +104,7 @@ const SpecialDay = () => {
             Special Days
           </h1>
 
-          <div className="metropolis_medium">
+          <div className="metropolis_medium mt-4">
             <div className="p-2">
               <div className="text-lg leading-7 font-medium text-redfull capitalize md:text-xl xl:text-2xl">
                 Humans rights day
@@ -200,12 +195,12 @@ const EventsAccordion = () => {
       <div className="flex justify-start filosofia_italic">
         <div className="flex items-center justify-around">
           <img
-            src="../img/arrow-left.png"
+            src="/img/arrow-left.png"
             className="w-8 h-8 p-1 mr-2 border-2 border-gray-400 rounded cursor-pointer lg:h-12 lg:w-10"
           />
           <span className="mt-1 text-3xl md:text-4xl text-gold1"> 12/2/21</span>
           <img
-            src="../img/asset1.png"
+            src="/img/asset1.png"
             className="w-8 h-8 p-1 ml-2 border-2 border-gray-400 rounded cursor-pointer lg:h-12 lg:w-10"
           />
         </div>
@@ -218,24 +213,22 @@ const EventsAccordion = () => {
             {accordinData.map((ed, i) => {
               return (
                 <>
-                  <div className="relative" key={i}>
-                    <div className="flex justify-between my-2 bg-gray-100 cursor-pointer md:items-center eventAccordion metropolis_medium">
-                      <div className="flex items-center w-full md:w-4/5 lg:w-5/6 xl:w-5/6">
-                        {/* <!-- img --> */}
+           <div className="relative w-full my-2" key={i}>
+                    <div className="flex justify-between bg-gray-100 cursor-pointer md:items-center eventAccordion metropolis_medium">
+                        <div className="flex items-center w-[93%] md:w-4/5 lg:w-5/6 xl:w-5/6">
 
+                      
                         <div className="relative w-[27vw] md:w-36">
-                          <img
-                            className="object-cover w-full h-full"
-                            src={ed.image}
+                                <img className="object-cover w-full h-full"    src={ed.image}
                             alt={ed.image}
                           />
-                        </div>
-                        <div className="w-full md:w-[62%] lg:w-full px-2 md:px-4 lg:px-8">
+                            </div>
+                        <div className="px-2 md:px-4 w-[9rem] md:w-[inherit] lg:w-full">
                           <h1 className="text-xs font-medium leading-4 text-redfull xs:text-[14px] md:text-2xl xxl:text-3xl whitespace-nowrap lg:whitespace-normal overflow-hidden lg:overflow-auto text-ellipsis">
                             {ed.title}
                           </h1>
 
-                          <div className="flex items-center justify-between w-full">
+                          <div className="md:flex items-center justify-between w-full">
                             <div>
                               <p className="leading-6 text-[10px] text-gray-700 md:text-[1rem] lg:text-[1.125rem]">
                                 {ed.date}
@@ -249,12 +242,12 @@ const EventsAccordion = () => {
                         </div>
                       </div>
 
-                      <div className="w-20 xs:w-24 xl:w-32">
+                      <div className="w-[10rem] xs:w-24 xl:w-32">
                         <div className="flex items-center px-1 py-1 my-1 rounded-lg cursor-pointer bg-gold1">
                           <div>
                             <img
                               className="w-4 xs:w-6 lg:w-7"
-                              src="../img/icons8-info-50.png"
+                              src="/img/icons8-info-50.png"
                               alt=""
                             />
                           </div>
@@ -267,71 +260,12 @@ const EventsAccordion = () => {
                           <div>
                             <img
                               className="w-4 xs:w-6 lg:w-7"
-                              src="../img/icons8-pencil-64.png"
+                              src="/img/icons8-pencil-64.png"
                               alt=""
                             />
                           </div>
                           <div className="m-auto mt-auto mb-auto text-xs xs:text-[12px] text-slate-50 onlnie_eve_title lg:text-sm xl:text-base">
                             join now
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* <!-- open accordin --> */}
-                    <div className="relative w-full overflow-hidden text-slate-50 bg-slate-50 shadow-md accordionBody metropolis_medium">
-                      <div className="flex flex-col-reverse justify-between p-3 lg:flex-row xl:p-5">
-                        <div className="w-full">
-                          <p className="text-base text-gray-700 md:text-xl">
-                            Take a look at the image above. On the top, you can
-                            see that in synchronous execution, the tasks are
-                            executed in a sequential way;
-                            <br />
-                            Lorem ipsum dolor, sit amet consectetur adipisicing
-                            elit. Hic incidunt suscipit nobis perspiciatis ex
-                            odit quidem iste laudantium nemo minima .
-                            <br />
-                            Doloremque reprehenderit aperiam corporis beatae
-                            ratione minus illum,
-                            <a
-                              href="components/Events/calendar/CalendarMain#"
-                              className="underline"
-                            >
-                              www.bksanfrancisco.org
-                            </a>
-                            <a
-                              href="components/Events/calendar/CalendarMain#"
-                              className="underline"
-                            >
-                              www.bksanfrancisco.org
-                            </a>
-                          </p>
-                        </div>
-
-                        {/* <!-- img --> */}
-                        <div className="relative flex justify-between w-full lg:w-max">
-                          <div className="">
-                            <img
-                              className="object-cover w-auto mx-auto lg:h-auto md:w-full lg:w-96 xl:w-10/12"
-                              src="https://images.unsplash.com/photo-1657299156791-44140a28a518?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                              alt=""
-                            />
-                          </div>
-
-                          <div
-                            data-share-btn="share_btn"
-                            data-parent="events"
-                            className="float-right my-4 cursor-pointer md:mt-4 "
-                            style={{ textAlign: "-webkit-center" }}
-                          >
-                            <img
-                              className="w-4 xs:w-6 lg:w-7"
-                              src="../img/Share.png"
-                              alt=""
-                            />
-                            <h3 className="text-center text-xs xs:text-[12px] lg:text-sm xl:text-base text-gray-500">
-                              Share
-                            </h3>
                           </div>
                         </div>
                       </div>
@@ -356,6 +290,8 @@ const EventsAccordion = () => {
           </h1>
         </div>
       </div>
+
+      
     </div>
   );
 };
@@ -363,7 +299,7 @@ const EventsAccordion = () => {
 const ArrowBack = () => {
   return (
     <>
-      <div className="w-12 xl:w-14 my-7 pl-4">
+      <div className="absolute md:relative w-8 md:w-12 xl:w-14 my-7 md:pl-4">
         <img
           onClick={() => Router.back()}
           className="w-4 cursor-pointer"
