@@ -13,11 +13,9 @@ const ArrowIcon = ({start, setStart, arrowDirection, isEnd}) => {
   const step = arrowDirection === "up" ? -3 : +3
 
   const onClick = (e) => {
-    console.log("PREVIOUS STATE: ", start, isEnd)
     e.preventDefault()
     if ((arrowDirection === "up" && start !== 0) || (arrowDirection === "down" && !isEnd)) {
       setStart(start + step)
-      console.log("NEW STATE: ", start, isEnd)
     }
   }
 
@@ -43,7 +41,6 @@ const EventBlock = ({adaptedEvents, category}) => {
 
   useEffect(() => {
     async function fetchData() {
-      console.log("NEW STATE DOUBLE: ", start, isEnd)
       const response = await categoryEventsLayout(locale, category, start)
       if (response.data.eventSessions.data.length > 0) {
         setEvents(eventsAdapter(response))
