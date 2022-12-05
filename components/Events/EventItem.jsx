@@ -16,7 +16,7 @@ export const EventItem = ({ event, locale }) => {
                     <div className="pb-3">
                           <span className="text-sm text-gray-700 md:text-base">
                             {formateDate(
-                                event.startDate,
+                                event.date || event.startDate,
                                 locale,
                                 'dd LLLL yyyy  hh:mm a',
                             )} {event.timezone}
