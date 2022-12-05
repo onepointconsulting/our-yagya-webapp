@@ -4,8 +4,7 @@ import React from "react";
 import CalendarMain from "../components/Events/calendar/CalendarMain";
 
 export default function Calendar({ data }) {
-  console.log("Calendar data", data);
-  return <div><CalendarMain /> </div>;
+  return <div><CalendarMain data={data}/></div>;
 }
 
 // get server side props;

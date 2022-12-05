@@ -1,0 +1,673 @@
+{
+  "data": {
+    "pageLayouts": {
+      "data": [
+        {
+          "attributes": {
+            "title": "Calendar",
+            "layout": "calendario",
+            "backgroundImage": {
+              "data": [],
+              "__typename": "UploadFileRelationResponseCollection"
+            },
+            "__typename": "PageLayout"
+          },
+          "__typename": "PageLayoutEntity"
+        }
+      ],
+      "__typename": "PageLayoutEntityResponseCollection"
+    },
+    "eventSessions": {
+      "data": [
+        {
+          "id": "20",
+          "attributes": {
+            "startDate": "2022-12-07T21:58:00.000Z",
+            "endDate": "2022-12-10T20:58:00.000Z",
+            "timezone": {
+              "data": {
+                "attributes": {
+                  "name": "Africa/Cairo",
+                  "abbreviation": "EET",
+                  "__typename": "Timezone"
+                },
+                "__typename": "TimezoneEntity"
+              },
+              "__typename": "TimezoneEntityResponse"
+            },
+            "event": {
+              "data": {
+                "attributes": {
+                  "featuredImage": {
+                    "data": {
+                      "id": "26",
+                      "attributes": {
+                        "alternativeText": "Dr Murtaza",
+                        "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667499146/america_29c98d30b9.jpg",
+                        "__typename": "UploadFile"
+                      },
+                      "__typename": "UploadFileEntity"
+                    },
+                    "__typename": "UploadFileEntityResponse"
+                  },
+                  "title": "Event 1",
+                  "categories": {
+                    "data": [
+                      {
+                        "attributes": {
+                          "title": "yarra valley centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Featured Events",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Illawarra retreat centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "the peninsula retreat center",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Asia Retreat Centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      }
+                    ],
+                    "__typename": "CategoryRelationResponseCollection"
+                  },
+                  "onlineStatus": "inhouse",
+                  "joinLink": null,
+                  "venue": {
+                    "data": {
+                      "attributes": {
+                        "name": "Global Co-operation House",
+                        "address": "65-69 Pound Lane, Willesden Green",
+                        "postalCode": "NW10 2HH",
+                        "locality": "London",
+                        "country": {
+                          "data": {
+                            "attributes": {
+                              "name": "United Kingdom of Great Britain and Northern Ireland (the)",
+                              "__typename": "Country"
+                            },
+                            "__typename": "CountryEntity"
+                          },
+                          "__typename": "CountryEntityResponse"
+                        },
+                        "__typename": "Venue"
+                      },
+                      "__typename": "VenueEntity"
+                    },
+                    "__typename": "VenueEntityResponse"
+                  },
+                  "__typename": "Event"
+                },
+                "__typename": "EventEntity"
+              },
+              "__typename": "EventEntityResponse"
+            },
+            "__typename": "EventSession"
+          },
+          "__typename": "EventSessionEntity"
+        },
+        {
+          "id": "22",
+          "attributes": {
+            "startDate": "2022-12-14T21:28:00.000Z",
+            "endDate": "2022-12-14T19:00:00.000Z",
+            "timezone": {
+              "data": {
+                "attributes": {
+                  "name": "Africa/Cairo",
+                  "abbreviation": "EET",
+                  "__typename": "Timezone"
+                },
+                "__typename": "TimezoneEntity"
+              },
+              "__typename": "TimezoneEntityResponse"
+            },
+            "event": {
+              "data": {
+                "attributes": {
+                  "featuredImage": {
+                    "data": {
+                      "id": "27",
+                      "attributes": {
+                        "alternativeText": "dddd.jpeg",
+                        "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667501294/dddd_1925e7d149.jpg",
+                        "__typename": "UploadFile"
+                      },
+                      "__typename": "UploadFileEntity"
+                    },
+                    "__typename": "UploadFileEntityResponse"
+                  },
+                  "title": "Event 2",
+                  "categories": {
+                    "data": [
+                      {
+                        "attributes": {
+                          "title": "Virtual centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "the peninsula retreat center",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "tagaytay city retreat centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "yarra valley centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Asia Retreat Centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Blue Mountain Retreat Center",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Featured Events",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      }
+                    ],
+                    "__typename": "CategoryRelationResponseCollection"
+                  },
+                  "onlineStatus": "online",
+                  "joinLink": null,
+                  "venue": {
+                    "data": {
+                      "attributes": {
+                        "name": "Global Co-operation House",
+                        "address": "65-69 Pound Lane, Willesden Green",
+                        "postalCode": "NW10 2HH",
+                        "locality": "London",
+                        "country": {
+                          "data": {
+                            "attributes": {
+                              "name": "United Kingdom of Great Britain and Northern Ireland (the)",
+                              "__typename": "Country"
+                            },
+                            "__typename": "CountryEntity"
+                          },
+                          "__typename": "CountryEntityResponse"
+                        },
+                        "__typename": "Venue"
+                      },
+                      "__typename": "VenueEntity"
+                    },
+                    "__typename": "VenueEntityResponse"
+                  },
+                  "__typename": "Event"
+                },
+                "__typename": "EventEntity"
+              },
+              "__typename": "EventEntityResponse"
+            },
+            "__typename": "EventSession"
+          },
+          "__typename": "EventSessionEntity"
+        },
+        {
+          "id": "24",
+          "attributes": {
+            "startDate": "2022-12-16T09:10:00.000Z",
+            "endDate": "2022-12-16T21:59:00.000Z",
+            "timezone": {
+              "data": {
+                "attributes": {
+                  "name": "America/Asuncion",
+                  "abbreviation": "-03",
+                  "__typename": "Timezone"
+                },
+                "__typename": "TimezoneEntity"
+              },
+              "__typename": "TimezoneEntityResponse"
+            },
+            "event": {
+              "data": {
+                "attributes": {
+                  "featuredImage": {
+                    "data": {
+                      "id": "28",
+                      "attributes": {
+                        "alternativeText": "b.jpeg",
+                        "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667501468/b_a058d14f7a.jpg",
+                        "__typename": "UploadFile"
+                      },
+                      "__typename": "UploadFileEntity"
+                    },
+                    "__typename": "UploadFileEntityResponse"
+                  },
+                  "title": "Event 3",
+                  "categories": {
+                    "data": [
+                      {
+                        "attributes": {
+                          "title": "Illawarra retreat centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Virtual centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Featured Events",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Asia Retreat Centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "the peninsula retreat center",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      }
+                    ],
+                    "__typename": "CategoryRelationResponseCollection"
+                  },
+                  "onlineStatus": "inhouse",
+                  "joinLink": "https://us02web.zoom.us/j/85495153523?pwd=U2VPM2lDVmFOYjRFaFdHZTI2YjJuUT09",
+                  "venue": {
+                    "data": {
+                      "attributes": {
+                        "name": "Global Co-operation House",
+                        "address": "65-69 Pound Lane, Willesden Green",
+                        "postalCode": "NW10 2HH",
+                        "locality": "London",
+                        "country": {
+                          "data": {
+                            "attributes": {
+                              "name": "United Kingdom of Great Britain and Northern Ireland (the)",
+                              "__typename": "Country"
+                            },
+                            "__typename": "CountryEntity"
+                          },
+                          "__typename": "CountryEntityResponse"
+                        },
+                        "__typename": "Venue"
+                      },
+                      "__typename": "VenueEntity"
+                    },
+                    "__typename": "VenueEntityResponse"
+                  },
+                  "__typename": "Event"
+                },
+                "__typename": "EventEntity"
+              },
+              "__typename": "EventEntityResponse"
+            },
+            "__typename": "EventSession"
+          },
+          "__typename": "EventSessionEntity"
+        },
+        {
+          "id": "16",
+          "attributes": {
+            "startDate": "2022-12-22T14:38:00.000Z",
+            "endDate": "2022-12-22T21:49:00.000Z",
+            "timezone": {
+              "data": {
+                "attributes": {
+                  "name": "Europe/London",
+                  "abbreviation": "GMT",
+                  "__typename": "Timezone"
+                },
+                "__typename": "TimezoneEntity"
+              },
+              "__typename": "TimezoneEntityResponse"
+            },
+            "event": {
+              "data": {
+                "attributes": {
+                  "featuredImage": {
+                    "data": {
+                      "id": "29",
+                      "attributes": {
+                        "alternativeText": "Dr John Smith",
+                        "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667502966/aus_deaab42cc8.webp",
+                        "__typename": "UploadFile"
+                      },
+                      "__typename": "UploadFileEntity"
+                    },
+                    "__typename": "UploadFileEntityResponse"
+                  },
+                  "title": "Event 4  ",
+                  "categories": {
+                    "data": [
+                      {
+                        "attributes": {
+                          "title": "Asia Retreat Centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "tagaytay city retreat centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "the peninsula retreat center",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Featured Events",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      }
+                    ],
+                    "__typename": "CategoryRelationResponseCollection"
+                  },
+                  "onlineStatus": "online_inhouse",
+                  "joinLink": null,
+                  "venue": {
+                    "data": {
+                      "attributes": {
+                        "name": "Global Co-operation House",
+                        "address": "65-69 Pound Lane, Willesden Green",
+                        "postalCode": "NW10 2HH",
+                        "locality": "London",
+                        "country": {
+                          "data": {
+                            "attributes": {
+                              "name": "United Kingdom of Great Britain and Northern Ireland (the)",
+                              "__typename": "Country"
+                            },
+                            "__typename": "CountryEntity"
+                          },
+                          "__typename": "CountryEntityResponse"
+                        },
+                        "__typename": "Venue"
+                      },
+                      "__typename": "VenueEntity"
+                    },
+                    "__typename": "VenueEntityResponse"
+                  },
+                  "__typename": "Event"
+                },
+                "__typename": "EventEntity"
+              },
+              "__typename": "EventEntityResponse"
+            },
+            "__typename": "EventSession"
+          },
+          "__typename": "EventSessionEntity"
+        },
+        {
+          "id": "18",
+          "attributes": {
+            "startDate": "2023-01-27T13:00:00.000Z",
+            "endDate": "2022-02-01T14:00:00.000Z",
+            "timezone": {
+              "data": {
+                "attributes": {
+                  "name": "Africa/Abidjan",
+                  "abbreviation": "GMT",
+                  "__typename": "Timezone"
+                },
+                "__typename": "TimezoneEntity"
+              },
+              "__typename": "TimezoneEntityResponse"
+            },
+            "event": {
+              "data": {
+                "attributes": {
+                  "featuredImage": {
+                    "data": {
+                      "id": "24",
+                      "attributes": {
+                        "alternativeText": "skynews-sikh-jagtar-singh-johal_5953211.jpg",
+                        "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667498069/skynews_sikh_jagtar_singh_johal_5953211_bf4ccc2c6b.jpg",
+                        "__typename": "UploadFile"
+                      },
+                      "__typename": "UploadFileEntity"
+                    },
+                    "__typename": "UploadFileEntityResponse"
+                  },
+                  "title": "Event 5",
+                  "categories": {
+                    "data": [
+                      {
+                        "attributes": {
+                          "title": "tagaytay city retreat centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "the peninsula retreat center",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Asia Retreat Centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Blue Mountain Retreat Center",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Australia",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      }
+                    ],
+                    "__typename": "CategoryRelationResponseCollection"
+                  },
+                  "onlineStatus": "online",
+                  "joinLink": null,
+                  "venue": {
+                    "data": null,
+                    "__typename": "VenueEntityResponse"
+                  },
+                  "__typename": "Event"
+                },
+                "__typename": "EventEntity"
+              },
+              "__typename": "EventEntityResponse"
+            },
+            "__typename": "EventSession"
+          },
+          "__typename": "EventSessionEntity"
+        },
+        {
+          "id": "26",
+          "attributes": {
+            "startDate": "2023-01-28T13:00:00.000Z",
+            "endDate": "2022-01-28T14:00:00.000Z",
+            "timezone": {
+              "data": {
+                "attributes": {
+                  "name": "Africa/Abidjan",
+                  "abbreviation": "GMT",
+                  "__typename": "Timezone"
+                },
+                "__typename": "TimezoneEntity"
+              },
+              "__typename": "TimezoneEntityResponse"
+            },
+            "event": {
+              "data": {
+                "attributes": {
+                  "featuredImage": {
+                    "data": {
+                      "id": "31",
+                      "attributes": {
+                        "alternativeText": "dummy.jpg",
+                        "url": "https://res.cloudinary.com/stackrefugee/image/upload/v1667841600/dummy_b18ed28cec.jpg",
+                        "__typename": "UploadFile"
+                      },
+                      "__typename": "UploadFileEntity"
+                    },
+                    "__typename": "UploadFileEntityResponse"
+                  },
+                  "title": "Event 6",
+                  "categories": {
+                    "data": [
+                      {
+                        "attributes": {
+                          "title": "Featured Events",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "the peninsula retreat center",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Virtual centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "yarra valley centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Illawarra retreat centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "Asia Retreat Centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      },
+                      {
+                        "attributes": {
+                          "title": "tagaytay city retreat centre",
+                          "__typename": "Category"
+                        },
+                        "__typename": "CategoryEntity"
+                      }
+                    ],
+                    "__typename": "CategoryRelationResponseCollection"
+                  },
+                  "onlineStatus": "online",
+                  "joinLink": null,
+                  "venue": {
+                    "data": {
+                      "attributes": {
+                        "name": "Global Co-operation House",
+                        "address": "65-69 Pound Lane, Willesden Green",
+                        "postalCode": "NW10 2HH",
+                        "locality": "London",
+                        "country": {
+                          "data": {
+                            "attributes": {
+                              "name": "United Kingdom of Great Britain and Northern Ireland (the)",
+                              "__typename": "Country"
+                            },
+                            "__typename": "CountryEntity"
+                          },
+                          "__typename": "CountryEntityResponse"
+                        },
+                        "__typename": "Venue"
+                      },
+                      "__typename": "VenueEntity"
+                    },
+                    "__typename": "VenueEntityResponse"
+                  },
+                  "__typename": "Event"
+                },
+                "__typename": "EventEntity"
+              },
+              "__typename": "EventEntityResponse"
+            },
+            "__typename": "EventSession"
+          },
+          "__typename": "EventSessionEntity"
+        }
+      ],
+      "__typename": "EventSessionEntityResponseCollection"
+    }
+  },
+  "loading": false,
+  "networkStatus": 7,
+  "stale": false
+}

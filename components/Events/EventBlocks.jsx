@@ -3,14 +3,11 @@ import { GlobalContext } from '../../pages/_app'
 import { EventItem } from './EventItem'
 import { eventsAdapter } from '../../lib/eventsAdapter'
 import { categoryEventsLayout } from '../../lib/apiClient'
-import { useTranslation } from 'react-i18next'
+import useArrowHook from '../../hooks/useArrowHook'
 
 const ArrowIcon = ({start, setStart, arrowDirection, isEnd}) => {
 
-  const { t } = useTranslation();
-
-  const iconUrl = arrowDirection === "up" ? "/img/icons/ArrowUp.png" : "/img/icons/ArrowDown.png"
-  const step = arrowDirection === "up" ? -3 : +3
+  const [t, iconUrl, step, isOnTop] = useArrowHook(arrowDirection, start)
 
   const onClick = (e) => {
     e.preventDefault()
@@ -21,11 +18,12 @@ const ArrowIcon = ({start, setStart, arrowDirection, isEnd}) => {
 
   return (
     <div>
-      <h1 className="flex justify-center py-4 text-5xl text-center text-gray-400 cursor-poainter">
+      {!isOnTop && <h1
+        className="flex justify-center py-4 text-5xl text-center text-gray-400 cursor-poainter">
         <a href="#" onClick={onClick}>
           <img className="w-8 xs:w-10" src={iconUrl} alt={t('more')}/>
         </a>
-      </h1>
+      </h1>}
     </div>
   );
 };
