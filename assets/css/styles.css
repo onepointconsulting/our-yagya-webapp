@@ -35,7 +35,7 @@
   }
 
   .filter {
-    @apply w-full p-1 text-base text-gray-400 outline-none bg-slate-50 md:w-96 lg:w-60 xl:w-96 md:text-xl xl:text-4xl;
+    @apply w-full p-1 text-base text-gray-400 outline-none bg-slate-50 md:w-96 lg:w-60 xl:w-96 md:text-xl xl:text-2xl;
   }
   .goldenButtons {
     @apply bg-gold1 flex items-center mx-auto justify-center rounded-2xl font-semibold w-8/12 md:w-[66%] lg:w-36 px-1 lg:px-3 p-2 text-xss xs:text-xs md:text-sm h-[2rem] lg:h-8 text-slate-50 uppercase;
@@ -1232,6 +1232,7 @@ iframe {
   }
 }
 
+
 @media only screen and (max-width: 425px) {
   .video-cover {
     margin-top: 5rem;
@@ -1252,6 +1253,9 @@ iframe {
     top: 0px;
     max-width: 100%;
     width: auto;
+  }
+  .fc-toolbar-title {
+    margin-left: 10px;
   }
 }
 
