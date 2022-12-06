@@ -9,15 +9,6 @@ const Calendar = ({data}) => {
   const calendarRef = useRef(null);
   const events = calendarAdapter(data);
   console.log("events", events)
-  const eventDetail = events.map((event) => {
-    const date = formateDate(event.start)
-
-    return {
-      title: event.title,
-      start: event.start
-      // start: formateDate(event.start)
-    }
-  })
   return (
     <>
     <div className="w-full md:w-[71%] md:mx-auto lg:w-[40rem]">
@@ -30,7 +21,7 @@ const Calendar = ({data}) => {
         plugins={[dayGridPlugin, interactionPlugin]}
         selectable
         contentHeight={450}
-        events={eventDetail}
+        events={events}
         eventColor={'#ffffff'}
         eventBackgroundColor={'#e89295'}
         />

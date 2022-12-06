@@ -1,0 +1,17 @@
+.fc-h-event .fc-event-title {
+    vertical-align: top;
+    left: 0;
+    right: 0;
+    max-width: initial;
+    overflow: hidden;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fc-direction-ltr .fc-daygrid-event.fc-event-end, .fc-direction-rtl .fc-daygrid-event.fc-event-start {
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 2.3rem;
+}
