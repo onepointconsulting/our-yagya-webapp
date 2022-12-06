@@ -3,6 +3,7 @@ import { appWithTranslation } from 'next-i18next'
 import '../lib/i18n'
 import '../assets/css/styles.css'
 import '../assets/css/fullCalendar.css'
+import '../assets/css/customStyle.css'
 import '../styles/globals.css'
 
 import React, { createContext, useEffect } from 'react'
