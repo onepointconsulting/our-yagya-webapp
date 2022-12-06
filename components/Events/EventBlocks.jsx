@@ -6,7 +6,7 @@ import { categoryEventsLayout } from "../../lib/apiClient";
 import useArrowHook from "../../hooks/useArrowHook";
 
 const ArrowIcon = ({ start, setStart, arrowDirection, isEnd }) => {
-  const [t, iconUrl, step, isOnTop] = useArrowHook(arrowDirection, start);
+  const [t, iconUrl, step, isOnTop, isTheEnd] = useArrowHook(arrowDirection, start, isEnd);
 
   const onClick = (e) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ const ArrowIcon = ({ start, setStart, arrowDirection, isEnd }) => {
 
   return (
     <div className="">
-      {!isOnTop && (
+      {!isOnTop && !isTheEnd && (
         <h1 className=" flex justify-center py-4 text-5xl text-center text-gray-400 cursor-poainter">
           <a href="#" onClick={onClick}>
             <img className="w-8 xs:w-10" src={iconUrl} alt={t("more")} />
