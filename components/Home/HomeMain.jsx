@@ -17,7 +17,7 @@ const EventsBlock = ({ eventsData }) => {
         <div
             className="relative w-full h-full pb-12 mb-2 bg-gray-200 metropolis_medium bg-opacity-95 lg:w-auto xl:pb-16 lg:mb-0">
             <div
-                className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 filosofia_italic bg-button-color bg-gold1 md:text-4xl">
+                className="py-2 pl-4 pr-2 text-[2rem] text-white filosofia_italic bg-button-color bg-gold1 md:text-4xl">
                 {t('Events')}
             </div>
 
@@ -70,7 +70,7 @@ const NewsBlock = ({ newsData }) => {
         <div
             className="relative w-full h-full pb-12 mb-2 bg-gray-200 metropolis_medium bg-opacity-95 lg:w-auto xl:pb-16 lg:mb-0">
             <div
-                className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 filosofia_italic bg-button-color bg-gold1 md:text-4xl">
+                className="py-2 pl-4 pr-2 text-[2rem] text-white filosofia_italic bg-button-color bg-gold1 md:text-4xl">
                 {t('News')}
             </div>
 
@@ -102,7 +102,7 @@ const ClassBlock = () => {
         <div
             className="relative w-full h-full pb-12 mb-2 bg-gray-200 fadeInTop bg-opacity-95 lg:w-auto xl:pb-16 lg:mb-0">
             <div
-                className="py-2 pl-4 pr-2 text-[2rem] text-slate-50 filosofia_italic bg-button-color bg-gold1 md:text-4xl">
+                className="py-2 pl-4 pr-2 text-[2rem] text-white filosofia_italic bg-button-color bg-gold1 md:text-4xl">
                 {' '}
                 {t('Latest classes')}
             </div>

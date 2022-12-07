@@ -6,14 +6,14 @@
     image-rendering: pixelated;
   }
   .a-sub-nav {
-    @apply block py-1 text-lg text-slate-50 md:text-3xl md:px-2;
+    @apply block py-1 text-lg text-white md:text-3xl md:px-2;
   }
   .home_page_center_nav {
     @apply block py-1 text-lg md:text-3xl md:px-2;
   }
 
   .a-sub-nav-1 {
-    @apply block py-1 text-lg text-slate-50 md:text-2xl;
+    @apply block py-1 text-lg text-white md:text-2xl;
   }
 
   .icons-list {
@@ -28,17 +28,17 @@
   }
 
   .icon-and-text {
-    @apply flex flex-col items-center p-3 text-icons-color hover:text-slate-50;
+    @apply flex flex-col items-center p-3 text-icons-color hover:text-white;
   }
   .speaker-names {
     @apply text-redfull text-ms xs:text-lg md:text-[22px] lg:text-[24px] xl:text-[27px] my-[0px]  md:my-[3px] 2xl:my-[6px];
   }
 
   .filter {
-    @apply w-full p-1 text-base text-gray-400 outline-none bg-slate-50 md:w-96 lg:w-60 xl:w-96 md:text-xl xl:text-2xl;
+    @apply w-full p-1 text-base text-gray-400 outline-none bg-white md:w-96 lg:w-60 xl:w-96 md:text-xl xl:text-2xl;
   }
   .goldenButtons {
-    @apply bg-gold1 flex items-center mx-auto justify-center rounded-2xl font-semibold w-8/12 md:w-[66%] lg:w-36 px-1 lg:px-3 p-2 text-xss xs:text-xs md:text-sm h-[2rem] lg:h-8 text-slate-50 uppercase;
+    @apply bg-gold1 flex items-center mx-auto justify-center rounded-2xl font-semibold w-8/12 md:w-[66%] lg:w-36 px-1 lg:px-3 p-2 text-xss xs:text-xs md:text-sm h-[2rem] lg:h-8 text-white uppercase;
   }
 
   .sectons-lists {
@@ -49,7 +49,7 @@
   }
 
   .buttons {
-    @apply p-1 px-1 m-1 text-xs uppercase rounded-full text-slate-50 bg-gold1 sm:py-1 md:py-4 lg:py-4 md:px-2 lg:px-2 md:h-auto lg:h-auto h-14 md:m-2 md:p-2 lg:m-2 lg:p-2 md:text-lg lg:text-xl;
+    @apply p-1 px-1 m-1 text-xs uppercase rounded-full text-white bg-gold1 sm:py-1 md:py-4 lg:py-4 md:px-2 lg:px-2 md:h-auto lg:h-auto h-14 md:m-2 md:p-2 lg:m-2 lg:p-2 md:text-lg lg:text-xl;
   }
 }
 
@@ -527,7 +527,7 @@ video {
   background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
 }
 
-.bg-slate-50 {
+.bg-white {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
 }
@@ -593,7 +593,7 @@ video {
   color: rgba(75, 85, 99, var(--tw-text-opacity));
 }
 
-.text-slate-50 {
+.text-white {
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }

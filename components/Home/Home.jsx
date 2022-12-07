@@ -5,7 +5,7 @@ import Video from './Video'
 
 export default function Home () {
     return (
-        <div className="bg-slate-50 h-full">
+        <div className="bg-white h-full">
             <Slider/>
             <HomeMain/>
             <Video/>

@@ -8,10 +8,10 @@ export const EventItem = ({ event, locale }) => {
       href={`/single_event/${event.id}`}
     >
       <a>
-        <div className="h-auto p-2 md:p-4 overflow-y-auto metropolis_medium">
+        <div className="h-auto p-2 lg:p-4 overflow-y-auto metropolis_medium">
           <div className="text-lg text-redfull md:text-2xl">{event.title}</div>
 
-          <div className="pb-3">
+          <div>
             <span className="text-sm text-gray-700 md:text-base">
               {formateDate(
                 event.date || event.startDate,

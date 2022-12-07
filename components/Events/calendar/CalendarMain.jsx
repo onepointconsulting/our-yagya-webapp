@@ -100,7 +100,7 @@ const SpecialDay = () => {
   return (
     <div className="text-xl text-gray-900 lg:border-0 border-2 border-gold1">
       <div>
-        <div className="bg-slate-50">
+        <div className="bg-white">
           <h1
             className="pb-2 ml-2 text-3xl font-light filosofia_italic md:text-4xl text-gold1 md:ml-0 md:p-2">
             Special Days
@@ -211,7 +211,7 @@ const EventsAccordionItems = () => {
     <>
       {/* <!-- open accordin --> */}
       <div
-        className="relative w-full text-slate-50 bg-slate-50 shadow-md metropolis_medium"
+        className="relative w-full text-white bg-white shadow-md metropolis_medium"
       >
         <div
           className="flex flex-col-reverse justify-between p-3 lg:flex-row xl:p-5">
@@ -348,7 +348,7 @@ const EventsAccordion = ({ pos, openPosition, setOpenPosition }) => {
                               />
                             </div>
                             <div
-                              className="m-auto mt-auto mb-auto text-xs xs:text-[12px] text-slate-50 onlnie_eve_title lg:text-sm xl:text-base">
+                              className="m-auto mt-auto mb-auto text-xs xs:text-[12px] text-white onlnie_eve_title lg:text-sm xl:text-base">
                               <a href="/event_card.html"> more info</a>
                             </div>
                           </div>
@@ -363,7 +363,7 @@ const EventsAccordion = ({ pos, openPosition, setOpenPosition }) => {
                               />
                             </div>
                             <div
-                              className="m-auto mt-auto mb-auto text-xs xs:text-[12px] text-slate-50 onlnie_eve_title lg:text-sm xl:text-base">
+                              className="m-auto mt-auto mb-auto text-xs xs:text-[12px] text-white onlnie_eve_title lg:text-sm xl:text-base">
                               join now
                             </div>
                           </div>
@@ -371,7 +371,7 @@ const EventsAccordion = ({ pos, openPosition, setOpenPosition }) => {
                       </div>
                       {/* event accordion body open */}
                       <div
-                        className="relative overflow-hidden w-full text-slate-50 bg-slate-50 shadow-md accordionChildBody metropolis_medium"
+                        className="relative overflow-hidden w-full text-white bg-white shadow-md accordionChildBody metropolis_medium"
                         style={{ maxHeight: maxHeightChildBody }}
                       >
                         <div
@@ -476,7 +476,7 @@ export default function CalendarMain ({ data }) {
   return (
     <div className="mx-2 md:mx-4">
       <div
-        className="relative mt-4 xl:mb-8 bg-slate-50 lg:flex lg:mt-12 xl:mt-16">
+        className="relative mt-4 xl:mb-8 bg-white lg:flex lg:mt-12 xl:mt-16">
         <div>
           <div className="flex">
             {' '}

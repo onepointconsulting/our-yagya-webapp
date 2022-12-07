@@ -4,11 +4,11 @@ export default function MurliQuestion() {
   return (
     <>
       <div className="w-full px-4 py-4 md:px-8 lg:px-20 md:py-8 lg:py-20">
-        <div className="w-full mx-auto bg-slate-50 xl:w-3/5 bg-opacity-95">
+        <div className="w-full mx-auto bg-white xl:w-3/5 bg-opacity-95">
           <div className="relative w-full h-full">
             <div className="flex jsutify-between">
               <img
-                className="w-8 md:w-12 h-8 md:h-12 absolute right-[-14px] md:right-[-24px] top-[-9px] md:top-[-22px] cursor-pointer hover:bg-red-400 transition-all duration-150 p-2 rounded-full bg-slate-50 border border-gray-600 mx-auto object-cover"
+                className="w-8 md:w-12 h-8 md:h-12 absolute right-[-14px] md:right-[-24px] top-[-9px] md:top-[-22px] cursor-pointer hover:bg-red-400 transition-all duration-150 p-2 rounded-full bg-white border border-gray-600 mx-auto object-cover"
                 src="/img/svg/icons8-close-50.png"
                 alt=""
               />
@@ -21,7 +21,7 @@ export default function MurliQuestion() {
             </div>
           </div>
 
-          <div className="border border-gray-400 bg-slate-50">
+          <div className="border border-gray-400 bg-white">
             <p className="p-8">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptates ab ducimus natus. Debitis, temporibus maxime. Iste

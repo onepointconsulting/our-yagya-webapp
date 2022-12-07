@@ -49,7 +49,7 @@ const Header = ({ title }) => {
                     className="fixed cursor-pointer left-2 top-5 md:left-3"
                     style={{ zIndex: '1' }}
                 >
-                    <div className="lg:hidden inline-block cursor-pointer p-[5px] bg-slate-50 rounded-full  border-[1px] border-red-600">
+                    <div className="lg:hidden inline-block cursor-pointer p-[5px] bg-white rounded-full  border-[1px] border-red-600">
                         <img
                             className="h-[1.5em] md:h-[3.5vh]"
                             src="/img/icons/Search.png"

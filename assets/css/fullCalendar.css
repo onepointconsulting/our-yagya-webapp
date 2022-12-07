@@ -161,7 +161,7 @@
     place-items: center;
     display: flex;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
   }
   .fc .fc-scrollgrid-liquid {
     height: 100%;

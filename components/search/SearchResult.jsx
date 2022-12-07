@@ -152,7 +152,7 @@ const SearchResult = () => {
 
       <Link href="/details">
         <a className="my-12">
-          <div className="flex w-full bg-slate-50 justify-betwen">
+          <div className="flex w-full bg-white justify-betwen">
             <div className="flex items-center justify-center ml-auto">
               <img
                 className="search-result max-w-[5rem] md:max-w-[8rem] float-left object-cover ml-2 mr-2 md:mr-4 md:ml-4"
@@ -185,7 +185,7 @@ const SearchResult = () => {
 
       <Link href="/details">
         <a className="my-12">
-          <div className="flex w-full bg-slate-50 justify-betwen">
+          <div className="flex w-full bg-white justify-betwen">
             <div className="flex items-center justify-center ml-auto">
               <img
                 className="float-left object-cover ml-2 mr-2 search-result max-w-[5rem] md:max-w-[8rem] md:mr-4 md:ml-4"

@@ -37,7 +37,7 @@ const EventImage = ({singleEvent}) => {
         <div className="flex jsutify-between">
           <img
             onClick={() => router.back()}
-            className="w-8 md:w-12 h-8 md:h-12 absolute right-[-14px] md:right-[-24px] top-[-9px] md:top-[-22px] cursor-pointer hover:bg-red-400 transition-all duration-150 p-2 rounded-full bg-slate-50  border border-gray-600 mx-auto object-cover"
+            className="w-8 md:w-12 h-8 md:h-12 absolute right-[-14px] md:right-[-24px] top-[-9px] md:top-[-22px] cursor-pointer hover:bg-red-400 transition-all duration-150 p-2 rounded-full bg-white  border border-gray-600 mx-auto object-cover"
             src="https://ouryagya.netlify.app/img/svg/icons8-close-50.png"
             alt={t("Close")}
           />
@@ -96,7 +96,7 @@ const AddToCalendar = ({singleEvent}) => {
         </div>
 
         <div className="w-full">
-          <h4 className="text-sm text-left capitalize text-slate-50 md:text-base lg:text-xl">
+          <h4 className="text-sm text-left capitalize text-white md:text-base lg:text-xl">
               <a href={googleCalendarLink} target="_blank">
                   {t("Add to Google Calendar")}
               </a>
@@ -226,7 +226,7 @@ const SingleEventMain = ({ data }) => {
         return (
             <div
                 className="flex items-center justify-center h-screen p-4 text-center bg-red-500">
-                <h3 className="text-base md:text-lg lg:text-5xl text-slate-50">
+                <h3 className="text-base md:text-lg lg:text-5xl text-white">
                     {' '}
                     {t('Sorry, we could not find the event you looking for.')}
                 </h3>
@@ -237,11 +237,11 @@ const SingleEventMain = ({ data }) => {
     return (
       <>
         <div className="w-full px-4 py-4 md:px-8 lg:px-20 md:py-8 lg:py-20">
-          <div className="w-full mx-auto bg-slate-50 xl:w-10/12 bg-opacity-95">
+          <div className="w-full mx-auto bg-white xl:w-10/12 bg-opacity-95">
             <EventImage singleEvent={singleEvent} />
             <div className="border border-gray-400">
               <div className="filosofia_italic bg-gold1">
-                <h1 className="p-2 text-xl text-center md:p-4 text-slate-50 sm:text-2xl md:text-4xl lg:text-5xl lg:p-7">
+                <h1 className="p-2 text-xl text-center md:p-4 text-white sm:text-2xl md:text-4xl lg:text-5xl lg:p-7">
                   {singleEvent.eventTitle}
                 </h1>
               </div>

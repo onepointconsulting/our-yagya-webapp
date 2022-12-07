@@ -31,7 +31,7 @@ export default function Video() {
       {/* video preview */}
       <div className="w-auto mx-auto mt-6 bg-video-pre-color xl:w-3/4">
         <div className="bg-gold1">
-          <h1 className="p-2 pl-4 text-2xl text-slate-50 capitalize md:p-[.75rem] md:pl-6 md:text-[2.25rem] filosofia_italic">
+          <h1 className="p-2 pl-4 text-2xl text-white capitalize md:p-[.75rem] md:pl-6 md:text-[2.25rem] filosofia_italic">
             {t("featured video")}
           </h1>
         </div>

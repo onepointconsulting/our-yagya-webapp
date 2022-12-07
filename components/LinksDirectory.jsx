@@ -24,7 +24,7 @@ const LinksDirectory = () => {
     <Parallax speed={-5} className="lg:flex mt-3 mb-3 lg:px-6 py-8">
       <div className="w-auto md:w-11/12 lg:w-2/5 md:mb-4text-gray-900 text-xl bg-links_directory relative mr-4 ml-4 md:mr-auto md:ml-auto">
         <div className="bg-button-color capitalize p-2 md:p-4 text-Filosofia italic">
-          <h1 className="filosofia_italic text-slate-50 ml-auto text-2xl md:text-4xl lg:ml-5">
+          <h1 className="filosofia_italic text-white ml-auto text-2xl md:text-4xl lg:ml-5">
             {t(" Links directory")}
           </h1>
         </div>
@@ -59,7 +59,7 @@ const LinksDirectory = () => {
       <div className="bg-video-pre-color mb-8 md:mb-auto md:w-11/12 lg:ml-2 mr-4 ml-4 md:mr-auto md:ml-auto">
         {/* <!--  featured title --> */}
         <div className="bg-button-color capitalize p-2 md:p-4 text-Filosofia italic">
-          <h1 className="filosofia_italic text-slate-50 ml-auto text-2xl md:text-4xl">
+          <h1 className="filosofia_italic text-white ml-auto text-2xl md:text-4xl">
             {t(" featured videos")}
           </h1>
         </div>

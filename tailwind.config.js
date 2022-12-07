@@ -57,7 +57,6 @@ module.exports = {
         12: "3.5rem",
       },
       colors: {
-        white: "#ffffff",
         redfull: "#e9513d",
         red70: "#ee7c6d",
         red50: "#e9513d4f",
@@ -98,7 +97,6 @@ module.exports = {
         home_page_top_bg: "#f9c9c5",
         home_page_events_card_bg: "#ebecee",
         home_page_center_meniu: "#fbdcd9",
-        white: "#747777",
         links_directory: "#eddcbe",
       },
       listStyleType: {

@@ -18,7 +18,7 @@ const Footer = () => {
       <>
         <div className="metropolis_medium xl:container xl:mx-auto">
           <footer
-              className="relative w-full p-2 px-2 text-center capitalize text-slate-50 2xl:flex 2xl:flex-wrap 2xl:justify-between filosofia_italic md:p-4 bg-grayfull">
+              className="relative w-full p-2 px-2 text-center capitalize text-white 2xl:flex 2xl:flex-wrap 2xl:justify-between filosofia_italic md:p-4 bg-grayfull">
                 <BackToTop />
             <div><a href="#!" className="footer">{globalPropertyAdapter(globalProperties, 'copyright')}</a></div>
             <div>

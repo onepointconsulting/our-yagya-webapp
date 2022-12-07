@@ -10,11 +10,11 @@ const FeaturedEventItem = ({ event, locale }) => {
         return []
     }
     return (
-        <div className="flex pt-3">
-            <div className="w-full pb-4">
+        <div className="flex">
+            <div className="w-full my-3">
                 <Link className='cursor-pointer' href={`/single_event/${event.id}`}>
                     <div
-                        className="flex items-center justify-between pt-[0.5rem] cursor-pointer">
+                        className="flex items-center justify-between bg-gray50 cursor-pointer">
                         <div
                             className="flex items-center w-auto md:w-4/5 lg:w-5/6 xl:w-5/6">
                             {/* <!-- image --> */}
@@ -63,7 +63,7 @@ const FeaturedEventItem = ({ event, locale }) => {
                                     />
                                 </div>
                                 <div
-                                    className="m-auto mt-auto mb-auto text-xs xs:text-[12px] text-slate-50 onlnie_eve_title lg:text-sm xl:text-[13px]">
+                                    className="m-auto mt-auto mb-auto text-xs xs:text-[12px] text-white onlnie_eve_title lg:text-sm xl:text-[13px]">
                                     {t("More Info")}
                                 </div>
                             </div>
@@ -79,7 +79,7 @@ const FeaturedEventItem = ({ event, locale }) => {
                                     />
                                 </div>
                                 <div
-                                    className="pl-2 pr-2 m-auto mt-auto mb-auto text-xs text-center text-slate-50 onlnie_eve_title lg:text-sm xl:text-[13px]">
+                                    className="pl-2 pr-2 m-auto mt-auto mb-auto text-xs text-center text-white onlnie_eve_title lg:text-sm xl:text-[13px]">
                                     {t("Register")}
                                 </div>
                             </div>}

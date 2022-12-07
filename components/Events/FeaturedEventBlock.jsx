@@ -23,7 +23,7 @@ export default function FeaturedEventBlock ({adaptedEvents, title = 'You forgot 
             <div
                 className="relative w-full h-full ml-auto mr-auto bg-[#ffffff] bg-opacity-95 lg:m-4 md:w-11/12 lg:w-10/12">
                 <div
-                    className="py-2 pl-4 pr-2 text-xl text-slate-50 filosofia_italic bg-gold1 md:text-3xl xl:text-4xl">
+                    className="py-2 pl-4 pr-2 text-xl text-white filosofia_italic bg-gold1 md:text-3xl xl:text-4xl">
                     {title}
                 </div>
                 {!!adaptedEvents[title] ? adaptedEvents[title].map((event, i) => {

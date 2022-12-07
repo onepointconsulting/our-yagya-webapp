@@ -7,7 +7,11 @@ import useArrowHook from "../../hooks/useArrowHook";
 import FeaturedEventItem from "./FeaturedEventItem";
 
 const ArrowIcon = ({ start, setStart, arrowDirection, isEnd }) => {
-  const [t, iconUrl, step, isOnTop, isTheEnd] = useArrowHook(arrowDirection, start, isEnd);
+  const [t, iconUrl, step, isOnTop, isTheEnd] = useArrowHook(
+    arrowDirection,
+    start,
+    isEnd
+  );
 
   const onClick = (e) => {
     e.preventDefault();
@@ -22,7 +26,7 @@ const ArrowIcon = ({ start, setStart, arrowDirection, isEnd }) => {
   return (
     <div className="">
       {!isOnTop && !isTheEnd && (
-        <h1 className=" flex justify-center py-4 text-5xl text-center text-gray-400 cursor-poainter">
+        <h1 className="flex justify-center py-4 text-5xl text-center text-gray-400 cursor-poainter">
           <a href="#" onClick={onClick}>
             <img className="w-8 xs:w-10" src={iconUrl} alt={t("more")} />
           </a>
@@ -57,30 +61,39 @@ const EventBlock = ({ adaptedEvents, category }) => {
   }, [start]);
 
   return (
-    /* TODO: Set a fixed events box height */
-    <div className="relative w-full bg-gray-200 pb-8 md:pb-7 lg:h-[30rem] xl:h-[25rem] 2xl:h-[28rem]">
+    <div className="relative w-full bg-gray50 h-[27rem] md:h-[30rem] xl:h-[33rem] 2xl:h-[31rem]">
       <>
-        <div className="py-2 pl-4 pr-2 text-[1.2rem] text-slate-50 capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
+        <div className="py-2 pl-4 pr-2 text-[1.2rem] text-white capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
           {category}
         </div>
       </>
-      
-      <div className="mt-auto h-12">
-        <ArrowIcon start={start} setStart={setStart} arrowDirection="up" isEnd={isEnd} />
+
+      <div className="h-12 mt-auto">
+        <ArrowIcon
+          start={start}
+          setStart={setStart}
+          arrowDirection="up"
+          isEnd={isEnd}
+        />
       </div>
 
       {!!events &&
         events[category]?.map((event, i) => {
-            if (category === 'Featured Events')
+          if (category === "Featured Events")
             return <FeaturedEventItem locale={locale} event={event} key={i} />;
           else return <EventItem locale={locale} event={event} key={i} />;
         })}
 
-      <div className="absolute bottom-0 inset-x-0">
-        <ArrowIcon start={start} setStart={setStart} arrowDirection="down" isEnd={isEnd} />
+      <div className="absolute inset-x-0 bottom-0  lg:bottom-[1rem]">
+        <ArrowIcon
+          start={start}
+          setStart={setStart}
+          arrowDirection="down"
+          isEnd={isEnd}
+        />
       </div>
     </div>
   );
 };
 
-export default EventBlock
+export default EventBlock;
