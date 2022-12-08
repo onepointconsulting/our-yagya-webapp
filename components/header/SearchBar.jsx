@@ -37,7 +37,7 @@ const SearchBar = () => {
               type="text"
               name="search"
               placeholder={t("Search by keywords")}
-              className="w-full p-4 py-2 text-sm placeholder-gray-400 bg-[#ffffff] border-2 border-gray-400 outline-none md:p-4 md:py-3 md:text-2xl xl:text-3xl filosofia_italic"
+              className="w-full p-4 py-2 text-sm placeholder-gray-400 bg-white border-2 border-gray-400 outline-none md:p-4 md:py-3 md:text-2xl xl:text-3xl filosofia_italic"
             />
           </div>
         </div>

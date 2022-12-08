@@ -67,7 +67,7 @@ const PillMenuItem = ({ attributes }) => {
         <>
             {url.indexOf('/') === 0 ? (
                 <div
-                    className="w-full flex items-center justify-between h-[2.4rem] p-[9px] 2xl:p-4 px-[9px] m-[3px] duration-100 bg-[#ffffff] border-2 rounded-full cursor-pointer text-red-600 border-red-600">
+                    className="w-full flex items-center justify-between h-[2.4rem] p-[9px] 2xl:p-4 px-[9px] m-[3px] duration-100 bg-white border-2 rounded-full cursor-pointer text-red-600 border-red-600">
                     <PillMenuContent title={title} children={children}
                                      url={url}/>
                     {icon && <img

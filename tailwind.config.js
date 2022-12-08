@@ -107,15 +107,7 @@ module.exports = {
         roman: "upper-roman",
       },
       variants: {
-        position: ["responsive"],
-        position: ["responsive", "hover", "focus"],
-      },
-
-      padding: {
-        "-0px": "-0px",
-      },
-      width: {
-        "-16rem": "-16rem",
+        backgroundColor: ['responsive', 'odd', 'even', 'hover', 'focus'],
       },
     },
   },

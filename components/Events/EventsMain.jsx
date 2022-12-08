@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import { eventsAdapter } from '../../lib/eventsAdapter'
+import FeaturedEventBlock from './FeaturedEventBlock'
 import { GlobalContext } from '../../pages/_app'
 import { categoriesAdapter } from '../../lib/globalPropertiesAdapter'
 import { imageAdapter } from '../../lib/imageAdapter'
 import EventBlocks from './EventBlocks'
-import EventBlock from './EventBlock'
 
 export default function EventsMain ({ data }) {
     const { globalProperties } = useContext(GlobalContext)
@@ -23,20 +23,16 @@ export default function EventsMain ({ data }) {
                 }}
             >
                 {/* Featured event with the event background */}
-                <div className="w-full mx-2 md:mx-4 lg:mx-24 pt-96">
-                    {/* <FeaturedEventBlock
+                <div className="w-full px-2 md:px-4">
+                    <FeaturedEventBlock
                         adaptedEvents={adaptedEvents}
                         title={eventsCategories[0]}
-                    /> */}
-                    <EventBlock
-                    adaptedEvents={adaptedEvents}
-                    category={"Featured Events"}
-                />
+                    />
                 </div>
             </div>
 
             {/* events */}
-            <div className="w-full mt-24">
+            <div className="w-full">
                 <EventBlocks
                     adaptedEvents={adaptedEvents}
                     eventsCategories={eventsCategories}

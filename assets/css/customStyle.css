@@ -860,3 +860,9 @@
   
   /* ------------------------------------------------------> end  media queries <-----------------------------------------------------------------  */
   
+  .mydev:nth-of-type(odd) {
+    background-color:white;
+  }
+  .mydev:nth-of-type(even) {
+    background-color:#ccc;
+  }
