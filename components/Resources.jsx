@@ -33,13 +33,13 @@ const Recources = () => {
 
   return (
     <div>
-      <div className="bg-home_resource text-center p-2">
+      <div className="bg-redD50 text-center p-2">
         <h1 className="filosofia_regular text-2xl md:text-4xl text-white">
           {t("resources")}
         </h1>
       </div>
 
-      <div className="filosofia_regular bg-home_page_center_meniu p-2  hidden md:block">
+      <div className="filosofia_regular bg-redD50 p-2  hidden md:block">
         <div className="flex-wrap md:flex flex-row items-end md:justify-around lg:justify-evenly text-center mx-auto w-full">
           {linksData.map((d, i) => {
             return (

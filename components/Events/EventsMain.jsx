@@ -6,6 +6,7 @@ import { categoriesAdapter } from '../../lib/globalPropertiesAdapter'
 import { imageAdapter } from '../../lib/imageAdapter'
 import EventBlocks from './EventBlocks'
 import { processEventDates } from '../../lib/dateAdapter'
+import Slider from '../Slider/Slider'
 
 export default function EventsMain ({ data }) {
     const { globalProperties } = useContext(GlobalContext)
@@ -18,6 +19,8 @@ export default function EventsMain ({ data }) {
 
     return (
         <>
+      <Slider />
+    
             <div
                 className="flex justify-center w-full h-auto mb-auto bg-opacity-75 imageBack"
                 style={{

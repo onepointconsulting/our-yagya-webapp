@@ -15,7 +15,7 @@ const SideBar = () => {
             </div>
     
             <div className="py-4">
-                <h1 className="text-3xl text-start text-yagya_sidebar_filter_color lg:text-4xl filosofia_italic">
+                <h1 className="text-3xl text-start text-grayDark lg:text-4xl filosofia_italic">
                     filter
                 </h1>
             </div>
