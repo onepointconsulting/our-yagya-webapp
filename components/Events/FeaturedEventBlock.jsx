@@ -12,10 +12,10 @@ const FeaturedEventItem = ({ event }) => {
   if (event.image.length === 0) {
     return [];
   }
-  console.log("event.joinLink", event.joinLink);
+
   return (
     <>
-      <div className="flex odd:bg-white even:bg-gray50  opacity-75">
+      <div className="flex odd:bg-white even:bg-gray50 ">
         <div className="cursor-pointer w-full my-1 ">
           <div className="flex items-center justify-between">
             <Link href={`/single_event/${event.id}`}>
@@ -119,8 +119,8 @@ const EventArrow = () => {
 export default function FeaturedEventBlock({adaptedEvents,title = "You forgot the title",
 }) {
   return (
-    <div className="flex items-center justify-center w-full mt-28 md:mt-36 lg:mt-52">
-      <div className="relative w-full h-full ml-auto mr-auto  lg:m-4 md:w-11/12 lg:w-10/12">
+    <div className="w-full mt-28 md:mt-36 lg:mt-52 px-2 md:px-4 lg:px-24">
+      <div className="w-full mx-auto">
         <div className="py-2 pl-4 pr-2 text-xl text-slate-50 filosofia_italic bg-gold1 md:text-3xl xl:text-4xl">
           {title}
         </div>
