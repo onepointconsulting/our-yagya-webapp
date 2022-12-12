@@ -4,7 +4,6 @@ import Link from "../../node_modules/next/link";
 import { GlobalContext } from "../../pages/_app";
 import { useTranslation } from "react-i18next";
 
-const BGCOLOR = "white";
 const FeaturedEventItem = ({ event }) => {
   const { locale } = useContext(GlobalContext);
   const { t } = useTranslation();
