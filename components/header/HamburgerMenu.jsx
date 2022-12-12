@@ -18,7 +18,7 @@ const HamburgerMenu = () => {
     <>
       {/* <!-- hamburger menu --> */}
       <div
-        className="bg-[#ffffff] relative w-[34%] h-auto flex justify-end items-center"
+        className="bg-white relative w-[34%] h-auto flex justify-end items-center"
         style={{ zIndex: "4" }}
       >
         {/* <!-- pille drop down --> */}

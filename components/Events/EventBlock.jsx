@@ -61,14 +61,14 @@ const EventBlock = ({ adaptedEvents, category }) => {
   }, [start]);
 
   return (
-    <div className="relative w-full bg-gray50 h-[27rem] md:h-[30rem] xl:h-[33rem] 2xl:h-[31rem]">
+    <div className="relative w-full bg-gray50 h-[23rem] md:h-[25rem] 2xl:h-[24rem]">
       <>
         <div className="py-2 pl-4 pr-2 text-[1.2rem] text-white capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
           {category}
         </div>
       </>
 
-      <div className="h-12 mt-auto">
+      <div>
         <ArrowIcon
           start={start}
           setStart={setStart}
