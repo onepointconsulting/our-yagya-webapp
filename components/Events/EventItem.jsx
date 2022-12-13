@@ -2,6 +2,7 @@ import Link from "next/link";
 import { formateDate } from "../../lib/dateAdapter";
 
 export const EventItem = ({ event, locale }) => {
+
   return (
     <Link
       className="bg-green-500 cursor-pointer"
@@ -13,12 +14,9 @@ export const EventItem = ({ event, locale }) => {
 
           <div>
           <span className="text-sm text-gray-700 md:text-base">
-              {formateDate(
-                event.date || event.startDate,
-                locale,
-                "dd LLLL yyyy  hh:mm a"
-              )}{" "}
-              {event.timezone}
+              {formateDate(event.localizedDate, locale, "dd LLLL yyyy")}
+              {' '}
+              {formateDate(event.localizedDate, locale, "hh:mm a ZZZZ")}
             </span>
           </div>
         </div>

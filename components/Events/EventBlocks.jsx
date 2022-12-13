@@ -14,7 +14,7 @@ const EventBlocks = ({ adaptedEvents, eventsCategories }) => {
   return (
     <div className="grid w-full grid-cols-1 gap-2 px-2 mb-20 md:gap-4 lg:gap-8 md:px-4 lg:px-24 md:grid-cols-2">
       {slicedEventCategories.map((category, i) => {
-        if (!!!adaptedEvents[category]) {
+        if (!adaptedEvents[category]) {
           return <></>;
         }
         return (
