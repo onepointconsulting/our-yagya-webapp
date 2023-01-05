@@ -19,6 +19,7 @@
     "@fullcalendar/timegrid": "^5.11.3",
     "@splidejs/react-splide": "^0.7.12",
     "apollo-boost": "^0.4.9",
+    "axios": "^1.2.2",
     "dotenv": "^16.0.1",
     "graphql": "^16.5.0",
     "i18next": "^21.8.8",
