@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "babel src -d lib",
+    "build": "next build",
     "test": "jest",
     "start": "next start",
     "lint": "next lint"
@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
+    "babel-cli": "^6.26.0",
     "eslint": "8.17.0",
     "eslint-config-next": "12.1.6",
     "jest": "^29.3.0",

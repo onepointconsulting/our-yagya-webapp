@@ -37,7 +37,7 @@
               "data": {
                 "attributes": {
                   "title": "The standard Lorem Ipsum passage, used since the 1500s",
-                  "categories": {
+                  "event_categories": {
                     "data": [
                       {
                         "attributes": {
@@ -68,7 +68,7 @@
               "data": {
                 "attributes": {
                   "title": " An apointment with Yourself",
-                  "categories": {
+                  "event_categories": {
                     "data": [
                       {
                         "attributes": {
@@ -106,7 +106,7 @@
               "data": {
                 "attributes": {
                   "title": "TROMSØ INTERNATIONAL FILM FESTIVAL",
-                  "categories": {
+                  "event_categories": {
                     "data": [
                       {
                         "attributes": {
@@ -137,7 +137,7 @@
               "data": {
                 "attributes": {
                   "title": "TROMSØ INTERNATIONAL FILM FESTIVAL",
-                  "categories": {
+                  "event_categories": {
                     "data": [
                       {
                         "attributes": {
@@ -168,7 +168,7 @@
               "data": {
                 "attributes": {
                   "title": "TROMSØ INTERNATIONAL FILM FESTIVAL",
-                  "categories": {
+                  "event_categories": {
                     "data": [
                       {
                         "attributes": {

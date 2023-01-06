@@ -269,7 +269,7 @@
                     "__typename": "UploadFileEntityResponse"
                   },
                   "title": "You can now generate datasets using JSON and import them into other schemas using the Dataset Column type.",
-                  "categories": {
+                  "event_categories": {
                     "data": [
                       {
                         "attributes": {
@@ -357,7 +357,7 @@
                     "__typename": "UploadFileEntityResponse"
                   },
                   "title": "Massive UI Update! The UI has been overhauled to provide a faster, prettier experience.",
-                  "categories": {
+                  "event_categories": {
                     "data": [
                       {
                         "attributes": {
@@ -431,7 +431,7 @@
                     "__typename": "UploadFileEntityResponse"
                   },
                   "title": "Massive UI Update! The UI has been overhauled to provide a faster, prettier experience.",
-                  "categories": {
+                  "event_categories": {
                     "data": [
                       {
                         "attributes": {

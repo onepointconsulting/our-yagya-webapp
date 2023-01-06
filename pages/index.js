@@ -6,7 +6,6 @@ import { indexLayout } from '../lib/apiClient'
 export const IndexContext = createContext({ data: {} })
 
 export default function Index ({ data }) {
-    console.log("datadata", data);
     return (
         <IndexContext.Provider value={{data}}>
             <Home/>
