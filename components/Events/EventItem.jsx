@@ -14,9 +14,9 @@ export const EventItem = ({ event, locale }) => {
 
           <div>
           <span className="text-sm text-gray-700 md:text-base">
-              {formateDate(event.localizedDate, locale, "dd LLLL yyyy")}
+              {formateDate(event.startDateTime, locale, "dd LLLL yyyy")}
               {' '}
-              {formateDate(event.localizedDate, locale, "hh:mm a ZZZZ")}
+              {formateDate(event.startDateTime, locale, "hh:mm a ZZZZ")}
             </span>
           </div>
         </div>

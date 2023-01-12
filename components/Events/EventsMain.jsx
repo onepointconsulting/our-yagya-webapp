@@ -12,9 +12,10 @@ export default function EventsMain ({ data }) {
   // const { globalProperties } = useContext(GlobalContext)
   const bgImage = imageAdapter(data)
 
-  // const eventsCategories = categoriesAdapter(globalProperties,
-  //   'eventsCategories')
-  //
+  const eventsCategories = data.data.categories
+  const allEvents = data.data.events
+
+  
   // const adaptedEvents = processEventDates(eventsAdapter(data))
 
   return (
@@ -27,21 +28,21 @@ export default function EventsMain ({ data }) {
           background: `url(${bgImage}) center center / cover no-repeat`,
         }}
       >
-        {/* Featured event with the event background */}
-        {/*<div className="w-full">*/}
-        {/*  <FeaturedEventBlock*/}
-        {/*    adaptedEvents={adaptedEvents}*/}
-        {/*    title={eventsCategories[0]}*/}
-        {/*  />*/}
-        {/*</div>*/}
+        {/* Featured event with the event background  */}
+        <div className="w-full">
+        <FeaturedEventBlock
+            allEvents={allEvents}
+            title={eventsCategories[0]}
+          />
+        </div>
       </div>
 
       {/* events */}
       <div className="w-full">
-        {/*<EventBlocks*/}
-        {/*  adaptedEvents={adaptedEvents}*/}
-        {/*  eventsCategories={eventsCategories}*/}
-        {/*/>*/}
+        <EventBlocks
+          allEvents={allEvents}
+          eventsCategories={eventsCategories}
+        />
       </div>
     </>
   )

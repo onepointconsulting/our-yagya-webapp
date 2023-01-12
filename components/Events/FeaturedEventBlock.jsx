@@ -115,7 +115,7 @@ const EventArrow = () => {
   );
 };
 
-export default function FeaturedEventBlock({adaptedEvents,title = "You forgot the title",
+export default function FeaturedEventBlock({allEvents,title = "You forgot the title",
 }) {
   return (
     <div className="w-full mt-28 md:mt-36 lg:mt-52 px-2 md:px-4 lg:px-24">
@@ -123,8 +123,8 @@ export default function FeaturedEventBlock({adaptedEvents,title = "You forgot th
         <div className="py-2 pl-4 pr-2 text-xl text-slate-50 filosofia_italic bg-gold1 md:text-3xl xl:text-4xl">
           {title}
         </div>
-        {!!adaptedEvents[title] ? (
-          adaptedEvents[title].map((event, i) => {
+        {!!allEvents[title] ? (
+          allEvents[title].map((event, i) => {
             return (
               <FeaturedEventItem event={event} key={`featuredEvent_${i}`} />
             );

@@ -38,7 +38,7 @@ const ArrowIcon = ({ start, setStart, arrowDirection, isEnd }) => {
 /**
  * Loops through events in category
  */
-const EventBlock = ({ adaptedEvents, category }) => {
+const EventBlock = ({ events, category }) => {
   const { locale } = useContext(GlobalContext)
 
   return (
@@ -51,8 +51,8 @@ const EventBlock = ({ adaptedEvents, category }) => {
         </div>
       </>
 
-      {!!adaptedEvents &&
-        adaptedEvents[category]?.map((event, i) => {
+      {!!events && 
+        events?.map((event, i) => {
           if (category === 'Featured Events')
             return <FeaturedEventItem locale={locale} event={event} key={i}/>
           else return <EventItem locale={locale} event={event} key={i}/>
