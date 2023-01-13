@@ -16,12 +16,12 @@ const EventBlocks = ({ allEvents, eventsCategories }) => {
   return (
     <div className="grid w-full grid-cols-1 gap-2 px-2 mb-20 md:gap-4 lg:gap-8 md:px-4 lg:px-24 md:grid-cols-2">
       {slicedEventCategories.map((category, i) => {
-        const eventsByCategory = getEventsByCategory(category, allEvents)
+        const eventsByCategory = getEventsByCategory(category.title, allEvents)
         if (eventsByCategory.length === 0) {
           return <></>;
         }
         return (
-          <EventBlock category={category} events={eventsByCategory}  key={i} />
+          <EventBlock category={category.title} categoryId={category.id} events={eventsByCategory} key={i} />
         );
       })}
     </div>

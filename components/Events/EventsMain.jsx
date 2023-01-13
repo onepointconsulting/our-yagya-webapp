@@ -32,7 +32,7 @@ export default function EventsMain ({ data }) {
         <div className="w-full">
         <FeaturedEventBlock
             allEvents={allEvents}
-            title={eventsCategories[0]}
+            title={eventsCategories[0].title}
           />
         </div>
       </div>

@@ -4,7 +4,7 @@ import { EventItem } from './EventItem'
 import useArrowHook from '../../hooks/useArrowHook'
 import FeaturedEventItem from './FeaturedEventItem'
 
-const ArrowIcon = ({ start, setStart, arrowDirection, isEnd }) => {
+const ArrowIcon = ({ start, setStart, arrowDirection, isEnd, categoryId }) => {
   const [t, iconUrl, step, isOnTop, isTheEnd] = useArrowHook(
     arrowDirection,
     start,
@@ -13,19 +13,23 @@ const ArrowIcon = ({ start, setStart, arrowDirection, isEnd }) => {
 
   const onClick = (e) => {
     e.preventDefault()
-    if (
-      (arrowDirection === 'up' && start !== 0) ||
-      (arrowDirection === 'down' && !isEnd)
-    ) {
-      setStart(start + step)
-    }
+    // if (
+    //   (arrowDirection === 'up' && start !== 0) ||
+    //   (arrowDirection === 'down' && !isEnd)
+    // ) {
+    //   setStart(start + step)
+    // }
+
+    // TODO: navigate deeper into the category based on the categoryId
+    // HOWTO navigate into a page and fetch the URL params
   }
 
   return (
     <div className="">
       {!isOnTop && !isTheEnd && (
         <h1
-          className="flex justify-center py-4 text-5xl text-center text-gray-400 cursor-poainter">
+          className="flex justify-center py-4 text-5xl text-center text-gray-400 cursor-pointer"
+          key = {categoryId}>
           <a href="#" onClick={onClick}>
             <img className="w-8 xs:w-10" src={iconUrl} alt={t('more')}/>
           </a>
@@ -38,8 +42,10 @@ const ArrowIcon = ({ start, setStart, arrowDirection, isEnd }) => {
 /**
  * Loops through events in category
  */
-const EventBlock = ({ events, category }) => {
+const EventBlock = ({ category, categoryId, events }) => {
   const { locale } = useContext(GlobalContext)
+
+  const onClick = (e) => {}
 
   return (
     <div
@@ -64,6 +70,7 @@ const EventBlock = ({ events, category }) => {
           setStart={() => {}}
           arrowDirection="down"
           isEnd={false}
+          categoryId = {categoryId}
         />
       </div>
     </div>
