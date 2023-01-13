@@ -15,7 +15,6 @@ export default function EventsMain ({ data }) {
   const eventsCategories = data.data.categories
   const allEvents = data.data.events
 
-  
   // const adaptedEvents = processEventDates(eventsAdapter(data))
 
   return (
