@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { formateDate } from "../../lib/dateAdapter";
+import { formateDate, formateDateToLocal } from '../../lib/dateAdapter'
 
 export const EventItem = ({ event, locale }) => {
 
@@ -14,9 +14,11 @@ export const EventItem = ({ event, locale }) => {
 
           <div>
           <span className="text-sm text-gray-700 md:text-base">
-              {formateDate(event.startDateTime, locale, "dd LLLL yyyy")}
+              {formateDateToLocal(event.startDate, locale, event.timezone,
+                "dd LLLL yyyy")}
               {' '}
-              {formateDate(event.startDateTime, locale, "hh:mm a ZZZZ")}
+              {formateDateToLocal(event.startDate, locale, event.timezone,
+                "hh:mm a ZZZZ")}
             </span>
           </div>
         </div>
