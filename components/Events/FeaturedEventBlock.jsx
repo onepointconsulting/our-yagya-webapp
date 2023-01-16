@@ -3,12 +3,13 @@ import { formateDate } from "../../lib/dateAdapter";
 import Link from "../../node_modules/next/link";
 import { GlobalContext } from "../../pages/_app";
 import { useTranslation } from "react-i18next";
+import {getEventsByCategory} from '../../lib/eventsAdapter'
 
 const FeaturedEventItem = ({ event }) => {
   const { locale } = useContext(GlobalContext);
   const { t } = useTranslation();
 
-  if (event.image.length === 0) {
+  if (event?.image?.length === 0) {
     return [];
   }
 
@@ -115,16 +116,19 @@ const EventArrow = () => {
   );
 };
 
-export default function FeaturedEventBlock({allEvents,title = "You forgot the title",
+export default function FeaturedEventBlock({allEvents, title = "You forgot the title",
 }) {
+  
+  const eventsByCategory = getEventsByCategory(title, allEvents)
+
   return (
     <div className="w-full mt-28 md:mt-36 lg:mt-52 px-2 md:px-4 lg:px-24">
       <div className="w-full mx-auto">
         <div className="py-2 pl-4 pr-2 text-xl text-slate-50 filosofia_italic bg-gold1 md:text-3xl xl:text-4xl">
           {title}
         </div>
-        {!!allEvents[title] ? (
-          allEvents[title].map((event, i) => {
+        {!!eventsByCategory ? (
+          eventsByCategory.map((event, i) => {
             return (
               <FeaturedEventItem event={event} key={`featuredEvent_${i}`} />
             );
