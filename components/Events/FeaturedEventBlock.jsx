@@ -9,7 +9,7 @@ const FeaturedEventItem = ({ event }) => {
   const { locale } = useContext(GlobalContext);
   const { t } = useTranslation();
 
-  if (event?.image?.length === 0) {
+  if (event?.imageUrl?.length === 0) {
     return [];
   }
 
@@ -24,7 +24,7 @@ const FeaturedEventItem = ({ event }) => {
                 <div className="relative w-[27vw] md:w-36">
                   <img
                     className="object-cover w-full h-full"
-                    src={event.image}
+                    src={event.imageUrl}
                     alt={event.alternativeText}
                     title={event.alternativeText}
                   />
@@ -39,12 +39,12 @@ const FeaturedEventItem = ({ event }) => {
                   <div className="items-center justify-between w-full md:flex">
                     <div>
                       <p className="leading-6 text-[10px] text-gray-400 md:text-[1rem] lg:text-[1.125rem]">
-                        {formateDate(event.localizedDate, locale, "dd LLLL yyyy")}
+                        {formateDate(event.startDateTime, locale, "dd LLLL yyyy")}
                       </p>
                     </div>
                     <div>
                       <p className="leading-6 text-[10px] text-gray-400 md:text-[1rem] lg:text-[1.125rem]">
-                        {formateDate(event.localizedDate, locale, "hh:mm a ZZZZ")}{" "}
+                        {formateDate(event.startDateTime, locale, "hh:mm a ZZZZ")}{" "}
                       </p>
                     </div>
                   </div>
