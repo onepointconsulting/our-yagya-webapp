@@ -30,7 +30,7 @@ const ArrowIcon = ({ start, setStart, arrowDirection, isEnd, categoryId }) => {
         <h1
           className="flex justify-center py-4 text-5xl text-center text-gray-400 cursor-pointer"
           key = {categoryId}>
-          <a href="#" onClick={onClick}>
+          <a href={`/event/category/${categoryId}`}>
             <img className="w-8 xs:w-10" src={iconUrl} alt={t('more')}/>
           </a>
         </h1>
@@ -42,7 +42,7 @@ const ArrowIcon = ({ start, setStart, arrowDirection, isEnd, categoryId }) => {
 /**
  * Loops through events in category
  */
-const EventBlock = ({ category, categoryId, events }) => {
+const EventBlock = ({ category, categoryId, events, hasChildren }) => {
   const { locale } = useContext(GlobalContext)
 
   const onClick = (e) => {}
@@ -64,6 +64,7 @@ const EventBlock = ({ category, categoryId, events }) => {
           else return <EventItem locale={locale} event={event} key={i}/>
         })}
 
+    { !!hasChildren && 
       <div className="absolute inset-x-0 bottom-0  lg:bottom-[1rem]">
         <ArrowIcon
           start={0}
@@ -73,6 +74,7 @@ const EventBlock = ({ category, categoryId, events }) => {
           categoryId = {categoryId}
         />
       </div>
+}
     </div>
   )
 }

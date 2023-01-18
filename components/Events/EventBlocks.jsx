@@ -1,5 +1,5 @@
 import EventBlock from './EventBlock'
-import {getEventsByCategory} from '../../lib/eventsAdapter'
+import {getEventsByCategory, getChildrenCountByCategory} from '../../lib/eventsAdapter'
 
 const EventBlocks = ({ allEvents, eventsCategories }) => {
   if (eventsCategories.length === 0) {
@@ -17,11 +17,13 @@ const EventBlocks = ({ allEvents, eventsCategories }) => {
     <div className="grid w-full grid-cols-1 gap-2 px-2 mb-20 md:gap-4 lg:gap-8 md:px-4 lg:px-24 md:grid-cols-2">
       {slicedEventCategories.map((category, i) => {
         const eventsByCategory = getEventsByCategory(category.title, allEvents)
+        const childrenCountByCategory = getChildrenCountByCategory(category.title, allEvents)
         if (eventsByCategory.length === 0) {
           return <></>;
         }
+        const hasChildren = childrenCountByCategory > 0 ? true : false
         return (
-          <EventBlock category={category.title} categoryId={category.id} events={eventsByCategory} key={i} />
+          <EventBlock category={category.title} categoryId={category.id} events={eventsByCategory} hasChildren={hasChildren} key={i} />
         );
       })}
     </div>
