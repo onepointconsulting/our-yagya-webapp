@@ -19,9 +19,9 @@ const FeaturedEventItem = ({ event, locale }) => {
                             className="flex items-center w-auto md:w-4/5 lg:w-5/6 xl:w-5/6">
                             {/* <!-- image --> */}
 
-                            <div className="relative w-[27vw] md:w-36">
+                            <div className="relative w-24 h-20 md:w-44 md:h-28">
                                 <img
-                                    className="object-cover w-full h-full"
+                                    className="object-scale-down absolute w-full h-full"
                                     src={event.image}
                                     alt={event.alternativeText}
                                     title={event.alternativeText}
