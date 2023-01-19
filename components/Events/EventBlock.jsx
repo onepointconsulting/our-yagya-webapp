@@ -3,9 +3,10 @@ import { GlobalContext } from "../../pages/_app";
 import { EventItem } from "./EventItem";
 import useArrowHook from "../../hooks/useArrowHook";
 import FeaturedEventItem from "./FeaturedEventItem";
+import Link from 'next/link'
 
-const ArrowIcon = ({ start, setStart, arrowDirection, isEnd, categoryId }) => {
-  const [t, iconUrl, step, isOnTop, isTheEnd] = useArrowHook(
+const ArrowIcon = ({ start, arrowDirection, isEnd, categoryId }) => {
+  const [t, iconUrl, isOnTop, isTheEnd] = useArrowHook(
     arrowDirection,
     start,
     isEnd
@@ -30,9 +31,9 @@ const ArrowIcon = ({ start, setStart, arrowDirection, isEnd, categoryId }) => {
         <h1
           className="flex justify-center py-4 text-5xl text-center text-gray-400 cursor-pointer"
           key = {categoryId}>
-          <a href={`/event/category/${categoryId}`}>
+          <Link href={`/event/category/${categoryId}`}>
             <img className="w-8 xs:w-10" src={iconUrl} alt={t('more')}/>
-          </a>
+          </Link>
         </h1>
       )}
     </div>
@@ -44,8 +45,6 @@ const ArrowIcon = ({ start, setStart, arrowDirection, isEnd, categoryId }) => {
  */
 const EventBlock = ({ category, categoryId, events, hasChildren }) => {
   const { locale } = useContext(GlobalContext)
-
-  const onClick = (e) => {};
 
   return (
     <div className="relative w-full bg-gray50 pb-8">
