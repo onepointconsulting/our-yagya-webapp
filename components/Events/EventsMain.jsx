@@ -11,7 +11,6 @@ import Slider from '../Slider/Slider'
 export default function EventsMain ({ data }) {
   // const { globalProperties } = useContext(GlobalContext)
   const bgImage = imageAdapter(data)
-
   const eventsCategories = data.data.categories
   const allEvents = data.data.events
 

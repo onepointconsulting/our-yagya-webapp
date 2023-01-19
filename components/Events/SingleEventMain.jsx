@@ -153,7 +153,7 @@ const EventTime = ({singleEvent, locale}) => {
                         {' '}
                         {t('Timezone')}:{' '}
                         <div className="ml-4 w-36 md:w-48 xl:w-60">
-                            {singleEvent.sTimezone.name}
+                            {singleEvent.sTimezone?.name}
                         </div>
                     </div>
                     <div className="flex items-center justify-between w-full my-2">

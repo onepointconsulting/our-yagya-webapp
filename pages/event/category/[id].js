@@ -13,8 +13,6 @@ export default function SingleCategory ({ data }) {
   const { asPath } = useRouter()
   const { baseUrl } = useContext(GlobalContext)
 
-  console.log('data:', data)
-
   return (
     <>
       <Head>
