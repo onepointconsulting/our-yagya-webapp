@@ -29,7 +29,7 @@ export default function FeaturedEventBlock({allEvents, title = "You forgot the t
           {title}
         </div>
         {!!eventsByCategory ? (
-          eventsByCategory.map((event, i) => {
+          eventsByCategory.slice(0,4).map((event, i) => {
             return (
               <FeaturedEventItem event={event} key={`featuredEvent_${i}`} />
             );

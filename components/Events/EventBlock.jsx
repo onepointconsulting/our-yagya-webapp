@@ -36,10 +36,11 @@ const EventBlock = ({ category, categoryId, events, hasChildren }) => {
       </>
 
       {!!events &&
-        events?.map((event, i) => {
-          if (category === "Featured Events")
-            return <FeaturedEventItem locale={locale} event={event} key={i} />;
-          else return <EventItem locale={locale} event={event} key={i} />;
+        events.slice(0,1).map((event, i) => {
+          // if (category === "Featured Events")
+          //   return <FeaturedEventItem locale={locale} event={event} key={i} />;
+          // else 
+          return <EventItem locale={locale} event={event} key={i} />;
         })}
 
     { !!hasChildren && 
