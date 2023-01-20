@@ -100,24 +100,21 @@ const FeaturedEventItem = ({ event }) => {
   );
 };
 
-const EventArrow = () => {
+const EventArrow = ({categoryId}) => {
   return (
     <h1 className="flex justify-center my-4 text-6xl text-center text-gray-400 cursor-pointer md:my-10">
-     <Link href="https://ouryagya.netlify.app/calendar_events.html" >
-     <a target="_blank">
+     <Link href={`/event/category/${categoryId}`}>
         <img
           className="w-8 xs:w-10 md:w-12"
           src="/img/icons/ArrowDown.png"
           alt=""
         />
-      </a>
      </Link>
     </h1>
   );
 };
 
-export default function FeaturedEventBlock({allEvents, title = "You forgot the title",
-}) {
+export default function FeaturedEventBlock({allEvents, title = "You forgot the title", hasChildren, categoryId}) {
   
   const eventsByCategory = getEventsByCategory(title, allEvents)
 
@@ -136,7 +133,9 @@ export default function FeaturedEventBlock({allEvents, title = "You forgot the t
         ) : (
           <></>
         )}
-        <EventArrow />
+        { !!hasChildren && 
+        <EventArrow categoryId={categoryId}/>
+}
       </div>
     </div>
   );
