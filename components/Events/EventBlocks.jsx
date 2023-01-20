@@ -18,7 +18,7 @@ const EventBlocks = ({ allEvents, eventsCategories }) => {
       {slicedEventCategories.map((category, i) => {
         const eventsByCategory = getEventsByCategory(category.title, allEvents)
         const childrenCountByCategory = getChildrenCountByCategory(category.title, allEvents)
-        const hasChildren = childrenCountByCategory > 0 ? true : false
+        const hasChildren = childrenCountByCategory > 0
         if (eventsByCategory.length === 0) {
           return <></>;
         }

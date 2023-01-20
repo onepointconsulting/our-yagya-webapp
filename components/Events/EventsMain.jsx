@@ -1,21 +1,16 @@
-import React, { useContext } from 'react'
-import { eventsAdapter } from '../../lib/eventsAdapter'
+import React from 'react'
+import { getChildrenCountFirstCategory } from '../../lib/eventsAdapter'
 import FeaturedEventBlock from './FeaturedEventBlock'
-import { GlobalContext } from '../../pages/_app'
-import { categoriesAdapter } from '../../lib/globalPropertiesAdapter'
 import { imageAdapter } from '../../lib/imageAdapter'
 import EventBlocks from './EventBlocks'
-import { processEventDates } from '../../lib/dateAdapter'
 import Slider from '../Slider/Slider'
-import {getChildrenCountFirstCategory} from '../../lib/eventsAdapter'
 
 export default function EventsMain ({ data }) {
-  // const { globalProperties } = useContext(GlobalContext)
   const bgImage = imageAdapter(data)
   const eventsCategories = data.data.categories
   const allEvents = data.data.events
   const childrenCountFeatured = getChildrenCountFirstCategory(allEvents)
-  const featuredHasChildren = childrenCountFeatured > 0 ? true : false
+  const featuredHasChildren = childrenCountFeatured > 0
   const firstCategoryId = eventsCategories[0].id
 
   // const adaptedEvents = processEventDates(eventsAdapter(data))

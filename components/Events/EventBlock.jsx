@@ -1,9 +1,10 @@
-import { useContext } from "react";
-import { GlobalContext } from "../../pages/_app";
-import { EventItem } from "./EventItem";
-import FeaturedEventItem from "./FeaturedEventItem";
+import { useContext } from 'react'
+import { GlobalContext } from '../../pages/_app'
+import { EventItem } from './EventItem'
 import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
+
+const MAX_EVENTS = 4
 
 const ArrowIcon = ({ categoryId }) => {
   const iconUrl = '/img/icons/ArrowDown.png'
@@ -36,7 +37,7 @@ const EventBlock = ({ category, categoryId, events, hasChildren }) => {
       </>
 
       {!!events &&
-        events.slice(0,1).map((event, i) => {
+        events.slice(0, MAX_EVENTS).map((event, i) => {
           // if (category === "Featured Events")
           //   return <FeaturedEventItem locale={locale} event={event} key={i} />;
           // else 
