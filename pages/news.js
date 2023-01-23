@@ -1,5 +1,5 @@
 import { adaptCustomPage } from '../lib/pageAdapter'
-import NewsMain from '../components/NewsCom/NewsMain'
+import NewsMain from '../components/NewsPage/NewsMain'
 import { newsLayout } from '../lib/apiClient'
 import Slider from '../components/Slider/Slider'
 import { createContext } from 'react'

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { adaptCustomPage } from "../../lib/pageAdapter";
 import { singleNewsLayout } from "../../lib/apiClient";
-import SingleNewsMain from "../../components/NewsCom/SingleNewsMain";
+import SingleNewsMain from "../../components/NewsPage/SingleNewsMain";
 import { singleNewsAdapter } from "../../lib/newsAdapter";
 import Head from "next/head";
 import MetaTags from "../../components/SocialMedia/MetaTags";

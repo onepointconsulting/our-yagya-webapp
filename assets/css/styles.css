@@ -56,10 +56,20 @@
 :root {
   scroll-behavior: smooth;
 }
+.transparency:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.5);
+}
 
+.transparency:nth-child(even) {
+  background-color: rgb(195 192 192 / 50%);
+}
 /* -----------------------------------------------------------------------> end animations <-------------------------------------------------- */
 /* ---------------------------------------------------------> end costume style */
-
+.murli_search {
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #fff, 0 0 82px #fff, 0 0 92px #fff, 0 0 102px #fff, 0 0 151px #fdfdfd;
+  background: #ffffff;
+  box-shadow: 0 0 7px #ffffff42, 0 0 20px 10px #fff, 0 0 21px #fff, 0 0 42px #fff, 0 0 82px #fff, 0 0 92px #fff, 0 0 102px #f8f8f8, 0 0 151px #fff;
+}
 hr {
   height: 0;
   color: inherit;

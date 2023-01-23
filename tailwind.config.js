@@ -66,6 +66,7 @@ module.exports = {
         "gray50": "#e3e3e3",
         "yagya-red": "#d1232a",
         "gold1": "#bf8f23",
+        "gold50": "#ecddbd",
         "darkGray": "#ebebec",
         "online-event-title": "#e4512e",
         "yagya-red-title": "#cfbd88",

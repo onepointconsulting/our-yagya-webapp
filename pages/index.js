@@ -1,5 +1,5 @@
 import React, { createContext } from 'react'
-import Home from '../components/Home/Home'
+import Home from '../components/HomePage/Home'
 import { adaptCustomPage } from '../lib/pageAdapter'
 import { indexLayout } from '../lib/apiClient'
 

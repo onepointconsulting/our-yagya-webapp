@@ -7,7 +7,7 @@ import '../assets/css/customStyle.css'
 import '../styles/globals.css'
 
 import React, { createContext, useEffect } from 'react'
-import Header from '../components/header/Header'
+import Header from '../components/HeaderGeneral/Header'
 import { OurYagyaContextProvider } from '../context/OurYagyaContext'
 import { fetchGlobalData } from '../lib/apiClient'
 import { menuAdapter } from '../lib/menuAdapter'
@@ -21,6 +21,7 @@ import Head from 'next/head'
 import "@fullcalendar/common/main.css";
 import "@fullcalendar/daygrid/main.css";
 import "@fullcalendar/timegrid/main.css";
+import StickyButton from '../components/StickyButtons'
 
 export const GlobalContext = createContext({})
 
@@ -47,6 +48,8 @@ function OurYagya ({ Component, pageProps }) {
                     <title>{t('Our Yagya')}</title>
                 </Head>
                 <div className="relative metropolis_medium xl:container xl:mx-auto">
+                <StickyButton />
+
                 <Header title={titleAdapter(pageProps)}/>
                     <Component {...pageProps} />
                     <Footer />

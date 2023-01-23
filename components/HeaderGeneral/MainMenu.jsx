@@ -67,9 +67,7 @@ const MainMenu = () => {
   return (
     <>
       <div className="relative z-30 hidden lg:block">
-        <div
-          className="flex-row flex-wrap items-end w-full p-3 mx-auto text-center filosofia_regular bg-grayDark md:flex md:justify-around lg:justify-evenly"
-        >
+        <div className="flex-row flex-wrap items-end w-full p-3 mx-auto text-center filosofia_regular bg-grayDark md:flex md:justify-around lg:justify-evenly">
           {mainMenu.map((menu, i) => {
             return (
               <MenuLink
