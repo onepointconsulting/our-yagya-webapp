@@ -1,4 +1,7 @@
-import findStartAndEndMonth, { durationAdapter } from '../../lib/dateAdapter'
+import findStartAndEndMonth, {
+  currentTimeAsISO,
+  durationAdapter,
+} from '../../lib/dateAdapter'
 
 describe('dateAdapter', () => {
   it('converts video one hour to 01:00:00', () => {
@@ -88,5 +91,12 @@ describe('dateAdapter', () => {
     expect(start.endsWith("-01")).toBe(true)
     expect(start.startsWith(year.toString())).toBe(true)
     expect(end.startsWith(year.toString())).toBe(true)
+  })
+  it('generate current date time ISO', () => {
+    const isoTimestamp = currentTimeAsISO()
+    expect(isoTimestamp).toBeTruthy()
+    expect(isoTimestamp.includes('T')).toBe(true)
+    expect(isoTimestamp.endsWith('Z')).toBe(true)
+    expect(isoTimestamp.match(/^\d{4}-\d{2}-\d{2}T.+/).length === 1).toBe(true)
   })
 })

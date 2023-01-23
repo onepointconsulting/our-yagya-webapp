@@ -1,15 +1,15 @@
-import React, { useContext } from "react";
-import { formateDate } from "../../lib/dateAdapter";
-import Link from "../../node_modules/next/link";
-import { useTranslation } from "react-i18next";
-import { GlobalContext } from "../../pages/_app";
+import React, { useContext } from 'react'
+import { formateDate } from '../../lib/dateAdapter'
+import Link from '../../node_modules/next/link'
+import { useTranslation } from 'react-i18next'
+import { GlobalContext } from '../../pages/_app'
 
 const FeaturedEventItem = ({ event }) => {
-  const { locale } = useContext(GlobalContext);
-  const { t } = useTranslation();
+  const { locale } = useContext(GlobalContext)
+  const { t } = useTranslation()
 
   if (event?.imageUrl?.length === 0) {
-    return [];
+    return []
   }
 
   return (
