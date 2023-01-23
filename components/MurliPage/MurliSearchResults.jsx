@@ -1,13 +1,13 @@
-import React, { createContext, useState } from "react";
-import { ToggleContext, useToggle } from "../../context/ToggleContext";
-import Toggle from "../ClassesPage/Toggle";
-import SideBar from "../HeaderGeneral/SideBar";
-import MurliSearchBadges from "./MurliSearchBadges";
+import React from 'react'
+import { ToggleContext, useToggle } from '../../context/ToggleContext'
+import Toggle from '../ClassesPage/Toggle'
+import SideBar from '../HeaderGeneral/SideBar'
+import MurliSearchBadges from './MurliSearchBadges'
 
 // context is for the sidebar component
 
 export default function MurliSearchResults() {
-    const { isOpen, handleOpen, handleClose } = useToggle();
+  const { isOpen, handleOpen, handleClose } = useToggle()
 
   const searchData = [
     {
