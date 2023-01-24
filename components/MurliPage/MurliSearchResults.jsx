@@ -24,7 +24,7 @@ export default function MurliSearchResults() {
 
         <div className="my-8">
           <h1 className="flex justify-center text-center cursor-poainter">
-            <!-- TODO: Change this to a meaningful -->
+            {/*TODO: Change this to a meaningful*/}
             <a href="/events.html">
               <img className="w-8" src="/img/icons/ArrowDown.png" alt="" />
             </a>
