@@ -94,7 +94,7 @@ const FeaturedEventItem = ({ event }) => {
             <Link href={`/single_event/${event.id}`}>
               <div className="flex items-center w-auto md:w-4/5 lg:w-5/6 xl:w-5/6">
                 {/* <!-- image --> */}
-                
+
                 <FeaturedEventImage event={event} />
 
                 {/* title and date */}

@@ -13,7 +13,7 @@ export default function MurliSearchBadges() {
           </h1>
         </Link>
 
-        <div className="overflow-x-scroll">
+        <div className="overflow-x-scroll lg:overflow-x-auto">
           <div className="inline-flex">
             <div className="bg-gold50 text-white py-2 px-2 mx-1 md:mx-3 flex justify-between items-center rounded-full m-1 w-28 md:w-36 lg:w-40 xl:w-48">
               {" "}

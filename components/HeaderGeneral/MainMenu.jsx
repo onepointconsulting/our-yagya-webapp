@@ -1,8 +1,7 @@
-import Link from "next/link";
-import { useTranslation } from "react-i18next";
-import { useContext } from "react";
-import { GlobalContext } from "../../pages/_app";
-import { useRouter } from "next/router";
+import Link from 'next/link'
+import { useContext } from 'react'
+import { GlobalContext } from '../../pages/_app'
+import { useRouter } from 'next/router'
 
 const MenuLink = ({ attributes, isLast }) => {
   const url = attributes.url;
@@ -62,7 +61,6 @@ const SubMenu = ({ mainMenu }) => {
  * @constructor
  */
 const MainMenu = () => {
-  const { t } = useTranslation();
   const { mainMenu } = useContext(GlobalContext);
 
   return (

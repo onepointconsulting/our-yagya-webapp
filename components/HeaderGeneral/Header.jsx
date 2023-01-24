@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import MainMenu from "./MainMenu";
 import HamburgerMenu from "./HamburgerMenu";
