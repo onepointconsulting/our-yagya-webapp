@@ -5,5 +5,5 @@ if [ $# -eq 0 ]
     echo "No commit message provided"
   else
     git status
-    git add . && git commit -m "$1" && git push origin your-branch-name
+    git add . && git commit -m "$1" && git push origin main
 fi
