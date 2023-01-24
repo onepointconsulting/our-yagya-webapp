@@ -76,7 +76,7 @@ const Header = ({ title }) => {
 
                     {/* <!-- title and subtitle --> */}
                     <Link href="/">
-                        <a className="absolute left-0 right-0 m-auto top-10 xs:top-12 lg:top-20 md:w-max">
+                        <a className="absolute left-0 right-0 m-auto top-8 xs:top-12 lg:top-20 md:w-max">
                             {/*
                             
                             <h4 className=" text-gold1 text-[1rem] lg:text-[2rem] xl:text-[3vw] 2xl:text-[3em] uppercase">
@@ -110,7 +110,8 @@ const Header = ({ title }) => {
 
                 <HamburgerMenu/>
             </div>
-            <MainMenu />
+<div className="hidden lg:block">            <MainMenu />
+</div>
         </div>
     )
 }
