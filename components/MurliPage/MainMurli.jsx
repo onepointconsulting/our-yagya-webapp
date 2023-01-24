@@ -1,8 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import MurliQuestion from "./MurliQuestion";
-import MurliSearchResults from "./MurliSearchResults";
-
 const MurliBadges = () => {
   return (
     <div className="lg:mr-auto grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 p-2 lg:p-4 xl:pb-16 text-center filosofia_italic">
@@ -168,14 +165,14 @@ const MurliSearchEngine = () => {
               >
                 <img
                   className="h-6 md:h-12"
-                  src="../img/magnifying_glass.svg"
+                  src="/img/magnifying_glass.svg"
                   alt="magnifying glass"
                 />
               </a>
             </div>
 
             <div className="pl-4">
-              <Link href="/MurliSearchResult">
+              <Link href="/murli-search-result">
                 <a className="flex justify-center items-center rounded-full h-12 w-12 p-2 md:p-4 bg-gold1 text-white text-lg md:text-2xl">
                   GO
                 </a>

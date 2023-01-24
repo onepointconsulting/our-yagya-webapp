@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "../../node_modules/next/link";
 
 export default function Classes() {
   const searchData = [
@@ -38,12 +39,12 @@ export default function Classes() {
   return (
     <div className="mt-4 fadeInLeft md:-mt-4 lg:mt-0">
       {searchData.map((item, index) => (
-        <a href="/details.html" className="my-2">
+        <Link href="/details.html">
           <div
             className={
               index % 2 === 0
-                ? "flex-row justify-between md:flex bg-gray-200"
-                : "flex-row justify-between md:flex bg-white"
+                ? "flex-row justify-between md:flex my-3 bg-gray-200"
+                : "flex-row justify-between md:flex my-3 bg-white"
             }
           >
             <div className="flex items-center w-auto">
@@ -68,19 +69,21 @@ export default function Classes() {
                 </div>
               </div>
             </div>
-            {/* <!-- flex right --> */}
+
+            {/* <!-- icons on the right --> */}
             <div className="flex items-center">
               <div className="pl-2 pr-2 lg:m-auto md:pl-3 md:pr-3 flex flex-col items-center">
                 <img
                   className="w-8 md:w-12 xl:w-16"
-                  src="../img/icons/eye.png"
-                  alt=""
+                  src="/img/icons/eye.png"
+                  alt="eye icon"
                 />
                 <p className="text-sm lg:text-base text-gray-300">Read</p>
               </div>
             </div>
           </div>
-        </a>
+        </Link>
+       
       ))}
     </div>
   );

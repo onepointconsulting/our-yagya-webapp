@@ -1,19 +1,17 @@
 import React from "react";
-import GoldenButtons from "./GoldenButtons";
-import ClassSpeaker from "./ClassSpeaker";
+import Link from "../../node_modules/next/link";
 
 export default function LatestClasses() {
   return (
     <>
-      <div className="overflow-auto whitespace-nowrap flex items-center py-2 my-4 md:my-6 metropolis_medium">
-        <a 
-          href="#home"
-          className="inline-flex text-white text-center no-underline mx-2"
-        >
-          <h1 className="text-2xl xss:text-3xl xl:text-6xl text-gold1 text-emoji filosofia_italic">
+      <div className="pt-4 lg:pt-0 lg:py-2 my-2 md:my-2 lg:my-6 metropolis_medium">
+        <Link 
+          href="/"
+          className="inline-flex text-white text-center no-underline">
+          <h1 className="text-2xl xss:text-3xl md:text-5xl xl:text-6xl text-gold1 filosofia_italic">
             Latest Classes & talks
           </h1>
-        </a>
+        </Link>
       </div>
     </>
   );

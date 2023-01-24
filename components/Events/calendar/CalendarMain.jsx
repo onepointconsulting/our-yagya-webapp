@@ -253,7 +253,7 @@ const EventsAccordionItems = () => {
             >
               <img
                 className="w-4 xs:w-6 lg:w-7"
-                src="../img/Share.png"
+                src="/img/Share.png"
                 alt=""
               />
               <h3
@@ -417,7 +417,7 @@ const EventsAccordion = ({ pos, openPosition, setOpenPosition }) => {
                             >
                               <img
                                 className="w-4 xs:w-6 lg:w-7"
-                                src="../img/Share.png"
+                                src="/img/Share.png"
                                 alt=""
                               />
                               <h3
