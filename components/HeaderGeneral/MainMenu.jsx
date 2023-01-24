@@ -1,8 +1,7 @@
-import Link from "next/link";
-import { useTranslation } from "react-i18next";
-import { useContext } from "react";
-import { GlobalContext } from "../../pages/_app";
-import { useRouter } from "next/router";
+import Link from 'next/link'
+import { useContext } from 'react'
+import { GlobalContext } from '../../pages/_app'
+import { useRouter } from 'next/router'
 
 const MenuLink = ({ attributes, isLast }) => {
   const url = attributes.url;
@@ -34,11 +33,12 @@ const SubMenu = ({ mainMenu }) => {
     currentMenu[0]?.attributes?.children?.length > 0
   ) {
     const children = currentMenu[0]?.attributes?.children;
+
     return (
       <div
-        className="flex-row flex-wrap items-end w-full p-3 mx-auto text-center filosofia_regular bg-red70 md:flex md:justify-around lg:justify-evenly"
-        style={{ zIndex: -6 }}
-      >
+        className="hidden lg:flex-row flex-wrap items-end w-full p-3 mx-auto text-center filosofia_regular bg-red70 md:flex md:justify-around lg:justify-evenly"
+        style={{ zIndex: -6 }}>
+          
         {children.map((child, i) => {
           return (
             <MenuLink
@@ -61,13 +61,12 @@ const SubMenu = ({ mainMenu }) => {
  * @constructor
  */
 const MainMenu = () => {
-  const { t } = useTranslation();
   const { mainMenu } = useContext(GlobalContext);
 
   return (
     <>
       <div className="relative z-30 hidden lg:block">
-        <div className="flex-row flex-wrap items-end w-full p-3 mx-auto text-center filosofia_regular bg-grayDark md:flex md:justify-around lg:justify-evenly">
+        <div className="hidden lg:flex-row flex-wrap items-end w-full p-3 mx-auto text-center filosofia_regular bg-grayDark md:flex md:justify-around lg:justify-evenly">
           {mainMenu.map((menu, i) => {
             return (
               <MenuLink

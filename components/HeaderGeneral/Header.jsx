@@ -1,18 +1,13 @@
-import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
 import MainMenu from './MainMenu'
 import HamburgerMenu from './HamburgerMenu'
 import SearchBar from './SearchBar'
 import { useContext } from 'react'
 import { GlobalContext } from '../../pages/_app'
-import {
-    globalPropertyAdapter
-} from '../../lib/globalPropertiesAdapter'
-import PillMenu from './PillMenu'
+import { globalPropertyAdapter } from '../../lib/globalPropertiesAdapter'
 
 const Header = ({ title }) => {
     const { globalProperties } = useContext(GlobalContext)
-    const { t } = useTranslation()
 
     const logo = globalPropertyAdapter(globalProperties, 'logo')
 
@@ -76,7 +71,7 @@ const Header = ({ title }) => {
 
                     {/* <!-- title and subtitle --> */}
                     <Link href="/">
-                        <a className="absolute left-0 right-0 m-auto top-10 xs:top-12 lg:top-20 md:w-max">
+                        <a className="absolute left-0 right-0 m-auto top-8 xs:top-12 lg:top-20 md:w-max">
                             {/*
                             
                             <h4 className=" text-gold1 text-[1rem] lg:text-[2rem] xl:text-[3vw] 2xl:text-[3em] uppercase">
@@ -110,7 +105,8 @@ const Header = ({ title }) => {
 
                 <HamburgerMenu/>
             </div>
-            <MainMenu />
+<div className="hidden lg:block">            <MainMenu />
+</div>
         </div>
     )
 }

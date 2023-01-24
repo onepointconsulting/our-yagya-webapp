@@ -4,7 +4,7 @@ const SearchResult = () => {
   return (
     <div>
       {/* <!-- the speakers list section --> */}
-      <div className="mt-4 fadeInLeft md:-mt-4 lg:mt-0">
+      <div className="mt-4 fadeInLeft md:-mt-4 lg:mt-0 mb-2">
         <Link href="/details">
           <a>
             <div className="flex-row justify-between pt-1 pb-1 lg:flex md:mr-3 lg:pb-2 lg:pt-2 bg-gray40">

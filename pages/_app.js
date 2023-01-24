@@ -42,20 +42,23 @@ function OurYagya ({ Component, pageProps }) {
     }, [locale]);
 
     return (
-        <GlobalContext.Provider value={global}>
-            <OurYagyaContextProvider>
-                <Head>
-                    <title>{t('Our Yagya')}</title>
-                </Head>
-                <div className="relative metropolis_medium xl:container xl:mx-auto">
-                <StickyButton />
+    <GlobalContext.Provider value={global}>
+        <OurYagyaContextProvider>
+            <Head>
+            <title>{t("Our Yagya")}</title>
+            </Head>
+            <div className="relative metropolis_medium xl:container xl:mx-auto flex flex-col min-h-screen">
+            <StickyButton />
 
-                <Header title={titleAdapter(pageProps)}/>
-                    <Component {...pageProps} />
-                    <Footer />
-                </div>
-            </OurYagyaContextProvider>
-        </GlobalContext.Provider>
+            <Header title={titleAdapter(pageProps)} />
+            <div className="flex-1">
+                <Component {...pageProps} />
+            </div>
+            <Footer />
+            </div>
+        </OurYagyaContextProvider>
+    </GlobalContext.Provider>
+
     )
 }
 
