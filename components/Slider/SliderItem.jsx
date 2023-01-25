@@ -8,11 +8,12 @@ export default function SliderItem ({ id, imageUrl, imageAlternativeText, title,
     return ( 
         <SplideSlide className="splide__slide" key={`slide-${id}`}>
     <div
-    className="w-full max-w-full mx-auto overflow-hidden shadow-md metropolis_medium bg-redD50">
+    className="w-full max-w-full mx-auto overflow-hidden shadow-md metropolis_medium bg-redD50 cursor-pointer">
+        <Link href="#test">
     <div className="items-center justify-between md:flex">
-        <div className="mx-auto mt-2 lg:mt-0">
+        <div className="mx-auto lg:mt-0 h-52 xl:h-48 w-3/4 md:w-80  relative">
         <img
-            className="h-[50%] xs:h-2/4 mt-2 mb-2 mx-auto md:h-52 xl:h-48 w-[57%] xs:w-3/4 md:w-80 xl:w-80 md:ml-4 object-cover p-4"
+            className="mx-auto md:ml-4 object-cover p-4 absolute w-full h-full"
             style={{
             marginRight: 'auto',
             marginLeft: 'auto',
@@ -38,20 +39,21 @@ export default function SliderItem ({ id, imageUrl, imageAlternativeText, title,
             <div className="pl-4 description pr-1 sm:pr-0 sm:pl-0">
             <h3
                 className="text-SM leading-8 text-gray-500 capitalize online-event-p md:text-xl lg:text-lg xl:text-2xl">
-                {speakers}
+                Sr.Jayanti Kirpalani, Des
             </h3>
             </div>
-            {link && (
             <div
             className="float-right text-[1.2rem] md:text-base lg:text-lg xl:text-2xl md:mb-4 bg-gray-100 sm:float-none md:float-right p-2 lg:p-3 xl:p-4 mb-11 sm:mb-0 ml-auto hover:bg-blue-200 cursor-pointer transation text-gray-500">
             {t('INFO')}:
-                <Link href={link}>
-                <a>{link}</a>
+                <Link href="/">
+                <a>More info link</a>
                 </Link>
-            </div>)}
+            </div>
         </div>
         </div>
     </div>
+        </Link>
+
     </div>
     </SplideSlide>
     )

@@ -85,6 +85,7 @@ const FeaturedEventItem = ({ event }) => {
   if (event?.imageUrl?.length === 0) {
     return [];
   }
+  console.log("eventid",event);
 
   return (
     <>

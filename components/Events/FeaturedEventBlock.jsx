@@ -25,8 +25,6 @@ export default function FeaturedEventBlock ({
   categoryId,
 }) {
 
-  console.log('allEvents', allEvents)
-
   const eventsByCategory = getEventsByCategory(title, allEvents)
 
   return (

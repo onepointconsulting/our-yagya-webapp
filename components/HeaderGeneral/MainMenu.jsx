@@ -9,12 +9,12 @@ const MenuLink = ({ attributes, isLast }) => {
     <>
       {url.indexOf("/") === 0 ? (
         <Link href={attributes.url}>
-          <a className="menu">{attributes.title}</a>
+          <h6 className="menu">{attributes.title}</h6>
         </Link>
       ) : (
-        <a className="menu" href={attributes.url}>
+        <Link className="menu cursor-pointer" href={attributes.url}>
           {attributes.title}
-        </a>
+        </Link>
       )}
       {!isLast && <a className="text-gray-100">|</a>}
     </>
