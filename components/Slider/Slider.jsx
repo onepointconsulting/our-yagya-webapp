@@ -7,25 +7,27 @@ import { GlobalContext } from '../../pages/_app'
 import { IndexContext } from '../../pages'
 import { NewsContext } from '../../pages/news'
 import { EventsContext } from '../../pages/events'
+import { globalPropertyAdapter } from '../../lib/globalPropertiesAdapter'
 
-const extractSlides = () => {
-  const { locale } = useContext(GlobalContext)
-  const isIndex = (Object.keys(useContext(IndexContext).data).length > 0 && Object.keys(useContext(IndexContext).data).length > 0) ? true : false
-  const isNews = (Object.keys(useContext(NewsContext)).length > 0 && Object.keys(useContext(NewsContext).data).length > 0) ? true : false
-  // const isEvents = !isIndex && !isNews ? true : false
-
+const useExtractSlides = () => {
+  const { locale, globalProperties } = useContext(GlobalContext)
+  const isIndex = (Object.keys(useContext(IndexContext).data).length > 0 &&
+    Object.keys(useContext(IndexContext).data).length > 0)
+  const isNews = (Object.keys(useContext(NewsContext)).length > 0 &&
+    Object.keys(useContext(NewsContext).data).length > 0)
   if (isIndex) {
     return sliderAdapter(useContext(IndexContext).data, locale)
   }
   if (isNews) {
     return sliderAdapter(useContext(NewsContext).data, locale)
   }
-  return eventSliderAdapter(useContext(EventsContext).data, locale) // TODO: Create eventsSliderAdapter by analysing events-slider schema
+  const categoryIdStr = globalPropertyAdapter(globalProperties, 'categoryFeaturedEvents')
+  return eventSliderAdapter(useContext(EventsContext).data, locale, categoryIdStr)
 }
 
 export default function Slider () {
 
-  const slides = extractSlides()
+  const slides = useExtractSlides()
 
   return (
     <Splide
