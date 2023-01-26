@@ -1,13 +1,14 @@
-import { adaptCustomPage } from "../lib/pageAdapter";
-import EventsBlogMain from "../components/EventsBlog/EventsBlogMain";
-import React, { createContext } from "react";
-import { eventsLayout } from "../lib/apiClient";
+import React, { createContext } from 'react'
+import EventBlog from '../components/Events/EventBlog'
+
 export const EventsBlogContext = createContext({ data: {} });
 
 export default function Events({ data }) {
   return (
     <EventsBlogContext.Provider value={{ data }}>
-      <EventsBlogMain data={data} />
+      <div>
+        <EventBlog />
+      </div>
     </EventsBlogContext.Provider>
   );
 }
