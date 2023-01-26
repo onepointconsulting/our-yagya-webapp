@@ -5,6 +5,8 @@ import { useTranslation } from 'react-i18next'
 export default function SliderItem ({ id, imageUrl, imageAlternativeText, title, startTimestamp, speakers, link}) {
     const { t } = useTranslation()
 
+    console.log(speakers)
+
     return ( 
         <SplideSlide className="splide__slide" key={`slide-${id}`}>
     <div
@@ -39,7 +41,7 @@ export default function SliderItem ({ id, imageUrl, imageAlternativeText, title,
             <div className="pl-4 description pr-1 sm:pr-0 sm:pl-0">
             <h3
                 className="text-SM leading-8 text-gray-500 capitalize online-event-p md:text-xl lg:text-lg xl:text-2xl">
-                {speakers?.join(', ')}
+                {Array.isArray(speakers) && speakers?.join(', ') || speakers}
             </h3>
             </div>
             {link && <div
