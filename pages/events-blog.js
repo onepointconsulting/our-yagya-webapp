@@ -1,5 +1,6 @@
 import React, { createContext } from 'react'
-import EventBlog from '../components/Events/EventBlog'
+import EventBlog from '../components/EventsBlog/EventBlog'
+import { adaptCustomPage } from '../lib/pageAdapter';
 
 export const EventsBlogContext = createContext({ data: {} });
 
@@ -15,6 +16,6 @@ export default function Events({ data }) {
 
 // get server side props;
 // TODO : 
-// export async function getServerSideProps(context) {
-//   return await adaptCustomPage(context, eventsBlogLayout);
-// }
+export async function getServerSideProps(context) {
+  return await adaptCustomPage(context)
+}

@@ -9,7 +9,7 @@ const MenuLink = ({ attributes, isLast }) => {
     <>
       {url.indexOf("/") === 0 ? (
         <Link href={attributes.url}>
-          <h6 className="menu">{attributes.title}</h6>
+          <h6 className="menu cursor-pointer">{attributes.title}</h6>
         </Link>
       ) : (
         <Link className="menu cursor-pointer" href={attributes.url}>
