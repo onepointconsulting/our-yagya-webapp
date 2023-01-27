@@ -1,5 +1,5 @@
 import React from "react";
-import { getChildrenCountFirstCategory } from "../../lib/eventsAdapter";
+import { getChildrenCountFirstCategory, getNonFeaturedCategories, getFeaturedCategory, getFeaturedEvents, getNonFeaturedEvents } from "../../lib/eventsAdapter";
 import FeaturedEventBlock from "./FeaturedEventBlock";
 import { imageAdapter } from "../../lib/imageAdapter";
 import EventBlocks from "./EventBlocks";
@@ -9,9 +9,7 @@ export default function EventsMain({ data }) {
   const bgImage = imageAdapter(data);
   const eventsCategories = data.data.categories;
   const allEvents = data.data.events;
-  const childrenCountFeatured = getChildrenCountFirstCategory(allEvents);
-  const featuredHasChildren = childrenCountFeatured > 0;
-  const firstCategoryId = eventsCategories[0].id;
+  const featuredCategory = getFeaturedCategory(allEvents) 
 
   // const adaptedEvents = processEventDates(eventsAdapter(data))
 
@@ -26,21 +24,22 @@ export default function EventsMain({ data }) {
         }}
       >
         {/* Featured event with the event background  */}
+        {!!featuredCategory.id &&
         <div className="w-full">
           <FeaturedEventBlock
-            allEvents={allEvents}
-            title={eventsCategories[0].title}
-            hasChildren={featuredHasChildren}
-            categoryId={firstCategoryId}
+            featuredEvents={getFeaturedEvents(allEvents, featuredCategory.id)}
+            title={featuredCategory.title}
+            featuredCategoryId={featuredCategory.id}
           />
         </div>
+        }
       </div>
 
       {/* events */}
       <div className="w-full">
         <EventBlocks
-          allEvents={allEvents}
-          eventsCategories={eventsCategories}
+          allEvents={getNonFeaturedEvents(allEvents, featuredCategory.id)}
+          eventsCategories={getNonFeaturedCategories(eventsCategories, featuredCategory.id)}
         />
       </div>
     </>

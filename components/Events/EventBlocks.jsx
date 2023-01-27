@@ -2,6 +2,7 @@ import EventBlock from './EventBlock'
 import {getEventsByCategory, getChildrenCountByCategory} from '../../lib/eventsAdapter'
 
 const EventBlocks = ({ allEvents, eventsCategories }) => {
+  // console.log(allEvents, eventsCategories)
   if (eventsCategories.length === 0) {
     return <></>;
   }
@@ -10,12 +11,9 @@ const EventBlocks = ({ allEvents, eventsCategories }) => {
     return <></>;
   }
 
-  // To be removed when 'highlight' flag gets applied
-  const slicedEventCategories = eventsCategories.slice(1);
-
   return (
     <div className="grid w-full grid-cols-1 gap-2 px-2 mb-20 md:gap-4 lg:gap-8 md:px-4 lg:px-24 md:grid-cols-2">
-      {slicedEventCategories.map((category, i) => {
+      {eventsCategories.map((category, i) => {
         const eventsByCategory = getEventsByCategory(category.title, allEvents)
         const childrenCountByCategory = getChildrenCountByCategory(category.title, allEvents)
         const hasChildren = childrenCountByCategory > 0

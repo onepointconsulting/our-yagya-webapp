@@ -19,13 +19,12 @@ const EventArrow = ({ categoryId }) => {
 }
 
 export default function FeaturedEventBlock ({
-  allEvents,
+  featuredEvents,
   title = 'You forgot the title',
-  hasChildren,
-  categoryId,
+  featuredCategoryId
 }) {
-
-  const eventsByCategory = getEventsByCategory(title, allEvents)
+  const hasChildren = featuredEvents.children_count > 0
+  const featuredEventsList = featuredEvents.events
 
   return (
     <>
@@ -35,18 +34,18 @@ export default function FeaturedEventBlock ({
 
         <div
           className="relative w-full h-full ml-auto mr-auto lg:m-4 md:w-11/12 lg:w-10/12">
-          {!!eventsByCategory && eventsByCategory.length > 0 && (
+          {!!featuredEventsList && featuredEventsList.length > 0 && (
             <div className="w-full mx-auto">
               <div
                 className="py-2 pl-4 pr-2 text-[2rem] text-white filosofia_italic bg-gold1 md:text-4xl">
                 {title}
               </div>
-              {eventsByCategory.slice(0, 4).map((event, i) => {
+              {featuredEventsList.slice(0, 4).map((event, i) => {
                 return (
                   <FeaturedEventItem event={event} key={`featuredEvent_${i}`}/>
                 )
               })}
-              {hasChildren ? <EventArrow categoryId={categoryId}/> : <div
+              {hasChildren ? <EventArrow categoryId={featuredCategoryId}/> : <div
                 className="py-6 md:py-12"></div>}
             </div>
           )}
