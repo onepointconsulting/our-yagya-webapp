@@ -13,10 +13,11 @@ export default function SingleCategory ({ data }) {
   const { asPath } = useRouter()
   const { baseUrl } = useContext(GlobalContext)
 
+  console.log('parentCategory', JSON.stringify(data.data.parentCategory))
+
   return (
     <>
       <Head>
-        <title>CATEGORY HERE</title>
         <MetaTags
           title='CATEGORY HERE'
           image='IMAGE HERE'

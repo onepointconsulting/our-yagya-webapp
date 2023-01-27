@@ -41,16 +41,18 @@ function OurYagya ({ Component, pageProps }) {
         i18n.changeLanguage(locale);
     }, [locale]);
 
+    const pageTitle = titleAdapter(pageProps) ?? t("Our Yagya")
+
     return (
     <GlobalContext.Provider value={global}>
         <OurYagyaContextProvider>
             <Head>
-            <title>{t("Our Yagya")}</title>
+            <title>{pageTitle}</title>
             </Head>
             <div className="relative metropolis_medium xl:container xl:mx-auto flex flex-col min-h-screen">
             <StickyButton />
 
-            <Header title={titleAdapter(pageProps)} />
+            <Header title={pageTitle} />
             <div className="flex-1">
                 <Component {...pageProps} />
             </div>
