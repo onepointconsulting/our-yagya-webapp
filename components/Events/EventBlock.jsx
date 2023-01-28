@@ -6,16 +6,25 @@ import Link from "next/link";
 
 const MAX_EVENTS = 4;
 
-const ArrowIcon = ({ categoryId }) => {
+const ArrowIcon = ({ categoryId, showCard, total }) => {
   const iconUrl = "/img/icons/ArrowDown.png";
   const { t } = useTranslation();
+  let href 
+  if (showCard) {
+    if (total < 5)
+      href = `/events-blog/${categoryId}`
+      else
+      href = `/calendar`
+  } else 
+    href = `/event/category/${categoryId}`
+
   return (
     <div className="">
       <h1
         className="flex justify-center py-4 text-5xl text-center text-gray-400 cursor-pointer"
-        key={categoryId}
+        key={`down-arrow-${categoryId}`}
       >
-        <Link href={`/event/category/${categoryId}`}>
+        <Link href={href}>
           <img className="w-8 xs:w-10" src={iconUrl} alt={t("more")} />
         </Link>
       </h1>
@@ -26,7 +35,7 @@ const ArrowIcon = ({ categoryId }) => {
 /**
  * Loops through events in category
  */
-const EventBlock = ({ category, categoryId, events, hasChildren }) => {
+const EventBlock = ({ category, categoryId, events, hasChildren, showCard, total }) => {
   const { locale } = useContext(GlobalContext);
 
   return (
@@ -45,9 +54,9 @@ const EventBlock = ({ category, categoryId, events, hasChildren }) => {
           return <EventItem locale={locale} event={event} key={i} />;
         })}
 
-      {!!hasChildren && (
+      {(hasChildren || showCard) && ( 
         <div className="absolute inset-x-0 bottom-0  lg:bottom-[2px]">
-          <ArrowIcon categoryId={categoryId} />
+          <ArrowIcon categoryId={categoryId} showCard={showCard} total={total} />
         </div>
       )}
     </div>

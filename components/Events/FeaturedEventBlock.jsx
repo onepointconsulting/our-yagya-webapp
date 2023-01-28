@@ -1,13 +1,21 @@
 import React from 'react'
 import Link from '../../node_modules/next/link'
-import { getEventsByCategory } from '../../lib/eventsAdapter'
 import FeaturedEventItem from './FeaturedEventItem'
 
-const EventArrow = ({ categoryId }) => {
+const EventArrow = ({ categoryId, showCard, total }) => {
+  let href 
+  if (showCard) {
+    if (total < 5)
+      href = `/events-blog/${categoryId}`
+      else
+      href = `/calendar`
+  } else 
+    href = `/event/category/${categoryId}`
+
   return (
     <h1
       className="flex justify-center py-6 text-6xl text-center text-gray-400 cursor-pointer md:py-12">
-      <Link href={`/event/category/${categoryId}`}>
+      <Link href={href}>
         <img
           className="w-8 xs:w-10 md:w-12"
           src="/img/icons/ArrowDown.png"
@@ -24,6 +32,8 @@ export default function FeaturedEventBlock ({
   featuredCategoryId
 }) {
   const hasChildren = featuredEvents.children_count > 0
+  const total = featuredEvents.total
+  const showCard = featuredEvents.show_card
   const featuredEventsList = featuredEvents.events
 
   return (
@@ -45,8 +55,10 @@ export default function FeaturedEventBlock ({
                   <FeaturedEventItem event={event} key={`featuredEvent_${i}`}/>
                 )
               })}
-              {hasChildren ? <EventArrow categoryId={featuredCategoryId}/> : <div
-                className="py-6 md:py-12"></div>}
+              {(hasChildren || showCard) ? 
+                  <EventArrow categoryId={featuredCategoryId} 
+                    showCard={showCard} total={total}/> : 
+                    <div className="py-6 md:py-12"></div>}
             </div>
           )}
         </div>

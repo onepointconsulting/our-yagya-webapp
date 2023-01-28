@@ -1,5 +1,5 @@
 import React from "react";
-import { getChildrenCountFirstCategory, getNonFeaturedCategories, getFeaturedCategory, getFeaturedEvents, getNonFeaturedEvents } from "../../lib/eventsAdapter";
+import { getNonFeaturedCategories, getFeaturedCategory, getFeaturedEvents, getNonFeaturedEvents } from "../../lib/eventsAdapter";
 import FeaturedEventBlock from "./FeaturedEventBlock";
 import { imageAdapter } from "../../lib/imageAdapter";
 import EventBlocks from "./EventBlocks";
