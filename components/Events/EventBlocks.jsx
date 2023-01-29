@@ -1,5 +1,5 @@
 import EventBlock from './EventBlock'
-import {getEventsByCategory, getChildrenCountByCategory} from '../../lib/eventsAdapter'
+import {getEventsByCategory, getChildrenCountByCategory, getShowCardByCategory, getTotalByCategory} from '../../lib/eventsAdapter'
 
 const EventBlocks = ({ allEvents, eventsCategories }) => {
   // console.log(allEvents, eventsCategories)
@@ -17,11 +17,18 @@ const EventBlocks = ({ allEvents, eventsCategories }) => {
         const eventsByCategory = getEventsByCategory(category.title, allEvents)
         const childrenCountByCategory = getChildrenCountByCategory(category.title, allEvents)
         const hasChildren = childrenCountByCategory > 0
+        const showCard = getShowCardByCategory(category.title, allEvents)
+        const total = getTotalByCategory(category.title, allEvents)
+
         if (eventsByCategory.length === 0) {
           return <></>;
         }
         return (
-          <EventBlock category={category.title} categoryId={category.id} events={eventsByCategory} hasChildren={hasChildren} key={i} />
+          <EventBlock category={category.title} categoryId={category.id} 
+            events={eventsByCategory} 
+            hasChildren={hasChildren} 
+            showCard={showCard} total={total}
+            key={`eventBlock-${i}`} />
         );
       })}
     </div>
