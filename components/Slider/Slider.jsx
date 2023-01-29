@@ -42,7 +42,6 @@ export default function Slider () {
       }}
     >
       {slides.map((slide) => {
-        console.log("slide link", slide);
         const image = sliderImageAdapter(slide)
         return (
           <SliderItem

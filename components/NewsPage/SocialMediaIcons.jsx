@@ -1,3 +1,4 @@
+import { useState } from "react";
 
 const socialMediaData = [
   {
@@ -30,16 +31,31 @@ const socialMediaData = [
   }
 ]
 
-export default function SocialMediaIcons() {
+export default function SocialMediaIcons({ eventIndex }) {
+  const [socialOpen, setSocialOpen] = useState(false);
+  const social = () => {
+    setSocialOpen(!socialOpen);
+  };
+
   return (
-    <div className="absolute left-0 right-0 top-auto z-10">
-      <div className="flex flex-col float-right w-full">
-          {socialMediaData.map((sd, i) => {
-              return <a key={i} href="#" className={`h-auto text-white fa socialMediaClass ${sd.buttonStyle}`}>
-                  <img className="w-10 h-10 mx-auto" src={`/img/svg/${sd.image}`} alt="" />
-              </a>
-          })}
+    <>
+      <div onClick={() => setSocialOpen(!socialOpen)} >
+        <img className="w-8 md:w-12 lg:w-16" src="/img/Share.png"
+          alt="" />
+        <h3 className="text-center text-gray-500 text-sm md:text-lg">Share</h3>
       </div>
-    </div>
+      {socialOpen && (
+        <div className="absolute left-0 right-0 top-auto z-10 share-popup open">
+          <div className="flex flex-col float-right w-full">
+            {socialMediaData.map((sd, i) => {
+              return <a key={i} href="#" className={`h-auto text-white fa socialMediaClass ${sd.buttonStyle}`}>
+                <img className="w-10 h-10 mx-auto" src={`/img/svg/${sd.image}`} alt="" />
+              </a>
+            })}
+          </div>
+        </div>
+      )}
+
+    </>
   );
 }

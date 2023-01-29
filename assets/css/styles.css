@@ -63,6 +63,18 @@
 .transparency:nth-child(even) {
   background-color: rgb(195 192 192 / 50%);
 }
+
+.share-popup {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.share-popup.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
 /* -----------------------------------------------------------------------> end animations <-------------------------------------------------- */
 /* ---------------------------------------------------------> end costume style */
 .murli_search {

@@ -12,18 +12,15 @@ export default function EventsMain({ data }) {
   const featuredCategory = getFeaturedCategory(allEvents) 
 
   // const adaptedEvents = processEventDates(eventsAdapter(data))
-
+console.log("featuredCategory", imageAdapter(data));
   return (
     <>
       <Slider />
+      {/* Featured event category with the event background  */}
 
-      <div
-        className="flex justify-center w-full h-auto mb-auto bg-opacity-75 imageBack"
-        style={{
-          background: `url(${bgImage}) center center / cover no-repeat`,
-        }}
-      >
-        {/* Featured event with the event background  */}
+      <div className="flex justify-center w-full h-auto mb-auto bg-opacity-75 imageBack"
+           style={{ background: `url(${bgImage}) center center / cover no-repeat`}}>
+            
         {!!featuredCategory.id &&
         <div className="w-full">
           <FeaturedEventBlock
@@ -33,7 +30,9 @@ export default function EventsMain({ data }) {
           />
         </div>
         }
-      </div>
+      </div> 
+      <div className="my-20"></div>
+      
 
       {/* events */}
       <div className="w-full">

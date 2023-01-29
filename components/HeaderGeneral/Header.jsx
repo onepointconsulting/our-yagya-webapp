@@ -13,8 +13,7 @@ const Header = ({ title }) => {
 
   return (
     <div className="bg-white relative metropolis_medium xl:container xl:mx-auto">
-      <div
-        className="bg-white relative flex justify-between metropolis_medium shadow-md h-28 lg:h-44"
+      <div className="bg-white relative flex justify-between metropolis_medium shadow-md h-28 lg:h-44"
         style={{ zIndex: "2" }}
       >
         {/* <!-- search bar/icon --> */}
@@ -54,51 +53,27 @@ const Header = ({ title }) => {
         </div>
 
         {/* <!-- center  --> */}
-        <div
-          className="relative w-full h-0 mx-auto text-center bg-white"
-          style={{ zIndex: "3" }}
-        >
+        <div className="w-full" style={{ zIndex: "3" }}>
           {/* <!-- our yagya logo --> */}
-          <Link href="/">
-            <a className="block bg-white">
-              <img
-                className="object-fill w-auto mx-auto h-[7rem] lg:h-[11em]"
-                src="/img/ShivBaba.jpg"
-                alt="Our YagYa logo"
-                title="Our YagYa"
-              />
-            </a>
-          </Link>
-
-          {/* <!-- title and subtitle --> */}
-          <Link href="/">
-            <a className="absolute left-0 right-0 m-auto top-8 xs:top-12 lg:top-20 md:w-max">
-
-              {/* <h4 className=" text-gold1 text-[1rem] lg:text-[2rem] xl:text-[3vw] 2xl:text-[3em] uppercase">
-                     oUR YAGYA
-                   </h4> 
-               */}
-
-              <h1
-                className="text-gold1 font-extrabold uppercase text-[25px] xs:text-[2rem] md:text-[3rem]  lg:text-[4rem]"
-                style={{ lineHeight: "1" }}
-              >
-                {title}
-              </h1>
-            </a>
-          </Link>
-          <div className="absolute bottom-0 left-0 right-0 top-auto block mb-3 lg:hidden">
             <Link href="/">
-              <a>
-                {" "}
-                <img
-                  className="w-[77%] xs:w-[70%] md:w-[45%] lg:w-4 mx-auto"
-                  src="/img/icons/BK_Landscape.png"
-                  alt="BK Landscape"
-                />{" "}
-              </a>
-            </Link>
+             <div className="bg-white w-full relative">
+                <img className="object-fill w-auto mx-auto h-[7rem] lg:h-[11em]"
+                  src="/img/ShivBaba.jpg"
+                  alt="Our YagYa logo"
+                  title="Our YagYa"
+                />
+
+                  {/* <!-- title and subtitle --> */}
+                <div className="flex flex-wrap justify-center items-center absolute bottom-0 left-0 right-0 pb-[9px]">
+                  <h1 className="text-gold1 font-extrabold uppercase text-2xl md:text-3xl lg:text-5xl text-center"
+                    style={{ lineHeight: "1" }}>
+                    {title}
+                  </h1>
+              </div>
+
+
           </div>
+            </Link>
         </div>
 
         <HamburgerMenu />

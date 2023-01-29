@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
+import SocialMediaIcons from '../NewsPage/SocialMediaIcons';
 
-const EventBlog = () => {
+const EventBlog = ({data}) => {
   const eventDetailsData = [
     {
       title: 'Experience Peace and Calm in Your Own Home \nAngel[Los Angeles]',
@@ -26,7 +27,7 @@ const EventBlog = () => {
 
             {/* <!-- online events section 1 --> */}
             <div className="relative my-4">
-              <div className="flex justify-between bg-white metropolis_medium">
+              <div className="relative flex justify-between bg-white metropolis_medium">
                 <div className="flex w-full md:w-4/5 lg:w-5/6 xl:w-5/6">
                   <div className="w-full">
                     <h1
@@ -60,7 +61,7 @@ const EventBlog = () => {
                     className="flex rounded-md bg-gold1 my-1 xl:my-2 px-1 xl:px-2 py-1 xl:py-2 cursor-pointer items-center">
                     <div>
                       <img className="w-4 xs:w-6 lg:w-12"
-                           src="../img/icons8-info-50.png" alt=""/>
+                           src="/img/icons8-info-50.png" alt=""/>
                     </div>
                     <div
                       className="m-auto mt-auto text-sm text-right text-white md:text-base lg:text-xl xl:text-2xl">
@@ -72,29 +73,26 @@ const EventBlog = () => {
                     className="flex rounded-md bg-gold1 items-center text-center my-1 xl:my-2 px-1 xl:px-2 py-1 xl:py-2 cursor-pointer">
                     <div>
                       <img className="w-4 xs:w-6 lg:w-12"
-                           src="../img/icons8-pencil-64.png" alt=""/>
+                           src="/img/icons8-pencil-64.png" alt=""/>
                     </div>
                     <div
                       className="m-auto text-white text-sm mt-auto md:text-base lg:text-2xl xl:text-3xl">
                       join now
                     </div>
                   </div>
-                  <div id="share_btn"
-                       className="float-right mt-2 mr-2 cursor-pointer lg:mt-4 lg:mr-4 text-center">
-                    <img className="w-8 md:w-12 lg:w-16" src="../img/Share.png"
-                         alt=""/>
-                    <h3
-                      className="text-center text-gray-500 text-sm md:text-lg">Share</h3>
+
+                  <div className="float-right mt-2 mr-2 cursor-pointer lg:mt-4 lg:mr-4 text-center relative">
+                     <SocialMediaIcons eventIndex={index}  />
 
                   </div>
-
                 </div>
+
               </div>
             </div>
 
           </div>
         ),
-      )}
+        )}
 
 
     </div>

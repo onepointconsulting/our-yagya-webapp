@@ -4,11 +4,11 @@ import { adaptCustomPage } from '../lib/pageAdapter';
 
 export const EventsBlogContext = createContext({ data: {} });
 
-export default function Events({ data }) {
+export default function EventsBlog({ data }) {
   return (
     <EventsBlogContext.Provider value={{ data }}>
       <div>
-        <EventBlog />
+        <EventBlog data={data}/>
       </div>
     </EventsBlogContext.Provider>
   );

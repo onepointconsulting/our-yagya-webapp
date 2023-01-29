@@ -34,16 +34,7 @@ const BackArrow = ({ singleNewsData }) => {
         </div>
       </div>
       <div className="relative ml-auto xl:w-12">
-        <div className="cursor-pointer">
-          <img
-            onClick={social}
-            className="w-7 md:w-9 lg:w-9 xl:w-12"
-            src="/img/svg/Share.svg"
-            alt="share btn"
-          />
-        </div>
-
-        {socialOpen && <SocialMediaIcons />}
+        <SocialMediaIcons eventIndex={singleNewsData}  />
       </div>
     </>
   );
