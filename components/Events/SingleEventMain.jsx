@@ -33,7 +33,7 @@ const EventImage = ({singleEvent}) => {
     const { t } = useTranslation()
     const router = useRouter()
     return (
-        <div className="relative mx-auto w-[52%] h-full">
+        <div className="relative mx-auto w-[84%] h-full">
         <div className="flex jsutify-between pb-2">
           <img
             onClick={() => router.back()}

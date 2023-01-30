@@ -74,6 +74,7 @@ module.exports = {
         "icons-color": "#999999",
         "video-pre-color": "#e9ebea",
         "filter-bg": "#f2e7d3",
+        "pinkFull": "#ed7363",
         "results-for-bg": "#eddcbe",
         "social_media_btn_fac": "#3c5a98",
         "social_media_btn_twi": "#27a5f2",
