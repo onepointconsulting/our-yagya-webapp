@@ -1,21 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import SocialMediaIcons from '../NewsPage/SocialMediaIcons';
+import { blogEventsAdapter } from '../../lib/eventsAdapter';
+import { GlobalContext } from '../../pages/_app'
+import Link from '../../node_modules/next/link';
+import { useTranslation } from "react-i18next";
 
 const EventBlog = ({data}) => {
-  const eventDetailsData = [
-    {
-      title: 'Experience Peace and Calm in Your Own Home \nAngel[Los Angeles]',
-      date: 'Thursday, 15 December 2021 6:30-8:30pm EDT',
-      img: '/img/Event_1.png',
-      description: 'Prerequisite: This class is suitable for those who have completed the BK Meditation Introductory and Intermediate courses.',
-    },
-    {
-      title: 'Experience Peace and Calm in Your Own Home \nAngel[Los Angeles]',
-      date: 'Thursday, 15 December 2021 6:30-8:30pm EDT',
-      img: 'https://beejaacademy.com/images/course/Ethics_Values_Positive.webp',
-      description: 'Prerequisite: This class is suitable for those who have completed the BK Meditation Introductory and Intermediate courses.',
-    },
-  ]
+
+  console.log("data : " , data.events)
+  const { t } = useTranslation();
+  const { locale } = useContext(GlobalContext)
+  const eventDetailsData = blogEventsAdapter(data.events, locale)
 
   return (
     <div className="w-full h-auto">
@@ -63,10 +58,12 @@ const EventBlog = ({data}) => {
                       <img className="w-4 xs:w-6 lg:w-12"
                            src="/img/icons8-info-50.png" alt=""/>
                     </div>
+                    <Link href={`/single_event/${data.id}`}>
                     <div
                       className="m-auto mt-auto text-sm text-right text-white md:text-base lg:text-xl xl:text-2xl">
-                      More Info
+                      {t("More Info")}
                     </div>
+                    </Link>
                   </div>
 
                   <div
@@ -75,10 +72,21 @@ const EventBlog = ({data}) => {
                       <img className="w-4 xs:w-6 lg:w-12"
                            src="/img/icons8-pencil-64.png" alt=""/>
                     </div>
-                    <div
-                      className="m-auto text-white text-sm mt-auto md:text-base lg:text-2xl xl:text-3xl">
-                      join now
-                    </div>
+                    {data.joinLink ? (
+            <Link href={data.joinLink} target="_blank">
+              <div
+                className={`pl-2 pr-2 m-auto mt-auto mb-auto text-xs text-center ${
+                  data.joinLink ? "text-white" : "text-white cursor-text"
+                } onlnie_eve_title lg:text-sm xl:text-[13px]`}
+              >
+                {t("Register")}
+              </div>
+            </Link>
+          ) : (
+            <div className="pl-2 pr-2 m-auto mt-auto mb-auto text-xs text-center text-slate-200 cursor-text onlnie_eve_title lg:text-sm xl:text-[13px]">
+              {t("Register")}
+            </div>
+          )}
                   </div>
 
                   <div className="float-right mt-2 mr-2 cursor-pointer lg:mt-4 lg:mr-4 text-center relative">

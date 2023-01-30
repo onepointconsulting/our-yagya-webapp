@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import EventsBlog from '../../../components/EventsBlog/EventBlog'
 import { adaptCustomPage } from '../../../lib/pageAdapter'
-import { eventsLayout } from '../../../lib/apiClient'
+import { eventsBlogLayout } from '../../../lib/apiClient'
 import Head from 'next/head'
 import MetaTags from '../../../components/SocialMedia/MetaTags'
 import { useRouter } from 'next/router'
@@ -12,8 +12,6 @@ export default function EventBlog ({ data }) {
   // const singleEvent = singleEventAdapter(data)
   const { asPath } = useRouter()
   const { baseUrl } = useContext(GlobalContext)
-
-  console.log('parentCategory', JSON.stringify(data.data.parentCategory))
 
   return (
     <>
@@ -26,12 +24,11 @@ export default function EventBlog ({ data }) {
         />
       </Head>
       <EventsBlog data={data}/>
-
     </>
   )
 }
 
 // get server side props;
 export async function getServerSideProps (context) {
-  return await adaptCustomPage(context, eventsLayout)
+  return await adaptCustomPage(context, eventsBlogLayout)
 }

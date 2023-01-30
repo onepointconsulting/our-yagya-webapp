@@ -12,7 +12,7 @@ export default function EventsMain({ data }) {
   const featuredCategory = getFeaturedCategory(allEvents) 
 
   // const adaptedEvents = processEventDates(eventsAdapter(data))
-console.log("featuredCategory", imageAdapter(data));
+
   return (
     <>
       <Slider />

@@ -12,7 +12,7 @@ const ArrowIcon = ({ categoryId, showCard, total }) => {
   let href 
   if (showCard) {
     if (total < 5)
-      href = `/events-blog/${categoryId}`
+      href = `/event/blog/${categoryId}`
       else
       href = `/calendar`
   } else 

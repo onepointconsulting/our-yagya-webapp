@@ -6,14 +6,10 @@ import Head from 'next/head'
 import MetaTags from '../../../components/SocialMedia/MetaTags'
 import { useRouter } from 'next/router'
 import { GlobalContext } from '../../_app'
-// import { singleEventAdapter } from '../../lib/eventsAdapter'
 
 export default function SingleCategory ({ data }) {
-  // const singleEvent = singleEventAdapter(data)
   const { asPath } = useRouter()
   const { baseUrl } = useContext(GlobalContext)
-
-  console.log('parentCategory', JSON.stringify(data.data.parentCategory))
 
   return (
     <>
