@@ -3,20 +3,14 @@ import { GlobalContext } from "../../pages/_app";
 import { EventItem } from "./EventItem";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
+import { createEventLinks } from '../../lib/eventRouter'
 
 const MAX_EVENTS = 4;
 
-const ArrowIcon = ({ categoryId, showCard, total }) => {
+const ArrowIcon = ({ categoryId, showCard, total, hasChildren }) => {
   const iconUrl = "/img/icons/ArrowDown.png";
   const { t } = useTranslation();
-  let href 
-  if (showCard) {
-    if (total < 5)
-      href = `/event/blog/${categoryId}`
-      else
-      href = `/calendar`
-  } else 
-    href = `/event/category/${categoryId}`
+  const href = createEventLinks(showCard, categoryId, total, hasChildren)
 
   return (
     <div className="">
@@ -56,7 +50,7 @@ const EventBlock = ({ category, categoryId, events, hasChildren, showCard, total
 
       {(hasChildren || showCard) && ( 
         <div className="absolute inset-x-0 bottom-0  lg:bottom-[2px]">
-          <ArrowIcon categoryId={categoryId} showCard={showCard} total={total} />
+          <ArrowIcon categoryId={categoryId} showCard={showCard} total={total} hasChildren={hasChildren} />
         </div>
       )}
     </div>

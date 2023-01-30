@@ -13,6 +13,8 @@ export default function EventBlog ({ data }) {
   const { asPath } = useRouter()
   const { baseUrl } = useContext(GlobalContext)
 
+  console.log('EventBlog data', data)
+
   return (
     <>
       <Head>
@@ -23,7 +25,7 @@ export default function EventBlog ({ data }) {
           path={`//${baseUrl}${asPath}`}
         />
       </Head>
-      <EventsBlog data={data}/>
+      <EventsBlog data={data?.data}/>
     </>
   )
 }

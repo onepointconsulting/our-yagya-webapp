@@ -1,17 +1,10 @@
 import React from 'react'
 import Link from '../../node_modules/next/link'
 import FeaturedEventItem from './FeaturedEventItem'
+import { createEventLinks } from '../../lib/eventRouter'
 
-const EventArrow = ({ categoryId, showCard, total }) => {
-  let href 
-  if (showCard) {
-    if (total < 5)
-      href = `/event/blog/${categoryId}`
-      else
-      href = `/calendar`
-  } else 
-    href = `/event/category/${categoryId}`
-
+const EventArrow = ({ categoryId, showCard, total, hasChildren }) => {
+  const href = createEventLinks(showCard, categoryId, total, hasChildren)
   return (
     <h1
       className="flex justify-center py-6 text-6xl text-center text-gray-400 cursor-pointer md:py-12">
@@ -29,7 +22,7 @@ const EventArrow = ({ categoryId, showCard, total }) => {
 export default function FeaturedEventBlock ({
   featuredEvents,
   title = 'You forgot the title',
-  featuredCategoryId
+  featuredCategoryId,
 }) {
   const hasChildren = featuredEvents.children_count > 0
   const total = featuredEvents.total
@@ -55,10 +48,10 @@ export default function FeaturedEventBlock ({
                   <FeaturedEventItem event={event} key={`featuredEvent_${i}`}/>
                 )
               })}
-              {(hasChildren || showCard) ? 
-                  <EventArrow categoryId={featuredCategoryId} 
-                    showCard={showCard} total={total}/> : 
-                    <div className="py-6 md:py-12"></div>}
+              {(hasChildren || showCard) ?
+                <EventArrow categoryId={featuredCategoryId}
+                            showCard={showCard} total={total} hasChildren={hasChildren}/> :
+                <div className="py-6 md:py-12"></div>}
             </div>
           )}
         </div>
