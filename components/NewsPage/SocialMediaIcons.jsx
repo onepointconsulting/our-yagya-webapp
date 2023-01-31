@@ -38,24 +38,24 @@ export default function SocialMediaIcons({ eventIndex }) {
   };
 
   return (
-    <>
+    <div className="relative">
       <div onClick={() => setSocialOpen(!socialOpen)} >
         <img className="w-8 md:w-12 lg:w-16" src="/img/Share.png"
           alt="" />
         <h3 className="text-center text-gray-500 text-sm md:text-lg">Share</h3>
       </div>
       {socialOpen && (
-        <div className="absolute left-0 right-0 top-auto z-10 share-popup open">
+        <div className="absolute right-0 xl:-right-24 top-12 md:top-20 lg:top-24 xl:top-0 z-10 share-popup open">
           <div className="flex flex-col float-right w-full">
             {socialMediaData.map((sd, i) => {
-              return <a key={i} href="#" className={`h-auto text-white fa socialMediaClass ${sd.buttonStyle}`}>
-                <img className="w-10 h-10 mx-auto" src={`/img/svg/${sd.image}`} alt="" />
+              return <a key={i} href="#" className={`p-1 md:p-3 h-auto text-white fa socialMediaClass ${sd.buttonStyle}`}>
+                <img className="w-9 xl:w-11 h-9 xl:h-11 mx-auto" src={`/img/svg/${sd.image}`} alt="" />
               </a>
             })}
           </div>
         </div>
       )}
 
-    </>
+    </div>
   );
 }
