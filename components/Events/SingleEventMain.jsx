@@ -6,6 +6,8 @@ import { useContext } from 'react'
 import { useRouter } from 'next/router'
 import Link from '../../node_modules/next/link'
 import { createGoogleCalendarLink } from '../../lib/googleCalendar'
+import SocialMediaIcons from '../NewsPage/SocialMediaIcons'
+import { useEffect } from 'react'
 
 const Venue = ({singleEvent}) => {
     return (
@@ -80,11 +82,10 @@ const EventLocation = ({ singleEvent }) => {
 
 const AddToCalendar = ({singleEvent}) => {
     const { t } = useTranslation();
-
     const googleCalendarLink = createGoogleCalendarLink(singleEvent)
 
   return (
-    <div className="my-2 lg:my-4 lg:p-4">
+    <div className="my-2 lg:my-4 lg:p-4 flex justify-between w-full">
       <div className="flex items-center justify-around px-1 py-1 mx-2 my-4 cursor-pointer w-fit bg-gold1">
         <div className="ml-2 mr-3">
           <img
@@ -95,14 +96,18 @@ const AddToCalendar = ({singleEvent}) => {
           />
         </div>
 
-        <div className="w-full">
+        <div className="w-fulln">
           <h4 className="text-sm text-left capitalize text-slate-50 md:text-base lg:text-xl">
               <a href={googleCalendarLink} target="_blank">
                   {t("Add to Google Calendar")}
               </a>
           </h4>
+        
         </div>
       </div>
+      <div className='w-10 text-center' >
+            <SocialMediaIcons eventIndex={singleEvent}/>
+          </div>
     </div>
   );
 };

@@ -56,7 +56,7 @@ const Header = ({ title }) => {
         <div className="w-full" style={{ zIndex: "3" }}>
           {/* <!-- our yagya logo --> */}
             <Link href="/">
-             <div className="bg-white w-full relative">
+             <div className="bg-white w-full relative cursor-pointer">
                 <img className="object-fill w-auto mx-auto h-[7rem] lg:h-[11em]"
                   src="/img/ShivBaba.jpg"
                   alt="Our YagYa logo"

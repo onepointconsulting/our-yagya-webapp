@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import SocialMediaIcons from '../NewsPage/SocialMediaIcons';
 import { blogEventsAdapter } from '../../lib/eventsAdapter';
 import { GlobalContext } from '../../pages/_app'
@@ -19,16 +19,20 @@ const EventBlog = ({ data }) => {
             {/* <!-- img, title, date, and description --> */}
             <div className="w-full">
               {data.img ?
-                <div className="mx-auto w-full lg:h-[20rem] xl:h-[28rem] pb-[46%] relative">
+                <div className="mx-auto w-full lg:h-[20rem] xl:h-[28rem] pb-[46%] relative cursor-pointer">
+                  <Link href={`/single_event/${data.id}`}>
                   <img className="object-cover w-full h-full mx-auto absolute inset-0" src={data.img} alt="" />
+                  </Link>
                 </div>
 
                 : <></>}
               <div className="py-8">
-                <h1 className="text-xl font-medium text-red-500 md:text-3xl lg:text-4xl xl:text-5xl">
+                <Link href={`/single_event/${data.id}`}>
+                <h1 className="text-xl font-medium text-red-500 md:text-3xl lg:text-4xl xl:text-5xl cursor-pointer">
                   {data.title}
                 </h1>
 
+                </Link>
                 {data.subTitle && (<p className="text-base text-gray-400 md:text-xl lg:text-2xl xl:text-3xl">
                     {data.subTitle}
                   </p>)}
@@ -56,7 +60,7 @@ const EventBlog = ({ data }) => {
               </div>
               <Link href={`/single_event/${data.id}`}>
                 <div
-                  className="md:pl-1 lg:pl-4 text-sm md:text-base lg:text-2xl xl:text-3xl text-white">
+                  className="md:pl-1 lg:pl-4 text-[9px] md:text-sm lg:text-xl xl:text-2xl text-white">
                   {t("More Info")}
                 </div>
               </Link>
@@ -70,27 +74,21 @@ const EventBlog = ({ data }) => {
               {data.joinLink ? (
                 <Link href={data.joinLink} target="_blank">
                   <div
-                    className={`md:pl-1 lg:pl-4 text-sm md:text-base lg:text-2xl xl:text-3xl text-white ${data.joinLink ? "text-white" : "cursor-text"}`}>
-                    {t("Join now")}
+                    className={`md:pl-1 lg:pl-4 text-[9px] md:text-sm lg:text-xl xl:text-2xl text-white ${data.joinLink ? "text-white" : "cursor-text"}`}>
+                    {t("Register Now")}
                   </div>
                 </Link>
               ) : (
-                <div className="md:pl-1 lg:pl-4 text-sm md:text-base lg:text-2xl xl:text-3xl text-slate-200 cursor-text">
-                  {t("Join now")}
+                <div className="md:pl-1 lg:pl-4 text-[9px] md:text-sm lg:text-xl xl:text-2xl text-slate-200 cursor-text">
+                  {t("Register Now")}
                 </div>
               )}
-            </div>
-
-            <div className="float-right cursor-pointer">
-              <SocialMediaIcons eventIndex={index} />
             </div>
           </div>
 
         </div>
       ),
       )}
-
-
     </div>
   )
 }
