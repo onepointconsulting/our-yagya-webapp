@@ -38,11 +38,8 @@ const EventBlog = ({ data }) => {
                     {data.date}
                   </p>
 
-
-                  <p className="text-base text-gray-400 md:text-xl lg:text-2xl my-4">
-                    {data.description}
-                  </p>
-
+                  <div className="text-base text-gray-400 md:text-xl lg:text-2xl my-4" dangerouslySetInnerHTML={{__html: data.description}}>
+                  </div>
 
                 </div>
               </div>
