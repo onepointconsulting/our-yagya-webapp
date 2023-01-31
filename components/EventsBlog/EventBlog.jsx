@@ -29,6 +29,10 @@ const EventBlog = ({ data }) => {
                   {data.title}
                 </h1>
 
+                {data.subTitle && (<p className="text-base text-gray-400 md:text-xl lg:text-2xl xl:text-3xl">
+                    {data.subTitle}
+                  </p>)}
+
                 <div className="mt-4">
                   <p className="text-base text-gray-400 md:text-xl lg:text-2xl xl:text-3xl">
                     {data.date}
