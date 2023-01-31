@@ -40,7 +40,7 @@ const EventBlog = ({ data }) => {
 
 
                   <p className="text-base text-gray-400 md:text-xl lg:text-2xl my-4">
-                    {data.description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis delectus deserunt dignissimos sint quidem error alias nihil illum, vitae amet.
+                    {data.description}
                   </p>
 
 
