@@ -22,8 +22,6 @@ import "@fullcalendar/common/main.css";
 import "@fullcalendar/daygrid/main.css";
 import "@fullcalendar/timegrid/main.css";
 import StickyButton from '../components/StickyButtons'
-import AddThis from '../components/AddthisShare/addthis'
-
 export const GlobalContext = createContext({})
 
 /**
@@ -55,7 +53,6 @@ function OurYagya ({ Component, pageProps }) {
 
             <Header title={pageTitle} />
             <div className="flex-1">
-                <AddThis />
                 <Component {...pageProps} />
             </div>
             <Footer />
