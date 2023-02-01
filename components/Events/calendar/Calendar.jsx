@@ -6,8 +6,8 @@ import { calendarAdapter } from '../../../lib/eventsAdapter'
 
 const Calendar = ({ data }) => {
   const calendarRef = useRef(null)
-  const events = calendarAdapter(data)
-
+  const events = calendarAdapter(data.data)
+  
   return (
     <>
       <div className="w-full md:w-[71%] md:mx-auto lg:w-[40rem]">
