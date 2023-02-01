@@ -1,7 +1,7 @@
 import React from 'react'
 
 /**
- * Creates Meta Tags for socila platform sharing.
+ * Creates Meta Tags for social platform sharing.
  * @constructor
  */
 const MetaTags = ({title, description, image, path}) => {
