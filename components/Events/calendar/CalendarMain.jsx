@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Calendar from './Calendar'
 import Router from 'next/router'
 import { useTranslation } from 'react-i18next'
+import { CalendarContext } from '../../../context/CalendarContext'
 
 const Filter = () => {
   return (
@@ -472,6 +473,10 @@ const ArrowBack = () => {
 
 export default function CalendarMain ({ data }) {
   const [openPosition, setOpenPosition] = useState(-1)
+
+  const { calendarData, dispatchCalendarData } = useContext(CalendarContext)
+
+  console.log('calendarData.eventType', calendarData.eventType)
 
   return (
     <div className="mx-2 md:mx-4">
