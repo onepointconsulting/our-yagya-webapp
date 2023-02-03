@@ -2,14 +2,44 @@ import React, { useContext, useState } from 'react'
 import Calendar from './Calendar'
 import Router from 'next/router'
 import { useTranslation } from 'react-i18next'
-import { CalendarContext } from '../../../context/CalendarContext'
+import {
+  CALENDAR_ACTIONS,
+  CalendarContext,
+} from '../../../context/CalendarContext'
 
 const Filter = () => {
+
+  const { calendarData, dispatchCalendarData } = useContext(CalendarContext)
+
+
   return (
     <div className="flex justify-between my-4 metropolis_medium bg-filter-bg ">
-      <div
-        className="px-4 py-4 text-base md:text-lg lg:text-xl xl:text-2xl text-gold1">
-        Filter by
+      <div className="relative  flex flex-col">
+        <div className="px-4 py-4 text-base md:text-lg lg:text-xl xl:text-2xl text-gold1">
+          Filter by
+        </div>
+      <div>
+      <div className="flex px-4 py-1 text-base md:text-lg xl:text-xl text-gold1">
+          <p className='mr-2'>Online</p>{" "}
+          <input
+            checked={calendarData.online}
+            onChange={() => dispatchCalendarData(
+              { type: CALENDAR_ACTIONS.TOGGLE_ONLINE })}
+            type="checkbox"
+            className="px-6 py-6"
+          />
+        </div>
+        <div className="flex px-4 py-1 text-base md:text-lg xl:text-xl text-gold1">
+          <p className='mr-2'>In house</p>{" "}
+          <input
+            checked={calendarData.inPerson}
+            onChange={() => dispatchCalendarData(
+              { type: CALENDAR_ACTIONS.TOGGLE_IN_PERSON })}
+            type="checkbox"
+            className="px-6 py-6"
+          />
+        </div>
+      </div>
       </div>
 
       <div className="">
@@ -43,7 +73,7 @@ const Filter = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 const accordinData = [
@@ -475,8 +505,6 @@ export default function CalendarMain ({ data }) {
   const [openPosition, setOpenPosition] = useState(-1)
 
   const { calendarData, dispatchCalendarData } = useContext(CalendarContext)
-
-  console.log('calendarData.eventType', calendarData.eventType)
 
   return (
     <div className="mx-2 md:mx-4">

@@ -25,8 +25,18 @@ const reducer = (state, action) => {
   switch (action.type) {
     case CALENDAR_ACTIONS.SET_EVENT_TYPE:
       return {
-        eventType: action.eventType,
-        ...state
+        ...state,
+        eventType: action.eventType
+      }
+    case CALENDAR_ACTIONS.TOGGLE_ONLINE:
+      return {
+        ...state,
+        online: !state.online
+      }
+    case CALENDAR_ACTIONS.TOGGLE_IN_PERSON:
+      return {
+        ...state,
+        inPerson: !state.inPerson
       }
     default:
       return {
@@ -42,6 +52,8 @@ export const CalendarContextProvider = props => {
       eventTypes: [],
       venues: [],
       suitables: [],
+      online: true,
+      inPerson: true,
       eventType: DEFAULT_VALUES.EVENT_TYPE,
       venue: DEFAULT_VALUES.VENUE
     }
