@@ -7,7 +7,6 @@ import { useRouter } from 'next/router'
 import Link from '../../node_modules/next/link'
 import { createGoogleCalendarLink } from '../../lib/googleCalendar'
 import SocialMediaIcons from '../NewsPage/SocialMediaIcons'
-import { useEffect } from 'react'
 
 const Venue = ({singleEvent}) => {
     return (

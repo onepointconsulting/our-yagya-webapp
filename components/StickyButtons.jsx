@@ -36,7 +36,7 @@ const StickyButton = () => {
             <select className="outline-none focused">
               <option>English</option>
               <option>Hindi</option>
-              <option>Español</option>
+              <option>Spanish</option>
             </select>
           </div>
 

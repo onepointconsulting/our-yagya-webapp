@@ -107,7 +107,7 @@ const ClassBlock = () => {
       <div
         className="py-2 pl-4 pr-2 text-[2rem] text-white filosofia_italic bg-button-color bg-gold1 md:text-4xl">
         {' '}
-        {t('Latest classes')}
+        {t('Latest Classes')}
       </div>
       <div className="p-4 overflow-y-auto metropolis_medium h-80 ">
         <div
