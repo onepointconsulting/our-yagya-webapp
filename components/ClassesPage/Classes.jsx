@@ -13,7 +13,7 @@ export default function Classes() {
   return (
     <div>
       <ToggleContext.Provider value={{ isOpen, handleOpen, handleClose }}>
-        <div className="h-full mt-2 top-16 md:top-20 lg:top-4 sticky w-max z-10 float-left mr-2">
+        <div className="h-full mt-2 top-16 md:top-20 lg:top-28 sticky w-max z-10 float-left mr-2">
           {isOpen ? <SideBar /> : <Toggle />}
         </div>
       </ToggleContext.Provider>

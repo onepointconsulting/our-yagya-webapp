@@ -21,7 +21,6 @@ const StickyButton = () => {
   return (
     <div className="flex justify-end mr-2 md:mr-3 lg:mr-4">
       <button
-      className="fixed top-24 md:top-32 lg:top-20"
         style={{
           right: "auto",
           zIndex: "1",

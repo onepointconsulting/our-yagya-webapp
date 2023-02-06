@@ -22,6 +22,7 @@ import "@fullcalendar/common/main.css";
 import "@fullcalendar/daygrid/main.css";
 import "@fullcalendar/timegrid/main.css";
 import StickyButton from '../components/StickyButtons'
+import MainMenu from '../components/HeaderGeneral/MainMenu'
 export const GlobalContext = createContext({})
 
 /**
@@ -43,22 +44,29 @@ function OurYagya ({ Component, pageProps }) {
     const pageTitle = titleAdapter(pageProps) ?? t("Our Yagya")
 
     return (
-    <GlobalContext.Provider value={global}>
-        <OurYagyaContextProvider>
-            <Head>
-            <title>{pageTitle}</title>
-            </Head>
-            <div className="relative metropolis_medium xl:container xl:mx-auto flex flex-col min-h-screen">
-            <StickyButton />
+        <GlobalContext.Provider value={global}>
+            <OurYagyaContextProvider>
+                <Head>
+                    <title>{pageTitle}</title>
+                </Head>
+                <div className="relative metropolis_medium xl:container xl:mx-auto flex flex-col min-h-screen">
+                    <div className='sticky top-24 md:top-36 z-50'>
 
-            <Header title={pageTitle} />
-            <div className="flex-1">
-                <Component {...pageProps} />
-            </div>
-            <Footer />
-            </div>
-        </OurYagyaContextProvider>
-    </GlobalContext.Provider>
+                        <StickyButton />
+                    </div>
+
+                    <Header title={pageTitle} />
+                    <div className='sticky top-0 z-50'>
+                        <MainMenu />
+                    </div>
+
+                    <div className="flex-1">
+                        <Component {...pageProps} />
+                    </div>
+                    <Footer />
+                </div>
+            </OurYagyaContextProvider>
+        </GlobalContext.Provider>
 
     )
 }

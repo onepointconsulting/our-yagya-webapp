@@ -100,7 +100,7 @@ const FeaturedEventItem = ({ event }) => {
 
                 {/* title and date */}
                 <div className="w-[40vw] md:w-[72%] lg:w-full pl-2 md:pl-4 lg:pl-8">
-                  <h1 className="text-xs font-medium leading-4 text-red-400 xs:text-[14px] md:text-base lg:text-xl whitespace-nowrap lg:whitespace-normal overflow-hidden lg:overflow-auto text-ellipsis">
+                  <h1 className="font-medium leading-4 text-red-400 text-lg text-redfull md:text-2xl whitespace-nowrap lg:whitespace-normal overflow-hidden lg:overflow-auto text-ellipsis">
                     {event.title}
                   </h1>
 

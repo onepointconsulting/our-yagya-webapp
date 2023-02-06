@@ -78,10 +78,7 @@ const Header = ({ title }) => {
 
         <HamburgerMenu />
       </div>
-      <div className="hidden lg:block">
-        {" "}
-        <MainMenu />
-      </div>
+ 
     </div>
   );
 };
