@@ -31,12 +31,12 @@ const reducer = (state, action) => {
     case CALENDAR_ACTIONS.TOGGLE_ONLINE:
       return {
         ...state,
-        online: !state.online
+        online: !!state.inPerson ? !state.online : state.online
       }
     case CALENDAR_ACTIONS.TOGGLE_IN_PERSON:
       return {
         ...state,
-        inPerson: !state.inPerson
+        inPerson: !!state.online ? !state.inPerson : state.inPerson
       }
     default:
       return {
