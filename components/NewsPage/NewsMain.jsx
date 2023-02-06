@@ -173,21 +173,6 @@ export default function NewsMain({ data }) {
             </div>
 
             {/* Regional Websites */}
-            <div className="w-full">
-              <div className="relative w-full my-4 h-fit">
-                <div className="flex items-center mb-0 cursor-pointer text-white bg-gold1 filosofia_italic">
-                  <div className="py-2 pl-4 pr-2 text-xl capitalize text-white filosofia_italic bg-button-color bg-gold1 md:text-4xl">
-                    {newsCategories[3]}
-                  </div>
-                </div>
-
-                {/* <!--accordion child--> */}
-                <NestedAccordion
-                  news={adaptedNews}
-                  newsCategory={newsCategories[3]}
-                />
-              </div>
-            </div>
           </div>
 
           <div className="flex flex-col items-center w-full lg:ml-4 lg:w-3/6">
