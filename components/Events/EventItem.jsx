@@ -1,7 +1,27 @@
 import Link from "next/link";
 import { formateDateToLocal } from "../../lib/dateAdapter";
+import { useEffect, useState } from 'react'
 
 export const EventItem = ({ event, locale }) => {
+
+  const [date, setDate] = useState('')
+  const [time, setTime] = useState('')
+
+  useEffect(() => {
+    setDate(formateDateToLocal(
+      event.startDate ?? event.startDateTime,
+      locale,
+      event.timezone,
+      "dd LLLL yyyy"
+    ))
+    setTime(formateDateToLocal(
+      event.startDate ?? event.startDateTime,
+      locale,
+      event.timezone,
+      "hh:mm a ZZZZ"
+    ))
+  }, [])
+
   return (
     <Link
       className="bg-green-500 cursor-pointer"
@@ -13,18 +33,7 @@ export const EventItem = ({ event, locale }) => {
 
           <div>
             <span className="text-sm text-gray-700 md:text-base">
-              {formateDateToLocal(
-                event.startDate ?? event.startDateTime,
-                locale,
-                event.timezone,
-                "dd LLLL yyyy"
-              )}{" "}
-              {formateDateToLocal(
-                event.startDate ?? event.startDateTime,
-                locale,
-                event.timezone,
-                "hh:mm a ZZZZ"
-              )}
+              {date}{" "}{time}
             </span>
           </div>
         </div>
