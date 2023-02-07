@@ -10,7 +10,7 @@ const Calendar = ({ data }) => {
   
   return (
     <>
-      <div className="w-full md:w-[71%] md:mx-auto lg:w-[40rem]">
+      <div className="w-full lg:w-[40rem]">
         <FullCalendar
           innerRef={calendarRef}
           nowIndicator={true}

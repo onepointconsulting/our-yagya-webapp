@@ -107,10 +107,10 @@ export default function EventsAccordion() {
                 />
               </div>
               <div className="px-2 md:px-4 w-[9rem] md:w-[inherit] lg:w-full">
-                <h1 className="text-xs font-medium leading-4 text-redfull xs:text-[14px] md:text-2xl xxl:text-3xl whitespace-nowrap lg:whitespace-normal overflow-hidden lg:overflow-auto text-ellipsis">
+                <h1 className="text-xs font-medium leading-4 text-redfull xs:text-[14px] md:text-xl xxl:text-3xl whitespace-nowrap lg:whitespace-normal overflow-hidden lg:overflow-auto text-ellipsis">
                   {item.title}
                 </h1>
-                <h1 className="text-xs font-medium leading-4 text-redfull xs:text-[14px] md:text-xl xl:text-2xl whitespace-nowrap lg:whitespace-normal overflow-hidden lg:overflow-auto text-ellipsis">
+                <h1 className="text-xs font-medium leading-4 text-redfull xs:text-[14px] md:text-lg xl:text-2xl whitespace-nowrap lg:whitespace-normal overflow-hidden lg:overflow-auto text-ellipsis">
                   [{item.subtitle}]
                 </h1>
                 <div className="md:flex items-center justify-between w-full">

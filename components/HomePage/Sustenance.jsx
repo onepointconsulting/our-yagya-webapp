@@ -5,36 +5,37 @@ import { useTranslation } from 'react-i18next'
 
 import { GlobalContext } from '../../pages/_app'
 
-const SustenanceLink = ({ sustenance }) => {
+const SustenanceLink = ({ treasures }) => {
+
     return (
         <>
-            <Link href={sustenance.attributes.url}>
-                <a className="flex items-center justify-center h-12 px-4 py-2 text-lg text-center md:w-32 lg:w-48 lg:text-3xl xl:text-[2rem] rounded-3xl bg-gold1 text-white whitespace-nowrap">
-                    {sustenance.attributes.title}
-                </a>
-            </Link>
+            <div className='flex items-center justify-center mx-2 my-3 text-2xl lg:text-3xl xl:text-3xl rounded-[30px] text-center bg-gold1 text-white py-6 px-2 h-[7vh] w-64' style={{ lineHeight: "2rem" }}>
+                <Link href={treasures.attributes.url}>
+                    {treasures.attributes.title}
+                </Link>
+            </div>
         </>
     )
 }
 
-export default function Sustenance () {
+export default function Sustenance() {
     const { t } = useTranslation()
     const { sustenanceMenu } = useContext(GlobalContext)
 
     return (
         <>
-            <div className="hidden p-[.75rem] text-center bg-red70 lg:block">
-                <h1 className="text-2xl text-white filosofia_italic md:text-[2.5rem]">
-                    {t('Sustenance')}
+            <div className="p-[.75rem] text-center bg-red70">
+                <h1 className="text-6xl text-white filosofia_italic">
+                    {t('Treasures')}
                 </h1>
             </div>
 
-            <div className="hidden p-4 filosofia_italic bg-red50 lg:block">
+            <div className="p-4 filosofia_italic bg-red50">
                 <div
-                    className="flex items-center justify-around w-full mx-auto text-center md:flex">
+                    className="flex items-center justify-center flex-wrap w-full mx-auto text-center md:flex">
                     {!!sustenanceMenu &&
-                        sustenanceMenu.map((sustenance, i) => {
-                            return (<SustenanceLink sustenance={sustenance} key={`sustenance_${i}`}/>)
+                        sustenanceMenu.map((treasures, i) => {
+                            return (<SustenanceLink treasures={treasures} key={`treasures_${i}`} />)
                         })}
                 </div>
             </div>
