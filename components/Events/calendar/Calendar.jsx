@@ -1,12 +1,17 @@
 import FullCalendar from '@fullcalendar/react'
 import interactionPlugin from '@fullcalendar/interaction'
 import dayGridPlugin from '@fullcalendar/daygrid'
-import { useRef } from 'react'
+import { useContext, useMemo, useRef } from 'react'
 import { calendarAdapter } from '../../../lib/eventsAdapter'
+import { CalendarContext } from '../../../context/CalendarContext'
 
 const Calendar = ({ data }) => {
   const calendarRef = useRef(null)
-  const events = calendarAdapter(data.data)
+  const { calendarData, dispatchCalendarData } = useContext(CalendarContext);
+  
+  const events = useMemo(() => {
+    return calendarAdapter(calendarData.events)
+    }, [calendarData]);
   
   return (
     <>

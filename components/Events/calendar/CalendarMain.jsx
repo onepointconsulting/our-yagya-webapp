@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import Calendar from "./Calendar";
-import Router from "next/router";
 import EventsAccordion from "./EventsAccordion";
 import Filter from "./Filter";
 import SpecialDay from "./SpecialDay";
+import { CalendarContext, CALENDAR_ACTIONS } from "../../../context/CalendarContext";
+import { calendarFiltersAdapter } from "../../../lib/eventsAdapter";
 
 
 export default function CalendarMain({ data }) {
+
+  const { calendarData, dispatchCalendarData } = useContext(CalendarContext);
+  const { filters, events, categoryId } = data.data
+  const adaptedFilters = calendarFiltersAdapter(filters)
+  
+  // Migrating all data into the state
+  useEffect(()=> {
+    dispatchCalendarData({ type: CALENDAR_ACTIONS.SET_EVENTS, events: events})
+    dispatchCalendarData({ type: CALENDAR_ACTIONS.SET_EVENT_TYPES, eventTypes: adaptedFilters.eventTypes})
+    dispatchCalendarData({ type: CALENDAR_ACTIONS.SET_VENUES, venues: adaptedFilters.venues})
+    dispatchCalendarData({ type: CALENDAR_ACTIONS.SET_LANGUAGES, languages: adaptedFilters.languages})
+    dispatchCalendarData({ type: CALENDAR_ACTIONS.SET_CATEGORY_ID, categoryId })
+  }, [])
 
   return (
     <div className="mx-2 md:mx-4">
@@ -14,7 +28,7 @@ export default function CalendarMain({ data }) {
         <div>
           <div>
             {/* Caledar plugin */}
-            <Calendar data={data} />
+            <Calendar />
           </div>
 
           {/* filter */}
