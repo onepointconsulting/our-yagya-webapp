@@ -6,7 +6,7 @@ import { CalendarContextProvider} from '../../../context/CalendarContext'
 
 export default function Calendar({ data }) {
   return <CalendarContextProvider>
-    <div><CalendarMain data={data}/></div>
+    <CalendarMain data={data}/>
     </CalendarContextProvider>;
 }
 
