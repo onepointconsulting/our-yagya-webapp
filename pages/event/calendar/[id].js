@@ -2,10 +2,12 @@ import { adaptCustomPage } from "../../../lib/pageAdapter";
 import { calendarLayout } from "../../../lib/apiClient";
 import React from "react";
 import CalendarMain from "../../../components/Events/calendar/CalendarMain";
-import { CalendarContextProvider } from '../../../context/CalendarContext'
+import { CalendarContextProvider} from '../../../context/CalendarContext'
 
 export default function Calendar({ data }) {
-  return <CalendarContextProvider><div><CalendarMain data={data}/></div></CalendarContextProvider>;
+  return <CalendarContextProvider>
+    <div><CalendarMain data={data}/></div>
+    </CalendarContextProvider>;
 }
 
 // get server side props;

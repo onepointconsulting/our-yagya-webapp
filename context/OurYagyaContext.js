@@ -25,9 +25,7 @@ export const OurYagyaContextProvider = props => {
         }
     )
     return (
-        <OurYagyaContext.Provider value={{
-            languageData, dispatchLanguageData
-        }}>
+        <OurYagyaContext.Provider value={{languageData, dispatchLanguageData}}>
             {props.children}
         </OurYagyaContext.Provider>
     )

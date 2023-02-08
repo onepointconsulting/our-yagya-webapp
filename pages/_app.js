@@ -81,14 +81,14 @@ OurYagya.getInitialProps = async (ctxContainer) => {
     const menuData = await fetchGlobalData(locale)
     const menuDict = menuAdapter(menuData)
     const { globalProperties } = menuData?.data
-    const { footer, main, sustenance, pill_menu } = menuDict
+    const { footer, main, treasures, pill_menu } = menuDict
 
     return {
         ...appProps,
         pageProps: {
             global: {
                 mainMenu: main,
-                sustenanceMenu: sustenance,
+                sustenanceMenu: treasures,
                 footerMenu: footer,
                 pillMenu: pill_menu,
                 globalProperties,
