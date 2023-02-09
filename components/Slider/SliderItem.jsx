@@ -16,13 +16,13 @@ export default function SliderItem ({
 
   return (
     <SplideSlide className="splide__slide" key={`slide-${id}`}>
-      <div className="w-full max-w-full mx-auto overflow-hidden shadow-md metropolis_medium bg-redD50 cursor-pointer">
+      <div className="w-full max-w-full mx-auto overflow-hidden shadow-md cursor-pointer metropolis_medium bg-redD50">
 
         <div className="items-center justify-between md:flex">
           <div className="mx-auto lg:mt-0 h-52 xl:h-60 w-auto xss:w-[55%] lg:w-96 relative">
             <Link href={`/single_event/${id}`}>
               <img
-                className="mx-auto md:ml-4 object-cover p-4 absolute w-full h-full"
+                className="absolute object-cover w-full h-full p-4 mx-auto md:ml-4"
                 style={{
                   marginRight: 'auto',
                   marginLeft: 'auto',
@@ -35,11 +35,11 @@ export default function SliderItem ({
             </Link>
           </div>
 
-          <div className="w-full md:pl-14 flex flex-col p-4 h-auto lg:h-52 xl:h-60">
+          <div className="flex flex-col w-full h-auto p-4 md:pl-14 lg:h-52 xl:h-60">
 
             {/* Title and timestamp */}
             <Link href={`/single_event/${id}`}>
-              <div className="description text-gray-500 capitalize">
+              <div className="text-gray-500 capitalize description">
                 <h3 className='text-lg md:text-2xl lg:text-3xl xl:text-4xl'>{title}</h3>
                 <br/>
               </div>
@@ -52,8 +52,8 @@ export default function SliderItem ({
             
             {/* speaker abd info link. */}
             <div className="items-end justify-between lg:flex sm:items-center">
-              <div className="pl-4 description pt-4 lg:pt-1">
-                <h3 className="text-SM leading-8 text-gray-500 capitalize online-event-p md:text-xl lg:text-lg xl:text-2xl">
+              <div className="pt-4 pl-4 description lg:pt-1">
+                <h3 className="leading-8 text-gray-500 capitalize text-SM online-event-p md:text-xl lg:text-lg xl:text-2xl">
                   {Array.isArray(speakers) && speakers?.join(', ') || speakers}
                 </h3>
               </div>

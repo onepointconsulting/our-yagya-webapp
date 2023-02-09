@@ -26,8 +26,8 @@ const Calendar = () => {
           selectable
           contentHeight={450}
           events={events}
-          eventColor={'#e89295'}
-          eventBackgroundColor={'#e89295'}
+          eventColor={'#ffffff'}
+          eventBackgroundColor={'#bf8f23'}
           eventDisplay='background'
         />
       </div>

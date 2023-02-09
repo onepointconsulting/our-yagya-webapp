@@ -162,6 +162,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: -2;
   }
   .fc .fc-scrollgrid-liquid {
     height: 100%;
@@ -192,4 +193,9 @@
     height: auto;
     position: absolute;
     left: 2.3rem;
+}
+.fc .fc-day-other .fc-daygrid-day-top {
+ opacity: 0; 
+ display: contents;
+ color: #d2d2d2;
 }
