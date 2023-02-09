@@ -14,8 +14,6 @@ export const CALENDAR_ACTIONS = {
   SET_LANGUAGE: 'SET_LANGUAGE',
   SET_VENUES: 'SET_VENUES',
   SET_VENUE: 'SET_VENUE',
-  // SET_SUITABLES: 'SET_SUITABLES',
-  // SET_SUITABLE: 'SET_SUITABLE',
   TOGGLE_ONLINE: 'TOGGLE_ONLINE',
   TOGGLE_IN_HOUSE: 'TOGGLE_IN_HOUSE',
   SET_EVENTS: 'SET_EVENTS',
@@ -108,46 +106,3 @@ export const CalendarContextProvider = props => {
     </CalendarContext.Provider>
   )
 }
-
-
-// switch (action.type) {
-//   case CALENDAR_ACTIONS.SET_EVENT_TYPE:
-//     return {
-//       eventType: action.payload.eventType,
-//       ...state
-//     }
-//   case CALENDAR_ACTIONS.SET_EVENT_TYPES:
-//     return {
-//       eventTypes: action.payload.eventTypes,
-//       ...state
-//     }
-//   case CALENDAR_ACTIONS.SET_LANGUAGES:
-//     return {
-//       languages: action.payload.languages,
-//       ...state
-//     }
-//   case CALENDAR_ACTIONS.SET_LANGUAGE:
-//     return {
-//       language: action.payload.language,
-//       ...state
-//     }
-//   case CALENDAR_ACTIONS.SET_VENUES:
-//     return {
-//       venues: action.payload.venues,
-//       ...state
-//     }
-//   case CALENDAR_ACTIONS.SET_VENUE:
-//     return {
-//       venue: action.payload.venue,
-//       ...state
-//     }
-//   case CALENDAR_ACTIONS.SET_SUITABLES:
-//     return {
-//       suitables: action.payload.suitables,
-//       ...state
-//     }
-//   case CALENDAR_ACTIONS.SET_SUITABLE:
-//     return {
-//       suitable: action.payload.suitable,
-//       ...state
-//     }
