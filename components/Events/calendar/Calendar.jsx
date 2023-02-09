@@ -5,7 +5,7 @@ import { useContext, useMemo, useRef } from 'react'
 import { calendarAdapter } from '../../../lib/eventsAdapter'
 import { CalendarContext } from '../../../context/CalendarContext'
 
-const Calendar = ({ data }) => {
+const Calendar = () => {
   const calendarRef = useRef(null)
   const { calendarData, dispatchCalendarData } = useContext(CalendarContext);
   

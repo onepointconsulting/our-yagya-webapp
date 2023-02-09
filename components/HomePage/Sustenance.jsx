@@ -6,12 +6,13 @@ import { useTranslation } from 'react-i18next'
 import { GlobalContext } from '../../pages/_app'
 
 const SustenanceLink = ({ treasures }) => {
+    const { t } = useTranslation()
 
     return (
         <>
-            <div className='flex items-center justify-center mx-2 my-3 text-2xl lg:text-3xl xl:text-3xl rounded-[30px] text-center bg-gold1 text-white py-6 px-2 h-[7vh] w-64' style={{ lineHeight: "2rem" }}>
+            <div className='flex items-center justify-center mx-2 my-3 text-2xl lg:text-3xl xl:text-3xl rounded-[30px] text-center bg-gold1 text-white py-6 px-3 h-[7vh] w-64' style={{ lineHeight: "1.5rem" }}>
                 <Link href={treasures.attributes.url}>
-                    {treasures.attributes.title}
+                   {t(treasures.attributes.title)}
                 </Link>
             </div>
         </>
@@ -32,7 +33,7 @@ export default function Sustenance() {
 
             <div className="p-4 filosofia_italic bg-red50">
                 <div
-                    className="flex items-center justify-center flex-wrap w-full mx-auto text-center md:flex">
+                    className="flex flex-wrap items-center justify-center w-full mx-auto text-center md:flex">
                     {!!sustenanceMenu &&
                         sustenanceMenu.map((treasures, i) => {
                             return (<SustenanceLink treasures={treasures} key={`treasures_${i}`} />)
