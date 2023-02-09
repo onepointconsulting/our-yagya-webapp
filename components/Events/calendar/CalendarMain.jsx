@@ -9,16 +9,18 @@ import { calendarFiltersAdapter } from "../../../lib/eventsAdapter";
 
 export default function CalendarMain({ data }) {
 
-  const { calendarData, dispatchCalendarData } = useContext(CalendarContext);
+  const { dispatchCalendarData } = useContext(CalendarContext);
   const { filters, events, categoryId } = data.data
   const adaptedFilters = calendarFiltersAdapter(filters)
   
   // Migrating all data into the state
   useEffect(()=> {
     dispatchCalendarData({ type: CALENDAR_ACTIONS.SET_EVENTS, events: events})
-    dispatchCalendarData({ type: CALENDAR_ACTIONS.SET_EVENT_TYPES, eventTypes: adaptedFilters.eventTypes})
-    dispatchCalendarData({ type: CALENDAR_ACTIONS.SET_VENUES, venues: adaptedFilters.venues})
-    dispatchCalendarData({ type: CALENDAR_ACTIONS.SET_LANGUAGES, languages: adaptedFilters.languages})
+    dispatchCalendarData({ type: CALENDAR_ACTIONS.SET_FILTERS,
+      eventTypes: adaptedFilters.eventTypes,
+      venues: adaptedFilters.venues,
+      languages: adaptedFilters.languages
+    })
     dispatchCalendarData({ type: CALENDAR_ACTIONS.SET_CATEGORY_ID, categoryId })
   }, [])
 

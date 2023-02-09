@@ -8,11 +8,9 @@ export const DEFAULT_VALUES = {
 }
 
 export const CALENDAR_ACTIONS = {
-  SET_EVENT_TYPES: 'SET_EVENT_TYPES',
+  SET_FILTERS: 'SET_FILTERS',
   SET_EVENT_TYPE: 'SET_EVENT_TYPE',
-  SET_LANGUAGES: 'SET_LANGUAGES',
   SET_LANGUAGE: 'SET_LANGUAGE',
-  SET_VENUES: 'SET_VENUES',
   SET_VENUE: 'SET_VENUE',
   TOGGLE_ONLINE: 'TOGGLE_ONLINE',
   TOGGLE_IN_HOUSE: 'TOGGLE_IN_HOUSE',
@@ -28,25 +26,10 @@ const reducer = (state, action) => {
         ...state,
         eventType: action.eventType
       }
-    case CALENDAR_ACTIONS.SET_EVENT_TYPES:
-      return {
-        ...state,
-        eventTypes: action.eventTypes
-      }
     case CALENDAR_ACTIONS.SET_VENUE:
       return {
         ...state,
         venue: action.venue
-      }
-    case CALENDAR_ACTIONS.SET_VENUES:
-      return {
-        ...state,
-        venues: action.venues
-      }
-    case CALENDAR_ACTIONS.SET_LANGUAGES:
-      return {
-        ...state,
-        languages: action.languages
       }
     case CALENDAR_ACTIONS.SET_LANGUAGE:
       return {
@@ -78,6 +61,13 @@ const reducer = (state, action) => {
         ...state,
         categoryId: action.categoryId
     }
+    case CALENDAR_ACTIONS.SET_FILTERS:
+      return {
+        ...state,
+        eventTypes: action.eventTypes,
+        venues: action.venues,
+        languages: action.languages
+      }
     default:
       return {
         ...state

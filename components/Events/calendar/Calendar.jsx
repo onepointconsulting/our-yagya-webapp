@@ -7,17 +7,18 @@ import { CalendarContext } from '../../../context/CalendarContext'
 
 const Calendar = () => {
   const calendarRef = useRef(null)
-  const { calendarData, dispatchCalendarData } = useContext(CalendarContext);
+  const { calendarData } = useContext(CalendarContext);
   
   const events = useMemo(() => {
     return calendarAdapter(calendarData.events)
     }, [calendarData]);
+
   
   return (
     <>
       <div className="w-full lg:w-[40rem]">
         <FullCalendar
-          innerRef={calendarRef}
+          ref={calendarRef}
           nowIndicator={true}
           editable={true}
           aspectRatio={1}
