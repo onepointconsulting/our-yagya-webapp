@@ -4,10 +4,10 @@ import { formateDate } from "../../../lib/dateAdapter";
 import { calendarSpecialDaysAdapter } from "../../../lib/eventsAdapter";
 
 export default function SpecialDay() {
-  const { calendarData, dispatchCalendarData } = useContext(CalendarContext);
+  const { calendarData } = useContext(CalendarContext);
   const locale = "en" // TODO: this should come from state
   const specialEvents = useMemo(() => {
-    return calendarSpecialDaysAdapter(calendarData.events)
+    return calendarSpecialDaysAdapter(calendarData)
     }, [calendarData]);
     
   return (

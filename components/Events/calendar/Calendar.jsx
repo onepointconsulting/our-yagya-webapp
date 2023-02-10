@@ -3,17 +3,19 @@ import interactionPlugin from '@fullcalendar/interaction'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import { useContext, useMemo, useRef } from 'react'
 import { calendarAdapter } from '../../../lib/eventsAdapter'
-import { CalendarContext } from '../../../context/CalendarContext'
+import {
+  CALENDAR_ACTIONS,
+  CalendarContext,
+} from '../../../context/CalendarContext'
 
 const Calendar = () => {
   const calendarRef = useRef(null)
-  const { calendarData } = useContext(CalendarContext);
-  
+  const { calendarData, dispatchCalendarData } = useContext(CalendarContext)
+
   const events = useMemo(() => {
     return calendarAdapter(calendarData.events)
-    }, [calendarData]);
+  }, [calendarData])
 
-  
   return (
     <>
       <div className="w-full lg:w-[40rem]">
@@ -28,7 +30,14 @@ const Calendar = () => {
           events={events}
           eventColor={'#ffffff'}
           eventBackgroundColor={'#bf8f23'}
-          eventDisplay='background'
+          eventDisplay="background"
+          datesSet={(e) => {
+            const { start, end } = e
+            dispatchCalendarData({
+              type: CALENDAR_ACTIONS.SET_SELECTED_PERIOD,
+              selectedStartDate: start, selectedEndDate: end,
+            })
+          }}
         />
       </div>
     </>

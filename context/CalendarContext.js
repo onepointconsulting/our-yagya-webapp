@@ -16,7 +16,8 @@ export const CALENDAR_ACTIONS = {
   TOGGLE_IN_HOUSE: 'TOGGLE_IN_HOUSE',
   SET_EVENTS: 'SET_EVENTS',
   SET_CATEGORY_ID: 'SET_CATEGORY_ID',
-  SET_PRIVATE: 'SET_PRIVATE'
+  SET_PRIVATE: 'SET_PRIVATE',
+  SET_SELECTED_PERIOD: 'SET_SELECTED_PERIOD'
 }
 
 const reducer = (state, action) => {
@@ -68,6 +69,12 @@ const reducer = (state, action) => {
         venues: action.venues,
         languages: action.languages
       }
+    case CALENDAR_ACTIONS.SET_SELECTED_PERIOD:
+      return {
+        ...state,
+        selectedStartDate: action.selectedStartDate,
+        selectedEndDate: action.selectedEndDate,
+      }
     default:
       return {
         ...state
@@ -87,7 +94,9 @@ export const CalendarContextProvider = props => {
       eventType: DEFAULT_VALUES.EVENT_TYPE,
       venue: DEFAULT_VALUES.VENUE,
       events: [],
-      categoryId: ""
+      categoryId: "",
+      selectedStartDate: null,
+      selectedEndDate: null
     }
   )
   return (
