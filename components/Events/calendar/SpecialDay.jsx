@@ -5,7 +5,7 @@ import { calendarSpecialDaysAdapter } from "../../../lib/eventsAdapter";
 
 export default function SpecialDay() {
   const { calendarData } = useContext(CalendarContext);
-  const locale = "en" // TODO: this should come from state
+  const { locale } = calendarData
   const specialEvents = useMemo(() => {
     return calendarSpecialDaysAdapter(calendarData)
     }, [calendarData]);

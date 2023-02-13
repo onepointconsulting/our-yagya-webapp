@@ -10,8 +10,10 @@ import { calendarFiltersAdapter } from "../../../lib/eventsAdapter";
 export default function CalendarMain({ data }) {
 
   const { dispatchCalendarData } = useContext(CalendarContext);
-  const { filters, events, categoryId } = data.data
+  const { filters, events, categoryId, locale } = data.data
   const adaptedFilters = calendarFiltersAdapter(filters)
+
+  console.log('EVENTS: ', events)
   
   // Migrating all data into the state
   useEffect(()=> {
@@ -21,7 +23,7 @@ export default function CalendarMain({ data }) {
       venues: adaptedFilters.venues,
       languages: adaptedFilters.languages
     })
-    dispatchCalendarData({ type: CALENDAR_ACTIONS.SET_CATEGORY_ID, categoryId })
+    dispatchCalendarData({ type: CALENDAR_ACTIONS.SET_PAGE_DATA, categoryId, locale })
   }, [])
 
   return (
