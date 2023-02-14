@@ -55,7 +55,7 @@ function OurYagya ({ Component, pageProps }) {
                     {`window.history.scrollRestoration = 'manual'`}
                 </Script>
                 <div className="relative flex flex-col min-h-screen metropolis_medium xl:container xl:mx-auto">
-                    <div className='sticky z-50 top-24 md:top-36'>
+                    <div className='sticky z-50 top-24 md:top-36 w-fit ml-auto'>
 
                         <StickyButton />
                     </div>
