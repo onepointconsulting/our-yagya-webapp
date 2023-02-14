@@ -5,6 +5,10 @@ import axios from 'axios'
 import findStartAndEndMonth from "../../../lib/dateAdapter";
 import { useTranslation } from 'react-i18next'
 
+const ONLINE_OPTON_ID = "onlineOptionId"
+const IN_HOUSE_ID = "inHouseId"
+const VALUE_ALL = "ALL"
+
 const Filter = () => {
 
   const { t } = useTranslation()
@@ -24,9 +28,9 @@ const Filter = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const eventTypeParam = eventType !== 'ALL' ? `&eventType=${eventType}` : ''
-      const languageParam = !!language  ? `&language=${language}` : '' // TODO: language is currently fixed w/ categoryId
-      const venueParam = venue !== 'ALL' ? `&venueLocality=${venue}` : ''
+      const eventTypeParam = eventType !== VALUE_ALL ? `&eventType=${eventType}` : ''
+      const languageParam = !language || language === VALUE_ALL ? '' : `&language=${language}` // TODO: language is currently fixed w/ categoryId
+      const venueParam = venue !== VALUE_ALL ? `&venueLocality=${venue}` : ''
       const onlineStatusParam = online && inHouse ? '' : online ? `&onlineStatus=online` : `&onlineStatus=inhouse`
       const privateEventParam = privateEvent === "true" ? `&privateEvent=true` : ""
       const calendarUrl = `${getServerURL()}/api/events/category-events/${categoryId}?startDateTime=${start}T00:00:00.000Z&endDateTime=${end}T00:00:00.000Z${eventTypeParam}${languageParam}${venueParam}${onlineStatusParam}${privateEventParam}`
@@ -47,8 +51,9 @@ const Filter = () => {
             }
             type="checkbox"
             className="px-6 py-6"
+            id={ONLINE_OPTON_ID}
           />
-          <p className="ml-2">{t('Online')}</p>{" "}
+          <p className="ml-2"><label for={ONLINE_OPTON_ID}>{t('Online')}</label></p>{" "}
         </div>
         <div className="flex px-4 py-1 text-base md:text-lg lg:text-xl xl:text-2xl text-gold1">
           <input
@@ -58,8 +63,9 @@ const Filter = () => {
             }
             type="checkbox"
             className="px-6 py-6"
+            id={IN_HOUSE_ID}
           />
-          <p className="ml-2">{t('In house')}</p>{" "}
+          <p className="ml-2"><label for={IN_HOUSE_ID}>{t('In house')}</label></p>{" "}
         </div>
       </div>
 
@@ -75,18 +81,19 @@ const Filter = () => {
         <div>
         <div className="mx-4 my-4 relative flex justify-end">
             <select className="filter appearance-none" value={eventType} onChange={onEventTypeChange}>
-              <option key={`eventType-all`} value="ALL">{t('All')}</option>
+              <option key={`eventType-all`} value={VALUE_ALL}>{t('All')}</option>
               {eventTypes?.map((item, key) => (<option key={`eventType${key}`}>{item}</option>))}
             </select>
           </div>
           <div className="mx-4 my-4 relative">
             <select className="filter appearance-none">
-            {languages?.map((item, key) => (<option key={`lang${key}`}>{item}</option>))}
+              <option key={`eventLanguages-all`} value={VALUE_ALL}>{t('All')}</option>
+              {languages?.map((item, key) => (<option key={`lang${key}`}>{item}</option>))}
             </select>
           </div>
           <div className="mx-4 my-4 relative">
             <select className="filter appearance-none" value={venue} onChange={onVenueChange}>
-            <option key={`venues-all`} value="ALL">{t('All')}</option>
+            <option key={`venues-all`} value={VALUE_ALL}>{t('All')}</option>
             {venues?.map((item, key) => (<option key={`venues${key}`}>{item}</option>))}
             </select>
           </div>
