@@ -49,7 +49,7 @@ export default function SliderItem ({
                   {startTimestamp}
                 </h1>
             </Link>
-            
+
             {/* speaker abd info link. */}
             <div className="items-end justify-between lg:flex sm:items-center">
               <div className="pt-4 pl-4 description lg:pt-1">
@@ -62,7 +62,7 @@ export default function SliderItem ({
               {link && <div className="float-right text-[1rem] md:text-base lg:text-lg xl:text-xl lg:mb-4 bg-gray-100 sm:float-none md:float-right p-2 lg:p-3 xl:p-4 mb-11 sm:mb-0 ml-auto hover:bg-blue-200 cursor-pointer transation text-gray-500">
                 {t('INFO')}:
                 <Link href={link || ''} target="_blank">
-                  <a>{' '}{shortenUrl(link)}</a>
+                  {' '}{shortenUrl(link)}
                 </Link>
               </div>
               }

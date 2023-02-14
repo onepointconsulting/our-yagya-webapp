@@ -1,25 +1,21 @@
-import { useTranslation } from "react-i18next";
-import Link from "next/link";
-import PillMenu from "./PillMenu";
-import SidebarMenu from "./SidebarMenu.jsx";
-import { useState } from "react";
-import { useRouter } from "next/router";
+import Link from 'next/link'
+import PillMenu from './PillMenu'
+import SidebarMenu from './SidebarMenu.jsx'
+import { useState } from 'react'
 
 const HamburgerMenu = () => {
-  const { t } = useTranslation();
-  const [sideBarMenuIsOpen, setSideBarMenuIsOpen] = useState(false);
-  const router = useRouter();
+  const [sideBarMenuIsOpen, setSideBarMenuIsOpen] = useState(false)
 
   const sideBarMenu = () => {
-    setSideBarMenuIsOpen(!sideBarMenuIsOpen);
-  };
+    setSideBarMenuIsOpen(!sideBarMenuIsOpen)
+  }
 
   return (
     <>
       {/* <!-- hamburger menu --> */}
       <div
         className="bg-white relative w-[34%] h-auto flex justify-end items-center"
-        style={{ zIndex: "4" }}
+        style={{ zIndex: '4' }}
       >
         {/* <!-- pille drop down --> */}
         <div id="floatingMenuItems" className="stickyButtons hide">
@@ -36,43 +32,41 @@ const HamburgerMenu = () => {
             </div>
 
             <div className="flex flex-col float-right ml-auto">
-              <div className="p-2 px-2 m-1 text-red-600 border-2 border-red-600 rounded-full">
-                <Link href="/">
-                  <a href="#" id="o_language">
-                    {" "}
-                    <img
-                      className="w-5 h-5"
-                      src="/img/icons/Language.png"
-                      alt=""
-                    />{" "}
-                  </a>
+              <div
+                className="p-2 px-2 m-1 text-red-600 border-2 border-red-600 rounded-full">
+                <Link href="/" id="o_language">
+                  {' '}
+                  <img
+                    className="w-5 h-5"
+                    src="/img/icons/Language.png"
+                    alt=""
+                  />{' '}
                 </Link>
               </div>
-              <div className="p-2 px-2 m-1 text-red-600 border-2 border-red-600 rounded-full">
+              <div
+                className="p-2 px-2 m-1 text-red-600 border-2 border-red-600 rounded-full">
                 <Link href="/">
-                  <a>
-                    {" "}
-                    <img
-                      className="w-5 h-5"
-                      src="/img/icons/LoginRed.png"
-                      alt=""
-                    />{" "}
-                  </a>
+                  {' '}
+                  <img
+                    className="w-5 h-5"
+                    src="/img/icons/LoginRed.png"
+                    alt=""
+                  />{' '}
                 </Link>
               </div>
-              <div className="p-2 px-2 m-1 text-red-600 border-2 border-red-600 rounded-full">
+              <div
+                className="p-2 px-2 m-1 text-red-600 border-2 border-red-600 rounded-full">
                 <Link href="/">
-                  <a>
-                    {" "}
-                    <img
-                      className="w-5 h-5"
-                      src="/img/icons/StarPointer.png"
-                      alt=""
-                    />{" "}
-                  </a>
+                  {' '}
+                  <img
+                    className="w-5 h-5"
+                    src="/img/icons/StarPointer.png"
+                    alt=""
+                  />{' '}
                 </Link>
               </div>
-              <div className="hidden p-2 px-2 m-1 text-red-600 border-2 border-red-600 rounded-full">
+              <div
+                className="hidden p-2 px-2 m-1 text-red-600 border-2 border-red-600 rounded-full">
                 <img
                   className="w-5 h-5"
                   src="/img/icons/HeartRed.png"
@@ -83,13 +77,14 @@ const HamburgerMenu = () => {
           </div>
         </div>
 
-        <PillMenu />
+        <PillMenu/>
 
         {/* <!-- mobile hamburger icon --> */}
         <button onClick={sideBarMenu} className="absolute right-3">
           <div className="p-[4px] block lg:hidden">
             <div className="w-[16px] md:w-[24px] h-[3px] bg-red-500"></div>
-            <div className="w-[16px] md:w-[24px] h-[3px] my-[3px] md:my-[5px] bg-red-500"></div>
+            <div
+              className="w-[16px] md:w-[24px] h-[3px] my-[3px] md:my-[5px] bg-red-500"></div>
             <div className="w-[16px] md:w-[24px] h-[3px] bg-red-500"></div>
           </div>
         </button>
@@ -98,20 +93,23 @@ const HamburgerMenu = () => {
       {/* <!-- mobile hamburger icon fixed --> */}
       <div
         className="fixed block lg:hidden right-4 top-[1.60rem] md:top-8"
-        style={{ zIndex: "1" }}
+        style={{ zIndex: '1' }}
       >
         <button
           onClick={sideBarMenu}
           className="p-[5px] md:p-[11.5px] rounded-full border-[1px] border-red-600"
         >
-          <div className="w-[13px] md:w-[16px] h-[2px] md:h-[3.3px] bg-red-500"></div>
-          <div className="w-[13px] md:w-[16px] h-[2px] md:h-[3.3px] my-[3.3px] bg-red-500"></div>
-          <div className="w-[13px] md:w-[16px] h-[2px] md:h-[3.3px] bg-red-500"></div>
+          <div
+            className="w-[13px] md:w-[16px] h-[2px] md:h-[3.3px] bg-red-500"></div>
+          <div
+            className="w-[13px] md:w-[16px] h-[2px] md:h-[3.3px] my-[3.3px] bg-red-500"></div>
+          <div
+            className="w-[13px] md:w-[16px] h-[2px] md:h-[3.3px] bg-red-500"></div>
         </button>
       </div>
-      <div className="relative">{sideBarMenuIsOpen && <SidebarMenu />}</div>
+      <div className="relative">{sideBarMenuIsOpen && <SidebarMenu/>}</div>
     </>
-  );
-};
+  )
+}
 
-export default HamburgerMenu;
+export default HamburgerMenu

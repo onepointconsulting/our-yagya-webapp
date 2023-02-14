@@ -19,18 +19,17 @@ const Footer = () => {
       <div className="metropolis_medium xl:container xl:mx-auto">
         <footer
           className="relative flex-wrap w-full p-2 px-2 text-center text-white capitalize 2xl:flex 2xl:justify-between filosofia_italic md:p-4 bg-grayfull">
-          <BackToTop />
-          <a href="#!" className="footer">{globalPropertyAdapter(globalProperties, 'copyright')}</a>
-          <div className='2xl:text-ellipsis 2xl:whitespace-nowrap'>
+          <BackToTop/>
+          <a href="#" className="footer">{globalPropertyAdapter(
+            globalProperties, 'copyright')}</a>
+          <div className="2xl:text-ellipsis 2xl:whitespace-nowrap">
             {!!footerMenu &&
               footerMenu.map((footer, i) => {
                 return (
                   <span key={i}>
                     <Link
-                      href={footer.attributes.url} >
-                      <a className="footer">
+                      href={footer.attributes.url} className="footer">
                         {t(footer.attributes.title)}
-                      </a>
                     </Link>
                     {i < footerMenu.length - 1 &&
                       <a className="px-2"> |</a>}

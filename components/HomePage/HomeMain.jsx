@@ -34,10 +34,8 @@ const EventsBlock = ({ eventsData }) => {
         <h1
           className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-pointer">
           <Link href={PAGES.EVENTS}>
-            <a>
-              <img src="/img/icons/ArrowDown.png"
-                   alt=""/>
-            </a>
+            <img src="/img/icons/ArrowDown.png"
+                 alt=""/>
           </Link>
         </h1>
       </div>
@@ -88,10 +86,8 @@ const NewsBlock = ({ newsData }) => {
         <h1
           className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
           <Link href={PAGES.NEWS}>
-            <a>
-              <img src="/img/icons/ArrowDown.png"
-                   alt=""/>
-            </a>
+            <img src="/img/icons/ArrowDown.png"
+                 alt=""/>
           </Link>
         </h1>
       </div>

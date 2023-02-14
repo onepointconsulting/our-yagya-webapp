@@ -13,7 +13,7 @@ const NewsItem = ({ news, locale }) => {
     <div className="p-2 pl-3 metropolis_medium md:pl-6 md:p-3">
       <div className="text-redfull py-2 text-[14px] md:text-[26px] xl:text-[30px]">
         <Link href={`/single_news/${news.id}`}>
-          <a>{news.title}</a>
+          {news.title}
         </Link>
       </div>
       <div>
@@ -63,7 +63,7 @@ const AccordionItem = ({
               <div className="text-redfull py-2 text-[19px] md:text-[26px] xl:text-[30px]">
               
               <Link href={`/single_news/${regionalNews.id}`}>
-              <a>{regionalNews.title}</a>
+                {regionalNews.title}
               </Link>
               </div>
               <div>
@@ -89,24 +89,6 @@ const AccordionItem = ({
           </h1>
         </div>
       </div>
-    </div>
-  );
-};
-
-const NestedAccordion = ({ news, newsCategory }) => {
-  const [openPosition, setOpenPosition] = useState(-1);
-  const newsParent = news[newsCategory];
-  return (
-    <div className="mx-auto bg-white">
-      {newsParent?.children.map((subCategory, i) => (
-        <AccordionItem
-          pos={i}
-          key={i}
-          subCategory={subCategory}
-          openPosition={openPosition}
-          setOpenPosition={setOpenPosition}
-        />
-      ))}
     </div>
   );
 };
