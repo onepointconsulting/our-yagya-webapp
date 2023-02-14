@@ -31,7 +31,7 @@ export default function CalendarMain({ data }) {
       <div className="relative mt-4 xl:mb-8 bg-white lg:flex lg:mt-12 xl:mt-16">
         <div>
           <div>
-            {/* Caledar plugin */}
+            {/* Calendar plugin */}
             <Calendar />
           </div>
 
