@@ -17,6 +17,7 @@ import i18n from 'i18next'
 import i18next from 'i18next'
 import { useTranslation } from 'react-i18next'
 import Head from 'next/head'
+import Script from 'next/script'
 
 import "@fullcalendar/common/main.css";
 import "@fullcalendar/daygrid/main.css";
@@ -49,6 +50,7 @@ function OurYagya ({ Component, pageProps }) {
             <OurYagyaContextProvider>
                 <Head>
                     <title>{pageTitle}</title>
+                    <Script>history.scrollRestoration = "manual"</Script>
                 </Head>
                 <div className="relative flex flex-col min-h-screen metropolis_medium xl:container xl:mx-auto">
                     <div className='sticky z-50 top-24 md:top-36'>
