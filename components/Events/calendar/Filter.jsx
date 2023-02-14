@@ -25,11 +25,12 @@ const Filter = () => {
   useEffect(() => {
     const fetchData = async () => {
       const eventTypeParam = eventType !== 'ALL' ? `&eventType=${eventType}` : ''
-      const languageParam = language  ? `&language=${language}` : '' // TODO: language is currently fixed w/ categoryId
+      const languageParam = !!language  ? `&language=${language}` : '' // TODO: language is currently fixed w/ categoryId
       const venueParam = venue !== 'ALL' ? `&venueLocality=${venue}` : ''
       const onlineStatusParam = online && inHouse ? '' : online ? `&onlineStatus=online` : `&onlineStatus=inhouse`
       const privateEventParam = privateEvent === "true" ? `&privateEvent=true` : ""
-      const result = await axios.get(`${getServerURL()}/api/events/category-events/${categoryId}?limit=5&startDateTime=${start}T00:00:00.000Z&endDateTime=${end}T00:00:00.000Z${eventTypeParam}${languageParam}${venueParam}${onlineStatusParam}${privateEventParam}`)
+      const calendarUrl = `${getServerURL()}/api/events/category-events/${categoryId}?startDateTime=${start}T00:00:00.000Z&endDateTime=${end}T00:00:00.000Z${eventTypeParam}${languageParam}${venueParam}${onlineStatusParam}${privateEventParam}`
+      const result = await axios.get(calendarUrl)
       dispatchCalendarData({type: CALENDAR_ACTIONS.SET_EVENTS, events: result.data.events});
     };
     if (categoryId) fetchData();

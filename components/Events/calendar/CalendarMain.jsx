@@ -13,8 +13,6 @@ export default function CalendarMain({ data }) {
   const { filters, events, categoryId, locale } = data.data
   const adaptedFilters = calendarFiltersAdapter(filters)
 
-  console.log('EVENTS: ', events)
-  
   // Migrating all data into the state
   useEffect(()=> {
     dispatchCalendarData({ type: CALENDAR_ACTIONS.SET_EVENTS, events: events})
