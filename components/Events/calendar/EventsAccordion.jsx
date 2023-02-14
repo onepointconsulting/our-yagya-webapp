@@ -42,7 +42,8 @@ const ButtonsAccordion = ({ event }) => {
 export default function EventsAccordion () {
   const [activeIndex, setActiveIndex] = useState(-1)
 
-  const handleAccordionClick = (index) => {
+  const handleAccordionClick = (e, index) => {
+    e.preventDefault()
     setActiveIndex(activeIndex === index ? -1 : index)
   }
 
@@ -62,19 +63,19 @@ export default function EventsAccordion () {
         >
           {/* Accordion header */}
           <div
-            onClick={() => handleAccordionClick(index)}
-            className="flex justify-between bg-gray-100 cursor-pointer md:events-center metropolis_medium pr-4"
+            className="flex justify-between bg-gray-100 md:events-center metropolis_medium pr-4"
           >
             <div
-              className="flex events-center w-[93%] md:w-4/5 lg:w-5/6 xl:w-5/6">
-              <div className="relative w-[30vw] md:w-96">
+              className="flex events-center w-[93%] md:w-4/5 lg:w-5/6 xl:w-5/6 cursor-pointer">
+              <div className="relative w-[30vw] md:w-96" onClick={(e) => handleAccordionClick(e, index)}>
                 <img
                   className="object-cover w-full h-full"
                   src={event.imageUrl}
-                  alt={event.imageUrl}
+                  alt={event.title}
                 />
               </div>
-              <div className="px-2 md:px-4 w-[9rem] md:w-[inherit] lg:w-full">
+              <div className="px-2 md:px-4 w-[9rem] md:w-[inherit] lg:w-full cursor-pointer"
+                   onClick={(e) => handleAccordionClick(e, index)}>
                 <h1
                   className="text-xs font-medium leading-4 text-redfull xs:text-[14px] md:text-xl xxl:text-3xl whitespace-nowrap lg:whitespace-normal overflow-hidden lg:overflow-auto text-ellipsis">
                   {event.title}
