@@ -13,14 +13,6 @@ export default function SingleCategory ({ data }) {
 
   return (
     <>
-      <Head>
-        <MetaTags
-          title='CATEGORY HERE'
-          image='IMAGE HERE'
-          description='DESCRIPTION HERE'
-          path={`//${baseUrl}${asPath}`}
-        />
-      </Head>
       <EventsMain data={data}/>
     </>
   )

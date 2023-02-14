@@ -1,52 +1,18 @@
 import React, { useContext } from 'react'
 import { formateDate } from '../../lib/dateAdapter'
 import Link from '../../node_modules/next/link'
-import { useTranslation } from 'react-i18next'
 import { GlobalContext } from '../../pages/_app'
-import MoreInfo from './MoreInfo'
+import MoreInfoButton from './MoreInfoButton'
+import JoinLinkButton from './JoinLinkButton'
 
 const MoreInfoAndRegister = ({ event }) => {
-  const { t } = useTranslation()
 
   return (
     <>
       {/* more info and registeration */}
       <div className="w-20 xs:w-24 xl:w-36">
-        <MoreInfo event={event} />
-
-        <div
-          className={`flex items-center px-1 py-1 my-1 text-center rounded-lg bg-gold1 ${
-            event.joinLink
-              ? 'bg-gold1 text-white'
-              : 'bg-gray-300 text-slate-200 cursor-text'
-          }`}
-        >
-          <div>
-            <img
-              className="w-4 xs:w-6 lg:w-7"
-              src="/img/icons8-pencil-64.png"
-              alt={event.title}
-              title={event.title}
-            />
-          </div>
-
-          {event.joinLink ? (
-            <Link href={event.joinLink} target="_blank">
-              <div
-                className={`pl-2 pr-2 m-auto mt-auto mb-auto text-xs text-center ${
-                  event.joinLink ? 'text-white' : 'text-white cursor-text'
-                } onlnie_eve_title lg:text-sm xl:text-[13px]`}
-              >
-                {t('Register')}
-              </div>
-            </Link>
-          ) : (
-            <div
-              className="pl-2 pr-2 m-auto mt-auto mb-auto text-xs text-center text-slate-200 cursor-text onlnie_eve_title lg:text-sm xl:text-[13px]">
-              {t('Register')}
-            </div>
-          )}
-        </div>
+        <MoreInfoButton event={event} />
+        <JoinLinkButton event={event} />
       </div>
     </>
   )

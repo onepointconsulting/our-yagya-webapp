@@ -25,6 +25,7 @@ export default function SingleEvent ({ data }) {
           description={singleEvent.sEeventDescription}
           path={`//${baseUrl}${asPath}`}
         />
+
       </Head>
       <SingleEventMain data={data}/>
     </>

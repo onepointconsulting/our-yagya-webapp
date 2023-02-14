@@ -50,8 +50,10 @@ function OurYagya ({ Component, pageProps }) {
             <OurYagyaContextProvider>
                 <Head>
                     <title>{pageTitle}</title>
-                    <Script>history.scrollRestoration = "manual"</Script>
                 </Head>
+                <Script id="show-banner" strategy="afterInteractive">
+                    {`window.history.scrollRestoration = 'manual'`}
+                </Script>
                 <div className="relative flex flex-col min-h-screen metropolis_medium xl:container xl:mx-auto">
                     <div className='sticky z-50 top-24 md:top-36'>
 

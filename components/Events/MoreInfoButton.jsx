@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
-const MoreInfo = ({
+const MoreInfoButton = ({
   event,
   mainClass = 'flex items-center px-1 py-1 my-1 rounded-lg bg-gold1',
   imgClass = 'w-4 xs:w-6 lg:w-7',
@@ -31,4 +31,4 @@ const MoreInfo = ({
   )
 }
 
-export default MoreInfo
+export default MoreInfoButton

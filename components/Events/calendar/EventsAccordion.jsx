@@ -6,35 +6,24 @@ import { useTranslation } from 'react-i18next'
 import { CalendarContext } from '../../../context/CalendarContext'
 import { calendarFooterEventsAdapter } from '../../../lib/eventsAdapter'
 import { formateDate } from '../../../lib/dateAdapter'
-import MoreInfo from '../MoreInfo'
+import MoreInfoButton from '../MoreInfoButton'
+import JoinLinkButton from '../JoinLinkButton'
 
 const ButtonsAccordion = ({ event }) => {
   const { t } = useTranslation()
 
   return (
     <div className="w-32 md:w-40 lg:w-60">
-      <MoreInfo event={event}
-                mainClass="flex rounded-md bg-gold1 my-1 xl:my-2 px-1 xl:px-2 py-1 xl:py-2 cursor-pointer items-center"
-                imgClass="w-4 xs:w-6 lg:w-12"
-                moreInfoClass="pl-1 md:pl-3 lg:pl-4 text-[9px] md:text-lg lg:text-xl xl:text-2xl text-white"/>
+      <MoreInfoButton event={event}
+                      mainClass="flex rounded-md bg-gold1 my-1 xl:my-2 px-1 xl:px-2 py-1 xl:py-2 cursor-pointer items-center"
+                      imgClass="w-4 xs:w-6 lg:w-12"
+                      moreInfoClass="pl-1 md:pl-3 lg:pl-4 text-[9px] md:text-lg lg:text-xl xl:text-2xl text-white"/>
 
       {/* Register link button */}
-      <div
-        className="flex items-center px-1 py-1 my-1 rounded-md cursor-pointer bg-gold1 xl:my-2 xl:px-2 xl:py-2">
-        <div>
-          <img
-            className="w-4 xs:w-6 lg:w-12"
-            src="/img/icons8-pencil-64.png"
-            alt={t('Register')}
-          />
-        </div>
-        <Link href="#" target="_blank">
-          <div
-            className="pl-1 md:pl-3 lg:pl-4 text-[9px] md:text-lg lg:text-xl xl:text-2xl text-white">
-            {t('Register')}
-          </div>
-        </Link>
-      </div>
+      <JoinLinkButton event={event}
+                      parentStyle="flex items-center px-1 py-1 my-1 rounded-md cursor-pointer bg-gold1 xl:my-2 xl:px-2 xl:py-2"
+                      imageClass="w-4 xs:w-6 lg:w-12"
+                      registerButtonClass="pl-1 md:pl-3 lg:pl-4 text-[9px] md:text-lg lg:text-xl xl:text-2xl text-white" />
     </div>
   )
 }

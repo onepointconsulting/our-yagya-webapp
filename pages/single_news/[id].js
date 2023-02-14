@@ -22,6 +22,7 @@ export default function SingleNews({ data }) {
           description={singleNewsData.sNewsContent}
           path={`//${baseUrl}${asPath}`}
         />
+
       </Head>
       <SingleNewsMain singleNewsData={singleNewsData} />
     </>
