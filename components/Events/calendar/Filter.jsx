@@ -3,24 +3,24 @@ import { CalendarContext, CALENDAR_ACTIONS} from "../../../context/CalendarConte
 import { getServerURL } from "../../../lib/apiConstants";
 import axios from 'axios'
 import findStartAndEndMonth from "../../../lib/dateAdapter";
+import { useTranslation } from 'react-i18next'
 
 const Filter = () => {
-    
+
+  const { t } = useTranslation()
   const { calendarData, dispatchCalendarData } = useContext(CalendarContext);
-  const { online, inHouse, privateEvent, eventType, language, eventTypes, languages, venue, venues, categoryId } = calendarData;
+  const { online, inHouse, privateEvent, eventType, language, eventTypes, languages,
+    venue, venues, categoryId } = calendarData;
   const { start, end } = findStartAndEndMonth()
 
-  const onEventTypeChange = (event) => {
-    dispatchCalendarData({ type: CALENDAR_ACTIONS.SET_EVENT_TYPE, eventType: event.target.value})
-  }
+  const onEventTypeChange = (event) => dispatchCalendarData(
+    { type: CALENDAR_ACTIONS.SET_EVENT_TYPE, eventType: event.target.value })
 
-  const onVenueChange = (event) => {
-    dispatchCalendarData({ type: CALENDAR_ACTIONS.SET_VENUE, venue: event.target.value})
-  } 
+  const onVenueChange = (event) => dispatchCalendarData(
+    { type: CALENDAR_ACTIONS.SET_VENUE, venue: event.target.value })
 
-  const onPrivacyChange = (event) => {
-    dispatchCalendarData({ type: CALENDAR_ACTIONS.SET_PRIVATE, privateEvent: event.target.value})
-  }
+  const onPrivacyChange = (event) => dispatchCalendarData(
+    { type: CALENDAR_ACTIONS.SET_PRIVATE, privateEvent: event.target.value })
 
   useEffect(() => {
     const fetchData = async () => {
@@ -47,7 +47,7 @@ const Filter = () => {
             type="checkbox"
             className="px-6 py-6"
           />
-          <p className="ml-2">Online</p>{" "}
+          <p className="ml-2">{t('Online')}</p>{" "}
         </div>
         <div className="flex px-4 py-1 text-base md:text-lg lg:text-xl xl:text-2xl text-gold1">
           <input
@@ -58,7 +58,7 @@ const Filter = () => {
             type="checkbox"
             className="px-6 py-6"
           />
-          <p className="ml-2">In house</p>{" "}
+          <p className="ml-2">{t('In house')}</p>{" "}
         </div>
       </div>
 
@@ -66,7 +66,7 @@ const Filter = () => {
         
         <div className="relative  flex flex-col">
           <div className="px-4 py-4 text-base md:text-lg lg:text-xl xl:text-2xl text-gold1">
-            Filter by
+            {t('Filter by')}
           </div>
           
         </div>
@@ -74,7 +74,7 @@ const Filter = () => {
         <div>
         <div className="mx-4 my-4 relative flex justify-end">
             <select className="filter appearance-none" value={eventType} onChange={onEventTypeChange}>
-              <option key={`eventType-all`} value="ALL">All</option>
+              <option key={`eventType-all`} value="ALL">{t('All')}</option>
               {eventTypes?.map((item, key) => (<option key={`eventType${key}`}>{item}</option>))}
             </select>
           </div>
@@ -85,14 +85,14 @@ const Filter = () => {
           </div>
           <div className="mx-4 my-4 relative">
             <select className="filter appearance-none" value={venue} onChange={onVenueChange}>
-            <option key={`venues-all`} value="ALL">All</option>
+            <option key={`venues-all`} value="ALL">{t('All')}</option>
             {venues?.map((item, key) => (<option key={`venues${key}`}>{item}</option>))}
             </select>
           </div>
           <div className="mx-4 my-4 relative">
             <select className="filter appearance-none" value={privateEvent} onChange={onPrivacyChange}>
-              <option value="false">All</option>
-              <option value="true">Private</option>
+              <option value="false">{t('All')}</option>
+              <option value="true">{t('Private')}</option>
             </select>
           </div>
         </div>

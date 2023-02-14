@@ -15,7 +15,7 @@ export const CALENDAR_ACTIONS = {
   TOGGLE_ONLINE: 'TOGGLE_ONLINE',
   TOGGLE_IN_HOUSE: 'TOGGLE_IN_HOUSE',
   SET_EVENTS: 'SET_EVENTS',
-  SET_CATEGORY_ID: 'SET_CATEGORY_ID',
+  SET_PAGE_DATA: 'SET_PAGE_DATA',
   SET_PRIVATE: 'SET_PRIVATE',
   SET_SELECTED_PERIOD: 'SET_SELECTED_PERIOD'
 }
@@ -57,10 +57,11 @@ const reducer = (state, action) => {
         ...state,
         events: action.events
     }
-    case CALENDAR_ACTIONS.SET_CATEGORY_ID:
+    case CALENDAR_ACTIONS.SET_PAGE_DATA:
       return {
         ...state,
-        categoryId: action.categoryId
+        categoryId: action.categoryId,
+        locale: action.locale
     }
     case CALENDAR_ACTIONS.SET_FILTERS:
       return {
@@ -95,6 +96,7 @@ export const CalendarContextProvider = props => {
       venue: DEFAULT_VALUES.VENUE,
       events: [],
       categoryId: "",
+      locale: "",
       selectedStartDate: null,
       selectedEndDate: null
     }
