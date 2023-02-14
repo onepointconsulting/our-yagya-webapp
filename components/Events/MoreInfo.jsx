@@ -12,24 +12,22 @@ const MoreInfo = ({
   const { t } = useTranslation()
 
   return (
+        <Link href={`/single_event/${event.id}`}>
     <div className={mainClass}>
       <div>
-        <Link href={`/single_event/${event.id}`}>
           <img
             className={imgClass}
             src="/img/icons8-info-50.png"
             alt={event.title}
             title={event.title}
           />
-        </Link>
       </div>
-      <Link href={`/single_event/${event.id}`}>
         <div
           className={moreInfoClass}>
           {t('More Info')}
         </div>
-      </Link>
     </div>
+      </Link>
   )
 }
 

@@ -57,7 +57,7 @@ export default function NewsListingMain () {
               <div
                 className="py-2 pl-4 break-words w-52 xs:w-64 md:w-full md:truncate">
                 <h1
-                  className="text-base font-medium leading-4 text-redfull xs:text-[14px] md:text-2xl xxl:text-3xl whitespace-nowrap md:whitespace-normal overflow-ellipsis overflow-hidden metropolis_medium">
+                  className="text-base font-medium leading-4 text-redfull xs:text-[14px] md:text-2xl xl:text-3xl whitespace-nowrap md:whitespace-normal overflow-ellipsis overflow-hidden metropolis_medium">
                   {item.title}
                   <br/>
                   {item.subTitle}
