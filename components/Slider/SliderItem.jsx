@@ -52,7 +52,7 @@ export default function SliderItem ({
 
             {/* speaker abd info link. */}
             <div className="items-end justify-between lg:flex sm:items-center">
-              <div className="pt-4 pl-4 description lg:pt-1">
+              <div className="pt-4 description lg:pt-1">
                 <h3 className="leading-8 text-gray-500 capitalize text-SM online-event-p md:text-xl lg:text-lg xl:text-2xl">
                   {Array.isArray(speakers) && speakers?.join(', ') || speakers}
                 </h3>

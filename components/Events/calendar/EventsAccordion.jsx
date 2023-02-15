@@ -110,12 +110,11 @@ export default function EventsAccordion() {
 
                 {/* <!-- img --> */}
                 <div className="relative flex flex-col items-end justify-between w-full lg:w-max">
-                  <div className="md:w-full lg:w-96 xl:w-10/12">
+                  <div className="md:w-full lg:w-[27rem] xl:w-[40rem] h-[12vh] md:h-[28vh] lg:h-[16rem] xl:h-[30rem] mx-auto lg:mx-0">
                     <img
-                      className="object-cover w-full mx-auto lg:h-auto"
+                      className="object-cover w-full h-full mx-auto"
                       src={event.imageUrl}
-                      alt=""
-                    />
+                      alt="" />
                   </div>
                   <div className="relative w-10 my-2 text-center">
                     <SocialMediaIcons eventIndex={event} />
