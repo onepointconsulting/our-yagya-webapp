@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from 'react'
 import Link from "../../node_modules/next/link";
+import { GlobalContext } from '../../pages/_app'
 
 const SidebarMenu = () => {
+  const { mainMenu } = useContext(GlobalContext);
   return (
       <div
         className="fixed top-0 right-0 block w-48 h-screen overflow-y-auto transition duration-700 ease-in-out lg:hidden lg:top-20 bg-grayDark md:w-52 md:translate-x-0"
