@@ -1,27 +1,31 @@
-import Link from 'next/link'
-import { useContext } from 'react'
-import { GlobalContext } from '../../pages/_app'
-import { useRouter } from 'next/router'
+import Link from "next/link";
+import { useContext } from "react";
+import { GlobalContext } from "../../pages/_app";
+import { useRouter } from "next/router";
 
-const MenuLink = ({ attributes, isLast }) => {
+const MenuLink = ({ attributes, isLast, lineClass = "text-gray-100" }) => {
   const url = attributes.url;
   return (
     <>
       {url.indexOf("/") === 0 ? (
         <Link href={attributes.url}>
-          <h6 className="menu cursor-pointer">{attributes.title}</h6>
+          <h6 className="cursor-pointer menu">{attributes.title}</h6>
         </Link>
       ) : (
-        <Link className="menu cursor-pointer" href={attributes.url}>
+        <Link className="cursor-pointer menu" href={attributes.url}>
           {attributes.title}
         </Link>
       )}
-      {!isLast && <a className="text-gray-100">|</a>}
+      {!isLast && <a className={lineClass}>|</a>}
     </>
   );
 };
 
-const SubMenu = ({ mainMenu }) => {
+const SubMenu = ({
+  mainMenu,
+  lineClass,
+  subMenuClass = "flex-wrap items-end hidden w-full p-3 mx-auto text-center lg:flex-row filosofia_regular bg-red70 md:flex md:justify-around lg:justify-evenly",
+}) => {
   const { pathname } = useRouter();
   let actualPathName = pathname === "/" ? "/index" : pathname;
   const currentMenu = mainMenu.filter(
@@ -35,13 +39,11 @@ const SubMenu = ({ mainMenu }) => {
     const children = currentMenu[0]?.attributes?.children;
 
     return (
-      <div
-        className="hidden lg:flex-row flex-wrap items-end w-full p-3 mx-auto text-center filosofia_regular bg-red70 md:flex md:justify-around lg:justify-evenly"
-        style={{ zIndex: -6 }}>
-          
+      <div className={subMenuClass} style={{ zIndex: -6 }}>
         {children.map((child, i) => {
           return (
             <MenuLink
+              lineClass={lineClass}
               key={i}
               attributes={child.attributes}
               isLast={children.length - 1 === i}
@@ -60,16 +62,21 @@ const SubMenu = ({ mainMenu }) => {
  * @returns {JSX.Element}
  * @constructor
  */
-const MainMenu = () => {
+const MainMenu = ({
+  lineClass,
+  subMenuClass,
+  mainMenuClass = "flex-wrap items-end hidden w-full p-3 mx-auto text-center lg:flex-row filosofia_regular bg-grayDark md:flex md:justify-around lg:justify-evenly",
+}) => {
   const { mainMenu } = useContext(GlobalContext);
 
   return (
     <>
-      <div className="relative z-30 hidden lg:block">
-        <div className="hidden lg:flex-row flex-wrap items-end w-full p-3 mx-auto text-center filosofia_regular bg-grayDark md:flex md:justify-around lg:justify-evenly">
+      <div className="relative z-30">
+        <div className={mainMenuClass}>
           {mainMenu.map((menu, i) => {
             return (
               <MenuLink
+                lineClass={lineClass}
                 key={i}
                 attributes={menu.attributes}
                 isLast={mainMenu.length - 1 === i}
@@ -78,9 +85,9 @@ const MainMenu = () => {
           })}
         </div>
       </div>
-      <SubMenu mainMenu={mainMenu} />
+      <SubMenu mainMenu={mainMenu} lineClass={lineClass} subMenuClass={subMenuClass}/>
     </>
-  );
-};
+  )
+}
 
 export default MainMenu;

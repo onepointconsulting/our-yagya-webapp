@@ -45,7 +45,7 @@
     @apply flex-row justify-between py-3 mt-3 mb-3 md:flex bg-speakers-bg-color;
   }
   .menu {
-    @apply text-gray-100 px-2 text-lg lg:text-[25px] xl:text-[28px] whitespace-nowrap capitalize;
+    @apply text-gray-100 px-2 text-base md:text-lg lg:text-[25px] xl:text-[28px] whitespace-nowrap capitalize;
   }
 
   .buttons {
