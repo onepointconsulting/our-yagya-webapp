@@ -1,14 +1,7 @@
-import React, { useContext } from "react";
-import Link from "../../node_modules/next/link";
-import { GlobalContext } from "../../pages/_app";
+import React from "react";
 import MainMenu from "./MainMenu";
 
-const SidebarMenu = ({ mainMenuClass }) => {
-  const { mainMenu } = useContext(GlobalContext);
-  // const sidebarMenu = mainMenu()
-  console.log("====================================");
-  console.log("mainMenu sidebarMenu", mainMenu);
-  console.log("====================================");
+const SidebarMenu = () => {
 
   return (
     <div
