@@ -74,41 +74,43 @@ const Filter = () => {
 
   return (
     <div className="mt-12">
-      <div className="flex items-center">
-        <div className="flex px-4 py-1 text-base md:text-lg lg:text-xl xl:text-2xl text-gold1">
-          <input
-            checked={calendarData.online}
-            onChange={() =>
-              dispatchCalendarData({ type: CALENDAR_ACTIONS.TOGGLE_ONLINE })
-            }
-            type="checkbox"
-            className="px-6 py-6"
-            id={ONLINE_OPTON_ID}
-          />
-          <p className="ml-2">
-            <label for={ONLINE_OPTON_ID}>{t("Online")}</label>
-          </p>{" "}
-        </div>
-
-        <div className="flex px-4 py-1 text-base md:text-lg lg:text-xl xl:text-2xl text-gold1">
-          <input
-            checked={calendarData.inHouse}
-            onChange={() =>
-              dispatchCalendarData({ type: CALENDAR_ACTIONS.TOGGLE_IN_HOUSE })
-            }
-            type="checkbox"
-            className="px-6 py-6"
-            id={IN_HOUSE_ID}
-          />
-          <p className="ml-2">
-            <label for={IN_HOUSE_ID}>{t("In house")}</label>
-          </p>{" "}
-        </div>
-      </div>
-
       <div className="flex justify-between w-full my-4 metropolis_medium bg-filter-bg">
-        <div className="w-32 px-4 py-4 text-base md:text-lg lg:text-xl xl:text-2xl text-gold1 md:w-44">
+        <div className="w-60 px-4 py-4 text-base md:text-lg lg:text-xl xl:text-2xl text-gold1 md:w-72">
           <p> {t("Filter by")}</p>
+
+          <div className="">
+            <div className="flex px-4 py-1 text-base md:text-lg lg:text-xl xl:text-2xl text-gray-500">
+              <input
+                checked={calendarData.online}
+                onChange={() =>
+                  dispatchCalendarData({ type: CALENDAR_ACTIONS.TOGGLE_ONLINE })
+                }
+                type="checkbox"
+                className="px-6 py-6"
+                id={ONLINE_OPTON_ID}
+              />
+              <p className="ml-2">
+                <label htmlFor={ONLINE_OPTON_ID}>{t("Online")}</label>
+              </p>{" "}
+            </div>
+
+            <div className="flex px-4 py-1 text-base md:text-lg lg:text-xl xl:text-2xl text-gray-500">
+              <input
+                checked={calendarData.inHouse}
+                onChange={() =>
+                  dispatchCalendarData({
+                    type: CALENDAR_ACTIONS.TOGGLE_IN_HOUSE,
+                  })
+                }
+                type="checkbox"
+                className="px-6 py-6"
+                id={IN_HOUSE_ID}
+              />
+              <p className="ml-2">
+                <label htmlFor={IN_HOUSE_ID}>{t("In house")}</label>
+              </p>{" "}
+            </div>
+          </div>
         </div>
 
         <div className="relative w-full">
@@ -127,7 +129,7 @@ const Filter = () => {
             </select>
           </div>
           <div className="w-full max-w-full px-4 my-4">
-            <select  className="w-full filter">
+            <select className="w-full filter">
               <option key={`eventLanguages-all`} value={VALUE_ALL}>
                 {t("All")}
               </option>

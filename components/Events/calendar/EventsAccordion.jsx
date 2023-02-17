@@ -1,6 +1,5 @@
 import React, { useContext, useMemo } from "react";
 import { useState } from "react";
-import Link from "../../../node_modules/next/link";
 import SocialMediaIcons from "../../NewsPage/SocialMediaIcons";
 import { useTranslation } from "react-i18next";
 import { CalendarContext } from "../../../context/CalendarContext";
@@ -20,17 +19,22 @@ const ButtonsAccordion = ({ event }) => {
 
       {/* Register/join link button */}
       <JoinLinkButton event={event} />
-      
     </div>
   );
 };
 
 export default function EventsAccordion() {
   const [activeIndex, setActiveIndex] = useState(-1);
+  const [bgColor, setBgColor] = useState("#f3f4f6");
+  const [dateColor, setDateColor] = useState("#9ca3af");
+  const [titleColor, setTitleColor] = useState("red");
 
   const handleAccordionClick = (e, index) => {
     e.preventDefault();
     setActiveIndex(activeIndex === index ? -1 : index);
+    setBgColor(activeIndex === index ? "#f3f4f6" : "#bf8e23");
+    setDateColor(activeIndex === index ? "#9ca3af" : "#fff");
+    setTitleColor(activeIndex === index ? "red" : "#fff");
   };
 
   const { calendarData } = useContext(CalendarContext);
@@ -48,7 +52,12 @@ export default function EventsAccordion() {
           className="relative my-4 bg-white rounded-lg shadow-lg"
         >
           {/* Accordion header */}
-          <div className="flex items-center justify-between pr-1 bg-gray-100 cursor-pointer md:pr-4 metropolis_medium">
+          <div
+            className="flex items-center justify-between pr-1 cursor-pointer md:pr-4 metropolis_medium"
+            style={{
+              backgroundColor: activeIndex === index ? bgColor : "#f3f4f6",
+            }}
+          >
             <div className="flex items-center w-[93%] md:w-4/5 lg:w-5/6 xl:w-5/6">
               {/* event img */}
               <div
@@ -67,22 +76,33 @@ export default function EventsAccordion() {
                 className="px-2 md:px-4 w-36 xss:w-40 md:w-[23rem] lg:w-full"
                 onClick={(e) => handleAccordionClick(e, index)}
               >
-                <h1 className="text-xs font-medium leading-4 text-redfull xs:text-[14px] md:text-xl xl:text-3xl whitespace-nowrap lg:whitespace-normal overflow-hidden lg:overflow-auto text-ellipsis">
-                  {event.title}
-                </h1>
-                {!!event.subTitle && (
-                  <h1 className="text-xs font-medium leading-4 text-redfull xs:text-[14px] md:text-lg xl:text-xl whitespace-nowrap lg:whitespace-normal overflow-hidden lg:overflow-auto text-ellipsis">
-                    [{event.subTitle}]
+                <div
+                  style={{
+                    color: activeIndex === index ? "white" : titleColor,
+                  }}
+                >
+                  <h1 className="text-xs font-medium leading-4 xs:text-[14px] md:text-xl xl:text-3xl whitespace-nowrap lg:whitespace-normal overflow-hidden lg:overflow-auto text-ellipsis">
+                    {event.title}
                   </h1>
-                )}
-                <div className="items-center justify-between w-full pt-2 md:flex">
+                  
+                  {!!event.subTitle && (
+                    <h1 className="text-xs font-medium leading-4 xs:text-[14px] md:text-lg xl:text-xl whitespace-nowrap lg:whitespace-normal overflow-hidden lg:overflow-auto text-ellipsis">
+                      [{event.subTitle}]
+                    </h1>
+                  )}
+                </div>
+
+                <div
+                  className="items-center justify-between w-full pt-2 md:flex"
+                  style={{ color: activeIndex === index ? "white" : dateColor }}
+                >
                   <div>
-                    <p className="text-[8px] text-gray-400 md:text-sm lg:text-[1.125rem]">
+                    <p className="text-[8px] md:text-sm lg:text-[1.125rem]">
                       {formateDate(event.startDateTime, locale, "dd LLLL yyyy")}
                     </p>
                   </div>
 
-                  <div className="text-[8px] text-gray-400 md:text-sm lg:text-[1.125rem]">
+                  <div className="text-[8px] md:text-sm lg:text-[1.125rem]">
                     <p>
                       {formateDate(event.startDateTime, locale, "hh:mm a ZZZZ")}
                     </p>
@@ -114,7 +134,8 @@ export default function EventsAccordion() {
                     <img
                       className="object-cover w-full h-full mx-auto"
                       src={event.imageUrl}
-                      alt="" />
+                      alt=""
+                    />
                   </div>
                   <div className="relative w-10 my-2 text-center">
                     <SocialMediaIcons eventIndex={event} />
