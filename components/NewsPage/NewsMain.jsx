@@ -1,18 +1,18 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { formateDate } from "../../lib/dateAdapter";
 import { imageAdapter } from "../../lib/imageAdapter";
-import { newsAdapter } from "../../lib/newsAdapter";
+import { getNewsByCategory } from "../../lib/newsAdapter";
 import { GlobalContext } from "../../pages/_app";
 import { useTranslation } from "react-i18next";
-import { categoriesAdapter } from '../../lib/globalPropertiesAdapter'
 import Link from 'next/link'
+import { getFeaturedCategory } from "../../lib/eventsAdapter";
 
 const NewsItem = ({ news, locale }) => {
   const { t } = useTranslation();
   return (
     <div className="p-2 pl-3 metropolis_medium md:pl-6 md:p-3">
       <div className="text-redfull py-2 text-[14px] md:text-[26px] xl:text-[30px]">
-        <Link href={`/single_news/${news.id}`}>
+        <Link href={`/single_news/${news.title}`}>
           {news.title}
         </Link>
       </div>
@@ -94,11 +94,25 @@ const AccordionItem = ({
 };
 
 export default function NewsMain({ data }) {
-  const { globalProperties, locale } = useContext(GlobalContext);
+  const { locale } = useContext(GlobalContext);
 
   const bgImage = imageAdapter(data);
-  const adaptedNews = newsAdapter(data);
-  const newsCategories = categoriesAdapter(globalProperties);
+  const newsCategories = data.data.categories;
+  const allNews = data.data.news;
+  // const featuredCategory = getFeaturedCategory(allNews)  
+  
+  // International
+  const internationalNews = getNewsByCategory("International", allNews)
+  // Madhuban News
+  const madhubanNews = getNewsByCategory("Madhuban News", allNews)
+  // Special Focus News
+  const specialFocusNews = getNewsByCategory("Special Focus News", allNews)
+  // Transitions
+  const transitionsNews = getNewsByCategory("Transitions", allNews)
+  // Regional News
+  const regionalNews = getNewsByCategory("Regional News", allNews)
+
+  console.log(newsCategories, internationalNews, madhubanNews, specialFocusNews)
 
   return (
     <div>
@@ -109,13 +123,14 @@ export default function NewsMain({ data }) {
           background: `url(${bgImage}) no-repeat`,
         }} >
 
+      {/* International */}
+      {internationalNews?.length > 0 && (
         <div className="w-auto mb-8 fadeInTop lg:w-full mx-atuo">
-        {/* Internationl */}
-          <div className="object-cover bg-gray-200 bg-opacity-[0.50]">
+        <div className="object-cover bg-gray-200 bg-opacity-[0.50]">
             <div className="py-2 pl-4 pr-2 text-xl capitalize text-white filosofia_italic bg-button-color bg-gold1 md:text-4xl">
-              {newsCategories[0]}
+              {newsCategories[0].title}
             </div>
-            {adaptedNews[newsCategories[0]]?.news.map((news, i) => (
+            {internationalNews?.map((news, i) => (
               <NewsItem news={news} locale={locale} key={`news_item_${i}`} />
             ))}
 
@@ -124,22 +139,23 @@ export default function NewsMain({ data }) {
                 <img
                   className="w-8 md:w-12"
                   src="/img/icons/ArrowDown.png"
-                  alt={newsCategories[0]}
-                  title={newsCategories[0]}
+                  alt={newsCategories[0].title}
+                  title={newsCategories[0].title}
                 />
               </h1>
             </div>
           </div>
-        </div>{" "}
-
+        </div>
+            )}
         <div className="justify-between lg:flex">
+          {/* Madhuban News */}
+         { madhubanNews?.length > 0 && (
           <div className="flex flex-col items-center w-full lg:mr-4 lg:w-1/2">
-            {/* Madhuban News */}
             <div className="relative w-full my-4 bg-gray-200 h-fit">
               <div className="py-2 pl-4 pr-2 text-xl capitalize text-white filosofia_italic bg-button-color bg-gold1 md:text-4xl">
-                {newsCategories[1]}
+                {newsCategories[1].title}
               </div>
-              {adaptedNews[newsCategories[1]]?.news.map((news, i) => (
+              {madhubanNews?.map((news, i) => (
                 <NewsItem news={news} locale={locale} key={`news_item_${i}`} />
               ))}
               <div className="my-8">
@@ -147,23 +163,24 @@ export default function NewsMain({ data }) {
                   <img
                     className="w-8 md:w-12"
                     src="/img/icons/ArrowDown.png"
-                    alt={newsCategories[1]}
-                    title={newsCategories[1]}
+                    alt={newsCategories[1].title}
+                    title={newsCategories[1].title}
                   />
                 </h1>
               </div>
-            </div>
+            </div>  
+          </div>)}
 
-            {/* Regional Websites */}
-          </div>
-
+          {/* Regional Websites */}
           <div className="flex flex-col items-center w-full lg:ml-4 lg:w-3/6">
+            
             {/* Special Focus News */}
+            {specialFocusNews?.length > 0 && (
             <div className="relative w-full my-4 bg-gray-200 h-fit">
               <div className="py-2 pl-4 pr-2 text-xl capitalize text-white filosofia_italic bg-button-color bg-gold1 md:text-4xl">
-                {newsCategories[2]}
+                {newsCategories[2].title}
               </div>
-              {adaptedNews[newsCategories[2]]?.news.map((news, i) => (
+              {specialFocusNews?.map((news, i) => (
                 <NewsItem news={news} locale={locale} key={`news_item_${i}`} />
               ))}
               <div className="my-8">
@@ -171,19 +188,20 @@ export default function NewsMain({ data }) {
                   <img
                     className="w-8 md:w-12"
                     src="/img/icons/ArrowDown.png"
-                    alt={newsCategories[2]}
-                    title={newsCategories[2]}
+                    alt={newsCategories[2].title}
+                    title={newsCategories[2].title}
                   />
                 </h1>
               </div>
-            </div>
+            </div>)}
 
             {/* Transitions */}
+            {transitionsNews?.length > 0 && (
             <div className="relative w-full my-4 bg-gray-200 h-fit">
               <div className="py-2 pl-4 pr-2 text-xl capitalize text-white filosofia_italic bg-button-color bg-gold1 md:text-4xl">
-                {newsCategories[4]}
+                {newsCategories[4].title}
               </div>
-              {adaptedNews[newsCategories[4]]?.news.map((news, i) => (
+              {transitionsNews?.map((news, i) => (
                 <NewsItem news={news} locale={locale} key={`news_item_${i}`} />
               ))}
               <div className="my-8">
@@ -191,12 +209,12 @@ export default function NewsMain({ data }) {
                   <img
                     className="w-8 md:w-12"
                     src="/img/icons/ArrowDown.png"
-                    alt={newsCategories[4]}
-                    title={newsCategories[4]}
+                    alt={newsCategories[4].title}
+                    title={newsCategories[4].title}
                   />
                 </h1>
               </div>
-            </div>
+            </div>)}
 
             {/* Links */}
             <div className="relative w-full my-4 bg-gray-200">
