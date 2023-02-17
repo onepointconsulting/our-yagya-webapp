@@ -4,7 +4,7 @@ import EventsAccordion from "./EventsAccordion";
 import Filter from "./Filter";
 import SpecialDays from "./SpecialDays";
 import { CalendarContext, CALENDAR_ACTIONS } from "../../../context/CalendarContext";
-import { calendarFiltersAdapter } from "../../../lib/eventsAdapter";
+import { calendarFiltersAdapter } from "../../../lib/calendarAdapter";
 
 
 export default function CalendarMain({ data }) {

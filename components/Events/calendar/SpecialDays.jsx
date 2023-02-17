@@ -1,7 +1,7 @@
 import React, { useContext, useMemo } from 'react'
 import { CalendarContext } from '../../../context/CalendarContext'
 import { formateDate } from '../../../lib/dateAdapter'
-import { calendarSpecialDaysAdapter } from '../../../lib/eventsAdapter'
+import { calendarSpecialDaysAdapter } from '../../../lib/calendarAdapter'
 import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
 

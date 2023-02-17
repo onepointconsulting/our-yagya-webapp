@@ -3,7 +3,7 @@ import { useState } from "react";
 import SocialMediaIcons from "../../NewsPage/SocialMediaIcons";
 import { useTranslation } from "react-i18next";
 import { CalendarContext } from "../../../context/CalendarContext";
-import { calendarFooterEventsAdapter } from "../../../lib/eventsAdapter";
+import { calendarFooterEventsAdapter } from "../../../lib/calendarAdapter";
 import { formateDate } from "../../../lib/dateAdapter";
 import MoreInfoButton from "../MoreInfoButton";
 import JoinLinkButton from "../JoinLinkButton";
