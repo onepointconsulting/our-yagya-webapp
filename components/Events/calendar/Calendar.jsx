@@ -2,7 +2,7 @@ import FullCalendar from '@fullcalendar/react'
 import interactionPlugin from '@fullcalendar/interaction'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import { useContext, useMemo, useRef } from 'react'
-import { calendarAdapter } from '../../../lib/eventsAdapter'
+import { calendarAdapter } from '../../../lib/calendarAdapter'
 import {
   CALENDAR_ACTIONS,
   CalendarContext,
