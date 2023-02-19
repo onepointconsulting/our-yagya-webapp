@@ -79,7 +79,7 @@ const Filter = () => {
           <p> {t("Filter by")}</p>
 
           <div className="">
-            <div className="flex px-4 py-1 text-base md:text-lg lg:text-xl xl:text-2xl text-gray-500">
+            <div className="flex px-2 xss:px-4 py-1 text-base md:text-lg lg:text-xl xl:text-2xl text-gray-500">
               <input
                 checked={calendarData.online}
                 onChange={() =>
@@ -94,7 +94,7 @@ const Filter = () => {
               </p>{" "}
             </div>
 
-            <div className="flex px-4 py-1 text-base md:text-lg lg:text-xl xl:text-2xl text-gray-500">
+            <div className="flex px-2 xss:px-4 py-1 text-base md:text-lg lg:text-xl xl:text-2xl text-gray-500">
               <input
                 checked={calendarData.inHouse}
                 onChange={() =>

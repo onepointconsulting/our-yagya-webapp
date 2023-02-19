@@ -33,8 +33,8 @@ export default function EventsAccordion() {
     e.preventDefault();
     setActiveIndex(activeIndex === index ? -1 : index);
     setBgColor(activeIndex === index ? "#f3f4f6" : "#bf8e23");
-    setDateColor(activeIndex === index ? "#9ca3af" : "#fff");
-    setTitleColor(activeIndex === index ? "red" : "#fff");
+    setDateColor(activeIndex === index ? "#9ca3af" : "gray");
+    setTitleColor(activeIndex === index ? "red" : "green");
   };
 
   const { calendarData } = useContext(CalendarContext);
@@ -58,12 +58,12 @@ export default function EventsAccordion() {
               backgroundColor: activeIndex === index ? bgColor : "#f3f4f6",
             }}
           >
-            <div className="flex items-center w-[93%] md:w-4/5 lg:w-5/6 xl:w-5/6">
+            <div
+              className="flex items-center w-[93%] md:w-4/5 lg:w-5/6 xl:w-5/6"
+              onClick={(e) => handleAccordionClick(e, index)}
+            >
               {/* event img */}
-              <div
-                className="relative w-20 h-16 xss:w-36 md:w-44 lg:w-80 xl:w-[22rem] xss:h-24 md:h-32 xl:h-40"
-                onClick={(e) => handleAccordionClick(e, index)}
-              >
+              <div className="relative w-20 h-16 xss:w-36 md:w-44 lg:w-80 xl:w-[22rem] xss:h-24 md:h-32 xl:h-40">
                 <img
                   className="object-cover w-full h-full"
                   src={event.imageUrl}
@@ -72,19 +72,21 @@ export default function EventsAccordion() {
               </div>
 
               {/* event title and date */}
-              <div
-                className="px-2 md:px-4 w-36 xss:w-40 md:w-[23rem] lg:w-full"
-                onClick={(e) => handleAccordionClick(e, index)}
-              >
+              <div className="px-2 md:px-4 w-36 xss:w-40 md:w-[23rem] lg:w-full">
                 <div
                   style={{
-                    color: activeIndex === index ? "white" : titleColor,
-                  }}
-                >
+                    color:
+                      activeIndex === index
+                        ? "white"
+                        : titleColor === "red" && activeIndex !== -1
+                        ? titleColor
+                        : "red",
+                  }}>
+                    
                   <h1 className="text-xs font-medium leading-4 xs:text-[14px] md:text-xl xl:text-3xl whitespace-nowrap lg:whitespace-normal overflow-hidden lg:overflow-auto text-ellipsis">
                     {event.title}
                   </h1>
-                  
+
                   {!!event.subTitle && (
                     <h1 className="text-xs font-medium leading-4 xs:text-[14px] md:text-lg xl:text-xl whitespace-nowrap lg:whitespace-normal overflow-hidden lg:overflow-auto text-ellipsis">
                       [{event.subTitle}]
@@ -94,7 +96,14 @@ export default function EventsAccordion() {
 
                 <div
                   className="items-center justify-between w-full pt-2 md:flex"
-                  style={{ color: activeIndex === index ? "white" : dateColor }}
+                  style={{
+                    color:
+                      activeIndex === index
+                        ? "white"
+                        : dateColor === "#9ca3af" && activeIndex !== -1
+                        ? dateColor
+                        : "#9ca3af",
+                  }}
                 >
                   <div>
                     <p className="text-[8px] md:text-sm lg:text-[1.125rem]">
@@ -123,6 +132,7 @@ export default function EventsAccordion() {
               <div className="flex flex-col-reverse justify-between p-3 lg:flex-row xl:p-5">
                 <div className="w-full">
                   <p
+                    style={{ lineHeight: "2.6rem" }}
                     className="text-sm text-gray-400 md:text-base lg:text-lg xl:text-xl"
                     dangerouslySetInnerHTML={{ __html: event.description }}
                   ></p>
