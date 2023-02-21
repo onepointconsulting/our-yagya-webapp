@@ -63,9 +63,7 @@
     font-weight: 500;
     font-family: "Metropolis Medium";
   }
-  .fc-day:hover {
-    background: #ff7b7b;
-    color: white;
+  .fc-day {
     cursor: pointer;
   }
   .fc .fc-view-harness-active > .fc-view{

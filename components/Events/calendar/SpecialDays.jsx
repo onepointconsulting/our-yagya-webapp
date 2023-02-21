@@ -1,7 +1,7 @@
 import React, { useContext, useMemo } from 'react'
 import { CalendarContext } from '../../../context/CalendarContext'
 import { formateDate } from '../../../lib/dateAdapter'
-import { calendarSpecialDaysAdapter } from '../../../lib/eventsAdapter'
+import { calendarSpecialDaysAdapter } from '../../../lib/calendarAdapter'
 import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
 
@@ -9,13 +9,13 @@ const SingleSpecialDay = ({ event, locale }) => {
   return (
     <div className="p-2">
       <div
-        className="text-lg leading-7 font-medium text-redfull capitalize md:text-xl xl:text-2xl">
+        className="text-lg font-medium md:text-xl xl:text-3xl text-redfull">
         <Link href={`/single_event/${event.id}`}>{event.title}</Link>
       </div>
       <div className="flex items-center justify-between w-full">
         <div>
           <p
-            className="text-xs xs:text-sm text-gray-700 md:text-base lg:text-lg">
+            className="text-xs xs:text-sm text-gray-400 md:text-base lg:text-lg">
             {formateDate(
               event.startDateTime,
               locale,
@@ -25,7 +25,7 @@ const SingleSpecialDay = ({ event, locale }) => {
         </div>
 
         <div
-          className="text-xs xs:text-sm text-gray-700 md:text-base lg:text-lg">
+          className="text-xs xs:text-sm text-gray-400 md:text-base lg:text-lg">
           <p>
             {formateDate(
               event.startDateTime,
@@ -40,7 +40,6 @@ const SingleSpecialDay = ({ event, locale }) => {
 }
 
 export default function SpecialDays () {
-
   const { t } = useTranslation()
   const { calendarData } = useContext(CalendarContext)
   const { locale } = calendarData

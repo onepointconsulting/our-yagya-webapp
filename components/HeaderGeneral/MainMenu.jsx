@@ -3,16 +3,16 @@ import { useContext } from "react";
 import { GlobalContext } from "../../pages/_app";
 import { useRouter } from "next/router";
 
-const MenuLink = ({ attributes, isLast, lineClass = "text-gray-100" }) => {
+const MenuLink = ({ attributes, isLast, lineClass = "text-gray-100", titleClassLink = 'cursor-pointer menu'}) => {
   const url = attributes.url;
   return (
     <>
       {url.indexOf("/") === 0 ? (
         <Link href={attributes.url}>
-          <h6 className="cursor-pointer menu">{attributes.title}</h6>
+          <h6 className={titleClassLink}>{attributes.title}</h6>
         </Link>
       ) : (
-        <Link className="cursor-pointer menu" href={attributes.url}>
+        <Link className={titleClassLink} href={attributes.url}>
           {attributes.title}
         </Link>
       )}
@@ -23,6 +23,7 @@ const MenuLink = ({ attributes, isLast, lineClass = "text-gray-100" }) => {
 
 const SubMenu = ({
   mainMenu,
+  titleClassLink,
   lineClass,
   subMenuClass = "flex-wrap items-end hidden w-full p-3 mx-auto text-center lg:flex-row filosofia_regular bg-red70 md:flex md:justify-around lg:justify-evenly",
 }) => {
@@ -43,6 +44,7 @@ const SubMenu = ({
         {children.map((child, i) => {
           return (
             <MenuLink
+            titleClassLink={titleClassLink}
               lineClass={lineClass}
               key={i}
               attributes={child.attributes}
@@ -65,6 +67,7 @@ const SubMenu = ({
 const MainMenu = ({
   lineClass,
   subMenuClass,
+  titleClassLink,
   mainMenuClass = "flex-wrap items-end hidden w-full p-3 mx-auto text-center lg:flex-row filosofia_regular bg-grayDark md:flex md:justify-around lg:justify-evenly",
 }) => {
   const { mainMenu } = useContext(GlobalContext);
@@ -76,6 +79,7 @@ const MainMenu = ({
           {mainMenu.map((menu, i) => {
             return (
               <MenuLink
+                titleClassLink={titleClassLink}
                 lineClass={lineClass}
                 key={i}
                 attributes={menu.attributes}
@@ -85,7 +89,7 @@ const MainMenu = ({
           })}
         </div>
       </div>
-      <SubMenu mainMenu={mainMenu} lineClass={lineClass} subMenuClass={subMenuClass}/>
+      <SubMenu mainMenu={mainMenu} lineClass={lineClass} subMenuClass={subMenuClass}  titleClassLink={titleClassLink}/>
     </>
   )
 }

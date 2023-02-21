@@ -4,7 +4,7 @@ import EventsAccordion from "./EventsAccordion";
 import Filter from "./Filter";
 import SpecialDays from "./SpecialDays";
 import { CalendarContext, CALENDAR_ACTIONS } from "../../../context/CalendarContext";
-import { calendarFiltersAdapter } from "../../../lib/eventsAdapter";
+import { calendarFiltersAdapter } from "../../../lib/calendarAdapter";
 
 
 export default function CalendarMain({ data }) {
@@ -45,8 +45,16 @@ export default function CalendarMain({ data }) {
 
       {/* Accordion */}
       <div className="w-full">
+      <div className="flex justify-start filosofia_italic my-8">
+        <div className="flex items-center justify-around">
+            <img src="/img/arrow-left.png" className="w-8 h-8 p-1 mr-2 border-2 border-gray-400 rounded cursor-pointer lg:h-12 lg:w-10" />
+            <span className="mt-1 text-3xl md:text-4xl text-gold1"> 12/2/21</span>
+            <img src="/img/asset1.png" className="w-8 h-8 p-1 ml-2 border-2 border-gray-400 rounded cursor-pointer lg:h-12 lg:w-10" />
+        </div>
+    </div>
         <EventsAccordion />
       </div>
+
     </div>
   );
 }
