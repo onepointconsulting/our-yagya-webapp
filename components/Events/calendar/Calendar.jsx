@@ -20,6 +20,12 @@ const Calendar = () => {
       <div className="w-full lg:w-[40rem]">
         <FullCalendar
           ref={calendarRef}
+          select={({start}) => {
+            dispatchCalendarData({
+              type: CALENDAR_ACTIONS.SET_SELECTED_START,
+              selectedStartDate: start
+            })
+          }}
           nowIndicator={true}
           editable={true}
           aspectRatio={1}

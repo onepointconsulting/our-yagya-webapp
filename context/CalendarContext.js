@@ -19,6 +19,7 @@ export const CALENDAR_ACTIONS = {
   SET_EVENTS_URL: 'SET_EVENTS_URL',
   SET_PAGE_DATA: 'SET_PAGE_DATA',
   SET_PRIVATE: 'SET_PRIVATE',
+  SET_SELECTED_START: 'SET_SELECTED_START',
   SET_SELECTED_PERIOD: 'SET_SELECTED_PERIOD'
 }
 
@@ -88,6 +89,11 @@ const reducer = (state, action) => {
         ...state,
         selectedStartDate: action.selectedStartDate,
         selectedEndDate: action.selectedEndDate,
+      }
+    case CALENDAR_ACTIONS.SET_SELECTED_START:
+      return {
+        ...state,
+        selectedStartDate: action.selectedStartDate
       }
     default:
       return {
