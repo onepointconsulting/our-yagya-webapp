@@ -7,10 +7,9 @@ import { calendarFooterEventsAdapter } from "../../../lib/calendarAdapter";
 import { formateDate } from "../../../lib/dateAdapter";
 import MoreInfoButton from "../MoreInfoButton";
 import JoinLinkButton from "../JoinLinkButton";
-import AccordionLoader from "../../Loader/Loader ";
+import LoadingContainer from '../../Loading/LoadingContainer'
 
 const ButtonsAccordion = ({ event }) => {
-  const { t } = useTranslation();
 
   return (
     <div className="w-32 md:w-40 lg:w-52 xl:w-60">
@@ -39,13 +38,14 @@ export default function EventsAccordion() {
   };
 
   const { calendarData } = useContext(CalendarContext);
-  const { locale } = calendarData;
+  const { locale, loadingEvents } = calendarData;
 
   const events = useMemo(() => {
     return calendarFooterEventsAdapter(calendarData);
   }, [calendarData]);
 
   return (
+    <LoadingContainer isLoading={loadingEvents} data={events}>
     <div>
       {events.map((event, index) => (
         <div
@@ -158,5 +158,6 @@ export default function EventsAccordion() {
         </div>
       ))}
     </div>
+    </LoadingContainer>
   );
 }
