@@ -5,7 +5,7 @@ import {
 } from "../../../context/CalendarContext";
 import { getServerURL } from "../../../lib/apiConstants";
 import axios from "axios";
-import findStartAndEndMonth from "../../../lib/dateAdapter";
+import { dateToISO } from '../../../lib/dateAdapter'
 import { useTranslation } from "react-i18next";
 
 const ONLINE_OPTON_ID = "onlineOptionId";
@@ -26,8 +26,10 @@ const Filter = () => {
     venue,
     venues,
     categoryId,
+    selectedStartDate,
+    selectedEndDate
   } = calendarData;
-  const { start, end } = findStartAndEndMonth();
+
 
   const onEventTypeChange = (event) =>
     dispatchCalendarData({
@@ -62,7 +64,12 @@ const Filter = () => {
           : `&onlineStatus=inhouse`;
       const privateEventParam =
         privateEvent === "true" ? `&privateEvent=true` : "";
-      const calendarUrl = `${getServerURL()}/api/events/category-events/${categoryId}?startDateTime=${start}T00:00:00.000Z&endDateTime=${end}T00:00:00.000Z${eventTypeParam}${languageParam}${venueParam}${onlineStatusParam}${privateEventParam}`;
+      const calendarUrl = `${getServerURL()}/api/events/category-events/${categoryId}?startDateTime=${dateToISO(selectedStartDate)}T00:00:00.000Z&endDateTime=${dateToISO(selectedEndDate)}T00:00:00.000Z${eventTypeParam}${languageParam}${venueParam}${onlineStatusParam}${privateEventParam}`;
+      console.log('calendarUrl', calendarUrl)
+      dispatchCalendarData({
+        type: CALENDAR_ACTIONS.START_LOADING_EVENTS,
+        loadingEvents: true
+      });
       const result = await axios.get(calendarUrl);
       dispatchCalendarData({
         type: CALENDAR_ACTIONS.SET_EVENTS,
@@ -70,7 +77,7 @@ const Filter = () => {
       });
     };
     if (categoryId) fetchData();
-  }, [online, inHouse, eventType, language, venue, privateEvent]);
+  }, [online, inHouse, eventType, language, venue, privateEvent, selectedStartDate, selectedEndDate]);
 
   return (
     <div className="mt-12">

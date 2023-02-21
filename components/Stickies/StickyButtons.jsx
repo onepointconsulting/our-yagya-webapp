@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from 'next/router'
 
 const StickyButton = () => {
+  const { pathname } = useRouter();
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    if(!pathname.includes("calendar")) {
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, []);
 
   const handleScroll = () => {

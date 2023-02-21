@@ -19,13 +19,18 @@ import { useTranslation } from 'react-i18next'
 import Head from 'next/head'
 import Script from 'next/script'
 
-import "@fullcalendar/common/main.css";
-import "@fullcalendar/daygrid/main.css";
-import "@fullcalendar/timegrid/main.css";
+import '@fullcalendar/common/main.css'
+import '@fullcalendar/daygrid/main.css'
+import '@fullcalendar/timegrid/main.css'
 import MainMenu from '../components/HeaderGeneral/MainMenu'
 import StickyButton from '../components/Stickies/StickyButtons'
 import StickyButtonMobile from '../components/Stickies/StickyButtonsMobile'
+
 export const GlobalContext = createContext({})
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
 
 /**
  * Main entry point for the whole app.
@@ -35,78 +40,83 @@ export const GlobalContext = createContext({})
  * @constructor
  */
 function OurYagya ({ Component, pageProps }) {
-    const { global } = pageProps
-    const locale = global.locale
-    const { t } = useTranslation();
+  const { global } = pageProps
+  const locale = global.locale
+  const { t } = useTranslation()
 
-    useEffect(() => {
-        i18n.changeLanguage(locale);
-    }, [locale]);
+  useEffect(() => {
+    i18n.changeLanguage(locale)
+  }, [locale])
 
-    const pageTitle = titleAdapter(pageProps) ?? t("Our Yagya")
+  const pageTitle = titleAdapter(pageProps) ?? t('Our Yagya')
 
-    return (
-        <GlobalContext.Provider value={global}>
-            <OurYagyaContextProvider>
-                <Head>
-                    <title>{pageTitle}</title>
-                </Head>
-                <Script id="show-banner" strategy="afterInteractive">
-                    {`window.history.scrollRestoration = 'manual'`}
-                </Script>
-                <div className="relative flex flex-col min-h-screen metropolis_medium xl:container xl:mx-auto">
-                    <div className='sticky z-50 ml-auto top-24 md:top-36 w-fit'>
+  const queryClient = new QueryClient()
 
-                        <StickyButton />
-                    </div>
+  return (
+    <GlobalContext.Provider value={global}>
+      <OurYagyaContextProvider>
+        <Head>
+          <title>{pageTitle}</title>
+        </Head>
+        <Script id="show-banner" strategy="afterInteractive">
+          {`window.history.scrollRestoration = 'manual'`}
+        </Script>
+        <div
+          className="relative flex flex-col min-h-screen metropolis_medium xl:container xl:mx-auto">
+          <div className="sticky z-50 ml-auto top-24 md:top-36 w-fit">
 
-                    <Header title={pageTitle} />
-                    <div className='sticky top-0 z-50 hidden lg:block'>
-                        <MainMenu />
-                    </div>
+            <StickyButton/>
+          </div>
 
-                    <div className="flex-1">
-                        <Component {...pageProps} />
-                    </div>
+          <Header title={pageTitle}/>
+          <div className="sticky top-0 z-50 hidden lg:block">
+            <MainMenu/>
+          </div>
 
-                    <div className='sticky z-50 bottom-14'>
-                    <StickyButtonMobile />
-                    </div>
-                    
-                    <Footer />
-                </div>
-            </OurYagyaContextProvider>
-        </GlobalContext.Provider>
+          <div className="flex-1">
+            <QueryClientProvider client={queryClient}>
+              <Component {...pageProps} />
+            </QueryClientProvider>
+          </div>
 
-    )
+          <div className="sticky z-50 bottom-14">
+            <StickyButtonMobile/>
+          </div>
+
+          <Footer/>
+        </div>
+      </OurYagyaContextProvider>
+    </GlobalContext.Provider>
+
+  )
 }
 
 OurYagya.getInitialProps = async (ctxContainer) => {
-    const { ctx, router } = ctxContainer
-    const { locale } = router
-    i18next.changeLanguage(locale);
+  const { ctx, router } = ctxContainer
+  const { locale } = router
+  i18next.changeLanguage(locale)
 
-    // Calls page's `getInitialProps` and fills `appProps.pageProps`
-    const appProps = await App.getInitialProps(ctxContainer)
-    const menuData = await fetchGlobalData(locale)
-    const menuDict = menuAdapter(menuData)
-    const { globalProperties } = menuData?.data
-    const { footer, main, treasures, pill_menu } = menuDict
+  // Calls page's `getInitialProps` and fills `appProps.pageProps`
+  const appProps = await App.getInitialProps(ctxContainer)
+  const menuData = await fetchGlobalData(locale)
+  const menuDict = menuAdapter(menuData)
+  const { globalProperties } = menuData?.data
+  const { footer, main, treasures, pill_menu } = menuDict
 
-    return {
-        ...appProps,
-        pageProps: {
-            global: {
-                mainMenu: main,
-                sustenanceMenu: treasures,
-                footerMenu: footer,
-                pillMenu: pill_menu,
-                globalProperties,
-                locale,
-                baseUrl: ctx?.req?.headers.host
-            },
-        },
-    }
+  return {
+    ...appProps,
+    pageProps: {
+      global: {
+        mainMenu: main,
+        sustenanceMenu: treasures,
+        footerMenu: footer,
+        pillMenu: pill_menu,
+        globalProperties,
+        locale,
+        baseUrl: ctx?.req?.headers.host,
+      },
+    },
+  }
 }
 
 export default appWithTranslation(OurYagya)

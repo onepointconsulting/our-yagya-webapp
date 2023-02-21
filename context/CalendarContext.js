@@ -1,4 +1,4 @@
-import { createContext, useReducer } from 'react'
+import { createContext, useReducer, useRef } from 'react'
 
 export const CalendarContext = createContext({})
 
@@ -15,6 +15,8 @@ export const CALENDAR_ACTIONS = {
   TOGGLE_ONLINE: 'TOGGLE_ONLINE',
   TOGGLE_IN_HOUSE: 'TOGGLE_IN_HOUSE',
   SET_EVENTS: 'SET_EVENTS',
+  START_LOADING_EVENTS: 'START_LOADING_EVENTS',
+  SET_EVENTS_URL: 'SET_EVENTS_URL',
   SET_PAGE_DATA: 'SET_PAGE_DATA',
   SET_PRIVATE: 'SET_PRIVATE',
   SET_SELECTED_PERIOD: 'SET_SELECTED_PERIOD'
@@ -52,11 +54,22 @@ const reducer = (state, action) => {
         ...state,
         privateEvent: action.privateEvent
       }
+    case CALENDAR_ACTIONS.START_LOADING_EVENTS:
+      return {
+        ...state,
+        loadingEvents: true
+      }
     case CALENDAR_ACTIONS.SET_EVENTS:
       return {
         ...state,
-        events: action.events
+        events: action.events,
+        loadingEvents: false
     }
+    case CALENDAR_ACTIONS.SET_EVENTS_URL:
+      return {
+        ...state,
+        eventsUrl: action.eventsUrl
+      }
     case CALENDAR_ACTIONS.SET_PAGE_DATA:
       return {
         ...state,
@@ -95,14 +108,17 @@ export const CalendarContextProvider = props => {
       eventType: DEFAULT_VALUES.EVENT_TYPE,
       venue: DEFAULT_VALUES.VENUE,
       events: [],
+      loadingEvents: false,
+      eventsUrl: "",
       categoryId: "",
       locale: "",
       selectedStartDate: null,
       selectedEndDate: null
     }
   )
+  const calendarRef = useRef(null)
   return (
-    <CalendarContext.Provider value={{calendarData, dispatchCalendarData}}>
+    <CalendarContext.Provider value={{calendarRef, calendarData, dispatchCalendarData}}>
       {props.children}
     </CalendarContext.Provider>
   )
