@@ -7,6 +7,7 @@ import { calendarFooterEventsAdapter } from "../../../lib/calendarAdapter";
 import { formateDate } from "../../../lib/dateAdapter";
 import MoreInfoButton from "../MoreInfoButton";
 import JoinLinkButton from "../JoinLinkButton";
+import AccordionLoader from "../../Loader/Loader ";
 
 const ButtonsAccordion = ({ event }) => {
   const { t } = useTranslation();
@@ -58,6 +59,7 @@ export default function EventsAccordion() {
               backgroundColor: activeIndex === index ? bgColor : "#f3f4f6",
             }}
           >
+            
             <div
               className="flex items-center w-[93%] md:w-4/5 lg:w-5/6 xl:w-5/6"
               onClick={(e) => handleAccordionClick(e, index)}
@@ -106,12 +108,12 @@ export default function EventsAccordion() {
                   }}
                 >
                   <div>
-                    <p className="text-[8px] md:text-sm lg:text-[1.125rem]">
+                    <p className="text-[9px] xss:text-[12px] md:text-base lg:text-[1.125rem]">
                       {formateDate(event.startDateTime, locale, "dd LLLL yyyy")}
                     </p>
                   </div>
 
-                  <div className="text-[8px] md:text-sm lg:text-[1.125rem]">
+                  <div className="text-[9px] xss:text-[12px] md:text-base lg:text-[1.125rem]">
                     <p>
                       {formateDate(event.startDateTime, locale, "hh:mm a ZZZZ")}
                     </p>
@@ -132,8 +134,7 @@ export default function EventsAccordion() {
               <div className="flex flex-col-reverse justify-between p-3 lg:flex-row xl:p-5">
                 <div className="w-full">
                   <p
-                    style={{ lineHeight: "2.6rem" }}
-                    className="text-sm text-gray-400 md:text-base lg:text-lg xl:text-xl"
+                    className="text-sm text-gray-400 md:text-base lg:text-lg xl:text-xl leading-5  md:leading-[2.6rem]"
                     dangerouslySetInnerHTML={{ __html: event.description }}
                   ></p>
                 </div>

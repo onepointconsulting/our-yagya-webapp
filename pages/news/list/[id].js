@@ -7,11 +7,14 @@ import { adaptCustomPage } from '../../../lib/pageAdapter'
 export const NewsContext = createContext({ data: {} })
 
 export default function NewsList({ data }) {
-
+    console.log("====================================");
+    console.log("datadata", newsLayout);
+    console.log("====================================");
+  
     return (
         <NewsContext.Provider value={{ data }}>
             <Slider />
-            <NewsLists />
+            <NewsLists data={data} />
         </NewsContext.Provider>
     )
 }

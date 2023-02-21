@@ -24,7 +24,7 @@ const JoinLinkButton = ({ event }) => {
       {!!event.joinLink ? (
         <Link href={event.joinLink} target="_blank">
           <div
-            className={`$pl-1 md:pl-3 lg:pl-4 text-[9px] md:text-lg lg:text-xl xl:text-2xl text-white ${
+            className={`$pl-1 md:pl-3 lg:pl-4 text-[7px] xss:text-[12px] md:text-lg lg:text-xl xl:text-2xl text-white ${
               event.joinLink ? "text-white" : "text-white cursor-text"
             }`}
           >
@@ -32,7 +32,7 @@ const JoinLinkButton = ({ event }) => {
           </div>
         </Link>
       ) : (
-        <div className="pl-1 md:pl-3 lg:pl-4 text-[9px] md:text-lg lg:text-xl xl:text-2xl text-white">
+        <div className="pl-1 md:pl-3 lg:pl-4 text-[7px] xss:text-[12px] md:text-lg lg:text-xl xl:text-2xl text-white">
           {t("Register")}
         </div>
       )}
