@@ -1,5 +1,5 @@
 import React from "react";
-import { getNonFeaturedCategories, getFeaturedCategory, getFeaturedEvents, getNonFeaturedEvents } from "../../lib/eventsAdapter";
+import { getNonFeaturedCategories, getFeaturedCategory, getFeaturedItems, getNonFeaturedItems } from "../../lib/eventsAdapter";
 import FeaturedEventBlock from "./FeaturedEventBlock";
 import { imageAdapter } from "../../lib/imageAdapter";
 import EventBlocks from "./EventBlocks";
@@ -24,7 +24,7 @@ export default function EventsMain({ data }) {
         {!!featuredCategory.id &&
         <div className="w-full">
           <FeaturedEventBlock
-            featuredEvents={getFeaturedEvents(allEvents, featuredCategory.id)}
+            featuredEvents={getFeaturedItems(allEvents, featuredCategory.id)}
             title={featuredCategory.title}
             featuredCategoryId={featuredCategory.id}
           />
@@ -37,7 +37,7 @@ export default function EventsMain({ data }) {
       {/* events */}
       <div className="w-full">
         <EventBlocks
-          allEvents={getNonFeaturedEvents(allEvents, featuredCategory.id)}
+          allEvents={getNonFeaturedItems(allEvents, featuredCategory.id)}
           eventsCategories={getNonFeaturedCategories(eventsCategories, featuredCategory.id)}
         />
       </div>
