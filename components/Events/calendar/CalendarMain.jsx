@@ -10,7 +10,7 @@ import {
 import { calendarFiltersAdapter } from '../../../lib/calendarAdapter'
 import CalendarDateButton from './CalendarDateButton'
 import { useLoadingState } from '../../Loader/useLoadingState'
-import AccordionLoader, { CalendarLoader } from '../../Loader/Loader '
+import AccordionLoader, { CalendarLoader, FilterLoader } from '../../Loader/Loader '
 
 export default function CalendarMain ({ data }) {
   const loading = useLoadingState();
@@ -44,21 +44,25 @@ export default function CalendarMain ({ data }) {
             </div>
           )}
           {/* filter */}
-          <Filter/>
+          {loading ? (
+            <FilterLoader />
+          ) : (
+            <Filter />
+          )}
         </div>
 
         {/* Special day or some special events */}
         <div className="w-full lg:mx-8 xl:mx-20">
-          <SpecialDays/>
+          <SpecialDays />
         </div>
       </div>
 
       {/* Accordion */}
       <div className="w-full">
-      <CalendarDateButton />
+        <CalendarDateButton />
 
-        {loading ? <AccordionLoader /> : <EventsAccordion />}
+        <EventsAccordion />
       </div>
     </div>
-  )
+  );
 }

@@ -1,52 +1,80 @@
 import React from "react";
-import ContentLoader from "react-content-loader";
+import ContentLoader, { Instagram } from "react-content-loader";
 
-export default function AccordionLoader() {
+export default function AccordionLoader(props) {
+  return (
+    <div className="w-full flex justify-center text-center">
+      <ContentLoader
+        speed={2}
+        width={1900}
+        height={460}
+        viewBox="0 0 1900 460"
+        backgroundColor="transparent"
+        {...props}
+      >
+        <rect x="2" y="23" rx="8" ry="8" width="1900" height="68" />
+        <rect x="2" y="101" rx="8" ry="8" width="1900" height="68" />
+        <rect x="2" y="178" rx="8" ry="8" width="1900" height="68" />
+        <rect x="2" y="255" rx="8" ry="8" width="1900" height="68" />
+      </ContentLoader>
+    </div>
+  );
+}
+
+export function SpecialDayLoader(props) {
   return (
     <>
       <ContentLoader
         speed={2}
-        width="100%"
-        height="200"
-        viewBox="0 0 300 30"
-        backgroundColor="#f3f3f3"
-        foregroundColor="#ecebeb"
+        width={1000}
+        height={460}
+        viewBox="0 0 1000 460"
+        backgroundColor="transparent"
+        {...props}
       >
-        <rect x="0" y="0" rx="0" ry="0" width="400" height="150" />
+        <rect x="1" y="21" rx="8" ry="8" width="1000" height="68" />
+        <rect x="2" y="92" rx="8" ry="8" width="492" height="47" />
+        <rect x="3" y="144" rx="8" ry="8" width="212" height="26" />
       </ContentLoader>
     </>
   );
 }
 
-export function SpecialDayLoader() {
+export function CalendarLoader(props) {
   return (
     <>
       <ContentLoader
         speed={2}
-        width="100%"
-        height="400"
-        viewBox="0 0 300 100"
-        backgroundColor="#f3f3f3"
-        foregroundColor="#ecebeb"
+        width={500}
+        height={460}
+        viewBox="0 0 500 460"
+        backgroundColor="transparent"
+        {...props}
       >
-        <rect x="0" y="0" rx="0" ry="0" width="400" height="150" />
+        <rect x="2" y="23" rx="8" ry="8" width="500" height="500" />
+        <rect x="2" y="428" rx="8" ry="8" width="309" height="57" />
       </ContentLoader>
     </>
   );
 }
 
-export function CalendarLoader() {
+export function FilterLoader(props) {
   return (
     <>
       <ContentLoader
         speed={2}
-        width="100%"
-        height="400"
-        viewBox="0 0 300 120"
-        backgroundColor="#f3f3f3"
-        foregroundColor="#ecebeb"
+        width={500}
+        height={460}
+        viewBox="0 0 500 460"
+        backgroundColor="transparent"
+        {...props}
       >
-        <rect x="0" y="0" rx="0" ry="0" width="400" height="150" />
+        <rect x="126" y="108" rx="8" ry="8" width="500" height="34" />
+        <rect x="1" y="41" rx="8" ry="8" width="102" height="279" />
+        <rect x="126" y="50" rx="8" ry="8" width="500" height="34" />
+        <rect x="128" y="167" rx="8" ry="8" width="500" height="34" />
+        <rect x="128" y="223" rx="8" ry="8" width="500" height="34" />
+        <rect x="127" y="277" rx="8" ry="8" width="500" height="34" />{" "}
       </ContentLoader>
     </>
   );
@@ -61,8 +89,7 @@ export function TestLoader() {
           width="100%"
           height="400"
           viewBox="0 0 300 120"
-          backgroundColor="#f3f3f3"
-          foregroundColor="#ecebeb"
+          backgroundColor="transparent"
         >
           <rect x="4" y="2" rx="1" ry="1" width="400" height="150" />
         </ContentLoader>
@@ -72,8 +99,7 @@ export function TestLoader() {
           width="100%"
           height="400"
           viewBox="0 0 300 120"
-          backgroundColor="#f3f3f3"
-          foregroundColor="#ecebeb"
+          backgroundColor="transparent"
         >
           <rect x="4" y="2" rx="1" ry="1" width="400" height="150" />
         </ContentLoader>
@@ -84,8 +110,7 @@ export function TestLoader() {
           width="100%"
           height="1000"
           viewBox="0 0 300 120"
-          backgroundColor="#f3f3f3"
-          foregroundColor="#ecebeb"
+          backgroundColor="transparent"
         >
           <rect x="2" y="15" rx="4" ry="0" width="400" height="25" />
           <rect x="2" y="50" rx="2" ry="0" width="400" height="150" />
