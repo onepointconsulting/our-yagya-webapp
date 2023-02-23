@@ -1,13 +1,12 @@
 import React, { useContext, useMemo } from "react";
 import { useState } from "react";
 import SocialMediaIcons from "../../NewsPage/SocialMediaIcons";
-import { useTranslation } from "react-i18next";
 import { CalendarContext } from "../../../context/CalendarContext";
 import { calendarFooterEventsAdapter } from "../../../lib/calendarAdapter";
 import { formateDate } from "../../../lib/dateAdapter";
 import MoreInfoButton from "../MoreInfoButton";
 import JoinLinkButton from "../JoinLinkButton";
-import LoadingContainer from '../../Loading/LoadingContainer'
+import LoadingContainer from '../../Loader/LoadingContainer'
 
 const ButtonsAccordion = ({ event }) => {
 

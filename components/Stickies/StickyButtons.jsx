@@ -1,34 +1,30 @@
-import React, { useState, useEffect } from "react";
-import { useRouter } from 'next/router'
+import React, { useState, useEffect } from 'react'
 
 const StickyButton = () => {
-  const { pathname } = useRouter();
-  const [showButton, setShowButton] = useState(false);
+  const [showButton, setShowButton] = useState(false)
 
   useEffect(() => {
-    if(!pathname.includes("calendar")) {
-      window.addEventListener("scroll", handleScroll);
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
     }
-  }, []);
+  }, [])
 
   const handleScroll = () => {
     if (window.pageYOffset > 300) {
-      setShowButton(true);
+      setShowButton(true)
     } else {
-      setShowButton(false);
+      setShowButton(false)
     }
-  };
+  }
 
   return (
     <div className="hidden lg:flex justify-end mr-2 md:mr-3 lg:mr-4">
       <button
         style={{
-          right: "auto",
-          zIndex: "1",
-          display: showButton ? "block" : "none",
+          right: 'auto',
+          zIndex: '1',
+          display: showButton ? 'block' : 'none',
         }}
       >
         <div>
@@ -44,44 +40,49 @@ const StickyButton = () => {
           </div>
 
           <div className="flex flex-col float-right ml-auto">
-            <div className="p-1 md:p-2 md:px-2 m-1 text-red-600 bg-white border-[1px] border-red-600 rounded-full">
+            <div
+              className="p-1 md:p-2 md:px-2 m-1 text-red-600 bg-white border-[1px] border-red-600 rounded-full">
               <a href="#" id="o_language">
-                {" "}
+                {' '}
                 <img
                   className="w-4 md:w-5 h-4 md:h-5"
                   src="/img/icons/Language.png"
                   alt=""
-                />{" "}
+                />{' '}
               </a>
             </div>
-            <div className="p-1 md:p-2 md:px-2 m-1 text-red-600 bg-white border-[1px] border-red-600 rounded-full">
+            <div
+              className="p-1 md:p-2 md:px-2 m-1 text-red-600 bg-white border-[1px] border-red-600 rounded-full">
               <a href="/login.html">
-                {" "}
+                {' '}
                 <img
                   className="w-4 md:w-5 h-4 md:h-5"
                   src="/img/icons/LoginRed.png"
                   alt=""
-                />{" "}
+                />{' '}
               </a>
             </div>
-            <div className="p-1 md:p-2 md:px-2 m-1 text-red-600 bg-white border-[1px] border-red-600 rounded-full">
+            <div
+              className="p-1 md:p-2 md:px-2 m-1 text-red-600 bg-white border-[1px] border-red-600 rounded-full">
               <a href="/made4me.html">
-                {" "}
+                {' '}
                 <img
                   className="w-4 md:w-5 h-4 md:h-5"
                   src="/img/icons/StarPointer.png"
                   alt=""
-                />{" "}
+                />{' '}
               </a>
             </div>
-            <div className="hidden p-1 md:p-2 md:px-2 m-1 text-red-600 bg-white border-2 border-red-600 rounded-full">
-              <img className="w-4 md:w-5 h-4 md:h-5" src="/img/icons/HeartRed.png" alt="" />
+            <div
+              className="hidden p-1 md:p-2 md:px-2 m-1 text-red-600 bg-white border-2 border-red-600 rounded-full">
+              <img className="w-4 md:w-5 h-4 md:h-5"
+                   src="/img/icons/HeartRed.png" alt=""/>
             </div>
           </div>
         </div>
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default StickyButton;
+export default StickyButton
