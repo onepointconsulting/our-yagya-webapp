@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
-import AccordionLoader from "../Loader/Loader ";
+import AccordionLoader from './Loader '
+
 
 const LoadingContainer = ({ data, isLoading, error, isFetching, children }) => {
   const { t } = useTranslation();
