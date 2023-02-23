@@ -41,8 +41,12 @@ export default function Slider () {
         swipeDistanceThreshold: 300,
       }}
     >
-      {slides.map((slide) => {
+      {Array.isArray(slides) && slides.map((slide) => {
         const image = sliderImageAdapter(slide)
+        if (!image) {
+          return null
+        }
+
         return (
           <SliderItem
             key={`slide-${slide.id}`} 
@@ -59,4 +63,6 @@ export default function Slider () {
       })}
     </Splide>
   )
+  
+  
 }

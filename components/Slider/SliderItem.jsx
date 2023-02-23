@@ -14,6 +14,9 @@ export default function SliderItem ({
 }) {
   const { t } = useTranslation()
 
+  if(!imageUrl) {
+    return null
+  }
   return (
     <SplideSlide className="splide__slide" key={`slide-${id}`}>
       <div className="w-full max-w-full mx-auto overflow-hidden shadow-md cursor-pointer metropolis_medium bg-redD50">

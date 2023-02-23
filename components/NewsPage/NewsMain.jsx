@@ -18,6 +18,7 @@ export default function NewsMain({ data }) {
   const featuredShowCard = featuredItem?.show_card > 0
   const featuredTotal = featuredItem?.total
 
+
   return (
     <div>
       {/* <!-- parent --> */}
@@ -31,7 +32,7 @@ export default function NewsMain({ data }) {
       {featuredNews?.length > 0 && (
         <div className="w-auto mb-8 fadeInTop lg:w-full mx-atuo">
         <div className="object-cover bg-gray-200 bg-opacity-[0.50]">
-            <div className="py-2 pl-4 pr-2 text-xl capitalize text-white filosofia_italic bg-button-color bg-gold1 md:text-4xl">
+            <div className="py-2 pl-4 pr-2 text-xl text-white capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
               {featuredCategory.title}
             </div>
             {featuredNews?.map((newsItem, i) => (
@@ -53,16 +54,17 @@ export default function NewsMain({ data }) {
                 showCard={newsItem.show_card > 0}
                 total={newsItem.total}/>
             ))}
+            </div>
             {/* Links */}
-            <div className="relative w-full my-4 bg-gray-200">
-              <div className="flex items-center justify-between w-full bg-gold1 h-fit">
-                <div className="flex lg:block">
-                  <div className="p-2 text-xl text-white filosofia_italic md:text-3xl lg:text-4xl xs:pl-2 md:pl-8">
+            <div className="flex flex-col items-center w-full lg:ml-4 lg:w-3/6">
+              <div className="flex items-center justify-between w-full my-4 bg-gold1 h-fit">
+                <div className="flex p-2 text-xl text-white lg:block filosofia_italic md:text-3xl lg:text-4xl xs:pl-2 md:pl-8">
+                  <h1>
                     for, CCs, NCs, NCTs,
-                  </div>
-                  <div className="p-2 text-xl text-white filosofia_italic md:text-3xl lg:text-4xl xs:pl-2 md:pl-8">
+                  </h1>
+                  <h1>
                     and Board Members
-                  </div>
+                  </h1>
                 </div>
                 <div className="mr-3 md:mr-8">
                   <h1 className="flex justify-center mt-4 text-5xl text-center text-gray-400 cursor-poainter">
@@ -76,7 +78,6 @@ export default function NewsMain({ data }) {
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>

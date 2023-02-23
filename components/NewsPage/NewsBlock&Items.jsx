@@ -44,7 +44,7 @@ export const NewsBlock = ({title, categoryId, news, locale, hasChildren, showCar
     (<>
       {news?.length > 0 && 
         <div className="relative w-full my-4 bg-gray-200 h-fit">
-          <div className="py-2 pl-4 pr-2 text-xl capitalize text-white filosofia_italic bg-button-color bg-gold1 md:text-4xl">
+          <div className="py-2 pl-4 pr-2 text-xl text-white capitalize filosofia_italic bg-button-color bg-gold1 md:text-4xl">
             {title}
           </div>
           {news?.map((newsItem, i) => (

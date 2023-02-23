@@ -4,8 +4,6 @@ import { formateDate } from "../../../lib/dateAdapter";
 import { calendarSpecialDaysAdapter } from "../../../lib/calendarAdapter";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
-import { SpecialDayLoader } from "../../Loader/Loader ";
-import { useLoadingState } from "../../Loader/useLoadingState";
 
 const SingleSpecialDay = ({ event, locale }) => {
   return (
@@ -15,12 +13,12 @@ const SingleSpecialDay = ({ event, locale }) => {
       </div>
       <div className="flex items-center justify-between w-full">
         <div>
-          <p className="text-xs xs:text-sm text-gray-400 md:text-base lg:text-lg">
+          <p className="text-xs text-gray-400 xs:text-sm md:text-base lg:text-lg">
             {formateDate(event.startDateTime, locale, "dd LLLL yyyy")}
           </p>
         </div>
 
-        <div className="text-xs xs:text-sm text-gray-400 md:text-base lg:text-lg">
+        <div className="text-xs text-gray-400 xs:text-sm md:text-base lg:text-lg">
           <p>{formateDate(event.startDateTime, locale, "hh:mm a ZZZZ")} </p>
         </div>
       </div>
@@ -32,7 +30,6 @@ export default function SpecialDays() {
   const { t } = useTranslation();
   const { calendarData } = useContext(CalendarContext);
   const { locale } = calendarData;
-  const loading = useLoadingState();
 
   const specialEvents = useMemo(() => {
     return calendarSpecialDaysAdapter(calendarData);
@@ -42,10 +39,8 @@ export default function SpecialDays() {
 
   return (
     <>
-        {loading ? (
-          <SpecialDayLoader />
-        ) : (
-      <div className="text-xl text-gray-900 lg:border-0 border-2 border-gold1">
+    
+      <div className="text-xl text-gray-900 border-2 lg:border-0 border-gold1">
             {!!hasSpecialDays && (
               <div>
                 <div className="bg-white">
@@ -53,7 +48,7 @@ export default function SpecialDays() {
                     {t("Special Days")}
                   </h1>
 
-                  <div className="metropolis_medium mt-4">
+                  <div className="mt-4 metropolis_medium">
                     {hasSpecialDays &&
                       specialEvents.map((event, index) => (
                         <SingleSpecialDay
@@ -67,7 +62,6 @@ export default function SpecialDays() {
               </div>
             )}
       </div>
-        )}
     </>
   );
 }
