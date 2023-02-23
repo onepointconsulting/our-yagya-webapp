@@ -8,14 +8,14 @@ export const NewsContext = createContext({ data: {} })
 
 export default function News ({ data }) {
 
-    return (
-        <NewsContext.Provider value={{ data }}>
-            <Slider/>
-            <NewsMain data={data}/>
-        </NewsContext.Provider>
-    )
+  return (
+    <NewsContext.Provider value={{ data }}>
+      <Slider/>
+      <NewsMain data={data}/>
+    </NewsContext.Provider>
+  )
 }
 
 export async function getServerSideProps (context) {
-    return await adaptCustomPage(context, newsLayout)
+  return await adaptCustomPage(context, newsLayout)
 }
