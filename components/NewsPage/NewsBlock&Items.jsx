@@ -1,7 +1,7 @@
 import { formateDate } from "../../lib/dateAdapter";
 import { useTranslation } from "react-i18next";
 import Link from 'next/link'
-import { createNewsLinks } from "../../lib/newsRouter";
+import createNewsLinks from "../../lib/newsRouter";
 
 export const NewsItem = ({ news, locale }) => {
     const { t } = useTranslation();
@@ -23,7 +23,7 @@ export const NewsItem = ({ news, locale }) => {
   };
   
 export const ArrowDown = ({title, categoryId, showCard, total, hasChildren}) => {
-    const href = createNewsLinks(showCard, categoryId, total, hasChildren)
+    const href = createNewsLinks(showCard, categoryId, hasChildren)
     return (
       <Link href={href}>
         <div className="my-8">
@@ -50,9 +50,7 @@ export const NewsBlock = ({title, categoryId, news, locale, hasChildren, showCar
           {news?.map((newsItem, i) => (
             <NewsItem news={newsItem} locale={locale} key={`${title}_${i}`} />
           ))}
-          {/* {(hasChildren && showCard) && ( */}
             <ArrowDown title={title} categoryId={categoryId} showCard={showCard} total={total} hasChildren={hasChildren}/>
-        {/* )} */}
         </div>}
         </>
     )
