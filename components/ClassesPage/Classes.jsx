@@ -1,10 +1,10 @@
 import React from "react";
-import GoldenButtons from "./GoldenButtons";
 import LatestClasses from "./LatestClasses";
 import ClassSpeaker from "./ClassSpeaker";
 import Toggle from "./Toggle";
 import { ToggleContext, useToggle } from "../../context/ToggleContext";
 import SideBar from "../HeaderGeneral/SideBar";
+import Video from "../HomePage/Video";
 
 export default function Classes() {
   const { isOpen, handleOpen, handleClose } = useToggle();     
@@ -21,7 +21,7 @@ export default function Classes() {
         <LatestClasses />
       <div className="w-auto lg:w-full mx-2 lg:mx-0 lg:pr-3 lg:pl-20 mt-8 md:mt-20 lg:mt-1 lg:mb-3">
         <ClassSpeaker />
-        <GoldenButtons />
+        <Video />
       </div>
   </div>
   );

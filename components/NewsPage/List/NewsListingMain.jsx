@@ -8,7 +8,7 @@ export default function NewsListingMain ({news}) {
   return (
     <div className="mt-4 fadeInLeft md:-mt-4 lg:mt-36">
       {news.map((item, index) => (
-        <Link href="/details.html" key={`news_listing_${index}`}>
+        <Link href="/classes-details" key={`news_listing_${index}`}>
           <div
             className={
               index % 2 === 0
