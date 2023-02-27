@@ -50,9 +50,9 @@ export const NewsBlock = ({title, categoryId, news, locale, hasChildren, showCar
           {news?.map((newsItem, i) => (
             <NewsItem news={newsItem} locale={locale} key={`${title}_${i}`} />
           ))}
-          {(hasChildren && showCard) && (
+          {/* {(hasChildren && showCard) && ( */}
             <ArrowDown title={title} categoryId={categoryId} showCard={showCard} total={total} hasChildren={hasChildren}/>
-          )}
+        {/* )} */}
         </div>}
         </>
     )

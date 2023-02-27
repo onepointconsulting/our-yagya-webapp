@@ -8,7 +8,6 @@ import NewsListingMain from "./NewsListingMain";
 export default function NewsLists({ data }) {
   const { isOpen, handleOpen, handleClose } = useToggle();
   const bgImage = imageAdapter(data);
-
   return (
     <div
       style={{ background: `url(${bgImage}) center center / cover no-repeat` }}
@@ -20,7 +19,7 @@ export default function NewsLists({ data }) {
       </ToggleContext.Provider>
 
       <div className="w-auto mx-2 pt-48 lg:w-full lg:mx-0 lg:pr-3 lg:pl-20 lg:mb-3">
-        <NewsListingMain />
+        <NewsListingMain news={data.data.news}/>
       </div>
     </div>
   );
