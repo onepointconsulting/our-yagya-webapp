@@ -1,6 +1,5 @@
+import SidebarMenu from '../HeaderGeneral/SidebarMenu';
 import SearchResult from './SearchResult'
-import SideBarMenu from './../SideBar/SideBarMenu'
-
 const SearchResultButtons = () => {
   return (
     <div>
@@ -32,8 +31,8 @@ const SearchResultButtons = () => {
           {/* <!-- open sidebar --> */}
           {/* @@include('./sidebar_classess.html', {"leftS": "p-4 h-screen overflow-y-auto max-h-[37rem]", "MobileSideBarClass": "fixed left-0 top-32 xs:top-36 md:top-48 lg:top-auto lg:absolute h-screen bg-darkGray transition-all overflow-x-hidden z-10"}) */}
         </div>
-        <div className="hidden">
-          <SideBarMenu />
+        <div className="hiddden">
+          <SidebarMenu />
         </div>
         {/* <!-- next --> */}
         <div className="w-full mb-8 -mr-8 lg:-ml-auto lg:mx-4 md:mr-4 lg:mr-auto">

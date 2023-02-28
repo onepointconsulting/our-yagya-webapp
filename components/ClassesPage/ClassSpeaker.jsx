@@ -39,11 +39,11 @@ export default function Classes() {
   return (
     <div className="mt-4 fadeInLeft md:-mt-4 lg:mt-0">
       {searchData.map((item, index) => (
-        <Link href="/details.html">
+        <Link href="/classes-details">
           <div
             className={
               index % 2 === 0
-                ? "flex-row justify-between md:flex my-3 bg-gray-200"
+                ? "flex-row justify-between md:flex my-3 bg-gray40"
                 : "flex-row justify-between md:flex my-3 bg-white"
             }
           >
